@@ -3,7 +3,7 @@
 #include "stdbitmap.h"
 
 #define NR_PAGES (TOTAL_MEMORY / PAGE_SIZE)
-
+#define PHYADDR_MASK ((0xfffffffffff)<<10)
 static unsigned short mem_map[NR_PAGES/8+256] = {0,};
 static unsigned short virt_mem_map[NR_PAGES/8+256] = {0,};
 static unsigned long phy_start_address;
@@ -70,14 +70,6 @@ void mem_init(unsigned long start_mem, unsigned long end_mem)
 
 unsigned long get_free_page(void)
 {
-	// int i;
-
-	// for (i = 0; i < NR_PAGES; i++) {
-	// 	if (mem_map[i] == 0) {
-	// 		mem_map[i] = 1;
-	// 		return phy_start_address + i * PAGE_SIZE;
-	// 	}
-	// }
 	int index=bitmap_scan(kpool.pool_bitmap,1);
 	if(index!=-1){
 		bitmap_set(kpool.pool_bitmap,index,BITMAP_TAKEN);
@@ -94,6 +86,7 @@ void free_page(unsigned long p)
 {
 	//mem_map[(p - phy_start_address)/PAGE_SIZE] = 0;
 	int index=(p - phy_start_address)/PAGE_SIZE;
+	kprintf("!\n");
 	bitmap_set(kpool.pool_bitmap,index,BITMAP_FREE);
 }
 
@@ -148,6 +141,16 @@ unsigned long pgtable_alloc_1(void)
 	return phys;
 }
 
+unsigned long get_phy_addr_by_virt(unsigned long virt){
+	pgd_t *pgdp = pgd_offset_raw((pgd_t*)idmap_pg_dir, virt);
+	pmd_t* pmdp = get_pmdp_from_pgdp(pgdp, virt);
+	pte_t* ptep = get_ptep_from_pmdp(pmdp,virt);
+	unsigned long high=(ptep->pte)&PHYADDR_MASK;
+	high=high<<2;
+	unsigned long low=virt&(0b111111111111);
+	return (high+low);
+}
+
 
 
 void page_table_add(void* _vaddr, void* _page_phyaddr){
@@ -169,3 +172,30 @@ void* malloc_a_page(void){
 	page_table_add(vaddr,paddr);
 	return vaddr;
 }
+
+
+int free_a_page(void* vaddr){
+	kprintf("start free a page\n");
+	//return index*PAGE_SIZE+kernel_vaddr.vaddr_start;
+	//return phy_start_address + index * PAGE_SIZE;
+	int index;
+	
+	index=((unsigned long)vaddr-kernel_vaddr.vaddr_start)/PAGE_SIZE;
+	bitmap_set(kernel_vaddr.vaddr_bitmap,index,BITMAP_FREE);
+
+	unsigned long paddr=get_phy_addr_by_virt((unsigned long)vaddr);
+	kprintf("phy_addr=%x\n",paddr);
+	// index=((uint64_t)paddr-phy_start_address)/PAGE_SIZE;
+	// bitmap_set(upool.pool_bitmap,index,BITMAP_FREE);
+	free_page((unsigned long)paddr);
+	
+	__create_pgd_mapping((pgd_t *)idmap_pg_dir, 0, vaddr,
+			PAGE_SIZE, PAGE_KERNEL_RESERVE,
+			pgtable_alloc_1,
+			0);
+	kprintf("vaddr:0x%x free successful\n",vaddr);
+}
+
+
+
+

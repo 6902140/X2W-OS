@@ -22,6 +22,7 @@
 #define PAGE_SHARED		PAGE_WRITE
 #define PAGE_SHARED_EXEC	PAGE_WRITE_EXEC
 
+
 #define _PAGE_KERNEL		(_PAGE_READ \
 				| _PAGE_WRITE \
 				| _PAGE_PRESENT \
@@ -34,6 +35,7 @@
 #define PAGE_KERNEL_EXEC	__pgprot(_PAGE_KERNEL | _PAGE_EXEC)
 #define PAGE_KERNEL_READ_EXEC	__pgprot((_PAGE_KERNEL & ~_PAGE_WRITE) \
 					 | _PAGE_EXEC)
+#define PAGE_KERNEL_RESERVE __pgprot(_PAGE_SOFT)//宏定义一个保存给软件的页面；
 
 #define PAGE_TABLE		__pgprot(_PAGE_TABLE)
 

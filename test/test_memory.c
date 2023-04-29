@@ -23,7 +23,7 @@ int test_memory(void){
     for(int i=0;i<16;i++){
         vad=(unsigned long)malloc_a_page();
         kprintf("test memory malloc page-> %d: virtual address=0x%x\n",i+1,vad);
-        kprintf("val=%d\n",*(int*)vad);
+        free_a_page(vad);
     }
     kprintf("Congratulations! Paging successfully\n");
     return 0;
