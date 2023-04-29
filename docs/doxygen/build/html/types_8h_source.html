@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/types.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">types.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="types_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_TYPES_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __INCLUDE_TYPES_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="constrains_8h.html">constrains.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="types_8h.html#a23195218eef2cf21e2beae685a041783">   17</a></span>&#160;<span class="preprocessor">#define DELIMITER &quot;============================================================\n&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">   20</a></span>&#160;<span class="preprocessor">#define NULL ((void *)0)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// 无符号常量定义, 由`gcc -mabi`参数设定, 参考`Makefile`中的`GCC`编译选项`CFALSG`, https://www.ibm.com/docs/en/zos/2.3.0?topic=environments-ilp32-lp64-data-models-data-type-sizes</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">   23</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>       <a class="code" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>;            </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="types_8h.html#a273cf69d639a59973b6019625df33e30">   24</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>      <a class="code" href="types_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>;           </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="types_8h.html#a435d1572bf3f880d55459d9805097f62">   25</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>;           </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>       <a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a>;           </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// 符号常量定义, 由`gcc -mabi`参数设定, 参考`Makefile`中的`GCC`编译选项`CFLAGS`, https://www.ibm.com/docs/en/zos/2.3.0?topic=environments-ilp32-lp64-data-models-data-type-sizes</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">   29</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span>       <a class="code" href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>;            </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="types_8h.html#aa343fa3b3d06292b959ffdd4c4703b06">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">short</span>      <a class="code" href="types_8h.html#aa343fa3b3d06292b959ffdd4c4703b06">int16_t</a>;           </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="types_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">int</span>        <a class="code" href="types_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>;           </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">   32</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">long</span>       <a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a>;           </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3af9d46b7804d93a4fcde88489a1b68c24">   37</a></span>&#160;    <a class="code" href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3af9d46b7804d93a4fcde88489a1b68c24">False</a>   = 0,            </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3a6d32c34708a0a3507c4bdb89219d650b">   38</a></span>&#160;    <a class="code" href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3a6d32c34708a0a3507c4bdb89219d650b">True</a>    = 1             </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="types_8h.html#a186ea1339bffb378854987065835afe3">   42</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> <a class="code" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="types_8h.html#ab8ef12fab634c171394422d0ee8baf94">   45</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="types_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="types_8h.html#ad8c04c91bab78dc7c80f298f11ff2cd7">   48</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a> <a class="code" href="types_8h.html#ad8c04c91bab78dc7c80f298f11ff2cd7">offset_t</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="types_8h.html#a23649fe323c2bb0dd67e8ddacb04a9df">   51</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> <a class="code" href="types_8h.html#a23649fe323c2bb0dd67e8ddacb04a9df">addr_t</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">   54</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">   57</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="types_8h.html#a70c57aae3eb654e205459b4362c8089a">   60</a></span>&#160;<span class="preprocessor">#define ARRAY_SIZE(array)  ((size_t)(sizeof(array) / sizeof((array)[0])))</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="types_8h.html#addf5ec070e9499d36b7f2009ce736076">   70</a></span>&#160;<span class="preprocessor">#define UNUSED __attribute__((unused))</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="types_8h.html#a9bc43e3ee0ae83643b65e07fe1fd0132">   79</a></span>&#160;<span class="preprocessor">#define NO_RETURN __attribute__((noreturn))</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="types_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">   88</a></span>&#160;<span class="preprocessor">#define DEPRECATED __attribute__((deprecated))</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="types_8h.html#a3af99897b60119951af8961dbd52dd3f">   97</a></span>&#160;<span class="preprocessor">#define UNREACHABLE __builtin_unreachable()</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atypes_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="types_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdoc">LP64中一个 short宽度为 16 bit</div><div class="ttdef"><b>Definition:</b> types.h:24</div></div>
+<div class="ttc" id="atypes_8h_html_aa343fa3b3d06292b959ffdd4c4703b06"><div class="ttname"><a href="types_8h.html#aa343fa3b3d06292b959ffdd4c4703b06">int16_t</a></div><div class="ttdeci">short int16_t</div><div class="ttdoc">LP64中一个 short宽度为 16 bit</div><div class="ttdef"><b>Definition:</b> types.h:30</div></div>
+<div class="ttc" id="atypes_8h_html_a48f2f43c22b22212994d19244ccb10fc"><div class="ttname"><a href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a></div><div class="ttdeci">uint64_t ireg_t</div><div class="ttdoc">整型寄存器类型</div><div class="ttdef"><b>Definition:</b> types.h:54</div></div>
+<div class="ttc" id="atypes_8h_html_aa232ecf786a74ce5363c36c10798d2b1"><div class="ttname"><a href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a></div><div class="ttdeci">unsigned long uint64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:26</div></div>
+<div class="ttc" id="atypes_8h_html_a253b248072cfc8bd812c69acd0046eed"><div class="ttname"><a href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a></div><div class="ttdeci">unsigned char Bool</div><div class="ttdoc">布尔常量定义</div><div class="ttdef"><b>Definition:</b> types.h:35</div></div>
+<div class="ttc" id="atypes_8h_html_ab8ef12fab634c171394422d0ee8baf94"><div class="ttname"><a href="types_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a></div><div class="ttdeci">uint8_t byte</div><div class="ttdoc">字节类型定义</div><div class="ttdef"><b>Definition:</b> types.h:45</div></div>
+<div class="ttc" id="atypes_8h_html_a23649fe323c2bb0dd67e8ddacb04a9df"><div class="ttname"><a href="types_8h.html#a23649fe323c2bb0dd67e8ddacb04a9df">addr_t</a></div><div class="ttdeci">uint64_t addr_t</div><div class="ttdoc">地址类型</div><div class="ttdef"><b>Definition:</b> types.h:51</div></div>
+<div class="ttc" id="atypes_8h_html_a32f2e37ee053cf2ce8ca28d1f74630e5"><div class="ttname"><a href="types_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a></div><div class="ttdeci">int int32_t</div><div class="ttdoc">LP64中一个 int 宽度为 32 bit</div><div class="ttdef"><b>Definition:</b> types.h:31</div></div>
+<div class="ttc" id="atypes_8h_html_ac2876a5049438ad8f5b5799f69013faf"><div class="ttname"><a href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a></div><div class="ttdeci">uint64_t freg_t</div><div class="ttdoc">浮点寄存器类型</div><div class="ttdef"><b>Definition:</b> types.h:57</div></div>
+<div class="ttc" id="atypes_8h_html_a2f80701c36e79c0640d91c788feee0b3af9d46b7804d93a4fcde88489a1b68c24"><div class="ttname"><a href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3af9d46b7804d93a4fcde88489a1b68c24">False</a></div><div class="ttdeci">@ False</div><div class="ttdoc">等价于unsigned int false = 0</div><div class="ttdef"><b>Definition:</b> types.h:37</div></div>
+<div class="ttc" id="atypes_8h_html_a2f80701c36e79c0640d91c788feee0b3a6d32c34708a0a3507c4bdb89219d650b"><div class="ttname"><a href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3a6d32c34708a0a3507c4bdb89219d650b">True</a></div><div class="ttdeci">@ True</div><div class="ttdoc">等价于unsigned int true = 1</div><div class="ttdef"><b>Definition:</b> types.h:38</div></div>
+<div class="ttc" id="atypes_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdoc">LP64中一个 char 宽度为 8 bit</div><div class="ttdef"><b>Definition:</b> types.h:23</div></div>
+<div class="ttc" id="atypes_8h_html_ad566f6541e98b74246db1a3a3a85ad49"><div class="ttname"><a href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a></div><div class="ttdeci">char int8_t</div><div class="ttdoc">LP64中一个 char 宽度为 8 bit</div><div class="ttdef"><b>Definition:</b> types.h:29</div></div>
+<div class="ttc" id="atypes_8h_html_a186ea1339bffb378854987065835afe3"><div class="ttname"><a href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a></div><div class="ttdeci">uint64_t size_t</div><div class="ttdoc">计数类型定义</div><div class="ttdef"><b>Definition:</b> types.h:42</div></div>
+<div class="ttc" id="atypes_8h_html_a312c7e8848187d110315ab83a7b3d4d0"><div class="ttname"><a href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a></div><div class="ttdeci">long int64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+<div class="ttc" id="atypes_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdoc">LP64中一个 int 宽度为 32 bit</div><div class="ttdef"><b>Definition:</b> types.h:25</div></div>
+<div class="ttc" id="atypes_8h_html_ad8c04c91bab78dc7c80f298f11ff2cd7"><div class="ttname"><a href="types_8h.html#ad8c04c91bab78dc7c80f298f11ff2cd7">offset_t</a></div><div class="ttdeci">int64_t offset_t</div><div class="ttdoc">偏移类型定义</div><div class="ttdef"><b>Definition:</b> types.h:48</div></div>
+<div class="ttc" id="aconstrains_8h_html"><div class="ttname"><a href="constrains_8h.html">constrains.h</a></div><div class="ttdoc">constrain.h定义了内核的一系列常数</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

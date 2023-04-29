@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/mm.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">mm.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="mm_8h.html" title="mm.h提供了一些内存管理需要的宏和函数.">mm.h</a></code>提供了一些内存管理需要的宏和函数.  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;pgable.h&quot;</code><br />
+<code>#include &quot;ptregs.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="stdbitmap_8h_source.html">stdbitmap.h</a>&quot;</code><br />
+</div>
+<p><a href="mm_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____pool__t.html">__pool_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义内存池的数据结构  <a href="struct____pool__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____virtual__addr__t.html">__virtual_addr_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义虚拟地址池的数据结构  <a href="struct____virtual__addr__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a850d80ca2291d26b40dc6b25c419f81a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a850d80ca2291d26b40dc6b25c419f81a">PAGE_SHIFT</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:a850d80ca2291d26b40dc6b25c419f81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">页内偏移在虚拟地址中有12位  <a href="mm_8h.html#a850d80ca2291d26b40dc6b25c419f81a">更多...</a><br /></td></tr>
+<tr class="separator:a850d80ca2291d26b40dc6b25c419f81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61113da663120ff8a3e513f3fa77b74b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a61113da663120ff8a3e513f3fa77b74b">TABLE_SHIFT</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a61113da663120ff8a3e513f3fa77b74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">一个页表的偏移在虚拟地址中9位偏移  <a href="mm_8h.html#a61113da663120ff8a3e513f3fa77b74b">更多...</a><br /></td></tr>
+<tr class="separator:a61113da663120ff8a3e513f3fa77b74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>&#160;&#160;&#160;(1 &lt;&lt; <a class="el" href="mm_8h.html#a850d80ca2291d26b40dc6b25c419f81a">PAGE_SHIFT</a>)</td></tr>
+<tr class="memdesc:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">一个页的大小（2^12bit）  <a href="mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">更多...</a><br /></td></tr>
+<tr class="separator:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4aa620ce57c7c3171b916de2c5f09f2"><td class="memItemLeft" align="right" valign="top"><a id="ae4aa620ce57c7c3171b916de2c5f09f2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PAGE_MASK</b>&#160;&#160;&#160;(~(<a class="el" href="mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>-1))</td></tr>
+<tr class="separator:ae4aa620ce57c7c3171b916de2c5f09f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573f7d87a906903bec10256e19a8bb14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a573f7d87a906903bec10256e19a8bb14">PAGE_ALIGN</a>(addr)&#160;&#160;&#160;(((addr)+<a class="el" href="mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>-1)&amp;PAGE_MASK)</td></tr>
+<tr class="memdesc:a573f7d87a906903bec10256e19a8bb14"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个地址使用PAGE_MASK来进行地址对齐  <a href="mm_8h.html#a573f7d87a906903bec10256e19a8bb14">更多...</a><br /></td></tr>
+<tr class="separator:a573f7d87a906903bec10256e19a8bb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632f076bc583efc1a8c6ec395b5a16c5"><td class="memItemLeft" align="right" valign="top"><a id="a632f076bc583efc1a8c6ec395b5a16c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PAGE_ALIGN_UP</b>(addr)&#160;&#160;&#160;<a class="el" href="mm_8h.html#a573f7d87a906903bec10256e19a8bb14">PAGE_ALIGN</a>(addr)</td></tr>
+<tr class="separator:a632f076bc583efc1a8c6ec395b5a16c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6658a67e8fe0f75b10a65026dcc339"><td class="memItemLeft" align="right" valign="top"><a id="a9c6658a67e8fe0f75b10a65026dcc339"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PAGE_ALIGN_DOWN</b>(addr)&#160;&#160;&#160;(addr &amp; PAGE_MASK)</td></tr>
+<tr class="separator:a9c6658a67e8fe0f75b10a65026dcc339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9f78fa0aef0c17bc6cd364396b9758"><td class="memItemLeft" align="right" valign="top"><a id="afa9f78fa0aef0c17bc6cd364396b9758"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PFN_DOWN</b>(x)&#160;&#160;&#160;((x) &gt;&gt; <a class="el" href="mm_8h.html#a850d80ca2291d26b40dc6b25c419f81a">PAGE_SHIFT</a>)</td></tr>
+<tr class="separator:afa9f78fa0aef0c17bc6cd364396b9758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267933de1f2afc9011d648dba57ff988"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a267933de1f2afc9011d648dba57ff988">K_HEAP_START</a>&#160;&#160;&#160;0xC0100000</td></tr>
+<tr class="memdesc:a267933de1f2afc9011d648dba57ff988"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义一个虚拟内存空间的起始地址  <a href="mm_8h.html#a267933de1f2afc9011d648dba57ff988">更多...</a><br /></td></tr>
+<tr class="separator:a267933de1f2afc9011d648dba57ff988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ab4e8bc202de3328ef1923785bfff3065"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct____pool__t.html">__pool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#ab4e8bc202de3328ef1923785bfff3065">pool_t</a></td></tr>
+<tr class="memdesc:ab4e8bc202de3328ef1923785bfff3065"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义内存池的数据结构  <a href="mm_8h.html#ab4e8bc202de3328ef1923785bfff3065">更多...</a><br /></td></tr>
+<tr class="separator:ab4e8bc202de3328ef1923785bfff3065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d40484ded75529eb862b9cc832b98f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct____virtual__addr__t.html">__virtual_addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#ae6d40484ded75529eb862b9cc832b98f">virtual_addr_t</a></td></tr>
+<tr class="memdesc:ae6d40484ded75529eb862b9cc832b98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义虚拟地址池的数据结构  <a href="mm_8h.html#ae6d40484ded75529eb862b9cc832b98f">更多...</a><br /></td></tr>
+<tr class="separator:ae6d40484ded75529eb862b9cc832b98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0652f9c27490845217db5f3400a0f12c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a0652f9c27490845217db5f3400a0f12c">paging_init</a> (void)</td></tr>
+<tr class="memdesc:a0652f9c27490845217db5f3400a0f12c"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启分页制度的初始化函数  <a href="mm_8h.html#a0652f9c27490845217db5f3400a0f12c">更多...</a><br /></td></tr>
+<tr class="separator:a0652f9c27490845217db5f3400a0f12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9a66240fe216250e52d6b6e80dd798"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a1c9a66240fe216250e52d6b6e80dd798">enable_mmu_relocate</a> (void)</td></tr>
+<tr class="memdesc:a1c9a66240fe216250e52d6b6e80dd798"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启三级分页SV39的使能函数  <a href="mm_8h.html#a1c9a66240fe216250e52d6b6e80dd798">更多...</a><br /></td></tr>
+<tr class="separator:a1c9a66240fe216250e52d6b6e80dd798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5beb0578c75971eb353cd8a67e9c042"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#af5beb0578c75971eb353cd8a67e9c042">get_free_page</a> (void)</td></tr>
+<tr class="memdesc:af5beb0578c75971eb353cd8a67e9c042"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配一个物理页  <a href="mm_8h.html#af5beb0578c75971eb353cd8a67e9c042">更多...</a><br /></td></tr>
+<tr class="separator:af5beb0578c75971eb353cd8a67e9c042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409722b58dcb786ea7ed28c9e2445912"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a409722b58dcb786ea7ed28c9e2445912">free_page</a> (unsigned long p)</td></tr>
+<tr class="memdesc:a409722b58dcb786ea7ed28c9e2445912"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放一个物理页  <a href="mm_8h.html#a409722b58dcb786ea7ed28c9e2445912">更多...</a><br /></td></tr>
+<tr class="separator:a409722b58dcb786ea7ed28c9e2445912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c4527cff3f92290891f1b1defefd0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#a35c4527cff3f92290891f1b1defefd0c">mem_init</a> (unsigned long start_mem, unsigned long end_mem)</td></tr>
+<tr class="memdesc:a35c4527cff3f92290891f1b1defefd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存初始化函数，在其中实现了各种内存池的管理，位图的初始化，内存空间的统计等任务  <a href="mm_8h.html#a35c4527cff3f92290891f1b1defefd0c">更多...</a><br /></td></tr>
+<tr class="separator:a35c4527cff3f92290891f1b1defefd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad885b41f536f9dea88afcb34406fbbe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mm_8h.html#ad885b41f536f9dea88afcb34406fbbe9">__create_pgd_mapping</a> (<a class="el" href="structpgd__t.html">pgd_t</a> *pgdir, unsigned long phys, unsigned long virt, unsigned long size, <a class="el" href="structpgprot__t.html">pgprot_t</a> prot, unsigned long(*alloc_pgtable)(void), unsigned long flags)</td></tr>
+<tr class="memdesc:ad885b41f536f9dea88afcb34406fbbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">PGD内存映射函数  <a href="mm_8h.html#ad885b41f536f9dea88afcb34406fbbe9">更多...</a><br /></td></tr>
+<tr class="separator:ad885b41f536f9dea88afcb34406fbbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfb3f0bcce40e78a581b9ea34be214b"><td class="memItemLeft" align="right" valign="top"><a id="aecfb3f0bcce40e78a581b9ea34be214b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_stage2_page_mapping</b> (unsigned long gpa, unsigned long hpa, unsigned long size, <a class="el" href="structpgprot__t.html">pgprot_t</a> prot)</td></tr>
+<tr class="separator:aecfb3f0bcce40e78a581b9ea34be214b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e379de9f5a1584f07a916fc7fec756"><td class="memItemLeft" align="right" valign="top"><a id="ad3e379de9f5a1584f07a916fc7fec756"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_stage2_pg_reg</b> (void)</td></tr>
+<tr class="separator:ad3e379de9f5a1584f07a916fc7fec756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c40388c467d2f7e9fd4572d13487209"><td class="memItemLeft" align="right" valign="top"><a id="a3c40388c467d2f7e9fd4572d13487209"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stage2_page_fault</b> (struct <a class="el" href="structpt__regs.html">pt_regs</a> *regs)</td></tr>
+<tr class="separator:a3c40388c467d2f7e9fd4572d13487209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="mm_8h.html" title="mm.h提供了一些内存管理需要的宏和函数.">mm.h</a></code>提供了一些内存管理需要的宏和函数. </p>
+<dl class="section author"><dt>作者</dt><dd>Zhuir Xiao (<a href="#" onclick="location.href='mai'+'lto:'+'xzr'+'33'+'561'+'42'+'450'+'@g'+'mai'+'l.'+'com'; return false;">xzr33<span style="display: none;">.nosp@m.</span>5614<span style="display: none;">.nosp@m.</span>2450@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-26</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">待办事项:</a></b></dt><dd><ol type="1">
+<li>需要进行测试, 以测试函数正确性(已经在test_memory.c中完成)</li>
+</ol>
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd></dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a267933de1f2afc9011d648dba57ff988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267933de1f2afc9011d648dba57ff988">&#9670;&nbsp;</a></span>K_HEAP_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_HEAP_START&#160;&#160;&#160;0xC0100000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义一个虚拟内存空间的起始地址 </p>
+
+</div>
+</div>
+<a id="a573f7d87a906903bec10256e19a8bb14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573f7d87a906903bec10256e19a8bb14">&#9670;&nbsp;</a></span>PAGE_ALIGN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAGE_ALIGN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr</td><td>)</td>
+          <td>&#160;&#160;&#160;(((addr)+<a class="el" href="mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>-1)&amp;PAGE_MASK)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个地址使用PAGE_MASK来进行地址对齐 </p>
+
+</div>
+</div>
+<a id="a850d80ca2291d26b40dc6b25c419f81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850d80ca2291d26b40dc6b25c419f81a">&#9670;&nbsp;</a></span>PAGE_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAGE_SHIFT&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>页内偏移在虚拟地址中有12位 </p>
+
+</div>
+</div>
+<a id="a7d467c1d283fdfa1f2081ba1e0d01b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d467c1d283fdfa1f2081ba1e0d01b6e">&#9670;&nbsp;</a></span>PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAGE_SIZE&#160;&#160;&#160;(1 &lt;&lt; <a class="el" href="mm_8h.html#a850d80ca2291d26b40dc6b25c419f81a">PAGE_SHIFT</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一个页的大小（2^12bit） </p>
+
+</div>
+</div>
+<a id="a61113da663120ff8a3e513f3fa77b74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61113da663120ff8a3e513f3fa77b74b">&#9670;&nbsp;</a></span>TABLE_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TABLE_SHIFT&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一个页表的偏移在虚拟地址中9位偏移 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ab4e8bc202de3328ef1923785bfff3065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e8bc202de3328ef1923785bfff3065">&#9670;&nbsp;</a></span>pool_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct____pool__t.html">__pool_t</a> <a class="el" href="mm_8h.html#ab4e8bc202de3328ef1923785bfff3065">pool_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义内存池的数据结构 </p>
+<dl class="section note"><dt>注解</dt><dd>包含 <br  />
+ pool_bitmap; 本内存池的位图，用于管理物理内存 phy_addr_start; 本内存池所管理的物理内存的起始地址 pool_size; 本内存池的字节容量 mutex_t mutex; 用于实现互斥访问内存池暂时没有实现 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="ae6d40484ded75529eb862b9cc832b98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d40484ded75529eb862b9cc832b98f">&#9670;&nbsp;</a></span>virtual_addr_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct____virtual__addr__t.html">__virtual_addr_t</a> <a class="el" href="mm_8h.html#ae6d40484ded75529eb862b9cc832b98f">virtual_addr_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义虚拟地址池的数据结构 </p>
+<dl class="section note"><dt>注解</dt><dd>包含 <br  />
+ vaddr_bitmap; 虚拟内存的位图 vaddr_start; 虚拟内存的起始的物理地址 <br  />
+ </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ad885b41f536f9dea88afcb34406fbbe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad885b41f536f9dea88afcb34406fbbe9">&#9670;&nbsp;</a></span>__create_pgd_mapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __create_pgd_mapping </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpgd__t.html">pgd_t</a> *&#160;</td>
+          <td class="paramname"><em>pgdir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>phys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>virt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpgprot__t.html">pgprot_t</a>&#160;</td>
+          <td class="paramname"><em>prot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long(*)(void)&#160;</td>
+          <td class="paramname"><em>alloc_pgtable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PGD内存映射函数 </p>
+<dl class="section note"><dt>注解</dt><dd>该函数会： 1：输入的虚拟地址和物理地址还有要映射的内存大小填充PGD表项 2: 将一段物理内存映射到一个指定的虚拟地址范围内。具体实现是通过对虚拟地址进行对齐和分割，逐个处理每个PGD表项，并将其指向相应的PMD表项来实现对整个虚拟地址范围的映射。在映射的过程中，函数还会调用alloc_init_pmd()函数，为每个PMD表项分配并初始化一个物理页面。该函数的参数包括PGD表基地址、需要映射的物理地址、虚拟地址、大小、保护标志、分配函数、标志等。 </dd></dl>
+
+</div>
+</div>
+<a id="a1c9a66240fe216250e52d6b6e80dd798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9a66240fe216250e52d6b6e80dd798">&#9670;&nbsp;</a></span>enable_mmu_relocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enable_mmu_relocate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启三级分页SV39的使能函数 </p>
+<dl class="section note"><dt>注解</dt><dd>实现在kernel/mmu_enable中使用汇编语言实现 </dd></dl>
+
+</div>
+</div>
+<a id="a409722b58dcb786ea7ed28c9e2445912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409722b58dcb786ea7ed28c9e2445912">&#9670;&nbsp;</a></span>free_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_page </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放一个物理页 </p>
+<dl class="section note"><dt>注解</dt><dd>该函数会 1：根据输入的物理地址释放一个位 2：设置位图相应位为0 </dd></dl>
+
+</div>
+</div>
+<a id="af5beb0578c75971eb353cd8a67e9c042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5beb0578c75971eb353cd8a67e9c042">&#9670;&nbsp;</a></span>get_free_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long get_free_page </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分配一个物理页 </p>
+<dl class="section note"><dt>注解</dt><dd>该函数会 1：扫描kernel的bitmap然后返回一个空闲的物理地址 2： 将bitmap相应位置设置为1 3：暂未使用🔒保护，因为互斥机制还未实现 </dd></dl>
+
+</div>
+</div>
+<a id="a35c4527cff3f92290891f1b1defefd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c4527cff3f92290891f1b1defefd0c">&#9670;&nbsp;</a></span>mem_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mem_init </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>start_mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>end_mem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内存初始化函数，在其中实现了各种内存池的管理，位图的初始化，内存空间的统计等任务 </p>
+<dl class="section note"><dt>注解</dt><dd>该函数会： 1：根据初始内存管理地址start_mem，内存管理终止地址end_mem来统计内存大小，页数... 2: 初始化各种内存池以及位图 </dd></dl>
+
+</div>
+</div>
+<a id="a0652f9c27490845217db5f3400a0f12c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0652f9c27490845217db5f3400a0f12c">&#9670;&nbsp;</a></span>paging_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void paging_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启分页制度的初始化函数 </p>
+<dl class="section note"><dt>注解</dt><dd>该函数会 1：建立一个PGD页，然后将其清空 2：根据mem_init()统计得到的内存的信息在内存空间先建立三级页表 3：建立分页机制之后使能mmu模块 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

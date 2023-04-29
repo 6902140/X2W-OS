@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>/home/data/proj/oskernel2023-x2w/include</compoundname>
+    <innerdir refid="dir_47b0152e0531aebd2c74f6f36a5c8382">/home/data/proj/oskernel2023-x2w/include/asm</innerdir>
+    <innerdir refid="dir_2ae24886e77657f82343b4b0154efdc1">/home/data/proj/oskernel2023-x2w/include/kernel</innerdir>
+    <innerdir refid="dir_5299e398a241aad4d173dc0e5cfe4485">/home/data/proj/oskernel2023-x2w/include/sbi</innerdir>
+    <innerdir refid="dir_69f6b0b437b9d7106ae46b3b241ba72b">/home/data/proj/oskernel2023-x2w/include/test</innerdir>
+    <innerdir refid="dir_a1638397e50ab9a7611310bf3275bb53">/home/data/proj/oskernel2023-x2w/include/trap</innerdir>
+    <innerdir refid="dir_2da6b4920bffa0d563fb54046b25229a">/home/data/proj/oskernel2023-x2w/include/user</innerdir>
+    <innerfile refid="assert_8h">assert.h</innerfile>
+    <innerfile refid="clint_8h">clint.h</innerfile>
+    <innerfile refid="constrains_8h">constrains.h</innerfile>
+    <innerfile refid="io_8h">io.h</innerfile>
+    <innerfile refid="mm_8h">mm.h</innerfile>
+    <innerfile refid="pg__attr_8h">pg_attr.h</innerfile>
+    <innerfile refid="pg__types_8h">pg_types.h</innerfile>
+    <innerfile refid="pgable_8h">pgable.h</innerfile>
+    <innerfile refid="ptregs_8h">ptregs.h</innerfile>
+    <innerfile refid="stdarg_8h">stdarg.h</innerfile>
+    <innerfile refid="stdbitmap_8h">stdbitmap.h</innerfile>
+    <innerfile refid="stdfmt_8h">stdfmt.h</innerfile>
+    <innerfile refid="stdlib_8h">stdlib.h</innerfile>
+    <innerfile refid="stdlist_8h">stdlist.h</innerfile>
+    <innerfile refid="string_8h">string.h</innerfile>
+    <innerfile refid="types_8h">types.h</innerfile>
+    <innerfile refid="uart_8h">uart.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/data/proj/oskernel2023-x2w/include/"/>
+  </compounddef>
+</doxygen>

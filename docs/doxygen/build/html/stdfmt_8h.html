@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/stdfmt.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">stdfmt.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="stdfmt_8h.html" title="stdfmt.h提供了格式化函数">stdfmt.h</a></code>提供了格式化函数  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stdarg_8h_source.html">stdarg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="string_8h_source.html">string.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stdlib_8h_source.html">stdlib.h</a>&quot;</code><br />
+</div>
+<p><a href="stdfmt_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa318f0a68f8472c9fe524059ee464872"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdfmt_8h.html#aa318f0a68f8472c9fe524059ee464872">_scan_number</a> (const char *str, int *num)</td></tr>
+<tr class="memdesc:aa318f0a68f8472c9fe524059ee464872"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_scan_number</code>用于将存储在<code>str</code>中的字符串数字转换为<code>int</code>数字并存入<code>num</code>中  <a href="stdfmt_8h.html#aa318f0a68f8472c9fe524059ee464872">更多...</a><br /></td></tr>
+<tr class="separator:aa318f0a68f8472c9fe524059ee464872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516ca7acae514264e2d3aae09cd33558"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdfmt_8h.html#a516ca7acae514264e2d3aae09cd33558">copy_number</a> (char *str, unsigned long num, int base, int width, int precision, int flag)</td></tr>
+<tr class="memdesc:a516ca7acae514264e2d3aae09cd33558"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>copy_number</code>用于将整形的数字<code>num</code>按照指定进制<code>base</code>转换为字符串数字, 而后按照指定的宽度<code>width</code>和精度<code>precision</code>复制到<code>str</code>中去  <a href="stdfmt_8h.html#a516ca7acae514264e2d3aae09cd33558">更多...</a><br /></td></tr>
+<tr class="separator:a516ca7acae514264e2d3aae09cd33558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6013cf5c9d1311c9044f649a7d91cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdfmt_8h.html#a5d6013cf5c9d1311c9044f649a7d91cf">vsprintf</a> (char *str, const char *format, <a class="el" href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a> ap)</td></tr>
+<tr class="memdesc:a5d6013cf5c9d1311c9044f649a7d91cf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>vsprintf</code>按照<code>format</code>中指定的格式将<code>ap</code>指向的可变参数列表的值复制到<code>str</code>中  <a href="stdfmt_8h.html#a5d6013cf5c9d1311c9044f649a7d91cf">更多...</a><br /></td></tr>
+<tr class="separator:a5d6013cf5c9d1311c9044f649a7d91cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa2019cc501e5783a7476645ca0bcdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdfmt_8h.html#adfa2019cc501e5783a7476645ca0bcdb">sprintf</a> (char *buf, const char *format,...)</td></tr>
+<tr class="memdesc:adfa2019cc501e5783a7476645ca0bcdb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sprintf</code>将格式字符串<code>format</code>的格式控制字符替换为可变参数并输出到<code>buf</code>中  <a href="stdfmt_8h.html#adfa2019cc501e5783a7476645ca0bcdb">更多...</a><br /></td></tr>
+<tr class="separator:adfa2019cc501e5783a7476645ca0bcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="stdfmt_8h.html" title="stdfmt.h提供了格式化函数">stdfmt.h</a></code>提供了格式化函数 </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'gm'+'ail'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.2 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-09</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="aa318f0a68f8472c9fe524059ee464872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa318f0a68f8472c9fe524059ee464872">&#9670;&nbsp;</a></span>_scan_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* _scan_number </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>_scan_number</code>用于将存储在<code>str</code>中的字符串数字转换为<code>int</code>数字并存入<code>num</code>中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>字符串形式的数字 </td></tr>
+    <tr><td class="paramname">num</td><td>转换后的数字将存入<code>num</code>中 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>const char* str第一个非字符数字</dd></dl>
+<dl class="section note"><dt>注解</dt><dd><code>_scan_number</code>将在第一个非字符数字前停下, 即:<ul>
+<li>若<code>str = "123TEST"</code>, 则运行后&lsquo;num = 123, *return = 'T&rsquo;<code></code></li>
+<li><code>若</code>str = "12EST456"<code>, 则运行后</code>num = 12, *return = 'E'<code></code></li>
+<li><code>若</code>str = "ST456"<code>, 则运行后</code>num = 0, *return = 'S'` </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a516ca7acae514264e2d3aae09cd33558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516ca7acae514264e2d3aae09cd33558">&#9670;&nbsp;</a></span>copy_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* copy_number </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>precision</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>copy_number</code>用于将整形的数字<code>num</code>按照指定进制<code>base</code>转换为字符串数字, 而后按照指定的宽度<code>width</code>和精度<code>precision</code>复制到<code>str</code>中去 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>输出字符数组 </td></tr>
+    <tr><td class="paramname">num</td><td>整形数字 </td></tr>
+    <tr><td class="paramname">base</td><td>进制 </td></tr>
+    <tr><td class="paramname">width</td><td>对齐宽度 </td></tr>
+    <tr><td class="paramname">precision</td><td>输出位数 </td></tr>
+    <tr><td class="paramname">flag</td><td>格式控制字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>char* 复制后str的位置 </dd></dl>
+
+</div>
+</div>
+<a id="adfa2019cc501e5783a7476645ca0bcdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa2019cc501e5783a7476645ca0bcdb">&#9670;&nbsp;</a></span>sprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a> sprintf </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>sprintf</code>将格式字符串<code>format</code>的格式控制字符替换为可变参数并输出到<code>buf</code>中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>接受输出的字符数组 </td></tr>
+    <tr><td class="paramname">format</td><td>含格式控制字符的格式字符串 </td></tr>
+    <tr><td class="paramname">...</td><td>可变参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>size_t 输出到buf字符数组中的字符个数</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>格式控制字符: <code>%[flag][width][precision][length]&lt;type&gt;</code>. 其中:<ul>
+<li><code>type</code>字段必须存在, 其余字段均可选</li>
+</ul>
+</dd></dl>
+<p>关于各个字段的说明:</p><ul>
+<li><code>flag</code>字段:<ul>
+<li><code>-</code>: 左对齐输出, 默认是右对齐</li>
+<li><code>+</code>: 输出正数前添加加号, 默认不添加</li>
+<li><code>#</code>: 当<code>type</code>为<code>b</code>, <code>o</code>, <code>x</code>, <code>X</code>时, 添加前缀<code>0b</code>, <code>0</code>或者<code>0x</code></li>
+<li><code>0</code>: 使用<code>0</code>填充对齐, 默认使用空格填充对齐</li>
+</ul>
+</li>
+<li><code>width</code>字段:<ul>
+<li><code>数字</code>: 设置对齐的宽度, 例如: <code>printf("%5d", 100)</code> 将会输出 <code>100</code></li>
+<li><code>*:</code> 动态参数, 由后续的数字指定, 例如: <code>printf("%*d", 5, 10)</code> 等价于 printf("%5d", 10)<code> -</code>precision<code>字段: -</code>.数字<code>: 设置输出的位数, 例如:</code>printf("%.2d", 111)<code>将会输出</code>11<code> -</code>.*<code>: 动态参数, 由后续的数字指定, 例如:</code>printf("%.*d", 2, 111)<code>等价于 printf("%.2d", 111)</code></li>
+</ul>
+</li>
+<li><code>length</code>字段:<ul>
+<li><code>h</code>: 输出一个16位宽度的整数, 即: <code>short</code>, <code>unsigned short</code>, <code>int16_t</code>, <code>uint16_t</code></li>
+<li><code>l</code>: 输出一个64位宽度的整数, 即: <code>long</code>, <code>unsigned long</code>, <code>int64_t</code>, <code>uint64_t</code></li>
+<li><code>ll</code>: 输出一个64位宽度的整数, 即: <code>long long</code>, <code>unsigned long long</code></li>
+<li>PS: RISC-V LP64中long long和long都是64位</li>
+</ul>
+</li>
+<li><code>type</code>字段:<ul>
+<li><code>%</code>: 输出一个<code>%</code></li>
+<li><code>p</code>: 输出一个指针, 需要转换为(void*)</li>
+<li><code>c</code>: 输出一个字符</li>
+<li><code>s</code>: 输出一个<code>\0</code>结尾的字符串</li>
+<li><code>b</code>: 以二进制输出一个整数, 无符号</li>
+<li><code>o</code>: 以八进制输出一个整数, 无符号</li>
+<li><code>i</code>: 以十进制输出一个整数, 有符号</li>
+<li><code>d</code>: 以十进制输出一个整数, 有符号</li>
+<li><code>u</code>: 以十进制输出一个整数, 无符号</li>
+<li><code>x</code>: 以十六进制输出一个整数, 小写字母, 无符号</li>
+<li><code>X</code>: 以十六进制输出一个整数, 大写字母, 无符号</li>
+<li><code>n</code>: 到此处已经输出的字符的数量, 不会输出文本, 而是将值保存到地址中. 参考: <a href="https://blog.csdn.net/zsx0728/article/details/118100389">https://blog.csdn.net/zsx0728/article/details/118100389</a> </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a5d6013cf5c9d1311c9044f649a7d91cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6013cf5c9d1311c9044f649a7d91cf">&#9670;&nbsp;</a></span>vsprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a> vsprintf </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a>&#160;</td>
+          <td class="paramname"><em>ap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>vsprintf</code>按照<code>format</code>中指定的格式将<code>ap</code>指向的可变参数列表的值复制到<code>str</code>中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>接受输出的字符数组 </td></tr>
+    <tr><td class="paramname">format</td><td>含格式控制字符的字符串. </td></tr>
+    <tr><td class="paramname">ap</td><td>可变参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>size_t 处理后的字符串(str)的长度</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>格式控制字符: <code>%[flag][width][precision][length]&lt;type&gt;</code>. 其中:<ul>
+<li><code>type</code>字段必须存在, 其余字段均可选</li>
+</ul>
+</dd></dl>
+<p>关于各个字段的说明:</p><ul>
+<li><code>flag</code>字段:<ul>
+<li><code>-</code>: 左对齐输出, 默认是右对齐</li>
+<li><code>+</code>: 输出正数前添加加号, 默认不添加</li>
+<li><code>#</code>: 当<code>type</code>为<code>b</code>, <code>o</code>, <code>x</code>, <code>X</code>时, 添加前缀<code>0b</code>, <code>0</code>或者<code>0x</code></li>
+<li><code>0</code>: 使用<code>0</code>填充对齐, 默认使用空格填充对齐</li>
+</ul>
+</li>
+<li><code>width</code>字段:<ul>
+<li><code>数字</code>: 设置对齐的宽度, 例如: <code>printf("%5d", 100)</code> 将会输出 <code>100</code></li>
+<li><code>*:</code> 动态参数, 由后续的数字指定, 例如: <code>printf("%*d", 5, 10)</code> 等价于 printf("%5d", 10)<code> -</code>precision<code>字段: -</code>.数字<code>: 设置输出的位数, 例如:</code>printf("%.2d", 111)<code>将会输出</code>11<code> -</code>.*<code>: 动态参数, 由后续的数字指定, 例如:</code>printf("%.*d", 2, 111)<code>等价于 printf("%.2d", 111)</code></li>
+</ul>
+</li>
+<li><code>length</code>字段:<ul>
+<li><code>h</code>: 输出一个16位宽度的整数, 即: <code>short</code>, <code>unsigned short</code>, <code>int16_t</code>, <code>uint16_t</code></li>
+<li><code>l</code>: 输出一个64位宽度的整数, 即: <code>long</code>, <code>unsigned long</code>, <code>int64_t</code>, <code>uint64_t</code></li>
+<li><code>ll</code>: 输出一个64位宽度的整数, 即: <code>long long</code>, <code>unsigned long long</code></li>
+<li>PS: RISC-V LP64中long long和long都是64位</li>
+</ul>
+</li>
+<li><code>type</code>字段:<ul>
+<li><code>%</code>: 输出一个<code>%</code></li>
+<li><code>p</code>: 输出一个指针, 需要转换为(void*)</li>
+<li><code>c</code>: 输出一个字符</li>
+<li><code>s</code>: 输出一个<code>\0</code>结尾的字符串</li>
+<li><code>b</code>: 以二进制输出一个整数, 无符号</li>
+<li><code>o</code>: 以八进制输出一个整数, 无符号</li>
+<li><code>i</code>: 以十进制输出一个整数, 有符号</li>
+<li><code>d</code>: 以十进制输出一个整数, 有符号</li>
+<li><code>u</code>: 以十进制输出一个整数, 无符号</li>
+<li><code>x</code>: 以十六进制输出一个整数, 小写字母, 无符号</li>
+<li><code>X</code>: 以十六进制输出一个整数, 大写字母, 无符号</li>
+<li><code>n</code>: 到此处已经输出的字符的数量, 不会输出文本, 而是将值保存到地址中. 参考: <a href="https://blog.csdn.net/zsx0728/article/details/118100389">https://blog.csdn.net/zsx0728/article/details/118100389</a> </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

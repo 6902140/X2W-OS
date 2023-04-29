@@ -1,0 +1,57 @@
+\hypertarget{secall_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/sbi/secall.h 文件参考}
+\label{secall_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/sbi/secall.h@{/home/data/proj/oskernel2023-\/x2w/include/sbi/secall.h}}
+
+
+{\ttfamily \mbox{\hyperlink{secall_8h}{secall.\+h}}}提供了{\ttfamily sbi}调用的实现  
+
+
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}asm/csr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sbi/sbi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sbi/strap.\+h\char`\"{}}\newline
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{secall_8h_aa71f5c95fca0e357eb1181cbc1cd6c60}\label{secall_8h_aa71f5c95fca0e357eb1181cbc1cd6c60}} 
+void \mbox{\hyperlink{secall_8h_aa71f5c95fca0e357eb1181cbc1cd6c60}{secall\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily secall\+\_\+init}用于初始化{\ttfamily S\+BI}调用 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a312c7e8848187d110315ab83a7b3d4d0}{int64\+\_\+t}} \mbox{\hyperlink{secall_8h_ab7d1d17a4ee99ccd30735940d0569cf8}{sup\+\_\+ecall\+\_\+handler}} (\mbox{\hyperlink{trapframe_8h_ace23faaa1579bcc09327b838e4f18145}{strapframe\+\_\+t}} $\ast$stf\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em {\ttfamily sup\+\_\+ecall\+\_\+handler}是{\ttfamily Supervisor}模式下{\ttfamily ecall}指令的处理函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{secall_8h}{secall.\+h}}}提供了{\ttfamily sbi}调用的实现 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gamil.com}{\texttt{ jack4shihong@gamil.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/17
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{secall_8h_ab7d1d17a4ee99ccd30735940d0569cf8}\label{secall_8h_ab7d1d17a4ee99ccd30735940d0569cf8}} 
+\index{secall.h@{secall.h}!sup\_ecall\_handler@{sup\_ecall\_handler}}
+\index{sup\_ecall\_handler@{sup\_ecall\_handler}!secall.h@{secall.h}}
+\doxysubsubsection{\texorpdfstring{sup\_ecall\_handler()}{sup\_ecall\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a312c7e8848187d110315ab83a7b3d4d0}{int64\+\_\+t}} sup\+\_\+ecall\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{trapframe_8h_ace23faaa1579bcc09327b838e4f18145}{strapframe\+\_\+t}} $\ast$}]{stf\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily sup\+\_\+ecall\+\_\+handler}是{\ttfamily Supervisor}模式下{\ttfamily ecall}指令的处理函数 
+
+
+\begin{DoxyParams}{参数}
+{\em stf\+\_\+ptr} & 陷入帧, 调用ecall的程序主动触发{\ttfamily Supervisor Environment Call}异常时在{\ttfamily strap\+\_\+enter}(定义在{\ttfamily strap\+\_\+entry.\+S}中)中构建 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int64\+\_\+t 处理结果, 若为0则表示处理正常, -\/1表示处理失败 
+\end{DoxyReturn}

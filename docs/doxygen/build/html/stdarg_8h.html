@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/stdarg.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle">
+<div class="title">stdarg.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>stdargs.h</code>提供了自定义的变参函数支持  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+</div>
+<p><a href="stdarg_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aab2fdb7b45868b2622028377c750dad9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#aab2fdb7b45868b2622028377c750dad9">va_start</a>(ap,  v)&#160;&#160;&#160;__builtin_va_start(ap, v)</td></tr>
+<tr class="memdesc:aab2fdb7b45868b2622028377c750dad9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>va_start</code>用于将参数指针<code>ap</code>(argument pointer)指向第一个固定参数<code>v</code>  <a href="stdarg_8h.html#aab2fdb7b45868b2622028377c750dad9">更多...</a><br /></td></tr>
+<tr class="separator:aab2fdb7b45868b2622028377c750dad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb46f660b756eb161fb4aa8969925c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#afeb46f660b756eb161fb4aa8969925c7">va_arg</a>(ap,  t)&#160;&#160;&#160;__builtin_va_arg(ap, t)</td></tr>
+<tr class="memdesc:afeb46f660b756eb161fb4aa8969925c7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>va_arg</code>用于将参数指针<code>ap</code>(argument pointer)指向栈中下一个类型为<code>t</code>的参数.  <a href="stdarg_8h.html#afeb46f660b756eb161fb4aa8969925c7">更多...</a><br /></td></tr>
+<tr class="separator:afeb46f660b756eb161fb4aa8969925c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9b3b9085ec072324c5fdac2b40304e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#acd9b3b9085ec072324c5fdac2b40304e">va_end</a>(ap)&#160;&#160;&#160;__builtin_va_end(ap)</td></tr>
+<tr class="memdesc:acd9b3b9085ec072324c5fdac2b40304e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_my_va_end</code>用于清除参数指针<code>ap</code>(argument pointer)  <a href="stdarg_8h.html#acd9b3b9085ec072324c5fdac2b40304e">更多...</a><br /></td></tr>
+<tr class="separator:acd9b3b9085ec072324c5fdac2b40304e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae641e06b00550c111ccb048aafe0fc4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#ae641e06b00550c111ccb048aafe0fc4b">_my_va_start</a>(ap,  v)&#160;&#160;&#160;ap = (<a class="el" href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a>) &amp;v</td></tr>
+<tr class="memdesc:ae641e06b00550c111ccb048aafe0fc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_my_va_start</code>用于将参数指针<code>ap</code>(argument pointer)指向第一个固定参数<code>v</code>  <a href="stdarg_8h.html#ae641e06b00550c111ccb048aafe0fc4b">更多...</a><br /></td></tr>
+<tr class="separator:ae641e06b00550c111ccb048aafe0fc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0f2a88c33d642ab5d0298f3c4b3035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#a7b0f2a88c33d642ab5d0298f3c4b3035">_my_va_arg</a>(ap,  t)&#160;&#160;&#160;*((t*)(ap += 8))</td></tr>
+<tr class="memdesc:a7b0f2a88c33d642ab5d0298f3c4b3035"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_my_va_arg</code>用于将参数指针<code>ap</code>(argument pointer)指向栈中下一个类型为<code>t</code>的参数.  <a href="stdarg_8h.html#a7b0f2a88c33d642ab5d0298f3c4b3035">更多...</a><br /></td></tr>
+<tr class="separator:a7b0f2a88c33d642ab5d0298f3c4b3035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6468ba7e0b5727b681dd3905208872d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#af6468ba7e0b5727b681dd3905208872d">_my_va_end</a>(ap)&#160;&#160;&#160;ap = <a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:af6468ba7e0b5727b681dd3905208872d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_my_va_end</code>用于清除参数指针<code>ap</code>(argument pointer)  <a href="stdarg_8h.html#af6468ba7e0b5727b681dd3905208872d">更多...</a><br /></td></tr>
+<tr class="separator:af6468ba7e0b5727b681dd3905208872d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:af53f622e3b6c080daeb167c1955d7ec1"><td class="memItemLeft" align="right" valign="top">typedef __builtin_va_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a></td></tr>
+<tr class="memdesc:af53f622e3b6c080daeb167c1955d7ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">变参列表类型, 本质就是一个指针, 因此也称为参数指针, 原理参考<code>GCC</code>编译器的传参原理  <a href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">更多...</a><br /></td></tr>
+<tr class="separator:af53f622e3b6c080daeb167c1955d7ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7606ba07f197c44b4185b4ce441e0d76"><td class="memItemLeft" align="right" valign="top">typedef char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#a7606ba07f197c44b4185b4ce441e0d76">_my_va_list</a></td></tr>
+<tr class="memdesc:a7606ba07f197c44b4185b4ce441e0d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">变参宏以字节形式处理在栈中的函数参数, 因此变参列表<code>_my_va_list</code>的本质就是字节  <a href="stdarg_8h.html#a7606ba07f197c44b4185b4ce441e0d76">更多...</a><br /></td></tr>
+<tr class="separator:a7606ba07f197c44b4185b4ce441e0d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code>stdargs.h</code>提供了自定义的变参函数支持 </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'gm'+'ail'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.2 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-09</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>deprecated, 原因见下. <code>GCC</code>调用时函数时通过栈传参, 因此参数在函数调用栈帧中依次排列. 所以变参宏的本质就是以字节的形式处理在栈中的依次排列的函数参数.</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>自己原先写的<code>stdargs</code>有BUG, 因为:<ol type="1">
+<li><code>x86-32</code> 是全部通过栈传参</li>
+<li><code>RISC-V LP64</code>的abi不是按照栈传参的, 先用寄存器再用栈, 所以如果要自己实现的话, 需要操作寄存器和栈 所以为了屏蔽不同的体系结构的<code>ABI</code>的差异, <code>GCC</code>使用了内建的<code>__builtin_va_list</code>, <code>__builtin_va_start()</code>和 <code>__builtin_va_end()</code> 因此如果需要自己实现<code>RISV-C</code>的<code>stdargs.h</code>的话, 就得参考GCC源码中的<code>__builtin_va_list</code>, <code>__builtin_va_start()</code>和 <code>__builtin_va_end()</code>的<code>RISC-V</code>部分的实现 所以综合考虑, 还是直接需要使用<code>GCC</code>内建的 <code>__builtin_va_list</code>, <code>__builtin_va_start()</code>和 <code>__builtin_va_end()</code>算了</li>
+</ol>
+</dd>
+<dd>
+所有我自己写的<code>stdargs.h</code>适用于<code>x86-32</code>, 已经全部加上了<code>_my_</code>的前缀</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>参考: &lt;path-to-riscv-gnu-toolchain-installation-path&gt;/lib/gcc/riscv64-unknown-elf/12.2.0/include/stdarg.h</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a7b0f2a88c33d642ab5d0298f3c4b3035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b0f2a88c33d642ab5d0298f3c4b3035">&#9670;&nbsp;</a></span>_my_va_arg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _my_va_arg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;*((t*)(ap += 8))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>_my_va_arg</code>用于将参数指针<code>ap</code>(argument pointer)指向栈中下一个类型为<code>t</code>的参数. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ap</td><td>参数指针 </td></tr>
+    <tr><td class="paramname">t</td><td>下一个参数的类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>由于是<code>64位</code>机器, 因此每次参数指针<code>ap</code>向后(高地址)增加8个字节</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">弃用:</a></b></dt><dd>自己写的<code>_my_va_arg</code>只适用于<code>x86-32</code>, 因此已经弃用, 详细的原因参考文件的doc </dd></dl>
+
+</div>
+</div>
+<a id="af6468ba7e0b5727b681dd3905208872d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6468ba7e0b5727b681dd3905208872d">&#9670;&nbsp;</a></span>_my_va_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _my_va_end</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap</td><td>)</td>
+          <td>&#160;&#160;&#160;ap = <a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>_my_va_end</code>用于清除参数指针<code>ap</code>(argument pointer) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ap</td><td>参数指针</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">弃用:</a></b></dt><dd>自己写的<code>_my_va_end</code>只适用于<code>x86-32</code>, 因此已经弃用, 详细的原因参考文件的doc </dd></dl>
+
+</div>
+</div>
+<a id="ae641e06b00550c111ccb048aafe0fc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae641e06b00550c111ccb048aafe0fc4b">&#9670;&nbsp;</a></span>_my_va_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _my_va_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;ap = (<a class="el" href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a>) &amp;v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>_my_va_start</code>用于将参数指针<code>ap</code>(argument pointer)指向第一个固定参数<code>v</code> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ap</td><td>参数指针 </td></tr>
+    <tr><td class="paramname">v</td><td>函数的第一个参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">弃用:</a></b></dt><dd>自己写的<code>_my_va_list</code>只适用于<code>x86-32</code>, 因此已经弃用, 详细的原因参考文件的doc </dd></dl>
+
+</div>
+</div>
+<a id="afeb46f660b756eb161fb4aa8969925c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb46f660b756eb161fb4aa8969925c7">&#9670;&nbsp;</a></span>va_arg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define va_arg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;__builtin_va_arg(ap, t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>va_arg</code>用于将参数指针<code>ap</code>(argument pointer)指向栈中下一个类型为<code>t</code>的参数. </p>
+<dl class="section note"><dt>注解</dt><dd>关于类型t, 需要注意的是:<ol type="1">
+<li>默认传入的最小单位是int, 因此char的调用方式为: <code>char varg_char = (unsigned char) <a class="el" href="stdarg_8h.html#afeb46f660b756eb161fb4aa8969925c7" title="va_arg用于将参数指针ap(argument pointer)指向栈中下一个类型为t的参数.">va_arg(ap, int)</a></code></li>
+</ol>
+</dd>
+<dd>
+使用<code>GCC</code>内建的<code>__builtin_va_arg</code>作为将变参列表指向下一个类型为<code>t</code>的参数 </dd></dl>
+
+</div>
+</div>
+<a id="acd9b3b9085ec072324c5fdac2b40304e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9b3b9085ec072324c5fdac2b40304e">&#9670;&nbsp;</a></span>va_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define va_end</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap</td><td>)</td>
+          <td>&#160;&#160;&#160;__builtin_va_end(ap)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>_my_va_end</code>用于清除参数指针<code>ap</code>(argument pointer) </p>
+<dl class="section note"><dt>注解</dt><dd>使用<code>GCC</code>内建的<code>__builtin_va_end</code>来清空变参列表 </dd></dl>
+
+</div>
+</div>
+<a id="aab2fdb7b45868b2622028377c750dad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2fdb7b45868b2622028377c750dad9">&#9670;&nbsp;</a></span>va_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define va_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;__builtin_va_start(ap, v)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>va_start</code>用于将参数指针<code>ap</code>(argument pointer)指向第一个固定参数<code>v</code> </p>
+<dl class="section note"><dt>注解</dt><dd>使用<code>GCC</code>内建的<code>__builtin_va_start</code>作为将变参列表指向变参列表的的第一个参数 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a7606ba07f197c44b4185b4ce441e0d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7606ba07f197c44b4185b4ce441e0d76">&#9670;&nbsp;</a></span>_my_va_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char* <a class="el" href="stdarg_8h.html#a7606ba07f197c44b4185b4ce441e0d76">_my_va_list</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>变参宏以字节形式处理在栈中的函数参数, 因此变参列表<code>_my_va_list</code>的本质就是字节 </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">弃用:</a></b></dt><dd>自己写的<code>_my_va_list</code>只适用于<code>x86-32</code>, 因此已经弃用, 详细的原因参考文件的doc </dd></dl>
+
+</div>
+</div>
+<a id="af53f622e3b6c080daeb167c1955d7ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af53f622e3b6c080daeb167c1955d7ec1">&#9670;&nbsp;</a></span>va_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef __builtin_va_list <a class="el" href="stdarg_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>变参列表类型, 本质就是一个指针, 因此也称为参数指针, 原理参考<code>GCC</code>编译器的传参原理 </p>
+<dl class="section note"><dt>注解</dt><dd>使用<code>GCC</code>内建的<code>__builtin_va_list</code>作为变参列表类型 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

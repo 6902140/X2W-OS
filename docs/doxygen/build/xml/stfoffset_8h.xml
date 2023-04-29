@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="stfoffset_8h" kind="file" language="C++">
+    <compoundname>stfoffset.h</compoundname>
+    <includes refid="constrains_8h" local="yes">constrains.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h</label>
+        <link refid="stfoffset_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="stfoffset_8h_1a344de885433d7b1f01741ca153e97342" prot="public" static="no">
+        <name>STF_SIZE</name>
+        <initializer>264</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="19" column="13" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a13ccf4d74c7540bbebdf8c9d6e6deb84" prot="public" static="no">
+        <name>STF_MEPC</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="22" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ae0aba43724c7d3b49539045d50edd273" prot="public" static="no">
+        <name>STF_RA</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="23" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a76697902662999dc3ced9ef3e37aa0b6" prot="public" static="no">
+        <name>STF_SP</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="24" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ad94a6d7d989af41539696f2a6c1ed909" prot="public" static="no">
+        <name>STF_GP</name>
+        <initializer>24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="25" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aa6699d590f0385f9020b9180058c23af" prot="public" static="no">
+        <name>STF_TP</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="26" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a816c6b6a70515b8f7723c24f3f2928ce" prot="public" static="no">
+        <name>STF_T0</name>
+        <initializer>40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="27" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ab567ed12e9d95049d6846f83895651f5" prot="public" static="no">
+        <name>STF_T1</name>
+        <initializer>48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="28" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a881fa6196ce9e29b7831933cb0b8cbb1" prot="public" static="no">
+        <name>STF_T2</name>
+        <initializer>56</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="29" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a04f607b019b8409ebc86348db4d56cda" prot="public" static="no">
+        <name>STF_FP</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="31" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aeeb74f15b4679a43c42a7065a134d3f9" prot="public" static="no">
+        <name>STF_S0</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="32" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a5f810b3353b6c8e608882ed43c48fc82" prot="public" static="no">
+        <name>STF_S1</name>
+        <initializer>72</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="33" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aea0b0dfb3c435660af17982d012ef63e" prot="public" static="no">
+        <name>STF_A0</name>
+        <initializer>80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="34" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aaa807dd1c3e4cdc8da9de3adf93177f8" prot="public" static="no">
+        <name>STF_A1</name>
+        <initializer>88</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="35" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a1f619de6b758986c1063b21163005f2b" prot="public" static="no">
+        <name>STF_A2</name>
+        <initializer>96</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="36" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a672248134a3e5bef4115cd02646cc1b2" prot="public" static="no">
+        <name>STF_A3</name>
+        <initializer>104</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="37" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ad9c2b21651acb652cb312734e57d9402" prot="public" static="no">
+        <name>STF_A4</name>
+        <initializer>112</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="38" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a50fb41e794d5034408e19c1d4eb91da5" prot="public" static="no">
+        <name>STF_A5</name>
+        <initializer>120</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="39" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ad6079c9fbea931150f1676e247a7e39d" prot="public" static="no">
+        <name>STF_A6</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="40" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aa11d9ad2c254cde9ea3197a5337e1679" prot="public" static="no">
+        <name>STF_A7</name>
+        <initializer>136</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="41" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aa7b1d31f89ec613f5a60b55416db88ed" prot="public" static="no">
+        <name>STF_S2</name>
+        <initializer>144</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="42" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1af7b6c28643eed4d7f9f9daa0e570fffb" prot="public" static="no">
+        <name>STF_S3</name>
+        <initializer>152</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="43" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a9617554bbf339ada11d4413342235e02" prot="public" static="no">
+        <name>STF_S4</name>
+        <initializer>160</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="44" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a1a2c476657607c04e32f81be031a342b" prot="public" static="no">
+        <name>STF_S5</name>
+        <initializer>168</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="45" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1aa0bb7a7753babfd9a0f386711d62e9c9" prot="public" static="no">
+        <name>STF_S6</name>
+        <initializer>176</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="46" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ae0c10042eec156454f5cddb43b272bf6" prot="public" static="no">
+        <name>STF_S7</name>
+        <initializer>184</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="47" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1acde09390c68c3301a104d1e18789d08d" prot="public" static="no">
+        <name>STF_S8</name>
+        <initializer>192</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="48" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a38544ea5553842b6344c63ff2fc16fde" prot="public" static="no">
+        <name>STF_S9</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="49" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1adcb3adb6ff4cf1d6a57bb333a7fb27c5" prot="public" static="no">
+        <name>STF_S10</name>
+        <initializer>208</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="50" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a5349542488f8fc5446824a9a1b42c38d" prot="public" static="no">
+        <name>STF_S11</name>
+        <initializer>216</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="51" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ac36b5e94bede0b873e509381052d846f" prot="public" static="no">
+        <name>STF_T3</name>
+        <initializer>224</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="52" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a76260a337fa26d89c8098f10a18002ba" prot="public" static="no">
+        <name>STF_T4</name>
+        <initializer>232</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="53" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a61ac99566d7cbac14305e999c16269a5" prot="public" static="no">
+        <name>STF_T5</name>
+        <initializer>240</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="54" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1a79a961ff6cfad36bd2f26c5af453c010" prot="public" static="no">
+        <name>STF_T6</name>
+        <initializer>248</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="55" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stfoffset_8h_1ae8da2cdfcfcbd09f35fb687403c09513" prot="public" static="no">
+        <name>STF_MSTATUS</name>
+        <initializer>265</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" line="61" column="14" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="stfoffset_8h" kindref="compound">stfoffset.h</ref></computeroutput>中定义了<computeroutput><ref refid="strap_8h" kindref="compound">strap.h</ref></computeroutput>中的<computeroutput>strapframe_t</computeroutput>结构体各个成员变量的字节偏移数 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-16</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_SBI_STFOFFSET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_SBI_STFOFFSET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="constrains_8h" kindref="compound">constrains.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WITH_FP_REG<sp/>==<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>含浮点寄存器的trap<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>STF_SIZE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>不含浮点寄存器的trap<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>STF_SIZE<sp/><sp/><sp/><sp/>264</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_MEPC<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_RA<sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_SP<sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_GP<sp/><sp/><sp/><sp/><sp/><sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_TP<sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T0<sp/><sp/><sp/><sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T1<sp/><sp/><sp/><sp/><sp/><sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T2<sp/><sp/><sp/><sp/><sp/><sp/>56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>S0和FP是一个寄存器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_FP<sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S0<sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S1<sp/><sp/><sp/><sp/><sp/><sp/>72</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A0<sp/><sp/><sp/><sp/><sp/><sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A1<sp/><sp/><sp/><sp/><sp/><sp/>88</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A2<sp/><sp/><sp/><sp/><sp/><sp/>96</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A3<sp/><sp/><sp/><sp/><sp/><sp/>104</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A4<sp/><sp/><sp/><sp/><sp/><sp/>112</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A5<sp/><sp/><sp/><sp/><sp/><sp/>120</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A6<sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_A7<sp/><sp/><sp/><sp/><sp/><sp/>136</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S2<sp/><sp/><sp/><sp/><sp/><sp/>144</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S3<sp/><sp/><sp/><sp/><sp/><sp/>152</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S4<sp/><sp/><sp/><sp/><sp/><sp/>160</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S5<sp/><sp/><sp/><sp/><sp/><sp/>168</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S6<sp/><sp/><sp/><sp/><sp/><sp/>176</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S7<sp/><sp/><sp/><sp/><sp/><sp/>184</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S8<sp/><sp/><sp/><sp/><sp/><sp/>192</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S9<sp/><sp/><sp/><sp/><sp/><sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S10<sp/><sp/><sp/><sp/><sp/>208</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_S11<sp/><sp/><sp/><sp/><sp/>216</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T3<sp/><sp/><sp/><sp/><sp/><sp/>224</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T4<sp/><sp/><sp/><sp/><sp/><sp/>232</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T5<sp/><sp/><sp/><sp/><sp/><sp/>240</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STF_T6<sp/><sp/><sp/><sp/><sp/><sp/>248</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WITH_FP_REG<sp/>==<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>含浮点寄存器的trap<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>添加保存浮点寄存器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>STF_MSTATUS<sp/><sp/><sp/><sp/><sp/><sp/>265</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h"/>
+  </compounddef>
+</doxygen>

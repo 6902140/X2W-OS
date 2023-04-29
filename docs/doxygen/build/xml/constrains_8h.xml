@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="constrains_8h" kind="file" language="C++">
+    <compoundname>constrains.h</compoundname>
+    <includedby refid="assert_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/assert.h</includedby>
+    <includedby refid="types_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/types.h</includedby>
+    <includedby refid="io_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/io.h</includedby>
+    <includedby refid="kinit_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/kernel/kinit.h</includedby>
+    <includedby refid="ktrap_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/kernel/ktrap.h</includedby>
+    <includedby refid="sbi_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/sbi/sbi.h</includedby>
+    <includedby refid="sinit_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/sbi/sinit.h</includedby>
+    <includedby refid="stfoffset_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h</includedby>
+    <includedby refid="strap_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/sbi/strap.h</includedby>
+    <includedby refid="tfoffset_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/trap/tfoffset.h</includedby>
+    <includedby refid="trapframe_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h</includedby>
+    <includedby refid="uart_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/uart.h</includedby>
+    <invincdepgraph>
+      <node id="34">
+        <label>/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h</label>
+        <link refid="trapframe_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/data/proj/oskernel2023-x2w/include/user/ustdio.h</label>
+        <link refid="ustdio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/data/proj/oskernel2023-x2w/include/stdarg.h</label>
+        <link refid="stdarg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/secall.h</label>
+        <link refid="secall_8h"/>
+      </node>
+      <node id="30">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test.h</label>
+        <link refid="test_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h</label>
+        <link refid="sstdio_8h"/>
+      </node>
+      <node id="3">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/kdebug.h</label>
+        <link refid="kdebug_8h"/>
+      </node>
+      <node id="27">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/sinit.h</label>
+        <link refid="sinit_8h"/>
+      </node>
+      <node id="2">
+        <label>/home/data/proj/oskernel2023-x2w/include/assert.h</label>
+        <link refid="assert_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/data/proj/oskernel2023-x2w/include/stdlist.h</label>
+        <link refid="stdlist_8h"/>
+      </node>
+      <node id="32">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_kstdio.h</label>
+        <link refid="test__kstdio_8h"/>
+      </node>
+      <node id="17">
+        <label>/home/data/proj/oskernel2023-x2w/include/io.h</label>
+        <link refid="io_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/data/proj/oskernel2023-x2w/include/pg_types.h</label>
+        <link refid="pg__types_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/data/proj/oskernel2023-x2w/include/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/kstdio.h</label>
+        <link refid="kstdio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/sbi.h</label>
+        <link refid="sbi_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/constrains.h</label>
+        <link refid="constrains_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/strap.h</label>
+        <link refid="strap_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/smain.h</label>
+        <link refid="smain_8h"/>
+      </node>
+      <node id="23">
+        <label>/home/data/proj/oskernel2023-x2w/include/pgable.h</label>
+        <link refid="pgable_8h_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/data/proj/oskernel2023-x2w/include/stdbitmap.h</label>
+        <link refid="stdbitmap_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/data/proj/oskernel2023-x2w/include/mm.h</label>
+        <link refid="mm_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/data/proj/oskernel2023-x2w/include/uart.h</label>
+        <link refid="uart_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_stdlib.h</label>
+        <link refid="test__stdlib_8h"/>
+      </node>
+      <node id="14">
+        <label>/home/data/proj/oskernel2023-x2w/include/stdlib.h</label>
+        <link refid="stdlib_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>/home/data/proj/oskernel2023-x2w/include/trap/tfoffset.h</label>
+        <link refid="tfoffset_8h"/>
+      </node>
+      <node id="31">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_memory.h</label>
+        <link refid="test__memory_8h"/>
+      </node>
+      <node id="33">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_strap.h</label>
+        <link refid="test__strap_8h"/>
+      </node>
+      <node id="7">
+        <label>/home/data/proj/oskernel2023-x2w/include/stdfmt.h</label>
+        <link refid="stdfmt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/data/proj/oskernel2023-x2w/include/user/udebug.h</label>
+        <link refid="udebug_8h"/>
+      </node>
+      <node id="21">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/ktrap.h</label>
+        <link refid="ktrap_8h"/>
+      </node>
+      <node id="35">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/stfoffset.h</label>
+        <link refid="stfoffset_8h"/>
+      </node>
+      <node id="13">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_string.h</label>
+        <link refid="test__string_8h"/>
+      </node>
+      <node id="11">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_stdfmt.h</label>
+        <link refid="test__stdfmt_8h"/>
+      </node>
+      <node id="12">
+        <label>/home/data/proj/oskernel2023-x2w/include/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/kinit.h</label>
+        <link refid="kinit_8h_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="constrains_8h_1ad72dbcf6d0153db1b8d8a58001feed83" prot="public" static="no">
+        <name>DEBUG</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>内核是否处于DEBUG模式, 若: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>DEBUG = 0, 不会运行测试函数</para>
+</listitem><listitem><para>DEBUG = 1, 运行测试函数 </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="20" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constrains_8h_1af89a5df6a8924eb0fc0491190f3224a5" prot="public" static="no">
+        <name>WITH_FP_REG</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>CPU是否具有浮点寄存器, 若 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>WITH_FP_REG = 0, CPU 不具有浮点寄存器</para>
+</listitem><listitem><para>WITH_FP_REG = 1, CPU 具有浮点寄存器 </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="27" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constrains_8h_1a2a99df20f690809e56096a53216e6e14" prot="public" static="no">
+        <name>KERNEL_JUMP_ADDR</name>
+        <initializer>0x80200000</initializer>
+        <briefdescription>
+<para>内核的跳转地址, 在<computeroutput>kernel.ld</computeroutput>中定义 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="30" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constrains_8h_1a9378dd52d6cbf1e8a87b58570fda75a6" prot="public" static="no">
+        <name>PRINTF_STRING_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+<para><computeroutput>kprintf</computeroutput>和<computeroutput>uprintf</computeroutput>可以输出的字符串最大长度 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="33" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constrains_8h_1a615aed21aa6825462b7c17b0c238ffe2" prot="public" static="no">
+        <name>UART_BAUD_RATE</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+<para><computeroutput>UART</computeroutput>设备的波特率 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="36" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constrains_8h_1abcaa63d145f98e9d9b12fd8e0f2fe40f" prot="public" static="no">
+        <name>MAX_TEST_FUNCTION_NUM</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>最大测试函数的数量 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="39" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constrains_8h_1ae502fa58d8733344935307064f11d2d7" prot="public" static="no">
+        <name>MAX_INTR_EXCP_INFO_NUM</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para>中断/异常处理函数信息最大数量 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h" line="42" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/constrains.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput>constrain.h</computeroutput>定义了内核的一系列常数 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-09</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_CONSTRAINS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_CONSTRAINS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="constrains_8h_1ad72dbcf6d0153db1b8d8a58001feed83" refkind="member"><highlight class="preprocessor">#define<sp/>DEBUG<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="constrains_8h_1af89a5df6a8924eb0fc0491190f3224a5" refkind="member"><highlight class="preprocessor">#define<sp/>WITH_FP_REG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="constrains_8h_1a2a99df20f690809e56096a53216e6e14" refkind="member"><highlight class="preprocessor">#define<sp/>KERNEL_JUMP_ADDR<sp/>0x80200000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="constrains_8h_1a9378dd52d6cbf1e8a87b58570fda75a6" refkind="member"><highlight class="preprocessor">#define<sp/>PRINTF_STRING_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="constrains_8h_1a615aed21aa6825462b7c17b0c238ffe2" refkind="member"><highlight class="preprocessor">#define<sp/>UART_BAUD_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>115200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="constrains_8h_1abcaa63d145f98e9d9b12fd8e0f2fe40f" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_TEST_FUNCTION_NUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="constrains_8h_1ae502fa58d8733344935307064f11d2d7" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_INTR_EXCP_INFO_NUM<sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/constrains.h"/>
+  </compounddef>
+</doxygen>

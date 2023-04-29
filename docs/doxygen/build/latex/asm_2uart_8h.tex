@@ -1,0 +1,155 @@
+\hypertarget{asm_2uart_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/asm/uart.h 文件参考}
+\label{asm_2uart_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/asm/uart.h@{/home/data/proj/oskernel2023-\/x2w/include/asm/uart.h}}
+
+
+{\ttfamily \mbox{\hyperlink{asm_2uart_8h}{asm/uart.\+h}}}文件中定义了{\ttfamily A\+XI U\+A\+RT 16550}相关的常量  
+
+
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{asm_2uart_8h_af7cb12b462b4594bd759d1b4e241ec4c}\label{asm_2uart_8h_af7cb12b462b4594bd759d1b4e241ec4c}} 
+\#define {\bfseries U\+A\+RT}~0x10000000
+\item 
+\mbox{\Hypertarget{asm_2uart_8h_ac0b0689b015ac9657c7fdf082797e88e}\label{asm_2uart_8h_ac0b0689b015ac9657c7fdf082797e88e}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+S\+I\+ZE}~4096
+\item 
+\mbox{\Hypertarget{asm_2uart_8h_a87b7a54cec0c7dfafa97d47e7cfd988e}\label{asm_2uart_8h_a87b7a54cec0c7dfafa97d47e7cfd988e}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a87b7a54cec0c7dfafa97d47e7cfd988e}{U\+A\+R\+T16550\+\_\+\+C\+L\+O\+CK}}~1843200
+\begin{DoxyCompactList}\small\item\em {\ttfamily A\+XI U\+A\+RT 16550}芯片的时钟频率, 设置波特率时将根据时钟频率计算除数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a50b083e5f3c00432ebaee95a865aa746}\label{asm_2uart_8h_a50b083e5f3c00432ebaee95a865aa746}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a50b083e5f3c00432ebaee95a865aa746}{U\+A\+R\+T\+\_\+\+M\+M\+A\+P\+\_\+\+B\+A\+SE}}~0x10000000
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}设备在内存中映射的起始单元 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}\label{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(\mbox{\hyperlink{stdlib_8h_adc59f925a90e4b37b619e4ed89321029}{offset}})~(\mbox{\hyperlink{asm_2uart_8h_a50b083e5f3c00432ebaee95a865aa746}{U\+A\+R\+T\+\_\+\+M\+M\+A\+P\+\_\+\+B\+A\+SE}} + \mbox{\hyperlink{stdlib_8h_adc59f925a90e4b37b619e4ed89321029}{offset}})
+\begin{DoxyCompactList}\small\item\em 根据\+U\+A\+R\+T寄存器的偏移量计算在内存中的地址 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a23b9e788f979a7b74a192cfc4a3a2d96}\label{asm_2uart_8h_a23b9e788f979a7b74a192cfc4a3a2d96}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a23b9e788f979a7b74a192cfc4a3a2d96}{U\+A\+R\+T\+\_\+\+D\+AT}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x00)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的数据寄存器({\ttfamily Data Register}), 在发送模式和接受模式下有不同的作用 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a7a676f075475e46d27eb878977b867ec}\label{asm_2uart_8h_a7a676f075475e46d27eb878977b867ec}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a7a676f075475e46d27eb878977b867ec}{U\+A\+R\+T\+\_\+\+T\+HR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x00)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的发送数据寄存器({\ttfamily Transmit Holding Register}), {\ttfamily U\+A\+RT}设备处于发送模式时候存储要发送的数据 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a6b1d9e511e1020db09f787660371e927}\label{asm_2uart_8h_a6b1d9e511e1020db09f787660371e927}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a6b1d9e511e1020db09f787660371e927}{U\+A\+R\+T\+\_\+\+R\+HR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x00)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的接受数据寄存器({\ttfamily Receiving Holding Register}), {\ttfamily U\+A\+RT}设备处于接收模式时候存储要接受的数据 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{asm_2uart_8h_aaf7aaa372e86b3aa99e6c78242be2722}{U\+A\+R\+T\+\_\+\+I\+ER}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x01)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的中断使能寄存器({\ttfamily Interrupt Enable Register}) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{asm_2uart_8h_a5e72509f2fe0cabe3a05502b2c6a867a}{U\+A\+R\+T\+\_\+\+I\+SR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x02)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的中断状态寄存器({\ttfamily Interrupt Status Register}) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{asm_2uart_8h_a220a678f91ca8244b30fe813200c26c1}{U\+A\+R\+T\+\_\+\+F\+CR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x02)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的\+F\+I\+F\+O控制寄存器({\ttfamily F\+I\+FO Control Register}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a36c30861e332468c7f1998648e706740}\label{asm_2uart_8h_a36c30861e332468c7f1998648e706740}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a36c30861e332468c7f1998648e706740}{U\+A\+R\+T\+\_\+\+L\+CR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x03)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的线路控制寄存器({\ttfamily Line Control Register}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a8ef39bc0942ddd0411d87001d12224f4}\label{asm_2uart_8h_a8ef39bc0942ddd0411d87001d12224f4}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a8ef39bc0942ddd0411d87001d12224f4}{U\+A\+R\+T\+\_\+\+M\+CR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x04)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的{\ttfamily Moden}控制寄存器({\ttfamily Modem Control Register}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a0f8ac527073d763bac90daba987361c6}\label{asm_2uart_8h_a0f8ac527073d763bac90daba987361c6}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a0f8ac527073d763bac90daba987361c6}{U\+A\+R\+T\+\_\+\+L\+SR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x05)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的线路状态寄存器({\ttfamily Line Status Register}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a71067c48bdde7dc6c5d0a1c56746e776}\label{asm_2uart_8h_a71067c48bdde7dc6c5d0a1c56746e776}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a71067c48bdde7dc6c5d0a1c56746e776}{U\+A\+R\+T\+\_\+\+M\+SR}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x06)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的{\ttfamily Moden}状态寄存器({\ttfamily Modem Status Register}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a325451056249a66d1c7ceca8e52463e3}\label{asm_2uart_8h_a325451056249a66d1c7ceca8e52463e3}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a325451056249a66d1c7ceca8e52463e3}{U\+A\+R\+T\+\_\+\+D\+L\+\_\+\+L\+SB}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x00)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的除数寄存器低八位({\ttfamily Least Significant Bits}, {\ttfamily L\+SB of Divisor Latch}), 用于进行预分频, 即设置波特率 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_afa5670be346cb486d76bb75e732500fb}\label{asm_2uart_8h_afa5670be346cb486d76bb75e732500fb}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_afa5670be346cb486d76bb75e732500fb}{U\+A\+R\+T\+\_\+\+D\+L\+\_\+\+M\+SB}}~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x01)
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}的除数寄存器高八位({\ttfamily Most Significant Bits}, {\ttfamily M\+SB of Divisor Latch}), 用于进行预分频, 即设置波特率 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a087021cb4f563b545c2e827b1a95e97d}\label{asm_2uart_8h_a087021cb4f563b545c2e827b1a95e97d}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a087021cb4f563b545c2e827b1a95e97d}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+E\+RR}}~0b10000000
+\begin{DoxyCompactList}\small\item\em 传输出错, F\+I\+FO Error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_afb0b74c1b345da06af598e6d00c291a3}\label{asm_2uart_8h_afb0b74c1b345da06af598e6d00c291a3}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_afb0b74c1b345da06af598e6d00c291a3}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+T\+SE}}~0b01000000
+\begin{DoxyCompactList}\small\item\em 传输缓冲区(\+F\+I\+F\+O)和移位寄存器为空, Transmit Empty \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a367cdd2af61ca57bc1f7c78cca48704f}\label{asm_2uart_8h_a367cdd2af61ca57bc1f7c78cca48704f}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a367cdd2af61ca57bc1f7c78cca48704f}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+T\+HE}}~0b00100000
+\begin{DoxyCompactList}\small\item\em 传输缓冲区(\+F\+I\+F\+O)为空, Transmit Holding Empty \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a0b0f5510bc38ddd69eab01ed6f90a5ea}\label{asm_2uart_8h_a0b0f5510bc38ddd69eab01ed6f90a5ea}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a0b0f5510bc38ddd69eab01ed6f90a5ea}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+B\+KI}}~0b00010000
+\begin{DoxyCompactList}\small\item\em 传输被打断, Break Interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a394124b89c650442a1ec18d228349e82}\label{asm_2uart_8h_a394124b89c650442a1ec18d228349e82}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a394124b89c650442a1ec18d228349e82}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+F\+ME}}~0b00001000
+\begin{DoxyCompactList}\small\item\em 接受帧出错, 没有接收到停止位的帧, Framing Error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_ac13b37788c32483db8ac20d4809c5100}\label{asm_2uart_8h_ac13b37788c32483db8ac20d4809c5100}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_ac13b37788c32483db8ac20d4809c5100}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+P\+RE}}~0b00000100
+\begin{DoxyCompactList}\small\item\em 奇偶校验出错, Parity Error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a45510686ea3a27a0e1908a0ae414f80e}\label{asm_2uart_8h_a45510686ea3a27a0e1908a0ae414f80e}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a45510686ea3a27a0e1908a0ae414f80e}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+O\+RE}}~0b00000010
+\begin{DoxyCompactList}\small\item\em 数据溢出, Overrun Error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{asm_2uart_8h_a3d83de31d722cd373ee69a2a38aaed43}\label{asm_2uart_8h_a3d83de31d722cd373ee69a2a38aaed43}} 
+\#define \mbox{\hyperlink{asm_2uart_8h_a3d83de31d722cd373ee69a2a38aaed43}{U\+A\+R\+T\+\_\+\+L\+S\+R\+\_\+\+R\+DR}}~0b00000001
+\begin{DoxyCompactList}\small\item\em F\+I\+F\+O有数据, Receive Data Ready \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{asm_2uart_8h}{asm/uart.\+h}}}文件中定义了{\ttfamily A\+XI U\+A\+RT 16550}相关的常量 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gamil.com}{\texttt{ jack4shihong@gamil.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/09
+\end{DoxyDate}
+\begin{DoxyNote}{注解}
+关于{\ttfamily A\+XI U\+A\+RT 16550}芯片介绍\+: \href{https://wenku.baidu.com/view/6f7a176048d7c1c708a14521.html?_wkts_=1681021571718}{\texttt{ https\+://wenku.\+baidu.\+com/view/6f7a176048d7c1c708a14521.\+html?\+\_\+wkts\+\_\+=1681021571718}} 
+
+关于{\ttfamily A\+XI U\+A\+RT 16550}相关常量, 参考{\ttfamily A\+XI U\+A\+RT 16550}编程手册({\ttfamily Programming Table})\+: \href{http://byterunner.com/16550.html}{\texttt{ http\+://byterunner.\+com/16550.\+html}}
+\end{DoxyNote}
+\begin{DoxyWarning}{警告}
+{\ttfamily \mbox{\hyperlink{asm_2uart_8h}{asm/uart.\+h}}}仅提供{\ttfamily A\+XI U\+A\+RT 16550}相关常量的定义, {\ttfamily U\+A\+RT}相关功能定义在{\ttfamily uart.\+h}中
+\end{DoxyWarning}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{asm_2uart_8h_a220a678f91ca8244b30fe813200c26c1}\label{asm_2uart_8h_a220a678f91ca8244b30fe813200c26c1}} 
+\index{uart.h@{uart.h}!UART\_FCR@{UART\_FCR}}
+\index{UART\_FCR@{UART\_FCR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FCR}{UART\_FCR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+F\+CR~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x02)}
+
+
+
+{\ttfamily U\+A\+RT}的\+F\+I\+F\+O控制寄存器({\ttfamily F\+I\+FO Control Register}) 
+
+\begin{DoxyNote}{注解}
+{\ttfamily U\+A\+RT}设备每次通信发送/接受1bit数据, 因此{\ttfamily 16550}内部设置了缓冲区, 将发送/接受的数据保存在缓冲区中, 缓冲区空/满之后再向\+C\+P\+U发送中断. {\ttfamily 16550}的缓冲区最大为16字节, 可以通过设置{\ttfamily F\+CR}设置使用的缓冲区的大小 
+\end{DoxyNote}
+\mbox{\Hypertarget{asm_2uart_8h_aaf7aaa372e86b3aa99e6c78242be2722}\label{asm_2uart_8h_aaf7aaa372e86b3aa99e6c78242be2722}} 
+\index{uart.h@{uart.h}!UART\_IER@{UART\_IER}}
+\index{UART\_IER@{UART\_IER}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_IER}{UART\_IER}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+ER~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x01)}
+
+
+
+{\ttfamily U\+A\+RT}的中断使能寄存器({\ttfamily Interrupt Enable Register}) 
+
+\begin{DoxyNote}{注解}
+{\ttfamily 16550}支持四种中断, 优先级从高到低依次为\+:
+\begin{DoxyItemize}
+\item 接受出错中断
+\item 接受缓冲区满中断
+\item 发送缓冲区空中断
+\item Modem状态变化中断 四种中断源的使能状态由{\ttfamily I\+ER}寄存器中的控制 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{asm_2uart_8h_a5e72509f2fe0cabe3a05502b2c6a867a}\label{asm_2uart_8h_a5e72509f2fe0cabe3a05502b2c6a867a}} 
+\index{uart.h@{uart.h}!UART\_ISR@{UART\_ISR}}
+\index{UART\_ISR@{UART\_ISR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_ISR}{UART\_ISR}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+I\+SR~\mbox{\hyperlink{asm_2uart_8h_a7f93d38a32cec4b5d5bf20def021911e}{\+\_\+\+U\+A\+R\+T\+\_\+\+R\+EG}}(0x02)}
+
+
+
+{\ttfamily U\+A\+RT}的中断状态寄存器({\ttfamily Interrupt Status Register}) 
+
+\begin{DoxyNote}{注解}
+{\ttfamily 16550}的四种中断源共用一条中断请求线{\ttfamily I\+N\+TR}向{\ttfamily C\+PU}申请中断, 因此在{\ttfamily C\+PU}响应中断之后, 需要判断是那一个中断. 因此{\ttfamily 16550}使用{\ttfamily I\+SR}寄存器表明有无中断和当前最高级别的中断 
+\end{DoxyNote}

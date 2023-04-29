@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/stdlib.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stdlib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stdlib_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_STDLIB_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define __INCLUDE_STDLIB_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="stdlib_8h.html#adc59f925a90e4b37b619e4ed89321029">   39</a></span>&#160;<span class="preprocessor">#define offset(struct_type, member_name) \</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">    (size_t) (&amp;((struct_type*)0)-&gt;member_name)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a62bb4208280af3c1efd802971ce71318">   66</a></span>&#160;<span class="preprocessor">#define member2struct(struct_type, member_name, elem_ptr) \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    (struct_type*)((uint64_t)elem_ptr - offset(struct_type, member_name))</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlib_8h.html#aa29b43ffe3685a28aa766b0be471b994">itoa</a>(<a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> integer, <span class="keywordtype">char</span>** buf_ptr_addr, <a class="code" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> base);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a> <a class="code" href="stdlib_8h.html#affe9aa2f8448f2b2faa3e112d6d0811f">atoi</a>(<span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">types.h中定义了X2W-OS的内建类型</div></div>
+<div class="ttc" id="atypes_8h_html_aa232ecf786a74ce5363c36c10798d2b1"><div class="ttname"><a href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a></div><div class="ttdeci">unsigned long uint64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:26</div></div>
+<div class="ttc" id="atypes_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdoc">LP64中一个 char 宽度为 8 bit</div><div class="ttdef"><b>Definition:</b> types.h:23</div></div>
+<div class="ttc" id="astdlib_8h_html_affe9aa2f8448f2b2faa3e112d6d0811f"><div class="ttname"><a href="stdlib_8h.html#affe9aa2f8448f2b2faa3e112d6d0811f">atoi</a></div><div class="ttdeci">int64_t atoi(char *str)</div><div class="ttdoc">'atoi函数实现字符串转整形数字</div></div>
+<div class="ttc" id="atypes_8h_html_a312c7e8848187d110315ab83a7b3d4d0"><div class="ttname"><a href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a></div><div class="ttdeci">long int64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+<div class="ttc" id="astdlib_8h_html_aa29b43ffe3685a28aa766b0be471b994"><div class="ttname"><a href="stdlib_8h.html#aa29b43ffe3685a28aa766b0be471b994">itoa</a></div><div class="ttdeci">void itoa(uint64_t integer, char **buf_ptr_addr, uint8_t base)</div><div class="ttdoc">itoa (integer to ascii) 用于将uint64_t数字转换为char*数字, 并将其存入*buf_ptr_addr指向的内存中</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

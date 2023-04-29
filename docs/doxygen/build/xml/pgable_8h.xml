@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pgable_8h" kind="file" language="C++">
+    <compoundname>pgable.h</compoundname>
+    <includes refid="pg__types_8h" local="yes">pg_types.h</includes>
+    <includes refid="pg__attr_8h" local="yes">pg_attr.h</includes>
+    <includes refid="mm_8h" local="yes">mm.h</includes>
+    <includedby refid="mm_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/mm.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>pg_types.h</label>
+        <link refid="pg__types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/pgable.h</label>
+        <link refid="pgable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdbitmap.h</label>
+        <link refid="stdbitmap_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mm.h</label>
+        <link refid="mm_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ptregs.h</label>
+        <link refid="ptregs_8h_source"/>
+      </node>
+      <node id="5">
+        <label>pg_attr.h</label>
+        <link refid="pg__attr_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/pgable.h</label>
+        <link refid="pgable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/data/proj/oskernel2023-x2w/include/mm.h</label>
+        <link refid="mm_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pgable_8h_1ae7c374984f9e9cb7e7134ff51be1a195" prot="public" static="no">
+        <name>_PAGE_BASE</name>
+        <initializer>(_PAGE_PRESENT | _PAGE_ACCESSED | _PAGE_USER)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="9" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1ab4f9e6a57253d8c99775a17096f26fd8" prot="public" static="no">
+        <name>PAGE_NONE</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_PROT_NONE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="11" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a23218b51de2f748d10cd8a6db98d8eb5" prot="public" static="no">
+        <name>PAGE_READ</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_BASE | _PAGE_READ)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="12" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a559697780e34fd09ba6a2e909f0fe1df" prot="public" static="no">
+        <name>PAGE_WRITE</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_BASE | _PAGE_READ | _PAGE_WRITE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="13" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a9b935e21cf8af38e8c498e53dfe130fb" prot="public" static="no">
+        <name>PAGE_EXEC</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_BASE | _PAGE_EXEC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="14" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a22a3a8bb814c91c64b1a35a1f4bf9bc4" prot="public" static="no">
+        <name>PAGE_READ_EXEC</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_BASE | _PAGE_READ | _PAGE_EXEC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="15" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a9c80663b9a1e54a9bbda6ddf63ac9b71" prot="public" static="no">
+        <name>PAGE_WRITE_EXEC</name>
+        <initializer>					 <ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_BASE | _PAGE_READ |	\
+					 _PAGE_EXEC | _PAGE_WRITE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="16" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a77ddcc2386ec30484ac1042342330927" prot="public" static="no">
+        <name>PAGE_COPY</name>
+        <initializer>PAGE_READ</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="19" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a81a46095eb1066f665435b9b60e942b1" prot="public" static="no">
+        <name>PAGE_COPY_EXEC</name>
+        <initializer>PAGE_EXEC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="20" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1ac950783e98864b39386b56d78323e808" prot="public" static="no">
+        <name>PAGE_COPY_READ_EXEC</name>
+        <initializer>PAGE_READ_EXEC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="21" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a5e2a280dd31cb9e3cec37fe2129d7e47" prot="public" static="no">
+        <name>PAGE_SHARED</name>
+        <initializer>PAGE_WRITE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="22" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1afd46e89c129f1593208eb0732a46d016" prot="public" static="no">
+        <name>PAGE_SHARED_EXEC</name>
+        <initializer>PAGE_WRITE_EXEC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="23" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a806b7fa358054c555c5808c2c1d0824b" prot="public" static="no">
+        <name>_PAGE_KERNEL</name>
+        <initializer>				(_PAGE_READ \
+				| _PAGE_WRITE \
+				| _PAGE_PRESENT \
+				| _PAGE_ACCESSED \
+				| _PAGE_DIRTY \
+				| _PAGE_GLOBAL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="25" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a4b18171a251b1878163154200d45e997" prot="public" static="no">
+        <name>PAGE_KERNEL</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_KERNEL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="32" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a0dad2536f6437c0fef5985a500bae76a" prot="public" static="no">
+        <name>PAGE_KERNEL_READ</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_KERNEL &amp; ~_PAGE_WRITE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="33" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1af091a22ee23d2ad2db6337f458f568f4" prot="public" static="no">
+        <name>PAGE_KERNEL_EXEC</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_KERNEL | _PAGE_EXEC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="34" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1aac2bb8a6d6c19e4b69a63a8d25fd6467" prot="public" static="no">
+        <name>PAGE_KERNEL_READ_EXEC</name>
+        <initializer>					 <ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>((_PAGE_KERNEL &amp; ~_PAGE_WRITE) \
+					 | _PAGE_EXEC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="35" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a01788c239976a50ddb46282f3a772700" prot="public" static="no">
+        <name>PAGE_TABLE</name>
+        <initializer><ref refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" kindref="member">__pgprot</ref>(_PAGE_TABLE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="38" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a9a7652401100cb4f21c2a207e29be515" prot="public" static="no">
+        <name>pgd_index</name>
+        <param><defname>addr</defname></param>
+        <initializer>(((addr) &gt;&gt; PGDIR_SHIFT) &amp; (PTRS_PER_PGD - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="41" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a40137fd7f7aca8ec076ee87ec67ebc88" prot="public" static="no">
+        <name>pgd_offset_raw</name>
+        <param><defname>pgd</defname></param>
+        <param><defname>addr</defname></param>
+        <initializer>((pgd) + pgd_index(addr))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="44" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1af9aee5c1ae14e8fa6d6a90e88ec6e23c" prot="public" static="no">
+        <name>pgd_addr_end</name>
+        <param><defname>addr</defname></param>
+        <param><defname>end</defname></param>
+        <initializer>({	unsigned long __boundary = ((addr) + PGDIR_SIZE) &amp; PGDIR_MASK;	\
+	(__boundary - 1 &lt; (end) - 1) ? __boundary : (end);		\
+})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="51" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a3e5dbc7129a61909599559b3179e850d" prot="public" static="no">
+        <name>pmd_addr_end</name>
+        <param><defname>addr</defname></param>
+        <param><defname>end</defname></param>
+        <initializer>({	unsigned long __boundary = ((addr) + PMD_SIZE) &amp; PMD_MASK;	\
+	(__boundary - 1 &lt; (end) - 1) ? __boundary : (end);		\
+})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="56" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a853168d0daba29edcd089520525978f7" prot="public" static="no">
+        <name>pgd_none</name>
+        <param><defname>pgd</defname></param>
+        <initializer>(!pgd_val(pgd))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="61" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a17653f32f993497d2203833686fe82a2" prot="public" static="no">
+        <name>pmd_none</name>
+        <param><defname>pmd</defname></param>
+        <initializer>(!pmd_val(pmd))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="62" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a73d0fb342e7e19659a66ac094e42b4d1" prot="public" static="no">
+        <name>pte_none</name>
+        <param><defname>pte</defname></param>
+        <initializer>(!pte_val(pte))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="63" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a982f5ee72ced35c7482d9c7b4b2edb3f" prot="public" static="no">
+        <name>pmd_index</name>
+        <param><defname>addr</defname></param>
+        <initializer>((addr) &gt;&gt; PMD_SHIFT &amp; (PTRS_PER_PMD - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="70" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1a02fc7b1667ef385773e26305d77794d2" prot="public" static="no">
+        <name>pmd_offset_phys</name>
+        <param><defname>pgd</defname></param>
+        <param><defname>addr</defname></param>
+        <initializer>((<ref refid="structpmd__t" kindref="compound">pmd_t</ref> *)(pgd_page_paddr(*(pgd)) + pmd_index(addr) * sizeof(<ref refid="structpmd__t" kindref="compound">pmd_t</ref>)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="71" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pgable_8h_1aaabf39d754cb92f1f42a0d7e34378ae4" prot="public" static="no">
+        <name>pte_index</name>
+        <param><defname>addr</defname></param>
+        <initializer>(((addr) &gt;&gt; <ref refid="mm_8h_1a850d80ca2291d26b40dc6b25c419f81a" kindref="member">PAGE_SHIFT</ref>) &amp; (PTRS_PER_PTE - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="92" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pgable_8h_1a33d1610c4d58be851e51b81eea675705" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long pgd_page_paddr</definition>
+        <argsstring>(pgd_t pgd)</argsstring>
+        <name>pgd_page_paddr</name>
+        <param>
+          <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref></type>
+          <declname>pgd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="65" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1aaa9dd117216e4d3914ced2c1fdf4c023" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref> *</type>
+        <definition>static pmd_t* get_pmdp_from_pgdp</definition>
+        <argsstring>(pgd_t *pgdp, unsigned long va)</argsstring>
+        <name>get_pmdp_from_pgdp</name>
+        <param>
+          <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref> *</type>
+          <declname>pgdp</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>va</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="73" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="73" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a2423d3a6db6b913c1fca6cd20899aae8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long pmd_page_paddr</definition>
+        <argsstring>(pmd_t pmd)</argsstring>
+        <name>pmd_page_paddr</name>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref></type>
+          <declname>pmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="87" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a68e624284ec71c50bb5bad6ce1bf67e1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref> *</type>
+        <definition>static pte_t* get_ptep_from_pmdp</definition>
+        <argsstring>(pmd_t *pmdp, unsigned long va)</argsstring>
+        <name>get_ptep_from_pmdp</name>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref> *</type>
+          <declname>pmdp</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>va</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="94" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="94" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a942d3e936a712c23387490421b9a2bb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void set_pgd</definition>
+        <argsstring>(pgd_t *pgdp, pgd_t pgd)</argsstring>
+        <name>set_pgd</name>
+        <param>
+          <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref> *</type>
+          <declname>pgdp</declname>
+        </param>
+        <param>
+          <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref></type>
+          <declname>pgd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="108" column="20" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a94b140fe89924e6fdf83de3bf3cc9ffa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void set_pmd</definition>
+        <argsstring>(pmd_t *pmdp, pmd_t pmd)</argsstring>
+        <name>set_pmd</name>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref> *</type>
+          <declname>pmdp</declname>
+        </param>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref></type>
+          <declname>pmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="113" column="20" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a86b24a60a63f232e464440d4c46c55c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void set_pte</definition>
+        <argsstring>(pte_t *ptep, pte_t pte)</argsstring>
+        <name>set_pte</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref> *</type>
+          <declname>ptep</declname>
+        </param>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="118" column="20" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a4d9ce8dbde5e786a0791063797aea59a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref></type>
+        <definition>static pgd_t pfn_pgd</definition>
+        <argsstring>(unsigned long pfn, pgprot_t prot)</argsstring>
+        <name>pfn_pgd</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>pfn</declname>
+        </param>
+        <param>
+          <type><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref></type>
+          <declname>prot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="123" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a3b8478fd28c1fd67f63044664ff63aeb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long _pgd_pfn</definition>
+        <argsstring>(pgd_t pgd)</argsstring>
+        <name>_pgd_pfn</name>
+        <param>
+          <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref></type>
+          <declname>pgd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="128" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a57499df9a098f8ffa71ea72ffafde95e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref></type>
+        <definition>static pmd_t pfn_pmd</definition>
+        <argsstring>(unsigned long pfn, pgprot_t prot)</argsstring>
+        <name>pfn_pmd</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>pfn</declname>
+        </param>
+        <param>
+          <type><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref></type>
+          <declname>prot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="133" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1afcbe178eb7bbd6a08054dd9cbfeb3827" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long _pmd_pfn</definition>
+        <argsstring>(pmd_t pmd)</argsstring>
+        <name>_pmd_pfn</name>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref></type>
+          <declname>pmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="138" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1ac85a4e7a4a30e71ba0a0897247eb85c3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+        <definition>static pte_t pfn_pte</definition>
+        <argsstring>(unsigned long pfn, pgprot_t prot)</argsstring>
+        <name>pfn_pte</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>pfn</declname>
+        </param>
+        <param>
+          <type><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref></type>
+          <declname>prot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="144" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a42b5c97d433956c78bbc4dd1d0682376" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int pmd_present</definition>
+        <argsstring>(pmd_t pmd)</argsstring>
+        <name>pmd_present</name>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref></type>
+          <declname>pmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="149" column="19" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a02b8f718d94f374d2b6fe23632b43afd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int pmd_leaf</definition>
+        <argsstring>(pmd_t pmd)</argsstring>
+        <name>pmd_leaf</name>
+        <param>
+          <type><ref refid="structpmd__t" kindref="compound">pmd_t</ref></type>
+          <declname>pmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="154" column="19" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1aa3149716769ddd45feda4baa5d0cd12b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int pte_write</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_write</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="159" column="19" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a0f4e4e9b8f00b6458436172691c8a256" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int pte_exec</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_exec</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="164" column="19" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a5ba40ca3f531c3fd17d1d0e849495344" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int pte_dirty</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_dirty</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="169" column="19" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="169" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1afbf0f0cc6f2addc789a2406c757617a2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int pte_young</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_young</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="174" column="19" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1adb1781d31de0053f8bb00aa9be367161" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+        <definition>static pte_t pte_wrprotect</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_wrprotect</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="179" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1ae88cbdb56be3d90a82d844ee4dcbeab5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+        <definition>static pte_t pte_mkwrite</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_mkwrite</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="184" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a4b43bf4dfa521a69dcbd3254b6180637" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+        <definition>static pte_t pte_mkdirty</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_mkdirty</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="189" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1ae420d56e87c6cf24c416ab7d750e3ed8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+        <definition>static pte_t pte_mkclean</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_mkclean</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="194" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a7de9c9d982e51e57bf299cf78081761a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+        <definition>static pte_t pte_mkyoung</definition>
+        <argsstring>(pte_t pte)</argsstring>
+        <name>pte_mkyoung</name>
+        <param>
+          <type><ref refid="structpte__t" kindref="compound">pte_t</ref></type>
+          <declname>pte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="199" column="21" bodyfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1a9a550035a81f24353d1282e784d4ea02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_pgtable</definition>
+        <argsstring>(void)</argsstring>
+        <name>dump_pgtable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="204" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" declline="204" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="pgable_8h_1af2329e79228cf542dee7d3406e411cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void walk_pgd</definition>
+        <argsstring>(pgd_t *pgd, unsigned long start, unsigned long size)</argsstring>
+        <name>walk_pgd</name>
+        <param>
+          <type><ref refid="structpgd__t" kindref="compound">pgd_t</ref> *</type>
+          <declname>pgd</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h" line="205" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/pgable.h" declline="205" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_ASM_RISCV_PGTABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ASM_RISCV_PGTABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pg__types_8h" kindref="compound">pg_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pg__attr_8h" kindref="compound">pg_attr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mm_8h" kindref="compound">mm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Page<sp/>protection<sp/>bits<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_BASE<sp/><sp/>(_PAGE_PRESENT<sp/>|<sp/>_PAGE_ACCESSED<sp/>|<sp/>_PAGE_USER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_PROT_NONE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_READ<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_BASE<sp/>|<sp/>_PAGE_READ)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_WRITE<sp/><sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_BASE<sp/>|<sp/>_PAGE_READ<sp/>|<sp/>_PAGE_WRITE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_EXEC<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_BASE<sp/>|<sp/>_PAGE_EXEC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_READ_EXEC<sp/><sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_BASE<sp/>|<sp/>_PAGE_READ<sp/>|<sp/>_PAGE_EXEC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_WRITE_EXEC<sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_BASE<sp/>|<sp/>_PAGE_READ<sp/>|<sp/><sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_PAGE_EXEC<sp/>|<sp/>_PAGE_WRITE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_COPY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PAGE_READ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_COPY_EXEC<sp/><sp/><sp/><sp/><sp/><sp/>PAGE_EXEC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_COPY_READ_EXEC<sp/>PAGE_READ_EXEC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_SHARED<sp/><sp/><sp/><sp/><sp/>PAGE_WRITE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_SHARED_EXEC<sp/><sp/><sp/><sp/>PAGE_WRITE_EXEC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_KERNEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(_PAGE_READ<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>_PAGE_WRITE<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>_PAGE_PRESENT<sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>_PAGE_ACCESSED<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>_PAGE_DIRTY<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>_PAGE_GLOBAL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_KERNEL<sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_KERNEL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_KERNEL_READ<sp/><sp/><sp/><sp/>__pgprot(_PAGE_KERNEL<sp/>&amp;<sp/>~_PAGE_WRITE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_KERNEL_EXEC<sp/><sp/><sp/><sp/>__pgprot(_PAGE_KERNEL<sp/>|<sp/>_PAGE_EXEC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_KERNEL_READ_EXEC<sp/><sp/><sp/>__pgprot((_PAGE_KERNEL<sp/>&amp;<sp/>~_PAGE_WRITE)<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>_PAGE_EXEC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_TABLE<sp/><sp/><sp/><sp/><sp/><sp/>__pgprot(_PAGE_TABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>查找PGD索引<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pgd_index(addr)<sp/>(((addr)<sp/>&gt;&gt;<sp/>PGDIR_SHIFT)<sp/>&amp;<sp/>(PTRS_PER_PGD<sp/>-<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>通过地址addr查找PGD的表项<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pgd_offset_raw(pgd,<sp/>addr)<sp/>((pgd)<sp/>+<sp/>pgd_index(addr))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*这个宏定义用于确定给定的地址范围内的页全局目录<sp/>(Page<sp/>Global<sp/>Directory,<sp/>PGD)<sp/>的范围，并返回它们的边界地址。</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">具体地，该宏定义首先将给定的地址<sp/>addr<sp/>加上<sp/>PGDIR_SIZE（表示一个<sp/>PGD<sp/>的大小）并与<sp/>PGDIR_MASK（表示<sp/>PGD<sp/>的掩码）相与，</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">这样可以得到最接近<sp/>addr<sp/>且大于等于<sp/>addr<sp/>的<sp/>PGD<sp/>边界地址。如果这个<sp/>PGD<sp/>边界地址小于<sp/>end，那么这个地址就是下一个<sp/>PGD<sp/>边界地址，</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">否则下一个<sp/>PGD<sp/>边界地址就是<sp/>end。该宏定义使用了<sp/>({})<sp/>括号表达式，可以返回一个表达式结果。</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pgd_addr_end(addr,<sp/>end)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor">({<sp/><sp/>unsigned<sp/>long<sp/>__boundary<sp/>=<sp/>((addr)<sp/>+<sp/>PGDIR_SIZE)<sp/>&amp;<sp/>PGDIR_MASK;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(__boundary<sp/>-<sp/>1<sp/>&lt;<sp/>(end)<sp/>-<sp/>1)<sp/>?<sp/>__boundary<sp/>:<sp/>(end);<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pmd_addr_end(addr,<sp/>end)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor">({<sp/><sp/>unsigned<sp/>long<sp/>__boundary<sp/>=<sp/>((addr)<sp/>+<sp/>PMD_SIZE)<sp/>&amp;<sp/>PMD_MASK;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(__boundary<sp/>-<sp/>1<sp/>&lt;<sp/>(end)<sp/>-<sp/>1)<sp/>?<sp/>__boundary<sp/>:<sp/>(end);<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor">})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pgd_none(pgd)<sp/>(!pgd_val(pgd))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pmd_none(pmd)<sp/>(!pmd_val(pmd))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pte_none(pte)<sp/>(!pte_val(pte))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pgd_page_paddr(<ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>pgd)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pgd_val(pgd)<sp/>&gt;&gt;<sp/>_PAGE_PFN_SHIFT)<sp/>&lt;&lt;<sp/>PTE_SHIFT;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pmd_index(addr)<sp/>((addr)<sp/>&gt;&gt;<sp/>PMD_SHIFT<sp/>&amp;<sp/>(PTRS_PER_PMD<sp/>-<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pmd_offset_phys(pgd,<sp/>addr)<sp/>((pmd_t<sp/>*)(pgd_page_paddr(*(pgd))<sp/>+<sp/>pmd_index(addr)<sp/>*<sp/>sizeof(pmd_t)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>*get_pmdp_from_pgdp(<ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>*pgdp,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>va)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>*pmd_base;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>由虚拟地址va，能找到对应的PMD表项的偏移offset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>pmd_index(va);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>由PGD表项的内容，解码出下一级页表PMD的基地址<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>pmd_base<sp/>=<sp/>(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>*)pgd_page_paddr(*pgdp);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PMD的基地址加上index，得到对应的pmd表项的地址*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pmd_base<sp/>+<sp/>index;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pmd_page_paddr(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>pmd)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pmd_val(pmd)<sp/>&gt;&gt;<sp/>_PAGE_PFN_SHIFT)<sp/>&lt;&lt;<sp/>PTE_SHIFT;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pte_index(addr)<sp/>(((addr)<sp/>&gt;&gt;<sp/>PAGE_SHIFT)<sp/>&amp;<sp/>(PTRS_PER_PTE<sp/>-<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>*get_ptep_from_pmdp(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>*pmdp,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>va)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>*pte_base;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>由虚拟地址va，能找到对应的PTE表项的偏移offset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>pte_index(va);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>由PMD表项的内容，解码出下一级页表PTE的基地址<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>pte_base<sp/>=<sp/>(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>*)pmd_page_paddr(*pmdp);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PTE的基地址加上index，得到对应的pte表项的地址*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pte_base<sp/>+<sp/>index;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_pgd(<ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>*pgdp,<sp/><ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>pgd)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>*pgdp<sp/>=<sp/>pgd;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_pmd(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>*pmdp,<sp/><ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>pmd)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>*pmdp<sp/>=<sp/>pmd;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_pte(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>*ptep,<sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>*ptep<sp/>=<sp/>pte;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>pfn_pgd(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pfn,<sp/><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref><sp/>prot)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pgd((pfn<sp/>&lt;&lt;<sp/>_PAGE_PFN_SHIFT)<sp/>|<sp/><ref refid="pg__types_8h_1a02f3364ea339abc727ddb02ff7225695" kindref="member">pgprot_val</ref>(prot));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>_pgd_pfn(<ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>pgd)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pgd_val(pgd)<sp/>&gt;&gt;<sp/>_PAGE_PFN_SHIFT;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>pfn_pmd(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pfn,<sp/><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref><sp/>prot)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pmd((pfn<sp/>&lt;&lt;<sp/>_PAGE_PFN_SHIFT)<sp/>|<sp/><ref refid="pg__types_8h_1a02f3364ea339abc727ddb02ff7225695" kindref="member">pgprot_val</ref>(prot));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>_pmd_pfn(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>pmd)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pmd_val(pmd)<sp/>&gt;&gt;<sp/>_PAGE_PFN_SHIFT;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//这个函数很简单，就是根据page<sp/>table的处理之后的地址pfn，再结合后十位的属性描述符生成一个page_table_entry<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pfn_pte(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pfn,<sp/><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref><sp/>prot)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pte((pfn<sp/>&lt;&lt;<sp/>_PAGE_PFN_SHIFT)<sp/>|<sp/><ref refid="pg__types_8h_1a02f3364ea339abc727ddb02ff7225695" kindref="member">pgprot_val</ref>(prot));</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pmd_present(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>pmd)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pmd_val(pmd)<sp/>&amp;<sp/>_PAGE_PRESENT<sp/>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pmd_leaf(<ref refid="structpmd__t" kindref="compound">pmd_t</ref><sp/>pmd)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pmd_present(pmd)<sp/>&amp;&amp;<sp/>(pmd_val(pmd)<sp/>&amp;<sp/>_PAGE_LEAF);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pte_write(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pte_val(pte)<sp/>&amp;<sp/>_PAGE_WRITE;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pte_exec(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pte_val(pte)<sp/>&amp;<sp/>_PAGE_EXEC;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pte_dirty(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pte_val(pte)<sp/>&amp;<sp/>_PAGE_DIRTY;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pte_young(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pte_val(pte)<sp/>&amp;<sp/>_PAGE_ACCESSED;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte_wrprotect(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pte(pte_val(pte)<sp/>&amp;<sp/>~(_PAGE_WRITE));</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte_mkwrite(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pte(pte_val(pte)<sp/>|<sp/>_PAGE_WRITE);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte_mkdirty(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pte(pte_val(pte)<sp/>|<sp/>_PAGE_DIRTY);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte_mkclean(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pte(pte_val(pte)<sp/>&amp;<sp/>~(_PAGE_DIRTY));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte_mkyoung(<ref refid="structpte__t" kindref="compound">pte_t</ref><sp/>pte)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__pte(pte_val(pte)<sp/>|<sp/>_PAGE_ACCESSED);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dump_pgtable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>walk_pgd(<ref refid="structpgd__t" kindref="compound">pgd_t</ref><sp/>*pgd,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/pgable.h"/>
+  </compounddef>
+</doxygen>

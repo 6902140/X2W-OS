@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/sbi/sbi.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_5299e398a241aad4d173dc0e5cfe4485.html">sbi</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">sbi.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="sbi_8h.html" title="sbi.h为操作系统提供了SBI调用(M模式下的功能接口)">sbi.h</a></code>为操作系统提供了SBI调用(M模式下的功能接口)  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="constrains_8h_source.html">constrains.h</a>&quot;</code><br />
+</div>
+<p><a href="sbi_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ab1806b9b2fd36cdda4cd3a5a1ddde20a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#ab1806b9b2fd36cdda4cd3a5a1ddde20a">_SBICALL</a>(scall_id,  arg0,  arg1,  arg2)</td></tr>
+<tr class="memdesc:ab1806b9b2fd36cdda4cd3a5a1ddde20a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_SBICALL</code>宏函数将会触发<code>ecall</code>异常, 而后跳转到<code>strap_enter</code>函数中运行, 该函数定义在<code>strap_entry.S</code>中  <a href="sbi_8h.html#ab1806b9b2fd36cdda4cd3a5a1ddde20a">更多...</a><br /></td></tr>
+<tr class="separator:ab1806b9b2fd36cdda4cd3a5a1ddde20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8a7d93e06d03d9378b3fdcf405924a"><td class="memItemLeft" align="right" valign="top"><a id="a7a8a7d93e06d03d9378b3fdcf405924a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a7a8a7d93e06d03d9378b3fdcf405924a">_SBICALL0</a>(scall_id)&#160;&#160;&#160;<a class="el" href="sbi_8h.html#ab1806b9b2fd36cdda4cd3a5a1ddde20a">_SBICALL</a>(scall_id, 0, 0, 0)</td></tr>
+<tr class="memdesc:a7a8a7d93e06d03d9378b3fdcf405924a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_SBICALL0</code>为接受0个参数的<code>SBI</code>调用 <br /></td></tr>
+<tr class="separator:a7a8a7d93e06d03d9378b3fdcf405924a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbe8366d23e803d18afa20376174fb1"><td class="memItemLeft" align="right" valign="top"><a id="a9fbe8366d23e803d18afa20376174fb1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a9fbe8366d23e803d18afa20376174fb1">_SBICALL1</a>(scall_id,  arg0)&#160;&#160;&#160;<a class="el" href="sbi_8h.html#ab1806b9b2fd36cdda4cd3a5a1ddde20a">_SBICALL</a>(scall_id, arg0, 0, 0)</td></tr>
+<tr class="memdesc:a9fbe8366d23e803d18afa20376174fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_SBICALL1</code>为接受1个参数的<code>SBI</code>调用 <br /></td></tr>
+<tr class="separator:a9fbe8366d23e803d18afa20376174fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8f8124c74582321259980998d56bdd"><td class="memItemLeft" align="right" valign="top"><a id="aec8f8124c74582321259980998d56bdd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#aec8f8124c74582321259980998d56bdd">_SBICALL2</a>(scall_id,  arg0,  arg1)&#160;&#160;&#160;<a class="el" href="sbi_8h.html#ab1806b9b2fd36cdda4cd3a5a1ddde20a">_SBICALL</a>(scall_id, arg0, arg1, 0)</td></tr>
+<tr class="memdesc:aec8f8124c74582321259980998d56bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_SBICALL2</code>为接受2个参数的<code>SBI</code>调用 <br /></td></tr>
+<tr class="separator:aec8f8124c74582321259980998d56bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43267e673930713b8f9f97675ac59d03"><td class="memItemLeft" align="right" valign="top"><a id="a43267e673930713b8f9f97675ac59d03"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a43267e673930713b8f9f97675ac59d03">_SBICALL3</a>(scall_id,  arg0,  arg1,  arg2)&#160;&#160;&#160;<a class="el" href="sbi_8h.html#ab1806b9b2fd36cdda4cd3a5a1ddde20a">_SBICALL</a>(scall_id, arg0, arg1, arg2)</td></tr>
+<tr class="memdesc:a43267e673930713b8f9f97675ac59d03"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>_SBICALL3</code>为接受3个参数的<code>SBI</code>调用 <br /></td></tr>
+<tr class="separator:a43267e673930713b8f9f97675ac59d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a1a40f8005dee91348ffaa10d8d059a7e"><td class="memItemLeft" align="right" valign="top"><a id="a1a40f8005dee91348ffaa10d8d059a7e"></a>
+typedef enum <a class="el" href="sbi_8h.html#a334b7276d6f4a176fa31284884cb19c6">__sbicall_id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a1a40f8005dee91348ffaa10d8d059a7e">sbicall_id_t</a></td></tr>
+<tr class="memdesc:a1a40f8005dee91348ffaa10d8d059a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sbicall_id_t</code>内定义了<code>SBI</code>调用号 <br /></td></tr>
+<tr class="separator:a1a40f8005dee91348ffaa10d8d059a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a334b7276d6f4a176fa31284884cb19c6"><td class="memItemLeft" align="right" valign="top"><a id="a334b7276d6f4a176fa31284884cb19c6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a334b7276d6f4a176fa31284884cb19c6">__sbicall_id_t</a> { <b>SBICALL_SETTIMER</b>, 
+<b>SBICALL_CONSOLE_PUTCHAR</b>, 
+<b>SBICALL_CONSOLE_PUTSTR</b>, 
+<b>SBICALL_CONSOLE_GETCHAR</b>
+ }</td></tr>
+<tr class="memdesc:a334b7276d6f4a176fa31284884cb19c6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sbicall_id_t</code>内定义了<code>SBI</code>调用号 <br /></td></tr>
+<tr class="separator:a334b7276d6f4a176fa31284884cb19c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a3fd620bafabc522ae9fec0063d74f561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a3fd620bafabc522ae9fec0063d74f561">sbi_settimer</a> (<a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> value)</td></tr>
+<tr class="memdesc:a3fd620bafabc522ae9fec0063d74f561"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sbi_settimer</code>用于设置时钟  <a href="sbi_8h.html#a3fd620bafabc522ae9fec0063d74f561">更多...</a><br /></td></tr>
+<tr class="separator:a3fd620bafabc522ae9fec0063d74f561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84b1d0d5e4e560a640e32e1516d9134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#ae84b1d0d5e4e560a640e32e1516d9134">sbi_putc</a> (char c)</td></tr>
+<tr class="memdesc:ae84b1d0d5e4e560a640e32e1516d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sbi_putc</code>用于向终端输出一个字符  <a href="sbi_8h.html#ae84b1d0d5e4e560a640e32e1516d9134">更多...</a><br /></td></tr>
+<tr class="separator:ae84b1d0d5e4e560a640e32e1516d9134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07077ca42bb9255058acb8227b65cce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#aa07077ca42bb9255058acb8227b65cce">sbi_puts</a> (char *str)</td></tr>
+<tr class="memdesc:aa07077ca42bb9255058acb8227b65cce"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sbi_puts</code>用于向字符输出一个字符串  <a href="sbi_8h.html#aa07077ca42bb9255058acb8227b65cce">更多...</a><br /></td></tr>
+<tr class="separator:aa07077ca42bb9255058acb8227b65cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="sbi_8h.html" title="sbi.h为操作系统提供了SBI调用(M模式下的功能接口)">sbi.h</a></code>为操作系统提供了SBI调用(M模式下的功能接口) </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'ga'+'mil'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>amil<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-15</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="ab1806b9b2fd36cdda4cd3a5a1ddde20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1806b9b2fd36cdda4cd3a5a1ddde20a">&#9670;&nbsp;</a></span>_SBICALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _SBICALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">scall_id, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    ({             \</div>
+<div class="line">    register <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a0 <span class="keyword">asm</span> (<span class="stringliteral">&quot;a0&quot;</span>) = (<a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>)(arg0);         \</div>
+<div class="line">    register <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a1 <span class="keyword">asm</span> (<span class="stringliteral">&quot;a1&quot;</span>) = (<a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>)(arg1);         \</div>
+<div class="line">    register <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a2 <span class="keyword">asm</span> (<span class="stringliteral">&quot;a2&quot;</span>) = (<a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>)(arg2);         \</div>
+<div class="line">    register <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a7 <span class="keyword">asm</span> (<span class="stringliteral">&quot;a7&quot;</span>) = (<a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>)(scall_id);     \</div>
+<div class="line">    asm <span class="keyword">volatile</span> (                                          \</div>
+<div class="line">        <span class="stringliteral">&quot;ecall&quot;</span>                                             \</div>
+<div class="line">        : <span class="stringliteral">&quot;+r&quot;</span>  (a0)                                        \</div>
+<div class="line">        : <span class="stringliteral">&quot;r&quot;</span>   (a1),   <span class="stringliteral">&quot;r&quot;</span>   (a2),   <span class="stringliteral">&quot;r&quot;</span>   (a7)            \</div>
+<div class="line">        : <span class="stringliteral">&quot;memory&quot;</span>                                          \</div>
+<div class="line">    );                                                      \</div>
+<div class="line">    a0;                                                     \</div>
+<div class="line">})</div>
+</div><!-- fragment -->
+<p><code>_SBICALL</code>宏函数将会触发<code>ecall</code>异常, 而后跳转到<code>strap_enter</code>函数中运行, 该函数定义在<code>strap_entry.S</code>中 </p>
+<dl class="section note"><dt>注解</dt><dd>该宏函数需要注意的是:<ol type="1">
+<li>目前最大支持三个参数, 分别使用a0, a1, a2寄存器传递</li>
+<li><code>ecall</code>调用号保存在<code>a7</code>寄存器中</li>
+<li>返回至保存在a0寄存器中 </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ae84b1d0d5e4e560a640e32e1516d9134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84b1d0d5e4e560a640e32e1516d9134">&#9670;&nbsp;</a></span>sbi_putc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sbi_putc </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>sbi_putc</code>用于向终端输出一个字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>需要输出的字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa07077ca42bb9255058acb8227b65cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07077ca42bb9255058acb8227b65cce">&#9670;&nbsp;</a></span>sbi_puts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sbi_puts </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>sbi_puts</code>用于向字符输出一个字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要输出的0-terminated字符串</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd><code>sbi_puts</code>不会对str是否是以'\0'结尾进行检查 </dd></dl>
+
+</div>
+</div>
+<a id="a3fd620bafabc522ae9fec0063d74f561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd620bafabc522ae9fec0063d74f561">&#9670;&nbsp;</a></span>sbi_settimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sbi_settimer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>sbi_settimer</code>用于设置时钟 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>时钟的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="atypes_8h_html_a48f2f43c22b22212994d19244ccb10fc"><div class="ttname"><a href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a></div><div class="ttdeci">uint64_t ireg_t</div><div class="ttdoc">整型寄存器类型</div><div class="ttdef"><b>Definition:</b> types.h:54</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

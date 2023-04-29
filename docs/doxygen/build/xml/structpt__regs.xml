@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpt__regs" kind="struct" language="C++" prot="public">
+    <compoundname>pt_regs</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpt__regs_1a2ecce0e0dfc613d2a7b2edf556f9e13b" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::sepc</definition>
+        <argsstring></argsstring>
+        <name>sepc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="16" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a3fc0d19f04725fa80dab6a39ec47a53b" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::ra</definition>
+        <argsstring></argsstring>
+        <name>ra</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="17" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a1c8529166fd79ffb8b814f1c4ab12567" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::sp</definition>
+        <argsstring></argsstring>
+        <name>sp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="18" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a0f8cf28ecb1e0037d2d94dc62e910468" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::gp</definition>
+        <argsstring></argsstring>
+        <name>gp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="19" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1aa7930aaae478c62effe1da2ccfd4dca2" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::tp</definition>
+        <argsstring></argsstring>
+        <name>tp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="20" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1af3ec179fffc6bb6877ce55e4de3aa411" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t0</definition>
+        <argsstring></argsstring>
+        <name>t0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="21" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a9e09bccabe1be20eae627d13cb6185e1" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t1</definition>
+        <argsstring></argsstring>
+        <name>t1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="22" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1af59e66ed9bcadcb8e9b72d804d6b54eb" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t2</definition>
+        <argsstring></argsstring>
+        <name>t2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="23" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1ac06a22b232409ce57df72f54f1f37c8c" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s0</definition>
+        <argsstring></argsstring>
+        <name>s0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="24" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1abbf9b856ec4253fe50362bdd801de949" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s1</definition>
+        <argsstring></argsstring>
+        <name>s1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="25" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a47c66f96b4b1b3da6efa3b6a7ca4f8fa" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a0</definition>
+        <argsstring></argsstring>
+        <name>a0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="26" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a3f230556663da8f1ddfd476b39d7015e" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a1</definition>
+        <argsstring></argsstring>
+        <name>a1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="27" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1aa16cd00867a78331e7d8400ed7876ad9" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a2</definition>
+        <argsstring></argsstring>
+        <name>a2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="28" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1ae76cd5dbab1b623f067314a3677ef430" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a3</definition>
+        <argsstring></argsstring>
+        <name>a3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="29" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1af4bfeefb9f6bda115d8961162394b471" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a4</definition>
+        <argsstring></argsstring>
+        <name>a4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="30" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a24159b7e1e8419c1fe25cbcb9480a282" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a5</definition>
+        <argsstring></argsstring>
+        <name>a5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="31" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a657a5ea6f713ddb8710f0b9a87be96c5" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a6</definition>
+        <argsstring></argsstring>
+        <name>a6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="32" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a764cbd7c887391ce07f6b57c9cadf37d" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::a7</definition>
+        <argsstring></argsstring>
+        <name>a7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="33" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a448f7847eefcff7ca15e90f1b70cc0f7" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s2</definition>
+        <argsstring></argsstring>
+        <name>s2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="34" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a7945195bb18258e028d3c1102db1a5ee" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s3</definition>
+        <argsstring></argsstring>
+        <name>s3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="35" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a99a2af1dc2ed23941b3323ed77e50e8f" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s4</definition>
+        <argsstring></argsstring>
+        <name>s4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="36" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1afa2c4403052eb3ee36f70e8249b59314" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s5</definition>
+        <argsstring></argsstring>
+        <name>s5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="37" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1af52b148fab609d26c5e90609ddefb8c8" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s6</definition>
+        <argsstring></argsstring>
+        <name>s6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="38" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a9ce6adc94f3b978852e97838e9a445c5" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s7</definition>
+        <argsstring></argsstring>
+        <name>s7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="39" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1ac43d57493c886b580369c594bcbc8441" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s8</definition>
+        <argsstring></argsstring>
+        <name>s8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="40" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a34f8a8b19150238c8fde422a388123e1" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s9</definition>
+        <argsstring></argsstring>
+        <name>s9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="41" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a58a3d9ecb425fea5133fdbe78a5fc8fc" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s10</definition>
+        <argsstring></argsstring>
+        <name>s10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="42" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a6528c0b2aa586f14c7ae93ca8c8ae7b8" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::s11</definition>
+        <argsstring></argsstring>
+        <name>s11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="43" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a47e156c7f5f85b470fe4167c6805da62" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t3</definition>
+        <argsstring></argsstring>
+        <name>t3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="44" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1ae5e99973cbeb98b430de7039f17ccf97" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t4</definition>
+        <argsstring></argsstring>
+        <name>t4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="45" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a0f90ec06fcb5532ecb2b95f3970af414" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t5</definition>
+        <argsstring></argsstring>
+        <name>t5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="46" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1aea09931bcb8ecf653a7189f1c08f7249" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::t6</definition>
+        <argsstring></argsstring>
+        <name>t6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="47" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1add7b5883b81019f4e10fd2f38fb30b13" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::sstatus</definition>
+        <argsstring></argsstring>
+        <name>sstatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="49" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a5b5ffb8dc38f35741d29253689e1ac9f" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::sbadaddr</definition>
+        <argsstring></argsstring>
+        <name>sbadaddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="50" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a7a67aa93830beb63217887e50d808b35" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::scause</definition>
+        <argsstring></argsstring>
+        <name>scause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="51" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpt__regs_1a372919efceaaf13688bd169290b448bc" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long pt_regs::hstatus</definition>
+        <argsstring></argsstring>
+        <name>hstatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="52" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/data/proj/oskernel2023-x2w/include/ptregs.h" line="14" column="14" bodyfile="/home/data/proj/oskernel2023-x2w/include/ptregs.h" bodystart="14" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structpt__regs_1a47c66f96b4b1b3da6efa3b6a7ca4f8fa" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a0</name></member>
+      <member refid="structpt__regs_1a3f230556663da8f1ddfd476b39d7015e" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a1</name></member>
+      <member refid="structpt__regs_1aa16cd00867a78331e7d8400ed7876ad9" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a2</name></member>
+      <member refid="structpt__regs_1ae76cd5dbab1b623f067314a3677ef430" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a3</name></member>
+      <member refid="structpt__regs_1af4bfeefb9f6bda115d8961162394b471" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a4</name></member>
+      <member refid="structpt__regs_1a24159b7e1e8419c1fe25cbcb9480a282" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a5</name></member>
+      <member refid="structpt__regs_1a657a5ea6f713ddb8710f0b9a87be96c5" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a6</name></member>
+      <member refid="structpt__regs_1a764cbd7c887391ce07f6b57c9cadf37d" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>a7</name></member>
+      <member refid="structpt__regs_1a0f8cf28ecb1e0037d2d94dc62e910468" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>gp</name></member>
+      <member refid="structpt__regs_1a372919efceaaf13688bd169290b448bc" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>hstatus</name></member>
+      <member refid="structpt__regs_1a3fc0d19f04725fa80dab6a39ec47a53b" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>ra</name></member>
+      <member refid="structpt__regs_1ac06a22b232409ce57df72f54f1f37c8c" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s0</name></member>
+      <member refid="structpt__regs_1abbf9b856ec4253fe50362bdd801de949" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s1</name></member>
+      <member refid="structpt__regs_1a58a3d9ecb425fea5133fdbe78a5fc8fc" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s10</name></member>
+      <member refid="structpt__regs_1a6528c0b2aa586f14c7ae93ca8c8ae7b8" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s11</name></member>
+      <member refid="structpt__regs_1a448f7847eefcff7ca15e90f1b70cc0f7" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s2</name></member>
+      <member refid="structpt__regs_1a7945195bb18258e028d3c1102db1a5ee" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s3</name></member>
+      <member refid="structpt__regs_1a99a2af1dc2ed23941b3323ed77e50e8f" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s4</name></member>
+      <member refid="structpt__regs_1afa2c4403052eb3ee36f70e8249b59314" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s5</name></member>
+      <member refid="structpt__regs_1af52b148fab609d26c5e90609ddefb8c8" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s6</name></member>
+      <member refid="structpt__regs_1a9ce6adc94f3b978852e97838e9a445c5" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s7</name></member>
+      <member refid="structpt__regs_1ac43d57493c886b580369c594bcbc8441" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s8</name></member>
+      <member refid="structpt__regs_1a34f8a8b19150238c8fde422a388123e1" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>s9</name></member>
+      <member refid="structpt__regs_1a5b5ffb8dc38f35741d29253689e1ac9f" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>sbadaddr</name></member>
+      <member refid="structpt__regs_1a7a67aa93830beb63217887e50d808b35" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>scause</name></member>
+      <member refid="structpt__regs_1a2ecce0e0dfc613d2a7b2edf556f9e13b" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>sepc</name></member>
+      <member refid="structpt__regs_1a1c8529166fd79ffb8b814f1c4ab12567" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>sp</name></member>
+      <member refid="structpt__regs_1add7b5883b81019f4e10fd2f38fb30b13" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>sstatus</name></member>
+      <member refid="structpt__regs_1af3ec179fffc6bb6877ce55e4de3aa411" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t0</name></member>
+      <member refid="structpt__regs_1a9e09bccabe1be20eae627d13cb6185e1" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t1</name></member>
+      <member refid="structpt__regs_1af59e66ed9bcadcb8e9b72d804d6b54eb" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t2</name></member>
+      <member refid="structpt__regs_1a47e156c7f5f85b470fe4167c6805da62" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t3</name></member>
+      <member refid="structpt__regs_1ae5e99973cbeb98b430de7039f17ccf97" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t4</name></member>
+      <member refid="structpt__regs_1a0f90ec06fcb5532ecb2b95f3970af414" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t5</name></member>
+      <member refid="structpt__regs_1aea09931bcb8ecf653a7189f1c08f7249" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>t6</name></member>
+      <member refid="structpt__regs_1aa7930aaae478c62effe1da2ccfd4dca2" prot="public" virt="non-virtual"><scope>pt_regs</scope><name>tp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

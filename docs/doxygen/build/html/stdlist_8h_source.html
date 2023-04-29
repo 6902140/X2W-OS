@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/stdlist.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stdlist.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stdlist_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_STDLIST_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define __INCLUDE_STDLIST_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdlib_8h.html">stdlib.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct____list__elem__t.html">   25</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct____list__elem__t.html">__list_elem_t</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct____list__elem__t.html#a2c866e1669966b579fb5250a8cc921c5">   27</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct____list__elem__t.html">__list_elem_t</a>* <a class="code" href="struct____list__elem__t.html#a2c866e1669966b579fb5250a8cc921c5">prev</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct____list__elem__t.html#acd5d436f8999ad2891e58132b72a3deb">   29</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct____list__elem__t.html">__list_elem_t</a>* <a class="code" href="struct____list__elem__t.html#acd5d436f8999ad2891e58132b72a3deb">next</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <a class="code" href="stdlist_8h.html#a1588db56e801f7c095989db72375905c">list_elem_t</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct____list__t.html">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct____list__t.html">__list_t</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct____list__t.html#a407b979d5091660f1a092f33d30c1d40">   37</a></span>&#160;    <a class="code" href="struct____list__elem__t.html">list_elem_t</a> <a class="code" href="struct____list__t.html#a407b979d5091660f1a092f33d30c1d40">head</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct____list__t.html#a79d7f7660eed936241ec490d29d3995d">   39</a></span>&#160;    <a class="code" href="struct____list__elem__t.html">list_elem_t</a> <a class="code" href="struct____list__t.html#a79d7f7660eed936241ec490d29d3995d">tail</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <a class="code" href="stdlist_8h.html#a5ca7f35b21e2be1520d96d730fd70b2c">list_t</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="stdlist_8h.html#a296e363010c1571191477c449be1ec79">   48</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a> (<a class="code" href="stdlist_8h.html#a296e363010c1571191477c449be1ec79">list_walking_func_t</a>)(<a class="code" href="struct____list__elem__t.html">list_elem_t</a> *elem_ptr, <span class="keywordtype">int</span> arg);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlist_8h.html#ab59346b047e534df51dd14354809b36a">list_init</a>(<a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlist_8h.html#a679f7e7104a62e180c03511489241925">list_insert</a>(<a class="code" href="struct____list__elem__t.html">list_elem_t</a> *before_ptr, <a class="code" href="struct____list__elem__t.html">list_elem_t</a> *add_ptr);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlist_8h.html#ad97d47d7e94c09725c2166dbf933e209">list_append</a>(<a class="code" href="struct____list__elem__t.html">list_elem_t</a> *elem_ptr, <a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlist_8h.html#aa31fa3bfee3869b8076890ffe2f5ef80">list_remove</a>(<a class="code" href="struct____list__elem__t.html">list_elem_t</a> *elem_ptr);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlist_8h.html#a0efbd84e3f75a8912344f130ba06e929">list_push</a>(<a class="code" href="struct____list__elem__t.html">list_elem_t</a> *elem_ptr, <a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="struct____list__elem__t.html">list_elem_t</a>* <a class="code" href="stdlist_8h.html#a3351742610f542e8a0ecd35bc152d3d4">list_pop</a>(<a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="code" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a> <a class="code" href="stdlist_8h.html#adc56bb04e13bdd9922f53da75e7a2920">list_empty</a>(<a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="stdlist_8h.html#ae428635a67c41f1d5e97f4b9c1f701f6">list_size</a>(<a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<a class="code" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a> <a class="code" href="stdlist_8h.html#a562e2bec1e05334211af8d3a728b0104">list_search</a>(<a class="code" href="struct____list__elem__t.html">list_elem_t</a> *elem_ptr, <a class="code" href="struct____list__t.html">list_t</a> *list_ptr);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<a class="code" href="struct____list__elem__t.html">list_elem_t</a>* <a class="code" href="stdlist_8h.html#abc7842d9a4f9b807ae9a09f1ba6d5bcb">list_walking</a>(<a class="code" href="struct____list__t.html">list_t</a> *list_ptr, <a class="code" href="stdlist_8h.html#a296e363010c1571191477c449be1ec79">list_walking_func_t</a> func, <span class="keywordtype">int</span> arg);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">types.h中定义了X2W-OS的内建类型</div></div>
+<div class="ttc" id="astruct____list__elem__t_html_acd5d436f8999ad2891e58132b72a3deb"><div class="ttname"><a href="struct____list__elem__t.html#acd5d436f8999ad2891e58132b72a3deb">__list_elem_t::next</a></div><div class="ttdeci">struct __list_elem_t * next</div><div class="ttdoc">指向下一个链表节点的指针</div><div class="ttdef"><b>Definition:</b> stdlist.h:29</div></div>
+<div class="ttc" id="astdlist_8h_html_ab59346b047e534df51dd14354809b36a"><div class="ttname"><a href="stdlist_8h.html#ab59346b047e534df51dd14354809b36a">list_init</a></div><div class="ttdeci">void list_init(list_t *list_ptr)</div><div class="ttdoc">list_init用于初始化list_ptr指向的链表</div></div>
+<div class="ttc" id="astruct____list__t_html_a407b979d5091660f1a092f33d30c1d40"><div class="ttname"><a href="struct____list__t.html#a407b979d5091660f1a092f33d30c1d40">__list_t::head</a></div><div class="ttdeci">list_elem_t head</div><div class="ttdoc">链表头结点, 仅标记用, 第一个节点是head-&gt;next</div><div class="ttdef"><b>Definition:</b> stdlist.h:37</div></div>
+<div class="ttc" id="astdlist_8h_html_abc7842d9a4f9b807ae9a09f1ba6d5bcb"><div class="ttname"><a href="stdlist_8h.html#abc7842d9a4f9b807ae9a09f1ba6d5bcb">list_walking</a></div><div class="ttdeci">list_elem_t * list_walking(list_t *list_ptr, list_walking_func_t func, int arg)</div><div class="ttdoc">list_walking用于遍历list_ptr指向的链表, 并对每一个节点调用func判断是否继续遍历</div></div>
+<div class="ttc" id="astdlist_8h_html_a5ca7f35b21e2be1520d96d730fd70b2c"><div class="ttname"><a href="stdlist_8h.html#a5ca7f35b21e2be1520d96d730fd70b2c">list_t</a></div><div class="ttdeci">struct __list_t list_t</div><div class="ttdoc">list_t是链表结构体</div></div>
+<div class="ttc" id="astdlist_8h_html_a0efbd84e3f75a8912344f130ba06e929"><div class="ttname"><a href="stdlist_8h.html#a0efbd84e3f75a8912344f130ba06e929">list_push</a></div><div class="ttdeci">void list_push(list_elem_t *elem_ptr, list_t *list_ptr)</div><div class="ttdoc">list_push将链表视为一个栈, 用于向list_ptr指向的链表头前(栈顶)压入elem_ptr指向的节点</div></div>
+<div class="ttc" id="astruct____list__elem__t_html"><div class="ttname"><a href="struct____list__elem__t.html">__list_elem_t</a></div><div class="ttdoc">list_elem_t是链表节点结构体</div><div class="ttdef"><b>Definition:</b> stdlist.h:25</div></div>
+<div class="ttc" id="astdlist_8h_html_ae428635a67c41f1d5e97f4b9c1f701f6"><div class="ttname"><a href="stdlist_8h.html#ae428635a67c41f1d5e97f4b9c1f701f6">list_size</a></div><div class="ttdeci">size_t list_size(list_t *list_ptr)</div><div class="ttdoc">list_size用于计算list_ptr指向的链表的长度(元素个数)</div></div>
+<div class="ttc" id="atypes_8h_html_a253b248072cfc8bd812c69acd0046eed"><div class="ttname"><a href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a></div><div class="ttdeci">unsigned char Bool</div><div class="ttdoc">布尔常量定义</div><div class="ttdef"><b>Definition:</b> types.h:35</div></div>
+<div class="ttc" id="astdlist_8h_html_ad97d47d7e94c09725c2166dbf933e209"><div class="ttname"><a href="stdlist_8h.html#ad97d47d7e94c09725c2166dbf933e209">list_append</a></div><div class="ttdeci">void list_append(list_elem_t *elem_ptr, list_t *list_ptr)</div><div class="ttdoc">list_append用于将elem_ptr指向的节点添加到list_ptr指向的链表后面</div></div>
+<div class="ttc" id="astruct____list__elem__t_html_a2c866e1669966b579fb5250a8cc921c5"><div class="ttname"><a href="struct____list__elem__t.html#a2c866e1669966b579fb5250a8cc921c5">__list_elem_t::prev</a></div><div class="ttdeci">struct __list_elem_t * prev</div><div class="ttdoc">指向上一个链表节点的指针</div><div class="ttdef"><b>Definition:</b> stdlist.h:27</div></div>
+<div class="ttc" id="astdlist_8h_html_a296e363010c1571191477c449be1ec79"><div class="ttname"><a href="stdlist_8h.html#a296e363010c1571191477c449be1ec79">list_walking_func_t</a></div><div class="ttdeci">Bool() list_walking_func_t(list_elem_t *elem_ptr, int arg)</div><div class="ttdoc">list_walking_func_t是自定义函数类型, 用于在链表遍历函数list_walking中作为回调函数</div><div class="ttdef"><b>Definition:</b> stdlist.h:48</div></div>
+<div class="ttc" id="astdlist_8h_html_a1588db56e801f7c095989db72375905c"><div class="ttname"><a href="stdlist_8h.html#a1588db56e801f7c095989db72375905c">list_elem_t</a></div><div class="ttdeci">struct __list_elem_t list_elem_t</div><div class="ttdoc">list_elem_t是链表节点结构体</div></div>
+<div class="ttc" id="astruct____list__t_html_a79d7f7660eed936241ec490d29d3995d"><div class="ttname"><a href="struct____list__t.html#a79d7f7660eed936241ec490d29d3995d">__list_t::tail</a></div><div class="ttdeci">list_elem_t tail</div><div class="ttdoc">链表尾结点, 仅标记用, 最后一个节点是tail-&gt;prev</div><div class="ttdef"><b>Definition:</b> stdlist.h:39</div></div>
+<div class="ttc" id="astdlist_8h_html_a679f7e7104a62e180c03511489241925"><div class="ttname"><a href="stdlist_8h.html#a679f7e7104a62e180c03511489241925">list_insert</a></div><div class="ttdeci">void list_insert(list_elem_t *before_ptr, list_elem_t *add_ptr)</div><div class="ttdoc">list_insert用于在before_ptr指向的节点前插入add_ptr指向的节点</div></div>
+<div class="ttc" id="astruct____list__t_html"><div class="ttname"><a href="struct____list__t.html">__list_t</a></div><div class="ttdoc">list_t是链表结构体</div><div class="ttdef"><b>Definition:</b> stdlist.h:35</div></div>
+<div class="ttc" id="astdlist_8h_html_a562e2bec1e05334211af8d3a728b0104"><div class="ttname"><a href="stdlist_8h.html#a562e2bec1e05334211af8d3a728b0104">list_search</a></div><div class="ttdeci">Bool list_search(list_elem_t *elem_ptr, list_t *list_ptr)</div><div class="ttdoc">list_search用于在list_ptr指向的链表中查找是否存在elem_ptr指向的节点</div></div>
+<div class="ttc" id="astdlist_8h_html_a3351742610f542e8a0ecd35bc152d3d4"><div class="ttname"><a href="stdlist_8h.html#a3351742610f542e8a0ecd35bc152d3d4">list_pop</a></div><div class="ttdeci">list_elem_t * list_pop(list_t *list_ptr)</div><div class="ttdoc">list_pop将链表视为一个栈, 用于向list_ptr指向的链表头前(栈顶)弹出一个节点</div></div>
+<div class="ttc" id="astdlib_8h_html"><div class="ttname"><a href="stdlib_8h.html">stdlib.h</a></div><div class="ttdoc">stdlib.h提供一系列帮助函数</div></div>
+<div class="ttc" id="astdlist_8h_html_adc56bb04e13bdd9922f53da75e7a2920"><div class="ttname"><a href="stdlist_8h.html#adc56bb04e13bdd9922f53da75e7a2920">list_empty</a></div><div class="ttdeci">Bool list_empty(list_t *list_ptr)</div><div class="ttdoc">list_empty用于判断list_ptr指向的链表是否为空</div></div>
+<div class="ttc" id="astdlist_8h_html_aa31fa3bfee3869b8076890ffe2f5ef80"><div class="ttname"><a href="stdlist_8h.html#aa31fa3bfee3869b8076890ffe2f5ef80">list_remove</a></div><div class="ttdeci">void list_remove(list_elem_t *elem_ptr)</div><div class="ttdoc">list_remove用于将elem_ptr指向的节点从在其所在的链表中删除</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

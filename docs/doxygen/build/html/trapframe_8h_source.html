@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/trap/trapframe.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a1638397e50ab9a7611310bf3275bb53.html">trap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">trapframe.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="trapframe_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_TRAP_TRAPFRAME_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __INCLUDE_TRAP_TRAPFRAME_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="constrains_8h.html">constrains.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct____gtrapframe__t.html">   29</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct____gtrapframe__t.html">__gtrapframe_t</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x1; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> ra; };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x2; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> sp; };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x3; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> gp; };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x4; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> tp; };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x5; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t0; };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x6; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t1; };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x7; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t2; };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x8; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s0; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> fp; };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x9; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s1; };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x10; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a0; };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x11; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a1; };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x12; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a2; };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x13; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a3; };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x14; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a4; };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x15; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a5; };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x16; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a6; };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x17; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> a7; };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x18; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s2; };</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x19; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s3; };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x20; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s4; };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x21; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s5; };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x22; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s6; };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x23; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s7; };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x24; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s8; };</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x25; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s9; };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x26; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s10; };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x27; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> s11; };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x28; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t3; };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x29; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t4; };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x30; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t5; };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> _x31; <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> t6; };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#if WITH_FP_REG == 1</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// TODO: 未来可能添加浮点寄存器的支持</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f0; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft0; };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f1; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft1; };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f2; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft2; };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f3; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft3; };</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f4; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft4; };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f5; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft5; };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f6; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft6; };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f7; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft7; };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f8; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs0; };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f9; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs1; };</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f10; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa0; };</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f11; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa1; };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f12; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa2; };</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f13; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa3; };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f14; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa4; };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f15; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa5; };</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f16; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa6; };</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f17; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fa7; };</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f18; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs2; };</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f19; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs3; };</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f20; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs4; };</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f21; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs5; };</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f22; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs6; };</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f23; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs7; };</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f24; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs8; };</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f25; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs9; };</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f26; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs10; };</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f27; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> fs11; };</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f28; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft8; };</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f29; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft9; };</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f30; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft10; };</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">union </span>{ <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> _f31; <a class="code" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a> ft11; };</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <a class="code" href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">gtrapframe_t</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="struct____strapframe__t.html">  131</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct____strapframe__t.html">__strapframe_t</a> {</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="struct____strapframe__t.html#a3ae3952178bfa660381e7a90eb9fb3a4">  133</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____strapframe__t.html#a3ae3952178bfa660381e7a90eb9fb3a4">mepc</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="struct____strapframe__t.html#a16754ebab46250bbdfdc93a340d431fa">  135</a></span>&#160;    <a class="code" href="struct____gtrapframe__t.html">gtrapframe_t</a> <a class="code" href="struct____strapframe__t.html#a16754ebab46250bbdfdc93a340d431fa">gregisters</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="struct____strapframe__t.html#a057bcc447c0a7b88be6e044572ef2c64">  137</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____strapframe__t.html#a057bcc447c0a7b88be6e044572ef2c64">mstatus</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;} <a class="code" href="trapframe_8h.html#ace23faaa1579bcc09327b838e4f18145">strapframe_t</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html">  142</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct____ktrapframe__t.html">__ktrapframe_t</a> {</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html#abde997ff85e120469bcbe78efb41a9c4">  144</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____ktrapframe__t.html#abde997ff85e120469bcbe78efb41a9c4">sepc</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html#a0271284c0175a48e3f01ac79622b3816">  146</a></span>&#160;    <a class="code" href="struct____gtrapframe__t.html">gtrapframe_t</a> <a class="code" href="struct____ktrapframe__t.html#a0271284c0175a48e3f01ac79622b3816">gregisters</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html#a4ba6215f663034f5e09359093a072ca6">  148</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____ktrapframe__t.html#a4ba6215f663034f5e09359093a072ca6">sstatus</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html#af996e039990b66e8fd5e084ef23bf853">  150</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____ktrapframe__t.html#af996e039990b66e8fd5e084ef23bf853">sbadaddr</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html#a815906f6adbc4eb46a933e3c3cd86eaa">  152</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____ktrapframe__t.html#a815906f6adbc4eb46a933e3c3cd86eaa">scause</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="struct____ktrapframe__t.html#a9a66b5f4212f06c9eed91933ceba7db3">  154</a></span>&#160;    <a class="code" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a> <a class="code" href="struct____ktrapframe__t.html#a9a66b5f4212f06c9eed91933ceba7db3">origin_a0</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;} <a class="code" href="trapframe_8h.html#a8ee2ed696d45e589b6afcbb4c3a4f47a">ktrapframe_t</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">  159</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a> (*<a class="code" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, ...);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trapframe_8h.html#aa2c72627c8a7364d0ffa8b93f3b9ebe4">print_gtrapframe</a>(<a class="code" href="struct____gtrapframe__t.html">gtrapframe_t</a> *gtf_ptr, <a class="code" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a> print_func);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trapframe_8h.html#af3b65ddc32145c57dd729fd2f926ce44">print_strapframe</a>(<a class="code" href="struct____strapframe__t.html">strapframe_t</a> *stf_ptr, <a class="code" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a> print_func);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trapframe_8h.html#a63953911ad2767d9f6001c191cde476b">print_ktrapframe</a>(<a class="code" href="struct____ktrapframe__t.html">ktrapframe_t</a> *ktf_ptr, <a class="code" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a> print_func);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">types.h中定义了X2W-OS的内建类型</div></div>
+<div class="ttc" id="atypes_8h_html_a48f2f43c22b22212994d19244ccb10fc"><div class="ttname"><a href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a></div><div class="ttdeci">uint64_t ireg_t</div><div class="ttdoc">整型寄存器类型</div><div class="ttdef"><b>Definition:</b> types.h:54</div></div>
+<div class="ttc" id="atrapframe_8h_html_aa2c72627c8a7364d0ffa8b93f3b9ebe4"><div class="ttname"><a href="trapframe_8h.html#aa2c72627c8a7364d0ffa8b93f3b9ebe4">print_gtrapframe</a></div><div class="ttdeci">void print_gtrapframe(gtrapframe_t *gtf_ptr, printf_t print_func)</div><div class="ttdoc">print_gtrapframe用于输出通用陷入帧gtf_ptr</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html_a9a66b5f4212f06c9eed91933ceba7db3"><div class="ttname"><a href="struct____ktrapframe__t.html#a9a66b5f4212f06c9eed91933ceba7db3">__ktrapframe_t::origin_a0</a></div><div class="ttdeci">ireg_t origin_a0</div><div class="ttdoc">origin_a0保存了系统调用前的a0寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:154</div></div>
+<div class="ttc" id="atrapframe_8h_html_ace23faaa1579bcc09327b838e4f18145"><div class="ttname"><a href="trapframe_8h.html#ace23faaa1579bcc09327b838e4f18145">strapframe_t</a></div><div class="ttdeci">struct __strapframe_t strapframe_t</div><div class="ttdoc">strapframe_t是SBI陷入帧(SBI Trap Frame), 在保存通用寄存器的基础上, 额外保存了empc寄存器和mstatus寄存器</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html_abde997ff85e120469bcbe78efb41a9c4"><div class="ttname"><a href="struct____ktrapframe__t.html#abde997ff85e120469bcbe78efb41a9c4">__ktrapframe_t::sepc</a></div><div class="ttdeci">ireg_t sepc</div><div class="ttdoc">spec保存了spec寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:144</div></div>
+<div class="ttc" id="astruct____strapframe__t_html"><div class="ttname"><a href="struct____strapframe__t.html">__strapframe_t</a></div><div class="ttdoc">strapframe_t是SBI陷入帧(SBI Trap Frame), 在保存通用寄存器的基础上, 额外保存了empc寄存器和mstatus寄存器</div><div class="ttdef"><b>Definition:</b> trapframe.h:131</div></div>
+<div class="ttc" id="atrapframe_8h_html_a8ee2ed696d45e589b6afcbb4c3a4f47a"><div class="ttname"><a href="trapframe_8h.html#a8ee2ed696d45e589b6afcbb4c3a4f47a">ktrapframe_t</a></div><div class="ttdeci">struct __ktrapframe_t ktrapframe_t</div><div class="ttdoc">ktrapframe_t是Kernel陷入帧(Kernel Trap Frame), 在保存通用寄存器的基础上, 额外保存了sepc, sstatus, sbadaddr,...</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html_a815906f6adbc4eb46a933e3c3cd86eaa"><div class="ttname"><a href="struct____ktrapframe__t.html#a815906f6adbc4eb46a933e3c3cd86eaa">__ktrapframe_t::scause</a></div><div class="ttdeci">ireg_t scause</div><div class="ttdoc">scause保存了scause寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:152</div></div>
+<div class="ttc" id="atypes_8h_html_ac2876a5049438ad8f5b5799f69013faf"><div class="ttname"><a href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a></div><div class="ttdeci">uint64_t freg_t</div><div class="ttdoc">浮点寄存器类型</div><div class="ttdef"><b>Definition:</b> types.h:57</div></div>
+<div class="ttc" id="atypes_8h_html_a186ea1339bffb378854987065835afe3"><div class="ttname"><a href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a></div><div class="ttdeci">uint64_t size_t</div><div class="ttdoc">计数类型定义</div><div class="ttdef"><b>Definition:</b> types.h:42</div></div>
+<div class="ttc" id="atrapframe_8h_html_ac7135428295a151a70d7b6de6ae41a3d"><div class="ttname"><a href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">gtrapframe_t</a></div><div class="ttdeci">struct __gtrapframe_t gtrapframe_t</div><div class="ttdoc">gtrapframe_t是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场</div></div>
+<div class="ttc" id="astruct____strapframe__t_html_a3ae3952178bfa660381e7a90eb9fb3a4"><div class="ttname"><a href="struct____strapframe__t.html#a3ae3952178bfa660381e7a90eb9fb3a4">__strapframe_t::mepc</a></div><div class="ttdeci">ireg_t mepc</div><div class="ttdoc">mepc保存了mepc寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:133</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html_a0271284c0175a48e3f01ac79622b3816"><div class="ttname"><a href="struct____ktrapframe__t.html#a0271284c0175a48e3f01ac79622b3816">__ktrapframe_t::gregisters</a></div><div class="ttdeci">gtrapframe_t gregisters</div><div class="ttdoc">gregisters寄存器保存了通用寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:146</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html"><div class="ttname"><a href="struct____ktrapframe__t.html">__ktrapframe_t</a></div><div class="ttdoc">ktrapframe_t是Kernel陷入帧(Kernel Trap Frame), 在保存通用寄存器的基础上, 额外保存了sepc, sstatus, sbadaddr,...</div><div class="ttdef"><b>Definition:</b> trapframe.h:142</div></div>
+<div class="ttc" id="atrapframe_8h_html_ab7fb0a8d1c81ba64631d0af5eeae5336"><div class="ttname"><a href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a></div><div class="ttdeci">size_t(* printf_t)(const char *format,...)</div><div class="ttdoc">printf_t是输出函数类型</div><div class="ttdef"><b>Definition:</b> trapframe.h:159</div></div>
+<div class="ttc" id="atrapframe_8h_html_a63953911ad2767d9f6001c191cde476b"><div class="ttname"><a href="trapframe_8h.html#a63953911ad2767d9f6001c191cde476b">print_ktrapframe</a></div><div class="ttdeci">void print_ktrapframe(ktrapframe_t *ktf_ptr, printf_t print_func)</div><div class="ttdoc">print_ktrapframe用于输出内核陷入帧ktf_ptr</div></div>
+<div class="ttc" id="astruct____strapframe__t_html_a16754ebab46250bbdfdc93a340d431fa"><div class="ttname"><a href="struct____strapframe__t.html#a16754ebab46250bbdfdc93a340d431fa">__strapframe_t::gregisters</a></div><div class="ttdeci">gtrapframe_t gregisters</div><div class="ttdoc">gregisters寄存器保存了通用寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:135</div></div>
+<div class="ttc" id="astruct____gtrapframe__t_html"><div class="ttname"><a href="struct____gtrapframe__t.html">__gtrapframe_t</a></div><div class="ttdoc">gtrapframe_t是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场</div><div class="ttdef"><b>Definition:</b> trapframe.h:29</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html_a4ba6215f663034f5e09359093a072ca6"><div class="ttname"><a href="struct____ktrapframe__t.html#a4ba6215f663034f5e09359093a072ca6">__ktrapframe_t::sstatus</a></div><div class="ttdeci">ireg_t sstatus</div><div class="ttdoc">sstatus保存了sstatus寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:148</div></div>
+<div class="ttc" id="astruct____ktrapframe__t_html_af996e039990b66e8fd5e084ef23bf853"><div class="ttname"><a href="struct____ktrapframe__t.html#af996e039990b66e8fd5e084ef23bf853">__ktrapframe_t::sbadaddr</a></div><div class="ttdeci">ireg_t sbadaddr</div><div class="ttdoc">sbadaddr保存了sbadaddr寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:150</div></div>
+<div class="ttc" id="atrapframe_8h_html_af3b65ddc32145c57dd729fd2f926ce44"><div class="ttname"><a href="trapframe_8h.html#af3b65ddc32145c57dd729fd2f926ce44">print_strapframe</a></div><div class="ttdeci">void print_strapframe(strapframe_t *stf_ptr, printf_t print_func)</div><div class="ttdoc">print_strapframe用于输出SBI陷入帧stf_ptr</div></div>
+<div class="ttc" id="astruct____strapframe__t_html_a057bcc447c0a7b88be6e044572ef2c64"><div class="ttname"><a href="struct____strapframe__t.html#a057bcc447c0a7b88be6e044572ef2c64">__strapframe_t::mstatus</a></div><div class="ttdeci">ireg_t mstatus</div><div class="ttdoc">mstatus保存了mstatus寄存器的值</div><div class="ttdef"><b>Definition:</b> trapframe.h:137</div></div>
+<div class="ttc" id="aconstrains_8h_html"><div class="ttname"><a href="constrains_8h.html">constrains.h</a></div><div class="ttdoc">constrain.h定义了内核的一系列常数</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

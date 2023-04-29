@@ -1,0 +1,1346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct____gtrapframe__t" kind="struct" language="C++" prot="public">
+    <compoundname>__gtrapframe_t</compoundname>
+    <includes refid="trapframe_8h" local="no">trapframe.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____gtrapframe__t_1aa7b7c035a8477e9a6e3eb0115dcca944" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x1</definition>
+        <argsstring></argsstring>
+        <name>_x1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="31" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a0f2e1498614699fa06d9c0614ae0392c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::ra</definition>
+        <argsstring></argsstring>
+        <name>ra</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="31" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a5a3d33b5f41e3bdbaf30a6dd5d410077" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@0</type>
+        <definition>union __gtrapframe_t::@0 __gtrapframe_t::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+<para><computeroutput>ra</computeroutput>寄存器(<computeroutput>Return Address</computeroutput>)用于保存函数调用时的返回地址 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="31" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a188540dee4e344ff7ac0e92933e5ce98" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x2</definition>
+        <argsstring></argsstring>
+        <name>_x2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="33" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a983aa2a66f74ba1f1df242df99d4bccb" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::sp</definition>
+        <argsstring></argsstring>
+        <name>sp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="33" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1adda08d1aceb2301408de3d835b2deb08" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@2</type>
+        <definition>union __gtrapframe_t::@2 __gtrapframe_t::@3</definition>
+        <argsstring></argsstring>
+        <name>@3</name>
+        <briefdescription>
+<para><computeroutput>sp</computeroutput>寄存器(<computeroutput>Stack Pointer</computeroutput>)用于保存当前线程的栈底指针 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="33" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a92d38539a60fd9bf7856e4f3df091294" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x3</definition>
+        <argsstring></argsstring>
+        <name>_x3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="35" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a4aee3aa09d23f793a6b10e4a8f6f57e5" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::gp</definition>
+        <argsstring></argsstring>
+        <name>gp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="35" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a6c6d28bc544052596637083559ce69d1" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@4</type>
+        <definition>union __gtrapframe_t::@4 __gtrapframe_t::@5</definition>
+        <argsstring></argsstring>
+        <name>@5</name>
+        <briefdescription>
+<para><computeroutput>gp</computeroutput>寄存器(<computeroutput>Golbal Pointer</computeroutput>)用于保存全局指针 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="35" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ab77d8d4d292dc2178ef827466b4929b4" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x4</definition>
+        <argsstring></argsstring>
+        <name>_x4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="37" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ac902fa22e19754ea0c15ed5f5fe74111" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::tp</definition>
+        <argsstring></argsstring>
+        <name>tp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="37" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a23a5ef8a85160185cbca51a4dd88cdf4" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@6</type>
+        <definition>union __gtrapframe_t::@6 __gtrapframe_t::@7</definition>
+        <argsstring></argsstring>
+        <name>@7</name>
+        <briefdescription>
+<para><computeroutput>tp</computeroutput>寄存器(<computeroutput>Thread Pointer</computeroutput>)用于保存当前线程帧的指针 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="37" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ab7f85fed960fba889becf8adac6f731d" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x5</definition>
+        <argsstring></argsstring>
+        <name>_x5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="39" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ada7db4928b16756abc457a4d9d21dcc8" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t0</definition>
+        <argsstring></argsstring>
+        <name>t0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="39" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1aa2cc844bc47f102f059922034f56bca0" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@8</type>
+        <definition>union __gtrapframe_t::@8 __gtrapframe_t::@9</definition>
+        <argsstring></argsstring>
+        <name>@9</name>
+        <briefdescription>
+<para><computeroutput>t0</computeroutput>寄存器(<computeroutput>Temporary 0</computeroutput>)是临时寄存器或者备用<computeroutput>ra</computeroutput>寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="39" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a8317bafd33003342cf9474044ddb2112" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x6</definition>
+        <argsstring></argsstring>
+        <name>_x6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="41" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ae2cc452662e7012b189b4c54e6f138fb" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t1</definition>
+        <argsstring></argsstring>
+        <name>t1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="41" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a05d417c4cee512c757ed294b3c35698d" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@10</type>
+        <definition>union __gtrapframe_t::@10 __gtrapframe_t::@11</definition>
+        <argsstring></argsstring>
+        <name>@11</name>
+        <briefdescription>
+<para><computeroutput>t1</computeroutput>寄存器(<computeroutput>Temporary 1</computeroutput>)是临时寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="41" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a7247fda7f63fb0a5c2e6adb7ca1321cc" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x7</definition>
+        <argsstring></argsstring>
+        <name>_x7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="43" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ab9725d2a9938ca7bfe3d7b3be702a656" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t2</definition>
+        <argsstring></argsstring>
+        <name>t2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="43" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a3fe7ab9c6ed216f4aa877787e71c22d3" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@12</type>
+        <definition>union __gtrapframe_t::@12 __gtrapframe_t::@13</definition>
+        <argsstring></argsstring>
+        <name>@13</name>
+        <briefdescription>
+<para><computeroutput>t2</computeroutput>寄存器(<computeroutput>Temporary 2</computeroutput>)是临时寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="43" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1afb982d2b5caf20054c2f5f99b4966b3b" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x8</definition>
+        <argsstring></argsstring>
+        <name>_x8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="45" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1acbd3dc1c1d02fdda61f8ce06cc515d5d" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s0</definition>
+        <argsstring></argsstring>
+        <name>s0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="45" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1abde132be9731b9657a6a9fbe16d7e082" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::fp</definition>
+        <argsstring></argsstring>
+        <name>fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="45" column="39" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a827cb9efbc71fa98b9416a1e46668df0" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@14</type>
+        <definition>union __gtrapframe_t::@14 __gtrapframe_t::@15</definition>
+        <argsstring></argsstring>
+        <name>@15</name>
+        <briefdescription>
+<para><computeroutput>s0</computeroutput>寄存器(<computeroutput>Saved Register 0</computeroutput>)是保存寄存器/帧寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="45" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a1ee2327a36e7720e56f040f8599dfce1" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x9</definition>
+        <argsstring></argsstring>
+        <name>_x9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="47" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a3cac4125559164c5dbc90a207f214ab4" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s1</definition>
+        <argsstring></argsstring>
+        <name>s1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="47" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a710297b965a23b698d0946d83d3e845c" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@16</type>
+        <definition>union __gtrapframe_t::@16 __gtrapframe_t::@17</definition>
+        <argsstring></argsstring>
+        <name>@17</name>
+        <briefdescription>
+<para><computeroutput>s1</computeroutput>寄存器(<computeroutput>Saved Register 1</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="47" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a999c83be5261cabd5468f90ca497ed76" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x10</definition>
+        <argsstring></argsstring>
+        <name>_x10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="49" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a0fbc71785916b8630ce4d8af7f69a7d1" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a0</definition>
+        <argsstring></argsstring>
+        <name>a0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="49" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ad0637872c32d0b5456ff94926abab01a" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@18</type>
+        <definition>union __gtrapframe_t::@18 __gtrapframe_t::@19</definition>
+        <argsstring></argsstring>
+        <name>@19</name>
+        <briefdescription>
+<para><computeroutput>a0</computeroutput>寄存器(<computeroutput>Argument 0</computeroutput>)是函数调用参数寄存器/返回值寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="49" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a3fc087220c0246172c15e93f699b8df8" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x11</definition>
+        <argsstring></argsstring>
+        <name>_x11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="51" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1add1eaca154eb5ee70b2e3d53c590ae51" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a1</definition>
+        <argsstring></argsstring>
+        <name>a1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="51" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ac45df4d9305010f020cabb22754bd438" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@20</type>
+        <definition>union __gtrapframe_t::@20 __gtrapframe_t::@21</definition>
+        <argsstring></argsstring>
+        <name>@21</name>
+        <briefdescription>
+<para><computeroutput>a1</computeroutput>寄存器(<computeroutput>Argument 1</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="51" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1abde371bc1832f0169f56a920d15dbeed" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x12</definition>
+        <argsstring></argsstring>
+        <name>_x12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="53" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a01e3a3de709102b4040242c30e336e87" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a2</definition>
+        <argsstring></argsstring>
+        <name>a2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="53" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a51e4c0a1f7b116e627886bfd1182b08e" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@22</type>
+        <definition>union __gtrapframe_t::@22 __gtrapframe_t::@23</definition>
+        <argsstring></argsstring>
+        <name>@23</name>
+        <briefdescription>
+<para><computeroutput>a2</computeroutput>寄存器(<computeroutput>Argument 2</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="53" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a8832222d8ebc4ecc25058a29cb15c946" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x13</definition>
+        <argsstring></argsstring>
+        <name>_x13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="55" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a8c05f36a5f90de4b2c2637de2bf15645" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a3</definition>
+        <argsstring></argsstring>
+        <name>a3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="55" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ad1090ed3a511f83616d62fdeb8264eff" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@24</type>
+        <definition>union __gtrapframe_t::@24 __gtrapframe_t::@25</definition>
+        <argsstring></argsstring>
+        <name>@25</name>
+        <briefdescription>
+<para><computeroutput>a3</computeroutput>寄存器(<computeroutput>Argument 3</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="55" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a4da723fd8fd2893f5c200468ab48fedd" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x14</definition>
+        <argsstring></argsstring>
+        <name>_x14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="57" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a48a4bf983f19c411f4d5bda59007994c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a4</definition>
+        <argsstring></argsstring>
+        <name>a4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="57" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a258278f4c76dbb2260edcfd28e861e1b" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@26</type>
+        <definition>union __gtrapframe_t::@26 __gtrapframe_t::@27</definition>
+        <argsstring></argsstring>
+        <name>@27</name>
+        <briefdescription>
+<para><computeroutput>a4</computeroutput>寄存器(<computeroutput>Argument 4</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="57" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a153c8d4f9c7c809d2237c6d616903bae" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x15</definition>
+        <argsstring></argsstring>
+        <name>_x15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="59" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a86444057ae291197c7d3ae5fb1c3b63e" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a5</definition>
+        <argsstring></argsstring>
+        <name>a5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="59" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a9e61ed3df37632029b1fec36767e3a0d" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@28</type>
+        <definition>union __gtrapframe_t::@28 __gtrapframe_t::@29</definition>
+        <argsstring></argsstring>
+        <name>@29</name>
+        <briefdescription>
+<para><computeroutput>a5</computeroutput>寄存器(<computeroutput>Argument 5</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="59" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a57bdf2c6b4c1a3b29e36234108f8bf46" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x16</definition>
+        <argsstring></argsstring>
+        <name>_x16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="61" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a66bd83f81fb7e0a8a80fb9a4a0f1b56e" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a6</definition>
+        <argsstring></argsstring>
+        <name>a6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="61" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ad3c620267bae292a9d645b9776ac5cba" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@30</type>
+        <definition>union __gtrapframe_t::@30 __gtrapframe_t::@31</definition>
+        <argsstring></argsstring>
+        <name>@31</name>
+        <briefdescription>
+<para><computeroutput>a6</computeroutput>寄存器(<computeroutput>Argument 6</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="61" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a131ae9f53ad3c3544ee2559b75100532" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x17</definition>
+        <argsstring></argsstring>
+        <name>_x17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="63" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a36fada9bc3860e96fcdc99d7aed85df0" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::a7</definition>
+        <argsstring></argsstring>
+        <name>a7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="63" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1aa62af287c3c16b0a2e915494b4562404" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@32</type>
+        <definition>union __gtrapframe_t::@32 __gtrapframe_t::@33</definition>
+        <argsstring></argsstring>
+        <name>@33</name>
+        <briefdescription>
+<para><computeroutput>a7</computeroutput>寄存器(<computeroutput>Argument 7</computeroutput>)是函数调用参数寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="63" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a96c83bca183bc17957635d9aee2e5cc1" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x18</definition>
+        <argsstring></argsstring>
+        <name>_x18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="65" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a7438629b35e973c983fbb56072aafa41" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s2</definition>
+        <argsstring></argsstring>
+        <name>s2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="65" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ac3bb85ff8f9174ecd013389d564b71b7" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@34</type>
+        <definition>union __gtrapframe_t::@34 __gtrapframe_t::@35</definition>
+        <argsstring></argsstring>
+        <name>@35</name>
+        <briefdescription>
+<para><computeroutput>s2</computeroutput>寄存器(<computeroutput>Saved Register 2</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="65" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1abcce1d9e25310cbaab889a4b8a43b69f" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x19</definition>
+        <argsstring></argsstring>
+        <name>_x19</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="67" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a3e6386234937049d8f0e953591cfba90" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s3</definition>
+        <argsstring></argsstring>
+        <name>s3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="67" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a7fe91c23039d9bf7bf2edd0fbc252f13" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@36</type>
+        <definition>union __gtrapframe_t::@36 __gtrapframe_t::@37</definition>
+        <argsstring></argsstring>
+        <name>@37</name>
+        <briefdescription>
+<para><computeroutput>s3</computeroutput>寄存器(<computeroutput>Saved Register 3</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="67" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a9595bbf0c5649889b4a684685a750626" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x20</definition>
+        <argsstring></argsstring>
+        <name>_x20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="69" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a6762978cd7904faea243e7a2cb2798cb" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s4</definition>
+        <argsstring></argsstring>
+        <name>s4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="69" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a8406b1014833c1729db521f6f07d22dd" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@38</type>
+        <definition>union __gtrapframe_t::@38 __gtrapframe_t::@39</definition>
+        <argsstring></argsstring>
+        <name>@39</name>
+        <briefdescription>
+<para><computeroutput>s4</computeroutput>寄存器(<computeroutput>Saved Register 4</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="69" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ac915a85c97129ef30f432fc381178c11" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x21</definition>
+        <argsstring></argsstring>
+        <name>_x21</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="71" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a57fa1f1deb58908563b9815ad7a07b50" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s5</definition>
+        <argsstring></argsstring>
+        <name>s5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="71" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a25dcf922ec2af8c5f497eda8b95f8942" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@40</type>
+        <definition>union __gtrapframe_t::@40 __gtrapframe_t::@41</definition>
+        <argsstring></argsstring>
+        <name>@41</name>
+        <briefdescription>
+<para><computeroutput>s5</computeroutput>寄存器(<computeroutput>Saved Register 5</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="71" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1acb32ff24cba645dfee7151aebc1da058" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x22</definition>
+        <argsstring></argsstring>
+        <name>_x22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="73" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ae3325814c8a86edbaa134e9c63b643f2" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s6</definition>
+        <argsstring></argsstring>
+        <name>s6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="73" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a59981d17735601dd6e49ab9d7b608f58" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@42</type>
+        <definition>union __gtrapframe_t::@42 __gtrapframe_t::@43</definition>
+        <argsstring></argsstring>
+        <name>@43</name>
+        <briefdescription>
+<para><computeroutput>s6</computeroutput>寄存器(<computeroutput>Saved Register 6</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="73" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ac9389a78c26f64b8654833ffa41535f5" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x23</definition>
+        <argsstring></argsstring>
+        <name>_x23</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="75" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a118c82c5ce63e92b4f2515935668d5bd" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s7</definition>
+        <argsstring></argsstring>
+        <name>s7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="75" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a31e0c9666d5db3396ec6f6c281903faa" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@44</type>
+        <definition>union __gtrapframe_t::@44 __gtrapframe_t::@45</definition>
+        <argsstring></argsstring>
+        <name>@45</name>
+        <briefdescription>
+<para><computeroutput>s7</computeroutput>寄存器(<computeroutput>Saved Register 7</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="75" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a74c80a4ee472f691dc4ba5bf756b13b1" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x24</definition>
+        <argsstring></argsstring>
+        <name>_x24</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="77" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a512c42f5c330cdd4f3509cc5b4cef1ed" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s8</definition>
+        <argsstring></argsstring>
+        <name>s8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="77" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1aa5e374edfd546aea3a3c994bf674b76d" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@46</type>
+        <definition>union __gtrapframe_t::@46 __gtrapframe_t::@47</definition>
+        <argsstring></argsstring>
+        <name>@47</name>
+        <briefdescription>
+<para><computeroutput>s8</computeroutput>寄存器(<computeroutput>Saved Register 8</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="77" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a835ef85ee8d76417dfa174bd8a7297a5" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x25</definition>
+        <argsstring></argsstring>
+        <name>_x25</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="79" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1aa855c7af5267d27e87cabc8cc2202e6e" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s9</definition>
+        <argsstring></argsstring>
+        <name>s9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="79" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a035da6fb4a5d8120397928c55940a6b1" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@48</type>
+        <definition>union __gtrapframe_t::@48 __gtrapframe_t::@49</definition>
+        <argsstring></argsstring>
+        <name>@49</name>
+        <briefdescription>
+<para><computeroutput>s9</computeroutput>寄存器(<computeroutput>Saved Register 9</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="79" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a16d2a77faa122ec98a7ad5e7ec3ada54" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x26</definition>
+        <argsstring></argsstring>
+        <name>_x26</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="81" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a320f89bc35da8193003e46362fa48a94" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s10</definition>
+        <argsstring></argsstring>
+        <name>s10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="81" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a63015113c534f97d75f2d0a14f5262aa" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@50</type>
+        <definition>union __gtrapframe_t::@50 __gtrapframe_t::@51</definition>
+        <argsstring></argsstring>
+        <name>@51</name>
+        <briefdescription>
+<para><computeroutput>s10</computeroutput>寄存器(<computeroutput>Saved Register 10</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="81" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1ad46b01b933f1428672e8ef5a1000d15b" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x27</definition>
+        <argsstring></argsstring>
+        <name>_x27</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="83" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a40411ec6bf253b409d3fe668de116546" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::s11</definition>
+        <argsstring></argsstring>
+        <name>s11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="83" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a557fec75adf552c1a5254cb9c3a266c5" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@52</type>
+        <definition>union __gtrapframe_t::@52 __gtrapframe_t::@53</definition>
+        <argsstring></argsstring>
+        <name>@53</name>
+        <briefdescription>
+<para><computeroutput>s11</computeroutput>寄存器(<computeroutput>Saved Register 11</computeroutput>)是保存寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="83" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a02227f51584826f64d9bdeb3d6ad0677" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x28</definition>
+        <argsstring></argsstring>
+        <name>_x28</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="85" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a9fb39b4ea7a23940fe6ff7bec91363b5" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t3</definition>
+        <argsstring></argsstring>
+        <name>t3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="85" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a584c1d061252aefb3353d349bc6d721e" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@54</type>
+        <definition>union __gtrapframe_t::@54 __gtrapframe_t::@55</definition>
+        <argsstring></argsstring>
+        <name>@55</name>
+        <briefdescription>
+<para><computeroutput>t3</computeroutput>寄存器(<computeroutput>Temporary 3</computeroutput>)是临时寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="85" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a190764043b341ea9ca97afd030512ec9" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x29</definition>
+        <argsstring></argsstring>
+        <name>_x29</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="87" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a005412fd4b53d37781afb1c97495f9f5" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t4</definition>
+        <argsstring></argsstring>
+        <name>t4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="87" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a1cd98d4ba47b8f38d3277053ae313f12" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@56</type>
+        <definition>union __gtrapframe_t::@56 __gtrapframe_t::@57</definition>
+        <argsstring></argsstring>
+        <name>@57</name>
+        <briefdescription>
+<para><computeroutput>t4</computeroutput>寄存器(<computeroutput>Temporary 4</computeroutput>)是临时寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="87" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a1db2cb70db233357a11cf3063067d65c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x30</definition>
+        <argsstring></argsstring>
+        <name>_x30</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="89" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a1fcb989a3991124b97bbdb87f7f39c0c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t5</definition>
+        <argsstring></argsstring>
+        <name>t5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="89" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a8f3dea9aa8b2e6b1848ebff5d77c5210" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@58</type>
+        <definition>union __gtrapframe_t::@58 __gtrapframe_t::@59</definition>
+        <argsstring></argsstring>
+        <name>@59</name>
+        <briefdescription>
+<para><computeroutput>t5</computeroutput>寄存器(<computeroutput>Temporary 5</computeroutput>)是临时寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="89" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a901301b3bb4bf2b613eb962cec22fb6d" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::_x31</definition>
+        <argsstring></argsstring>
+        <name>_x31</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="91" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1aa2281ab3b8bb9c34d879ecb14c217538" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __gtrapframe_t::t6</definition>
+        <argsstring></argsstring>
+        <name>t6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="91" column="30" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____gtrapframe__t_1a71019775bc4ed186f2062e4ffd6bcf4b" prot="public" static="no" mutable="no">
+        <type>union __gtrapframe_t::@60</type>
+        <definition>union __gtrapframe_t::@60 __gtrapframe_t::@61</definition>
+        <argsstring></argsstring>
+        <name>@61</name>
+        <briefdescription>
+<para><computeroutput>t6</computeroutput>寄存器(<computeroutput>Temporary 6</computeroutput>)是临时寄存器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="91" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput>gtrapframe_t</computeroutput>是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para><orderedlist>
+<listitem><para><computeroutput>gtrapframe_t</computeroutput>是否包含浮点寄存器取决于<computeroutput>constrain.h</computeroutput>的<computeroutput>WITH_FP_REG</computeroutput>宏:<itemizedlist>
+<listitem><para><computeroutput>WITH_FP_REG = 0</computeroutput>, 不包含浮点寄存器, 此时保存: <computeroutput>x1~x31</computeroutput> 寄存器. 一共 31 个寄存器, 共 248 字节</para>
+</listitem><listitem><para><computeroutput>WITH_FP_REG = 1</computeroutput>, 包含浮点寄存器, 此时保存: <computeroutput>x1~x31</computeroutput>, <computeroutput>f0~f31</computeroutput> 一共 31 + 32 个寄存器, 共 248 + 128 字节</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>寄存器命名规则参考: RISC-V Assembly Programmer’s Handbook</para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+<simplesect kind="warning"><para>目前不支持浮点寄存器, 支持浮点寄存器的话, 需要额外修改trap_entry.S里的汇编入口函数来保存 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="29" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="29" bodyend="127"/>
+    <listofallmembers>
+      <member refid="struct____gtrapframe__t_1aa7b7c035a8477e9a6e3eb0115dcca944" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x1</name></member>
+      <member refid="struct____gtrapframe__t_1a999c83be5261cabd5468f90ca497ed76" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x10</name></member>
+      <member refid="struct____gtrapframe__t_1a3fc087220c0246172c15e93f699b8df8" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x11</name></member>
+      <member refid="struct____gtrapframe__t_1abde371bc1832f0169f56a920d15dbeed" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x12</name></member>
+      <member refid="struct____gtrapframe__t_1a8832222d8ebc4ecc25058a29cb15c946" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x13</name></member>
+      <member refid="struct____gtrapframe__t_1a4da723fd8fd2893f5c200468ab48fedd" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x14</name></member>
+      <member refid="struct____gtrapframe__t_1a153c8d4f9c7c809d2237c6d616903bae" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x15</name></member>
+      <member refid="struct____gtrapframe__t_1a57bdf2c6b4c1a3b29e36234108f8bf46" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x16</name></member>
+      <member refid="struct____gtrapframe__t_1a131ae9f53ad3c3544ee2559b75100532" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x17</name></member>
+      <member refid="struct____gtrapframe__t_1a96c83bca183bc17957635d9aee2e5cc1" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x18</name></member>
+      <member refid="struct____gtrapframe__t_1abcce1d9e25310cbaab889a4b8a43b69f" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x19</name></member>
+      <member refid="struct____gtrapframe__t_1a188540dee4e344ff7ac0e92933e5ce98" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x2</name></member>
+      <member refid="struct____gtrapframe__t_1a9595bbf0c5649889b4a684685a750626" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x20</name></member>
+      <member refid="struct____gtrapframe__t_1ac915a85c97129ef30f432fc381178c11" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x21</name></member>
+      <member refid="struct____gtrapframe__t_1acb32ff24cba645dfee7151aebc1da058" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x22</name></member>
+      <member refid="struct____gtrapframe__t_1ac9389a78c26f64b8654833ffa41535f5" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x23</name></member>
+      <member refid="struct____gtrapframe__t_1a74c80a4ee472f691dc4ba5bf756b13b1" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x24</name></member>
+      <member refid="struct____gtrapframe__t_1a835ef85ee8d76417dfa174bd8a7297a5" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x25</name></member>
+      <member refid="struct____gtrapframe__t_1a16d2a77faa122ec98a7ad5e7ec3ada54" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x26</name></member>
+      <member refid="struct____gtrapframe__t_1ad46b01b933f1428672e8ef5a1000d15b" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x27</name></member>
+      <member refid="struct____gtrapframe__t_1a02227f51584826f64d9bdeb3d6ad0677" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x28</name></member>
+      <member refid="struct____gtrapframe__t_1a190764043b341ea9ca97afd030512ec9" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x29</name></member>
+      <member refid="struct____gtrapframe__t_1a92d38539a60fd9bf7856e4f3df091294" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x3</name></member>
+      <member refid="struct____gtrapframe__t_1a1db2cb70db233357a11cf3063067d65c" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x30</name></member>
+      <member refid="struct____gtrapframe__t_1a901301b3bb4bf2b613eb962cec22fb6d" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x31</name></member>
+      <member refid="struct____gtrapframe__t_1ab77d8d4d292dc2178ef827466b4929b4" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x4</name></member>
+      <member refid="struct____gtrapframe__t_1ab7f85fed960fba889becf8adac6f731d" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x5</name></member>
+      <member refid="struct____gtrapframe__t_1a8317bafd33003342cf9474044ddb2112" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x6</name></member>
+      <member refid="struct____gtrapframe__t_1a7247fda7f63fb0a5c2e6adb7ca1321cc" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x7</name></member>
+      <member refid="struct____gtrapframe__t_1afb982d2b5caf20054c2f5f99b4966b3b" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x8</name></member>
+      <member refid="struct____gtrapframe__t_1a1ee2327a36e7720e56f040f8599dfce1" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>_x9</name></member>
+      <member refid="struct____gtrapframe__t_1a0fbc71785916b8630ce4d8af7f69a7d1" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a0</name></member>
+      <member refid="struct____gtrapframe__t_1add1eaca154eb5ee70b2e3d53c590ae51" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a1</name></member>
+      <member refid="struct____gtrapframe__t_1a01e3a3de709102b4040242c30e336e87" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a2</name></member>
+      <member refid="struct____gtrapframe__t_1a8c05f36a5f90de4b2c2637de2bf15645" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a3</name></member>
+      <member refid="struct____gtrapframe__t_1a48a4bf983f19c411f4d5bda59007994c" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a4</name></member>
+      <member refid="struct____gtrapframe__t_1a86444057ae291197c7d3ae5fb1c3b63e" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a5</name></member>
+      <member refid="struct____gtrapframe__t_1a66bd83f81fb7e0a8a80fb9a4a0f1b56e" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a6</name></member>
+      <member refid="struct____gtrapframe__t_1a36fada9bc3860e96fcdc99d7aed85df0" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>a7</name></member>
+      <member refid="struct____gtrapframe__t_1abde132be9731b9657a6a9fbe16d7e082" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>fp</name></member>
+      <member refid="struct____gtrapframe__t_1a4aee3aa09d23f793a6b10e4a8f6f57e5" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>gp</name></member>
+      <member refid="struct____gtrapframe__t_1a0f2e1498614699fa06d9c0614ae0392c" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>ra</name></member>
+      <member refid="struct____gtrapframe__t_1acbd3dc1c1d02fdda61f8ce06cc515d5d" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s0</name></member>
+      <member refid="struct____gtrapframe__t_1a3cac4125559164c5dbc90a207f214ab4" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s1</name></member>
+      <member refid="struct____gtrapframe__t_1a320f89bc35da8193003e46362fa48a94" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s10</name></member>
+      <member refid="struct____gtrapframe__t_1a40411ec6bf253b409d3fe668de116546" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s11</name></member>
+      <member refid="struct____gtrapframe__t_1a7438629b35e973c983fbb56072aafa41" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s2</name></member>
+      <member refid="struct____gtrapframe__t_1a3e6386234937049d8f0e953591cfba90" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s3</name></member>
+      <member refid="struct____gtrapframe__t_1a6762978cd7904faea243e7a2cb2798cb" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s4</name></member>
+      <member refid="struct____gtrapframe__t_1a57fa1f1deb58908563b9815ad7a07b50" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s5</name></member>
+      <member refid="struct____gtrapframe__t_1ae3325814c8a86edbaa134e9c63b643f2" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s6</name></member>
+      <member refid="struct____gtrapframe__t_1a118c82c5ce63e92b4f2515935668d5bd" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s7</name></member>
+      <member refid="struct____gtrapframe__t_1a512c42f5c330cdd4f3509cc5b4cef1ed" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s8</name></member>
+      <member refid="struct____gtrapframe__t_1aa855c7af5267d27e87cabc8cc2202e6e" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>s9</name></member>
+      <member refid="struct____gtrapframe__t_1a983aa2a66f74ba1f1df242df99d4bccb" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>sp</name></member>
+      <member refid="struct____gtrapframe__t_1ada7db4928b16756abc457a4d9d21dcc8" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t0</name></member>
+      <member refid="struct____gtrapframe__t_1ae2cc452662e7012b189b4c54e6f138fb" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t1</name></member>
+      <member refid="struct____gtrapframe__t_1ab9725d2a9938ca7bfe3d7b3be702a656" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t2</name></member>
+      <member refid="struct____gtrapframe__t_1a9fb39b4ea7a23940fe6ff7bec91363b5" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t3</name></member>
+      <member refid="struct____gtrapframe__t_1a005412fd4b53d37781afb1c97495f9f5" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t4</name></member>
+      <member refid="struct____gtrapframe__t_1a1fcb989a3991124b97bbdb87f7f39c0c" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t5</name></member>
+      <member refid="struct____gtrapframe__t_1aa2281ab3b8bb9c34d879ecb14c217538" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>t6</name></member>
+      <member refid="struct____gtrapframe__t_1ac902fa22e19754ea0c15ed5f5fe74111" prot="public" virt="non-virtual"><scope>__gtrapframe_t</scope><name>tp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

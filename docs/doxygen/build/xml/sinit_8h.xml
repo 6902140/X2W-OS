@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sinit_8h" kind="file" language="C++">
+    <compoundname>sinit.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="constrains_8h" local="yes">constrains.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/sinit.h</label>
+        <link refid="sinit_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sinit_8h_1a75c4d25a06eb3419d0ce0bf9a7ad30b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sinit_all</definition>
+        <argsstring>(void)</argsstring>
+        <name>sinit_all</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><computeroutput>sinit_all</computeroutput>函数对<computeroutput>SBI</computeroutput>的各个模块进行初始化 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para><computeroutput>sinit_all</computeroutput>的初始化顺序:<orderedlist>
+<listitem><para>初始化 SBI 异常/中断处理模块</para>
+</listitem><listitem><para>初始化 SBI Ecall 异常处理模块 </para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/sinit.h" line="24" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/sbi/sinit.h" declline="24" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="kinit_8h_source" kindref="compound">kinit.h</ref></computeroutput>是<computeroutput>SBI</computeroutput>的初始化模块, 对<computeroutput>SBI</computeroutput>的各个模块进行了初始化 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-14</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_SBI_SINIT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_SBI_SINIT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="constrains_8h" kindref="compound">constrains.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sinit_8h_1a75c4d25a06eb3419d0ce0bf9a7ad30b1" kindref="member">sinit_all</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/sbi/sinit.h"/>
+  </compounddef>
+</doxygen>

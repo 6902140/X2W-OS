@@ -1,0 +1,118 @@
+\hypertarget{uart_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/uart.h 文件参考}
+\label{uart_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/uart.h@{/home/data/proj/oskernel2023-\/x2w/include/uart.h}}
+
+
+{\ttfamily uart.\+h}提供了包括初始化、输出字符串等函数在内的{\ttfamily uart}功能  
+
+
+{\ttfamily \#include \char`\"{}io.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}asm/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}constrains.\+h\char`\"{}}\newline
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}{uart\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily uart\+\_\+init}初始化{\ttfamily U\+A\+RT}设备. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{uart_8h_aeb5d4f8824840e438ffbcf8d7e15ad77}{uart\+\_\+get}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily uart\+\_\+get}从{\ttfamily U\+A\+RT}设备接受一个字符 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a752af97d44bdb3700eaf8285d3068086}{uart\+\_\+put}} (char chr)
+\begin{DoxyCompactList}\small\item\em {\ttfamily uart\+\_\+put}向{\ttfamily U\+A\+RT}设备发送一个字符 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_aae85f51dad6eefb6ee2fa3199ff18b85}{uart\+\_\+puts}} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em {\ttfamily uart\+\_\+puts}向{\ttfamily U\+A\+RT}设备发送字符串 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily uart.\+h}提供了包括初始化、输出字符串等函数在内的{\ttfamily uart}功能 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gamil.com}{\texttt{ jack4shihong@gamil.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/08
+\end{DoxyDate}
+\begin{DoxyNote}{注解}
+{\ttfamily Q\+E\+MU}默认模拟的{\ttfamily U\+A\+RT}设备处理芯片是{\ttfamily A\+XI U\+A\+RT 16550} 
+
+关于{\ttfamily A\+XI U\+A\+RT 16550}芯片介绍\+: \href{https://wenku.baidu.com/view/6f7a176048d7c1c708a14521.html?_wkts_=1681021571718}{\texttt{ https\+://wenku.\+baidu.\+com/view/6f7a176048d7c1c708a14521.\+html?\+\_\+wkts\+\_\+=1681021571718}} 
+
+关于{\ttfamily A\+XI U\+A\+RT 16550}相关常量, 参考{\ttfamily A\+XI U\+A\+RT 16550}编程手册({\ttfamily Programming Table})\+: \href{http://byterunner.com/16550.html}{\texttt{ http\+://byterunner.\+com/16550.\+html}}
+\end{DoxyNote}
+\begin{DoxyWarning}{警告}
+目前使用轮询方式使用{\ttfamily U\+A\+RT}设备, 没有实现中断方式 
+
+{\ttfamily uart.\+h}仅提供{\ttfamily U\+A\+RT}相关功能, {\ttfamily A\+XI U\+A\+RT 16550}相关常量的定义在{\ttfamily \mbox{\hyperlink{asm_2uart_8h}{asm/uart.\+h}}}中
+\end{DoxyWarning}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{uart_8h_aeb5d4f8824840e438ffbcf8d7e15ad77}\label{uart_8h_aeb5d4f8824840e438ffbcf8d7e15ad77}} 
+\index{uart.h@{uart.h}!uart\_get@{uart\_get}}
+\index{uart\_get@{uart\_get}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_get()}{uart\_get()}}
+{\footnotesize\ttfamily char uart\+\_\+get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily uart\+\_\+get}从{\ttfamily U\+A\+RT}设备接受一个字符 
+
+\begin{DoxyNote}{注解}
+目前{\ttfamily uart\+\_\+get}是轮询的方式获得字符的, 未来在完成中断后需要改为中断式获得字符 
+\end{DoxyNote}
+\mbox{\Hypertarget{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}\label{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}} 
+\index{uart.h@{uart.h}!uart\_init@{uart\_init}}
+\index{uart\_init@{uart\_init}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_init()}{uart\_init()}}
+{\footnotesize\ttfamily void uart\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily uart\+\_\+init}初始化{\ttfamily U\+A\+RT}设备. 
+
+\begin{DoxyNote}{注解}
+{\ttfamily uart\+\_\+init}将{\ttfamily U\+A\+RT}设备的波特率设置为{\ttfamily \mbox{\hyperlink{constrains_8h}{constrains.\+h}}}中{\ttfamily U\+A\+R\+T\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}所定义的值 
+
+{\ttfamily Q\+E\+MU}默认模拟的\+U\+A\+R\+T处理芯片为{\ttfamily A\+XI U\+A\+RT 16550}芯片 
+\end{DoxyNote}
+\mbox{\Hypertarget{uart_8h_a752af97d44bdb3700eaf8285d3068086}\label{uart_8h_a752af97d44bdb3700eaf8285d3068086}} 
+\index{uart.h@{uart.h}!uart\_put@{uart\_put}}
+\index{uart\_put@{uart\_put}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_put()}{uart\_put()}}
+{\footnotesize\ttfamily void uart\+\_\+put (\begin{DoxyParamCaption}\item[{char}]{chr }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily uart\+\_\+put}向{\ttfamily U\+A\+RT}设备发送一个字符 
+
+
+\begin{DoxyParams}{参数}
+{\em chr} & 要发送的字符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+目前以轮询方式发送 
+\end{DoxyWarning}
+\mbox{\Hypertarget{uart_8h_aae85f51dad6eefb6ee2fa3199ff18b85}\label{uart_8h_aae85f51dad6eefb6ee2fa3199ff18b85}} 
+\index{uart.h@{uart.h}!uart\_puts@{uart\_puts}}
+\index{uart\_puts@{uart\_puts}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_puts()}{uart\_puts()}}
+{\footnotesize\ttfamily void uart\+\_\+puts (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily uart\+\_\+puts}向{\ttfamily U\+A\+RT}设备发送字符串 
+
+
+\begin{DoxyParams}{参数}
+{\em string} & 要发送的字符串\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+{\ttfamily uart\+\_\+puts}调用{\ttfamily uart\+\_\+put}发送 
+\end{DoxyNote}

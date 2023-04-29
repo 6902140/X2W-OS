@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/asm/uart.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_47b0152e0531aebd2c74f6f36a5c8382.html">asm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">uart.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="asm_2uart_8h.html" title="asm/uart.h文件中定义了AXI UART 16550相关的常量">asm/uart.h</a></code>文件中定义了<code>AXI UART 16550</code>相关的常量  
+<a href="#details">更多...</a></p>
+
+<p><a href="asm_2uart_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:af7cb12b462b4594bd759d1b4e241ec4c"><td class="memItemLeft" align="right" valign="top"><a id="af7cb12b462b4594bd759d1b4e241ec4c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UART</b>&#160;&#160;&#160;0x10000000</td></tr>
+<tr class="separator:af7cb12b462b4594bd759d1b4e241ec4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b0689b015ac9657c7fdf082797e88e"><td class="memItemLeft" align="right" valign="top"><a id="ac0b0689b015ac9657c7fdf082797e88e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UART_SIZE</b>&#160;&#160;&#160;4096</td></tr>
+<tr class="separator:ac0b0689b015ac9657c7fdf082797e88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b7a54cec0c7dfafa97d47e7cfd988e"><td class="memItemLeft" align="right" valign="top"><a id="a87b7a54cec0c7dfafa97d47e7cfd988e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a87b7a54cec0c7dfafa97d47e7cfd988e">UART16550_CLOCK</a>&#160;&#160;&#160;1843200</td></tr>
+<tr class="memdesc:a87b7a54cec0c7dfafa97d47e7cfd988e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>AXI UART 16550</code>芯片的时钟频率, 设置波特率时将根据时钟频率计算除数 <br /></td></tr>
+<tr class="separator:a87b7a54cec0c7dfafa97d47e7cfd988e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b083e5f3c00432ebaee95a865aa746"><td class="memItemLeft" align="right" valign="top"><a id="a50b083e5f3c00432ebaee95a865aa746"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a50b083e5f3c00432ebaee95a865aa746">UART_MMAP_BASE</a>&#160;&#160;&#160;0x10000000</td></tr>
+<tr class="memdesc:a50b083e5f3c00432ebaee95a865aa746"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>设备在内存中映射的起始单元 <br /></td></tr>
+<tr class="separator:a50b083e5f3c00432ebaee95a865aa746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f93d38a32cec4b5d5bf20def021911e"><td class="memItemLeft" align="right" valign="top"><a id="a7f93d38a32cec4b5d5bf20def021911e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(<a class="el" href="stdlib_8h.html#adc59f925a90e4b37b619e4ed89321029">offset</a>)&#160;&#160;&#160;(<a class="el" href="asm_2uart_8h.html#a50b083e5f3c00432ebaee95a865aa746">UART_MMAP_BASE</a> + <a class="el" href="stdlib_8h.html#adc59f925a90e4b37b619e4ed89321029">offset</a>)</td></tr>
+<tr class="memdesc:a7f93d38a32cec4b5d5bf20def021911e"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据UART寄存器的偏移量计算在内存中的地址 <br /></td></tr>
+<tr class="separator:a7f93d38a32cec4b5d5bf20def021911e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b9e788f979a7b74a192cfc4a3a2d96"><td class="memItemLeft" align="right" valign="top"><a id="a23b9e788f979a7b74a192cfc4a3a2d96"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a23b9e788f979a7b74a192cfc4a3a2d96">UART_DAT</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x00)</td></tr>
+<tr class="memdesc:a23b9e788f979a7b74a192cfc4a3a2d96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的数据寄存器(<code>Data Register</code>), 在发送模式和接受模式下有不同的作用 <br /></td></tr>
+<tr class="separator:a23b9e788f979a7b74a192cfc4a3a2d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a676f075475e46d27eb878977b867ec"><td class="memItemLeft" align="right" valign="top"><a id="a7a676f075475e46d27eb878977b867ec"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a7a676f075475e46d27eb878977b867ec">UART_THR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x00)</td></tr>
+<tr class="memdesc:a7a676f075475e46d27eb878977b867ec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的发送数据寄存器(<code>Transmit Holding Register</code>), <code>UART</code>设备处于发送模式时候存储要发送的数据 <br /></td></tr>
+<tr class="separator:a7a676f075475e46d27eb878977b867ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1d9e511e1020db09f787660371e927"><td class="memItemLeft" align="right" valign="top"><a id="a6b1d9e511e1020db09f787660371e927"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a6b1d9e511e1020db09f787660371e927">UART_RHR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x00)</td></tr>
+<tr class="memdesc:a6b1d9e511e1020db09f787660371e927"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的接受数据寄存器(<code>Receiving Holding Register</code>), <code>UART</code>设备处于接收模式时候存储要接受的数据 <br /></td></tr>
+<tr class="separator:a6b1d9e511e1020db09f787660371e927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7aaa372e86b3aa99e6c78242be2722"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#aaf7aaa372e86b3aa99e6c78242be2722">UART_IER</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x01)</td></tr>
+<tr class="memdesc:aaf7aaa372e86b3aa99e6c78242be2722"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的中断使能寄存器(<code>Interrupt Enable Register</code>)  <a href="asm_2uart_8h.html#aaf7aaa372e86b3aa99e6c78242be2722">更多...</a><br /></td></tr>
+<tr class="separator:aaf7aaa372e86b3aa99e6c78242be2722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e72509f2fe0cabe3a05502b2c6a867a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a5e72509f2fe0cabe3a05502b2c6a867a">UART_ISR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x02)</td></tr>
+<tr class="memdesc:a5e72509f2fe0cabe3a05502b2c6a867a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的中断状态寄存器(<code>Interrupt Status Register</code>)  <a href="asm_2uart_8h.html#a5e72509f2fe0cabe3a05502b2c6a867a">更多...</a><br /></td></tr>
+<tr class="separator:a5e72509f2fe0cabe3a05502b2c6a867a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220a678f91ca8244b30fe813200c26c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a220a678f91ca8244b30fe813200c26c1">UART_FCR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x02)</td></tr>
+<tr class="memdesc:a220a678f91ca8244b30fe813200c26c1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的FIFO控制寄存器(<code>FIFO Control Register</code>)  <a href="asm_2uart_8h.html#a220a678f91ca8244b30fe813200c26c1">更多...</a><br /></td></tr>
+<tr class="separator:a220a678f91ca8244b30fe813200c26c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c30861e332468c7f1998648e706740"><td class="memItemLeft" align="right" valign="top"><a id="a36c30861e332468c7f1998648e706740"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a36c30861e332468c7f1998648e706740">UART_LCR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x03)</td></tr>
+<tr class="memdesc:a36c30861e332468c7f1998648e706740"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的线路控制寄存器(<code>Line Control Register</code>) <br /></td></tr>
+<tr class="separator:a36c30861e332468c7f1998648e706740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef39bc0942ddd0411d87001d12224f4"><td class="memItemLeft" align="right" valign="top"><a id="a8ef39bc0942ddd0411d87001d12224f4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a8ef39bc0942ddd0411d87001d12224f4">UART_MCR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x04)</td></tr>
+<tr class="memdesc:a8ef39bc0942ddd0411d87001d12224f4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的<code>Moden</code>控制寄存器(<code>Modem Control Register</code>) <br /></td></tr>
+<tr class="separator:a8ef39bc0942ddd0411d87001d12224f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8ac527073d763bac90daba987361c6"><td class="memItemLeft" align="right" valign="top"><a id="a0f8ac527073d763bac90daba987361c6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a0f8ac527073d763bac90daba987361c6">UART_LSR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x05)</td></tr>
+<tr class="memdesc:a0f8ac527073d763bac90daba987361c6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的线路状态寄存器(<code>Line Status Register</code>) <br /></td></tr>
+<tr class="separator:a0f8ac527073d763bac90daba987361c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71067c48bdde7dc6c5d0a1c56746e776"><td class="memItemLeft" align="right" valign="top"><a id="a71067c48bdde7dc6c5d0a1c56746e776"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a71067c48bdde7dc6c5d0a1c56746e776">UART_MSR</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x06)</td></tr>
+<tr class="memdesc:a71067c48bdde7dc6c5d0a1c56746e776"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的<code>Moden</code>状态寄存器(<code>Modem Status Register</code>) <br /></td></tr>
+<tr class="separator:a71067c48bdde7dc6c5d0a1c56746e776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325451056249a66d1c7ceca8e52463e3"><td class="memItemLeft" align="right" valign="top"><a id="a325451056249a66d1c7ceca8e52463e3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a325451056249a66d1c7ceca8e52463e3">UART_DL_LSB</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x00)</td></tr>
+<tr class="memdesc:a325451056249a66d1c7ceca8e52463e3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的除数寄存器低八位(<code>Least Significant Bits</code>, <code>LSB of Divisor Latch</code>), 用于进行预分频, 即设置波特率 <br /></td></tr>
+<tr class="separator:a325451056249a66d1c7ceca8e52463e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5670be346cb486d76bb75e732500fb"><td class="memItemLeft" align="right" valign="top"><a id="afa5670be346cb486d76bb75e732500fb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#afa5670be346cb486d76bb75e732500fb">UART_DL_MSB</a>&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x01)</td></tr>
+<tr class="memdesc:afa5670be346cb486d76bb75e732500fb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UART</code>的除数寄存器高八位(<code>Most Significant Bits</code>, <code>MSB of Divisor Latch</code>), 用于进行预分频, 即设置波特率 <br /></td></tr>
+<tr class="separator:afa5670be346cb486d76bb75e732500fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087021cb4f563b545c2e827b1a95e97d"><td class="memItemLeft" align="right" valign="top"><a id="a087021cb4f563b545c2e827b1a95e97d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a087021cb4f563b545c2e827b1a95e97d">UART_LSR_ERR</a>&#160;&#160;&#160;0b10000000</td></tr>
+<tr class="memdesc:a087021cb4f563b545c2e827b1a95e97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输出错, FIFO Error <br /></td></tr>
+<tr class="separator:a087021cb4f563b545c2e827b1a95e97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0b74c1b345da06af598e6d00c291a3"><td class="memItemLeft" align="right" valign="top"><a id="afb0b74c1b345da06af598e6d00c291a3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#afb0b74c1b345da06af598e6d00c291a3">UART_LSR_TSE</a>&#160;&#160;&#160;0b01000000</td></tr>
+<tr class="memdesc:afb0b74c1b345da06af598e6d00c291a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输缓冲区(FIFO)和移位寄存器为空, Transmit Empty <br /></td></tr>
+<tr class="separator:afb0b74c1b345da06af598e6d00c291a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367cdd2af61ca57bc1f7c78cca48704f"><td class="memItemLeft" align="right" valign="top"><a id="a367cdd2af61ca57bc1f7c78cca48704f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a367cdd2af61ca57bc1f7c78cca48704f">UART_LSR_THE</a>&#160;&#160;&#160;0b00100000</td></tr>
+<tr class="memdesc:a367cdd2af61ca57bc1f7c78cca48704f"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输缓冲区(FIFO)为空, Transmit Holding Empty <br /></td></tr>
+<tr class="separator:a367cdd2af61ca57bc1f7c78cca48704f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0f5510bc38ddd69eab01ed6f90a5ea"><td class="memItemLeft" align="right" valign="top"><a id="a0b0f5510bc38ddd69eab01ed6f90a5ea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a0b0f5510bc38ddd69eab01ed6f90a5ea">UART_LSR_BKI</a>&#160;&#160;&#160;0b00010000</td></tr>
+<tr class="memdesc:a0b0f5510bc38ddd69eab01ed6f90a5ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输被打断, Break Interrupt <br /></td></tr>
+<tr class="separator:a0b0f5510bc38ddd69eab01ed6f90a5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394124b89c650442a1ec18d228349e82"><td class="memItemLeft" align="right" valign="top"><a id="a394124b89c650442a1ec18d228349e82"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a394124b89c650442a1ec18d228349e82">UART_LSR_FME</a>&#160;&#160;&#160;0b00001000</td></tr>
+<tr class="memdesc:a394124b89c650442a1ec18d228349e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受帧出错, 没有接收到停止位的帧, Framing Error <br /></td></tr>
+<tr class="separator:a394124b89c650442a1ec18d228349e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13b37788c32483db8ac20d4809c5100"><td class="memItemLeft" align="right" valign="top"><a id="ac13b37788c32483db8ac20d4809c5100"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#ac13b37788c32483db8ac20d4809c5100">UART_LSR_PRE</a>&#160;&#160;&#160;0b00000100</td></tr>
+<tr class="memdesc:ac13b37788c32483db8ac20d4809c5100"><td class="mdescLeft">&#160;</td><td class="mdescRight">奇偶校验出错, Parity Error <br /></td></tr>
+<tr class="separator:ac13b37788c32483db8ac20d4809c5100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45510686ea3a27a0e1908a0ae414f80e"><td class="memItemLeft" align="right" valign="top"><a id="a45510686ea3a27a0e1908a0ae414f80e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a45510686ea3a27a0e1908a0ae414f80e">UART_LSR_ORE</a>&#160;&#160;&#160;0b00000010</td></tr>
+<tr class="memdesc:a45510686ea3a27a0e1908a0ae414f80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据溢出, Overrun Error <br /></td></tr>
+<tr class="separator:a45510686ea3a27a0e1908a0ae414f80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d83de31d722cd373ee69a2a38aaed43"><td class="memItemLeft" align="right" valign="top"><a id="a3d83de31d722cd373ee69a2a38aaed43"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_2uart_8h.html#a3d83de31d722cd373ee69a2a38aaed43">UART_LSR_RDR</a>&#160;&#160;&#160;0b00000001</td></tr>
+<tr class="memdesc:a3d83de31d722cd373ee69a2a38aaed43"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIFO有数据, Receive Data Ready <br /></td></tr>
+<tr class="separator:a3d83de31d722cd373ee69a2a38aaed43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="asm_2uart_8h.html" title="asm/uart.h文件中定义了AXI UART 16550相关的常量">asm/uart.h</a></code>文件中定义了<code>AXI UART 16550</code>相关的常量 </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'ga'+'mil'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>amil<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-09</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>关于<code>AXI UART 16550</code>芯片介绍: <a href="https://wenku.baidu.com/view/6f7a176048d7c1c708a14521.html?_wkts_=1681021571718">https://wenku.baidu.com/view/6f7a176048d7c1c708a14521.html?_wkts_=1681021571718</a> </dd>
+<dd>
+关于<code>AXI UART 16550</code>相关常量, 参考<code>AXI UART 16550</code>编程手册(<code>Programming Table</code>): <a href="http://byterunner.com/16550.html">http://byterunner.com/16550.html</a></dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code><a class="el" href="asm_2uart_8h.html" title="asm/uart.h文件中定义了AXI UART 16550相关的常量">asm/uart.h</a></code>仅提供<code>AXI UART 16550</code>相关常量的定义, <code>UART</code>相关功能定义在<code>uart.h</code>中</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a220a678f91ca8244b30fe813200c26c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220a678f91ca8244b30fe813200c26c1">&#9670;&nbsp;</a></span>UART_FCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_FCR&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x02)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>UART</code>的FIFO控制寄存器(<code>FIFO Control Register</code>) </p>
+<dl class="section note"><dt>注解</dt><dd><code>UART</code>设备每次通信发送/接受1bit数据, 因此<code>16550</code>内部设置了缓冲区, 将发送/接受的数据保存在缓冲区中, 缓冲区空/满之后再向CPU发送中断. <code>16550</code>的缓冲区最大为16字节, 可以通过设置<code>FCR</code>设置使用的缓冲区的大小 </dd></dl>
+
+</div>
+</div>
+<a id="aaf7aaa372e86b3aa99e6c78242be2722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf7aaa372e86b3aa99e6c78242be2722">&#9670;&nbsp;</a></span>UART_IER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_IER&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>UART</code>的中断使能寄存器(<code>Interrupt Enable Register</code>) </p>
+<dl class="section note"><dt>注解</dt><dd><code>16550</code>支持四种中断, 优先级从高到低依次为:<ul>
+<li>接受出错中断</li>
+<li>接受缓冲区满中断</li>
+<li>发送缓冲区空中断</li>
+<li>Modem状态变化中断 四种中断源的使能状态由<code>IER</code>寄存器中的控制 </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a5e72509f2fe0cabe3a05502b2c6a867a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e72509f2fe0cabe3a05502b2c6a867a">&#9670;&nbsp;</a></span>UART_ISR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_ISR&#160;&#160;&#160;<a class="el" href="asm_2uart_8h.html#a7f93d38a32cec4b5d5bf20def021911e">_UART_REG</a>(0x02)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>UART</code>的中断状态寄存器(<code>Interrupt Status Register</code>) </p>
+<dl class="section note"><dt>注解</dt><dd><code>16550</code>的四种中断源共用一条中断请求线<code>INTR</code>向<code>CPU</code>申请中断, 因此在<code>CPU</code>响应中断之后, 需要判断是那一个中断. 因此<code>16550</code>使用<code>ISR</code>寄存器表明有无中断和当前最高级别的中断 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

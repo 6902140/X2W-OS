@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/io.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">io.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="io_8h.html" title="io.h中提供了io操作函数">io.h</a></code>中提供了<code>io</code>操作函数  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="constrains_8h_source.html">constrains.h</a>&quot;</code><br />
+</div>
+<p><a href="io_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a3c3e456bfd6d0406bc6e20318da1760b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a3c3e456bfd6d0406bc6e20318da1760b">dmb</a>()&#160;&#160;&#160;__asm__ __volatile__ (&quot;&quot; : : : &quot;memory&quot;)</td></tr>
+<tr class="memdesc:a3c3e456bfd6d0406bc6e20318da1760b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>dmb</code>(<code>Define Memory Barrier</code>)定义了内存屏障(<code>Memory Barrier</code>)  <a href="io_8h.html#a3c3e456bfd6d0406bc6e20318da1760b">更多...</a><br /></td></tr>
+<tr class="separator:a3c3e456bfd6d0406bc6e20318da1760b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2972611d217f2dd8bf17d8e5a9df24c"><td class="memItemLeft" align="right" valign="top"><a id="aa2972611d217f2dd8bf17d8e5a9df24c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#aa2972611d217f2dd8bf17d8e5a9df24c">__iormb</a>()&#160;&#160;&#160;<a class="el" href="io_8h.html#a3c3e456bfd6d0406bc6e20318da1760b">dmb</a>()</td></tr>
+<tr class="memdesc:aa2972611d217f2dd8bf17d8e5a9df24c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>__iormb</code> 定义了读取寄存器的内存屏障 <br /></td></tr>
+<tr class="separator:aa2972611d217f2dd8bf17d8e5a9df24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c5ac1cb98b83819b9cedd10ab863ca"><td class="memItemLeft" align="right" valign="top"><a id="a76c5ac1cb98b83819b9cedd10ab863ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a76c5ac1cb98b83819b9cedd10ab863ca">__iowmb</a>()&#160;&#160;&#160;<a class="el" href="io_8h.html#a3c3e456bfd6d0406bc6e20318da1760b">dmb</a>()</td></tr>
+<tr class="memdesc:a76c5ac1cb98b83819b9cedd10ab863ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>__iowmb</code> 定义了写入寄存器的内存屏障 <br /></td></tr>
+<tr class="separator:a76c5ac1cb98b83819b9cedd10ab863ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c466414909380bc82d6d28e35193e7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a5c466414909380bc82d6d28e35193e7f">glue</a>(x,  y,  z)&#160;&#160;&#160;x ## _ ## y ## _ ## z</td></tr>
+<tr class="memdesc:a5c466414909380bc82d6d28e35193e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>glue</code>用于将符号<code>x</code>, <code>y</code>, <code>z</code>拼接为符号<code>x_y_z</code>  <a href="io_8h.html#a5c466414909380bc82d6d28e35193e7f">更多...</a><br /></td></tr>
+<tr class="separator:a5c466414909380bc82d6d28e35193e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2eaa508b61574c8081061907488e005"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#ac2eaa508b61574c8081061907488e005">mkname</a>(type,  width)&#160;&#160;&#160;<a class="el" href="io_8h.html#a5c466414909380bc82d6d28e35193e7f">glue</a>(type, width, bits)</td></tr>
+<tr class="memdesc:ac2eaa508b61574c8081061907488e005"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>mkname</code>用于方便的拼接得到函数名  <a href="io_8h.html#ac2eaa508b61574c8081061907488e005">更多...</a><br /></td></tr>
+<tr class="separator:ac2eaa508b61574c8081061907488e005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04306cf4d238a563ec6e862b546dc590"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a04306cf4d238a563ec6e862b546dc590">mkread</a>(width)</td></tr>
+<tr class="memdesc:a04306cf4d238a563ec6e862b546dc590"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>mkread</code>用于生成读不同长度寄存器的函数  <a href="io_8h.html#a04306cf4d238a563ec6e862b546dc590">更多...</a><br /></td></tr>
+<tr class="separator:a04306cf4d238a563ec6e862b546dc590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e4e10887e0e4c54d738802bf969f1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a59e4e10887e0e4c54d738802bf969f1c">mkwrite</a>(width)</td></tr>
+<tr class="memdesc:a59e4e10887e0e4c54d738802bf969f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>mkwrite</code>用于生成写不同长度寄存器的函数  <a href="io_8h.html#a59e4e10887e0e4c54d738802bf969f1c">更多...</a><br /></td></tr>
+<tr class="separator:a59e4e10887e0e4c54d738802bf969f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af5323b9c9edb836d4c9a0caf30b8755c"><td class="memItemLeft" align="right" valign="top"><a id="af5323b9c9edb836d4c9a0caf30b8755c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkread</b> (8)</td></tr>
+<tr class="separator:af5323b9c9edb836d4c9a0caf30b8755c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58e19d2fe95ee545850125e2cf044fe"><td class="memItemLeft" align="right" valign="top"><a id="ae58e19d2fe95ee545850125e2cf044fe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkread</b> (16)</td></tr>
+<tr class="separator:ae58e19d2fe95ee545850125e2cf044fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c5fcbf785b7116785adce25a7eb59c"><td class="memItemLeft" align="right" valign="top"><a id="a10c5fcbf785b7116785adce25a7eb59c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkread</b> (32)</td></tr>
+<tr class="separator:a10c5fcbf785b7116785adce25a7eb59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19e962b9bf6616b46865283e6f13206"><td class="memItemLeft" align="right" valign="top"><a id="ae19e962b9bf6616b46865283e6f13206"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkread</b> (64)</td></tr>
+<tr class="separator:ae19e962b9bf6616b46865283e6f13206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a4cd0abcc5f7d5123b60acc8d457684"><td class="memItemLeft" align="right" valign="top"><a id="a7a4cd0abcc5f7d5123b60acc8d457684"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkwrite</b> (8)</td></tr>
+<tr class="separator:a7a4cd0abcc5f7d5123b60acc8d457684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac199dfaa00c7aaeccf12f9657b3e76f4"><td class="memItemLeft" align="right" valign="top"><a id="ac199dfaa00c7aaeccf12f9657b3e76f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkwrite</b> (16)</td></tr>
+<tr class="separator:ac199dfaa00c7aaeccf12f9657b3e76f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67e4a6176af3ef355f7c71884c46e52"><td class="memItemLeft" align="right" valign="top"><a id="ae67e4a6176af3ef355f7c71884c46e52"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkwrite</b> (32)</td></tr>
+<tr class="separator:ae67e4a6176af3ef355f7c71884c46e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3871a02099ba5ff1fe0de444078f6afc"><td class="memItemLeft" align="right" valign="top"><a id="a3871a02099ba5ff1fe0de444078f6afc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mkwrite</b> (64)</td></tr>
+<tr class="separator:a3871a02099ba5ff1fe0de444078f6afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="io_8h.html" title="io.h中提供了io操作函数">io.h</a></code>中提供了<code>io</code>操作函数 </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'gm'+'ail'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-09</dd></dl>
+<dl class="section note"><dt>注解</dt><dd><code>RISC-V</code>通过<code>Memory Mapping IO</code> (<code>MMIO</code>)的方式操作设备寄存器. 关于具体的<code>MMIO Map</code>, 参阅<code>QEMU</code>中的<code>virt_memmap[]</code>: <a href="https://github.com/qemu/qemu/blob/master/hw/riscv/virt.c">https://github.com/qemu/qemu/blob/master/hw/riscv/virt.c</a></dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a3c3e456bfd6d0406bc6e20318da1760b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3e456bfd6d0406bc6e20318da1760b">&#9670;&nbsp;</a></span>dmb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dmb</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;__asm__ __volatile__ (&quot;&quot; : : : &quot;memory&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>dmb</code>(<code>Define Memory Barrier</code>)定义了内存屏障(<code>Memory Barrier</code>) </p>
+<dl class="section note"><dt>注解</dt><dd>关于内存屏障, 参考:<ul>
+<li><code>GCC</code>优化: <a href="https://www.cnblogs.com/nufangrensheng/p/3890856.html">https://www.cnblogs.com/nufangrensheng/p/3890856.html</a></li>
+<li>内存屏障原理: <a href="https://stackoverflow.com/questions/14950614/working-of-asm-volatile-memory">https://stackoverflow.com/questions/14950614/working-of-asm-volatile-memory</a> </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a5c466414909380bc82d6d28e35193e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c466414909380bc82d6d28e35193e7f">&#9670;&nbsp;</a></span>glue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define glue</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;x ## _ ## y ## _ ## z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>glue</code>用于将符号<code>x</code>, <code>y</code>, <code>z</code>拼接为符号<code>x_y_z</code> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>第一个符号 </td></tr>
+    <tr><td class="paramname">y</td><td>第二个符号 </td></tr>
+    <tr><td class="paramname">z</td><td>第三个符号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac2eaa508b61574c8081061907488e005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2eaa508b61574c8081061907488e005">&#9670;&nbsp;</a></span>mkname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mkname</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="io_8h.html#a5c466414909380bc82d6d28e35193e7f">glue</a>(type, width, bits)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>mkname</code>用于方便的拼接得到函数名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>读还是写寄存器, 只能是read或write </td></tr>
+    <tr><td class="paramname">width</td><td>读写的位数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04306cf4d238a563ec6e862b546dc590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04306cf4d238a563ec6e862b546dc590">&#9670;&nbsp;</a></span>mkread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mkread</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> uint##width##_t <a class="code" href="io_8h.html#ac2eaa508b61574c8081061907488e005">mkname</a>(read, width)(<a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> addr){ \</div>
+<div class="line">    uint##width##_t __v = *(<span class="keyword">volatile</span> uint##width##_t*)addr; \</div>
+<div class="line">    __iormb(); \</div>
+<div class="line">    return __v; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p><code>mkread</code>用于生成读不同长度寄存器的函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>读取的位数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>通常情况下，在内联汇编代码块的最后一条语句中将需要返回的值存储在一个特定的变量中，然后该变量将被作为代码块的返回值返回给调用者。在GCC扩展中，这个变量通常被命名为__v（两个下划线 + v），并且在代码块的最后一行写上__v;语句来表示将其作为返回值返回给调用者。 </dd>
+<dd>
+因为地址的值(寄存器的值)可能会被设备改变, 因此必须声明是volatile, 以避免GCC进行优化 </dd></dl>
+
+</div>
+</div>
+<a id="a59e4e10887e0e4c54d738802bf969f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e4e10887e0e4c54d738802bf969f1c">&#9670;&nbsp;</a></span>mkwrite</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mkwrite</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="io_8h.html#ac2eaa508b61574c8081061907488e005">mkname</a>(write, width)(<a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> addr, uint##width##_t value){ \</div>
+<div class="line">    uint##width##_t __v = value; \</div>
+<div class="line">    __iowmb(); \</div>
+<div class="line">    *(<span class="keyword">volatile</span> uint##width##_t*)addr = __v; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p><code>mkwrite</code>用于生成写不同长度寄存器的函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>写入的位数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>因为地址的值(寄存器的值)可能会被设备改变, 因此必须声明是volatile, 以避免GCC进行优化 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="atypes_8h_html_aa232ecf786a74ce5363c36c10798d2b1"><div class="ttname"><a href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a></div><div class="ttdeci">unsigned long uint64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:26</div></div>
+<div class="ttc" id="aio_8h_html_ac2eaa508b61574c8081061907488e005"><div class="ttname"><a href="io_8h.html#ac2eaa508b61574c8081061907488e005">mkname</a></div><div class="ttdeci">#define mkname(type, width)</div><div class="ttdoc">mkname用于方便的拼接得到函数名</div><div class="ttdef"><b>Definition:</b> io.h:127</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/sbi/strap.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_5299e398a241aad4d173dc0e5cfe4485.html">sbi</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">strap.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="strap_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_SBI_STRAP_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __INCLUDE_SBI_STRAP_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="constrains_8h.html">constrains.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="trapframe_8h.html">trap/trapframe.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="trap__entry_8h.html">trap/trap_entry.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="strap_8h.html#a9a19fa750573209f5634e474b11a3ee3">   30</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a> (*<a class="code" href="strap_8h.html#a9a19fa750573209f5634e474b11a3ee3">strap_handler_t</a>)(<a class="code" href="struct____strapframe__t.html">strapframe_t</a>* stf_ptr);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="strap_8h.html#a7cd9fe16e6c323ee6338df4ff08d35a0">strap_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="strap_8h.html#aac87713a691e1d0ff3762661d66f7b2c">delegate_traps</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> <a class="code" href="strap_8h.html#adf9cc8a8a5e27e4814bf087b6958610d">strap_dispatcher</a>(<a class="code" href="struct____strapframe__t.html">strapframe_t</a> *stf_ptr);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="strap_8h.html#a5654c6980aafe460d534d0bcc5c48348">regitser_strap_handler</a>(<a class="code" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a> trap_code, <a class="code" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a> interrupt, <span class="keyword">const</span> <span class="keywordtype">char</span>* msg, <a class="code" href="strap_8h.html#a9a19fa750573209f5634e474b11a3ee3">strap_handler_t</a> strap_func);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<a class="code" href="types_8h.html#a9bc43e3ee0ae83643b65e07fe1fd0132">NO_RETURN</a> <a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a> <a class="code" href="strap_8h.html#a55448a7c09442246934cc61d542749a4">general_strap_handler</a>(<a class="code" href="struct____strapframe__t.html">strapframe_t</a> *stf_ptr);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="atrapframe_8h_html"><div class="ttname"><a href="trapframe_8h.html">trapframe.h</a></div><div class="ttdoc">trapframe.h中定义了通用的陷入帧gtrapframe_t</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">types.h中定义了X2W-OS的内建类型</div></div>
+<div class="ttc" id="astrap_8h_html_a55448a7c09442246934cc61d542749a4"><div class="ttname"><a href="strap_8h.html#a55448a7c09442246934cc61d542749a4">general_strap_handler</a></div><div class="ttdeci">NO_RETURN int64_t general_strap_handler(strapframe_t *stf_ptr)</div><div class="ttdoc">general_strap_handler是所有中断/异常的缺省处理函数, 将会在屏幕上输出中断/异常信息, 打印陷入帧, 而后挂起内核</div></div>
+<div class="ttc" id="astrap_8h_html_a9a19fa750573209f5634e474b11a3ee3"><div class="ttname"><a href="strap_8h.html#a9a19fa750573209f5634e474b11a3ee3">strap_handler_t</a></div><div class="ttdeci">int64_t(* strap_handler_t)(strapframe_t *stf_ptr)</div><div class="ttdoc">strap_handler_t是异常/中断处理函数的函数类型, 函数原型为: int64_t funcname(struct strapframe_t*)</div><div class="ttdef"><b>Definition:</b> strap.h:30</div></div>
+<div class="ttc" id="astrap_8h_html_a5654c6980aafe460d534d0bcc5c48348"><div class="ttname"><a href="strap_8h.html#a5654c6980aafe460d534d0bcc5c48348">regitser_strap_handler</a></div><div class="ttdeci">void regitser_strap_handler(uint64_t trap_code, Bool interrupt, const char *msg, strap_handler_t strap_func)</div><div class="ttdoc">regitser_strap_handler是SBI异常/中断注册函数, 用于将编号为trap_code的异常/中断的处理函数strap_func注册到SBI的异常/中断处理函数表中</div></div>
+<div class="ttc" id="atypes_8h_html_aa232ecf786a74ce5363c36c10798d2b1"><div class="ttname"><a href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a></div><div class="ttdeci">unsigned long uint64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:26</div></div>
+<div class="ttc" id="astrap_8h_html_adf9cc8a8a5e27e4814bf087b6958610d"><div class="ttname"><a href="strap_8h.html#adf9cc8a8a5e27e4814bf087b6958610d">strap_dispatcher</a></div><div class="ttdeci">void strap_dispatcher(strapframe_t *stf_ptr)</div><div class="ttdoc">strap_dispatcher是通用异常/中断处理函数, 将会根据mcause寄存器的值运行不同的中断处理函数</div></div>
+<div class="ttc" id="atypes_8h_html_a253b248072cfc8bd812c69acd0046eed"><div class="ttname"><a href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a></div><div class="ttdeci">unsigned char Bool</div><div class="ttdoc">布尔常量定义</div><div class="ttdef"><b>Definition:</b> types.h:35</div></div>
+<div class="ttc" id="astruct____strapframe__t_html"><div class="ttname"><a href="struct____strapframe__t.html">__strapframe_t</a></div><div class="ttdoc">strapframe_t是SBI陷入帧(SBI Trap Frame), 在保存通用寄存器的基础上, 额外保存了empc寄存器和mstatus寄存器</div><div class="ttdef"><b>Definition:</b> trapframe.h:131</div></div>
+<div class="ttc" id="astrap_8h_html_aac87713a691e1d0ff3762661d66f7b2c"><div class="ttname"><a href="strap_8h.html#aac87713a691e1d0ff3762661d66f7b2c">delegate_traps</a></div><div class="ttdeci">void delegate_traps(void)</div><div class="ttdoc">delegate_traps用于将M模式下的一些中断和异常委托至S模式</div></div>
+<div class="ttc" id="atrap__entry_8h_html"><div class="ttname"><a href="trap__entry_8h.html">trap_entry.h</a></div><div class="ttdoc">trap_entry.h中定义了各种模式下的陷入入口函数和陷入出口函数</div></div>
+<div class="ttc" id="astrap_8h_html_a7cd9fe16e6c323ee6338df4ff08d35a0"><div class="ttname"><a href="strap_8h.html#a7cd9fe16e6c323ee6338df4ff08d35a0">strap_init</a></div><div class="ttdeci">void strap_init(void)</div><div class="ttdoc">strap_init是SBI的异常/中断初始化函数</div></div>
+<div class="ttc" id="atypes_8h_html_a312c7e8848187d110315ab83a7b3d4d0"><div class="ttname"><a href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a></div><div class="ttdeci">long int64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+<div class="ttc" id="atypes_8h_html_a9bc43e3ee0ae83643b65e07fe1fd0132"><div class="ttname"><a href="types_8h.html#a9bc43e3ee0ae83643b65e07fe1fd0132">NO_RETURN</a></div><div class="ttdeci">#define NO_RETURN</div><div class="ttdoc">NO_RETURN宏用于通知GCC/Clang编译器被修饰的函数不会返回, 帮助编译器静态分析用</div><div class="ttdef"><b>Definition:</b> types.h:79</div></div>
+<div class="ttc" id="aconstrains_8h_html"><div class="ttname"><a href="constrains_8h.html">constrains.h</a></div><div class="ttdoc">constrain.h定义了内核的一系列常数</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

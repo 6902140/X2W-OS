@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_5299e398a241aad4d173dc0e5cfe4485.html">sbi</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">sstdio.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>sstdio</code>库的实现  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="stdfmt_8h_source.html">stdfmt.h</a>&quot;</code><br />
+</div>
+<p><a href="sstdio_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a8c7d0ae2d3fa79a01d99c6ac10683461"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sstdio_8h.html#a8c7d0ae2d3fa79a01d99c6ac10683461">bprintf</a> (const char *format,...)</td></tr>
+<tr class="memdesc:a8c7d0ae2d3fa79a01d99c6ac10683461"><td class="mdescLeft">&#160;</td><td class="mdescRight">bprintf用于格式化输出字符串  <a href="sstdio_8h.html#a8c7d0ae2d3fa79a01d99c6ac10683461">更多...</a><br /></td></tr>
+<tr class="separator:a8c7d0ae2d3fa79a01d99c6ac10683461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code>sstdio</code>库的实现 </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'gm'+'ail'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-18</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>sstdio</code>为SBI库, 仅供SBI使用, 内核程序请使用<code>sstdio</code>库, 用户程序请使用<code>ustdio</code>库</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a8c7d0ae2d3fa79a01d99c6ac10683461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7d0ae2d3fa79a01d99c6ac10683461">&#9670;&nbsp;</a></span>bprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a> bprintf </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bprintf用于格式化输出字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>含格式控制字符的格式字符串 </td></tr>
+    <tr><td class="paramname">...</td><td>可变参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>size_t 输出的字符串中的字符数</dd></dl>
+<dl class="section note"><dt>注解</dt><dd><code>bprintf</code>函数可以输出的字符串最大长度由<code><a class="el" href="constrains_8h.html" title="constrain.h定义了内核的一系列常数">constrains.h</a></code>中的<code>PRINTF_STRING_SIZE</code>宏常量的值决定</dd>
+<dd>
+格式控制字符: <code>%[flag][width][precision][length]&lt;type&gt;</code>. 其中:<ul>
+<li><code>type</code>字段必须存在, 其余字段均可选</li>
+</ul>
+</dd></dl>
+<p>关于各个字段的说明:</p><ul>
+<li><code>flag</code>字段:<ul>
+<li><code>-</code>: 左对齐输出, 默认是右对齐</li>
+<li><code>+</code>: 输出正数前添加加号, 默认不添加</li>
+<li><code>#</code>: 当<code>type</code>为<code>b</code>, <code>o</code>, <code>x</code>, <code>X</code>时, 添加前缀<code>0b</code>, <code>0</code>或者<code>0x</code></li>
+<li><code>0</code>: 使用<code>0</code>填充对齐, 默认使用空格填充对齐</li>
+</ul>
+</li>
+<li><code>width</code>字段:<ul>
+<li><code>数字</code>: 设置对齐的宽度, 例如: <code>printf("%5d", 100)</code> 将会输出 <code>100</code></li>
+<li><code>*:</code> 动态参数, 由后续的数字指定, 例如: <code>printf("%*d", 5, 10)</code> 等价于 printf("%5d", 10)<code> -</code>precision<code>字段: -</code>.数字<code>: 设置输出的位数, 例如:</code>printf("%.2d", 111)<code>将会输出</code>11<code> -</code>.*<code>: 动态参数, 由后续的数字指定, 例如:</code>printf("%.*d", 2, 111)<code>等价于 printf("%.2d", 111)</code></li>
+</ul>
+</li>
+<li><code>length</code>字段:<ul>
+<li><code>h</code>: 输出一个16位宽度的整数, 即: <code>short</code>, <code>unsigned short</code>, <code>int16_t</code>, <code>uint16_t</code></li>
+<li><code>l</code>: 输出一个64位宽度的整数, 即: <code>long</code>, <code>unsigned long</code>, <code>int64_t</code>, <code>uint64_t</code></li>
+<li><code>ll</code>: 输出一个64位宽度的整数, 即: <code>long long</code>, <code>unsigned long long</code></li>
+<li>PS: RISC-V LP64中long long和long都是64位</li>
+</ul>
+</li>
+<li><code>type</code>字段:<ul>
+<li><code>%</code>: 输出一个<code>%</code></li>
+<li><code>p</code>: 输出一个指针, 需要转换为(void*)</li>
+<li><code>c</code>: 输出一个字符</li>
+<li><code>s</code>: 输出一个<code>\0</code>结尾的字符串</li>
+<li><code>b</code>: 以二进制输出一个整数, 无符号</li>
+<li><code>o</code>: 以八进制输出一个整数, 无符号</li>
+<li><code>i</code>: 以十进制输出一个整数, 有符号</li>
+<li><code>d</code>: 以十进制输出一个整数, 有符号</li>
+<li><code>u</code>: 以十进制输出一个整数, 无符号</li>
+<li><code>x</code>: 以十六进制输出一个整数, 小写字母, 无符号</li>
+<li><code>X</code>: 以十六进制输出一个整数, 大写字母, 无符号</li>
+<li><code>n</code>: 到此处已经输出的字符的数量, 不会输出文本, 而是将值保存到地址中. 参考: <a href="https://blog.csdn.net/zsx0728/article/details/118100389">https://blog.csdn.net/zsx0728/article/details/118100389</a></li>
+</ul>
+</li>
+</ul>
+<dl class="section warning"><dt>警告</dt><dd><code>bprintf</code>函数仅供SBI使用, 内核请使用<code>kprintf</code>函数, 用户程序请使用<code>uprintf</code>函数</dd>
+<dd>
+目前<code>bprintf</code>最终向<code>uart</code>输出字符串 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

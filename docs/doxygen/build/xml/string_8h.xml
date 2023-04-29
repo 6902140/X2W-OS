@@ -1,0 +1,964 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="string_8h" kind="file" language="C++">
+    <compoundname>string.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="stdfmt_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/stdfmt.h</includedby>
+    <includedby refid="test__string_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/test/test_string.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>/home/data/proj/oskernel2023-x2w/include/user/ustdio.h</label>
+        <link refid="ustdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h</label>
+        <link refid="sstdio_8h"/>
+      </node>
+      <node id="4">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/kdebug.h</label>
+        <link refid="kdebug_8h"/>
+      </node>
+      <node id="3">
+        <label>/home/data/proj/oskernel2023-x2w/include/assert.h</label>
+        <link refid="assert_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/kstdio.h</label>
+        <link refid="kstdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/data/proj/oskernel2023-x2w/include/stdfmt.h</label>
+        <link refid="stdfmt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/data/proj/oskernel2023-x2w/include/user/udebug.h</label>
+        <link refid="udebug_8h"/>
+      </node>
+      <node id="10">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_string.h</label>
+        <link refid="test__string_8h"/>
+      </node>
+      <node id="9">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_stdfmt.h</label>
+        <link refid="test__stdfmt_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="string_8h_1a0fd822120d98aeeb31c3e34b925aaac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t memset</definition>
+        <argsstring>(void *dst, byte value, size_t size)</argsstring>
+        <name>memset</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1ab8ef12fab634c171394422d0ee8baf94" kindref="member">byte</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>memset</computeroutput>将<computeroutput>det_</computeroutput>起始的<computeroutput>size</computeroutput>个字节的内存单元的值设置为<computeroutput>value</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>起始地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>设置的值 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要设置多少个字节</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 成功设置的字节数 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="32" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="32" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a81ef7c8c1f669e36358b53540413ad4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t strmset</definition>
+        <argsstring>(void *dst, char value, size_t size)</argsstring>
+        <name>strmset</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strmset是针对字符串复制的安全实现，避免了字符串复制时可能存在的缓存区溢出，</computeroutput>将<computeroutput>det_</computeroutput>起始的<computeroutput>size</computeroutput>个字节的内存单元的值设置为<computeroutput>value</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>起始地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>设置的值 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要设置多少个字节</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 成功设置的字节数 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="43" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="43" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a85a508ca397d58bd730fe247406225c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t memcpy</definition>
+        <argsstring>(void *dst, const void *src, size_t size)</argsstring>
+        <name>memcpy</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>memcpy</computeroutput>将<computeroutput>src</computeroutput>起始的<computeroutput>size</computeroutput>个内存单元的值(以字节计算)复制到<computeroutput>dst</computeroutput>起始的<computeroutput>size</computeroutput>个内存单元中 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>被复制的内存区域的起始地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>复制到的内存区域的起始地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>复制的字节数</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 复制的字节数</para>
+</simplesect>
+<simplesect kind="warning"><para><computeroutput>memcpy</computeroutput>不会进行长度检查, 注意<computeroutput>src</computeroutput>和<computeroutput>dst</computeroutput>的长度, 以避免溢出 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="57" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="57" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a2b93142c59725e6f0a23c11c01dd9806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t memmove</definition>
+        <argsstring>(void *dst, const void *src, size_t size)</argsstring>
+        <name>memmove</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>memmove - Copy a block of memory, handling overlaps </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t return the copied char num </para>
+</simplesect>
+<simplesect kind="note"><para>与 <ref refid="string_8h_1a85a508ca397d58bd730fe247406225c1" kindref="member">memcpy()</ref> 不同，memmove() 处理重叠缓冲区。 复制发生的过程就像 src 中的字节首先被复制到 不与 src 或 dest 和字节重叠的临时缓冲区 然后从临时缓冲区复制到目标。 </para>
+</simplesect>
+<simplesect kind="note"><para>此函数用于代替 <ref refid="string_8h_1a85a508ca397d58bd730fe247406225c1" kindref="member">memcpy()</ref> 在可能重叠的内存块之间进行复制。 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="72" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="72" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a75fd34829c47ba7a5e17b3749376dfb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ad566f6541e98b74246db1a3a3a85ad49" kindref="member">int8_t</ref></type>
+        <definition>int8_t memcmp</definition>
+        <argsstring>(const void *a, const void *b, size_t size)</argsstring>
+        <name>memcmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>memcmp</computeroutput>用于比较两个分别以<computeroutput>a</computeroutput>和<computeroutput>b</computeroutput>为起始地址的的<computeroutput>size</computeroutput>个字节的内存区域的值 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要比较的第一个内存区域的地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要比较的第二个内存区域的地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要比较的字节数</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int8_t 比较的结果:<itemizedlist>
+<listitem><para>若<computeroutput>a</computeroutput>&gt;<computeroutput>b</computeroutput>, 则返回<computeroutput>1</computeroutput></para>
+</listitem><listitem><para>若<computeroutput>a</computeroutput>=<computeroutput>b</computeroutput>, 则返回<computeroutput>0</computeroutput></para>
+</listitem><listitem><para>若<computeroutput>a</computeroutput>&lt;<computeroutput>b</computeroutput>, 则返回<computeroutput>-1</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="87" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="87" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a1a8e0d046aa6ccaf2c9947e3142e4786" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* strcpy</definition>
+        <argsstring>(char *dst, const char *src)</argsstring>
+        <name>strcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strcpy</computeroutput>复制<computeroutput>src</computeroutput>指向的以&apos;\0&apos;结尾的字符串到<computeroutput>dst</computeroutput>指向的字符串去中去 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>将要复制到的内存地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>被复制的字符串</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char* 返回dst的首地址</para>
+</simplesect>
+<simplesect kind="warning"><para><computeroutput>strcpy</computeroutput>不会进行长度检查, 注意<computeroutput>src</computeroutput>和<computeroutput>dst</computeroutput>的长度, 以避免溢出 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="99" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="99" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a008e171a518fe0e0352f31b245e03875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t strlen</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>strlen</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strlen</computeroutput>返回以&apos;\0&apos;结尾的字符串的长度 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要获取长度的字符串</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 字符串的长度 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="109" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="109" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a17120e5c0508b8cd7acb5b88a68df2e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1ad566f6541e98b74246db1a3a3a85ad49" kindref="member">int8_t</ref></type>
+        <definition>int8_t strcmp</definition>
+        <argsstring>(const char *a, const char *b)</argsstring>
+        <name>strcmp</name>
+        <param>
+          <type>const char *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strcmp</computeroutput>比较两个字符串 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要比较的第一个字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要比较的第二个字符串</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int8_t 返回比较的结果<itemizedlist>
+<listitem><para>若<computeroutput>a</computeroutput>&gt;<computeroutput>b</computeroutput>, 则返回<computeroutput>1</computeroutput></para>
+</listitem><listitem><para>若<computeroutput>a</computeroutput>=<computeroutput>b</computeroutput>, 则返回<computeroutput>0</computeroutput></para>
+</listitem><listitem><para>若<computeroutput>a</computeroutput>&lt;<computeroutput>b</computeroutput>, 则返回<computeroutput>-1</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="123" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="123" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a34faed0b162387a0d9f7e706a9b9e5fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* strcat</definition>
+        <argsstring>(char *dst, const char *src)</argsstring>
+        <name>strcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strcat</computeroutput>用于将字符串<computeroutput>src</computeroutput>拼接到<computeroutput>dst</computeroutput>后 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>将被拼接到的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>将被拼接的字符串</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char* 返回dst的首地址</para>
+</simplesect>
+<simplesect kind="warning"><para><computeroutput>strcat</computeroutput>不会进行长度检查, 注意<computeroutput>src</computeroutput>和<computeroutput>dst</computeroutput>的长度, 以避免溢出 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="136" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="136" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a1a5e632fe609361d02cb7801fe24602f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* strchr</definition>
+        <argsstring>(const char *str, const uint8_t ch)</argsstring>
+        <name>strchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="types_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strchr</computeroutput>返回字符串从左往右第一次出现字符<computeroutput>ch</computeroutput>的地址 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>被搜索的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要搜索的字符</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char* 指向字符的指针,<itemizedlist>
+<listitem><para>若字符<computeroutput>ch</computeroutput>在字符串<computeroutput>str</computeroutput>中, 则返回字符串第一个<computeroutput>ch</computeroutput>的地址</para>
+</listitem><listitem><para>若字符<computeroutput>ch</computeroutput>不在字符串<computeroutput>str</computeroutput>中, 则返回 <computeroutput>NULL</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>strchr</computeroutput>相当于返回字符<computeroutput>ch</computeroutput>第一次出现的地址 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="151" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="151" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1aac8072fca6653374df87f4c52d72648f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* strrchr</definition>
+        <argsstring>(const char *str, const uint8_t ch)</argsstring>
+        <name>strrchr</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="types_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strrchr</computeroutput>返回反向字符串第一次出现字符<computeroutput>ch</computeroutput>的地址 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>被搜索的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要搜索的字符</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char*<itemizedlist>
+<listitem><para>若字符<computeroutput>ch</computeroutput>在字符串<computeroutput>str</computeroutput>中, 则返回反向字符串第一个<computeroutput>ch</computeroutput>的地址</para>
+</listitem><listitem><para>若字符<computeroutput>ch</computeroutput>不在字符串<computeroutput>str</computeroutput>中, 则返回 <computeroutput>NULL</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>strrchr</computeroutput>相当于返回字符<computeroutput>ch</computeroutput>最后一次出现的地址 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="166" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="166" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1ac777359738f935cd3bf50191baf869eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t strchrs</definition>
+        <argsstring>(const char *str, const uint8_t ch)</argsstring>
+        <name>strchrs</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="types_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>strchrs</computeroutput>返回字符串<computeroutput>str</computeroutput>中字符<computeroutput>ch</computeroutput>出现的次数 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要被搜索的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要查询的字符</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 字符<computeroutput>ch</computeroutput>在字符串<computeroutput>str</computeroutput>中出现的次数 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="176" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="176" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a78de187fd1851b4b4a6c78242c1611cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t strslice</definition>
+        <argsstring>(const char *src, char *dst, int64_t start, int64_t len)</argsstring>
+        <name>strslice</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a312c7e8848187d110315ab83a7b3d4d0" kindref="member">int64_t</ref></type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a312c7e8848187d110315ab83a7b3d4d0" kindref="member">int64_t</ref></type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>&apos;strslice&apos;从src字符串中截取从start的len个字节写入start中；同时检查是否越界，避免缓存区溢出； </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要被截取的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要被写入的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>开始的下标 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要截取的长度 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 成功截取的长度 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="187" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="187" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a1ca84242c233142bb41710cec6d77f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void encrypt_decrypt</definition>
+        <argsstring>(char *str, int len, char key)</argsstring>
+        <name>encrypt_decrypt</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>‘encrypt_decrypt’函数通过使用一个异或操作对字符串进行加密，由于异或具有自反的性质没所以该函数同样可以用于解密！ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要被加密的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>需要被加密的长度 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>加密KEY </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void return </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="196" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="196" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1aa60b1947c3dc54d4255d2adb2e01a8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int regu_match</definition>
+        <argsstring>(const char *str, const char *pattern, int match_pos[])</argsstring>
+        <name>regu_match</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>match_pos</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="198" column="5" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="198" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="string_8h_1a1e85b03de97ac68581bdd673389b8b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void regu_replace</definition>
+        <argsstring>(char *str, const char *pattern, const char *replacement, int max_len)</argsstring>
+        <name>regu_replace</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>replacement</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_len</declname>
+        </param>
+        <briefdescription>
+<para>‘regu_replac’函数通过使用正则表达式对字符串中特定字符串进行一个替换； </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>需要被操作的字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>正则匹配模式 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>替换为的字符 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>最大处理长度 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void return </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/string.h" line="209" column="6" declfile="/home/data/proj/oskernel2023-x2w/include/string.h" declline="209" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="string_8h" kindref="compound">string.h</ref></computeroutput>提供了一系列内存和字符串操作函数. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-08</para>
+</simplesect>
+<xrefsect id="todo_1_todo000004"><xreftitle>待办事项</xreftitle><xrefdescription><para><orderedlist>
+<listitem><para>需要进行测试, 以测试函数正确性</para>
+</listitem><listitem><para>实现debug.h后需要给每个指针添加 NULL 检查</para>
+</listitem></orderedlist>
+</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="warning"><para>为了避免编译时编译器使用系统的<computeroutput><ref refid="string_8h" kindref="compound">string.h</ref></computeroutput>库, 编译时需要为<computeroutput>GCC</computeroutput>指定<computeroutput>-nostdinc</computeroutput>选项, 详见根目录下的<computeroutput>Makefile</computeroutput></para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="17"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_STRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_STRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a0fd822120d98aeeb31c3e34b925aaac9" kindref="member">memset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a81ef7c8c1f669e36358b53540413ad4a" kindref="member">strmset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a85a508ca397d58bd730fe247406225c1" kindref="member">memcpy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a2b93142c59725e6f0a23c11c01dd9806" kindref="member">memmove</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="types_8h_1ad566f6541e98b74246db1a3a3a85ad49" kindref="member">int8_t</ref><sp/><ref refid="string_8h_1a75fd34829c47ba7a5e17b3749376dfb1" kindref="member">memcmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*b,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="string_8h_1a1a8e0d046aa6ccaf2c9947e3142e4786" kindref="member">strcpy</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a008e171a518fe0e0352f31b245e03875" kindref="member">strlen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="types_8h_1ad566f6541e98b74246db1a3a3a85ad49" kindref="member">int8_t</ref><sp/><ref refid="string_8h_1a17120e5c0508b8cd7acb5b88a68df2e3" kindref="member">strcmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>b);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="string_8h_1a34faed0b162387a0d9f7e706a9b9e5fa" kindref="member">strcat</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="string_8h_1a1a5e632fe609361d02cb7801fe24602f" kindref="member">strchr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref><sp/>ch);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="string_8h_1aac8072fca6653374df87f4c52d72648f" kindref="member">strrchr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref><sp/>ch);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1ac777359738f935cd3bf50191baf869eb" kindref="member">strchrs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref><sp/>ch);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a78de187fd1851b4b4a6c78242c1611cb" kindref="member">strslice</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>dst,<sp/><ref refid="types_8h_1a312c7e8848187d110315ab83a7b3d4d0" kindref="member">int64_t</ref><sp/>start,<sp/><ref refid="types_8h_1a312c7e8848187d110315ab83a7b3d4d0" kindref="member">int64_t</ref><sp/>len);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a1ca84242c233142bb41710cec6d77f68" kindref="member">encrypt_decrypt</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>regu_match(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pattern,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>match_pos[]);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="string_8h_1a1e85b03de97ac68581bdd673389b8b5b" kindref="member">regu_replace</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pattern,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*replacement,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_len);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/string.h"/>
+  </compounddef>
+</doxygen>

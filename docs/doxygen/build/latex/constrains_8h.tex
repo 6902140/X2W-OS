@@ -1,0 +1,78 @@
+\hypertarget{constrains_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/constrains.h 文件参考}
+\label{constrains_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/constrains.h@{/home/data/proj/oskernel2023-\/x2w/include/constrains.h}}
+
+
+{\ttfamily constrain.\+h}定义了内核的一系列常数  
+
+
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{constrains_8h_ad72dbcf6d0153db1b8d8a58001feed83}{D\+E\+B\+UG}}~1
+\begin{DoxyCompactList}\small\item\em 内核是否处于\+D\+E\+B\+U\+G模式, 若\+: \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{constrains_8h_af89a5df6a8924eb0fc0491190f3224a5}{W\+I\+T\+H\+\_\+\+F\+P\+\_\+\+R\+EG}}~0
+\begin{DoxyCompactList}\small\item\em C\+P\+U是否具有浮点寄存器, 若 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constrains_8h_a2a99df20f690809e56096a53216e6e14}\label{constrains_8h_a2a99df20f690809e56096a53216e6e14}} 
+\#define \mbox{\hyperlink{constrains_8h_a2a99df20f690809e56096a53216e6e14}{K\+E\+R\+N\+E\+L\+\_\+\+J\+U\+M\+P\+\_\+\+A\+D\+DR}}~0x80200000
+\begin{DoxyCompactList}\small\item\em 内核的跳转地址, 在{\ttfamily kernel.\+ld}中定义 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constrains_8h_a9378dd52d6cbf1e8a87b58570fda75a6}\label{constrains_8h_a9378dd52d6cbf1e8a87b58570fda75a6}} 
+\#define \mbox{\hyperlink{constrains_8h_a9378dd52d6cbf1e8a87b58570fda75a6}{P\+R\+I\+N\+T\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+I\+ZE}}~1024
+\begin{DoxyCompactList}\small\item\em {\ttfamily kprintf}和{\ttfamily uprintf}可以输出的字符串最大长度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constrains_8h_a615aed21aa6825462b7c17b0c238ffe2}\label{constrains_8h_a615aed21aa6825462b7c17b0c238ffe2}} 
+\#define \mbox{\hyperlink{constrains_8h_a615aed21aa6825462b7c17b0c238ffe2}{U\+A\+R\+T\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}}~115200
+\begin{DoxyCompactList}\small\item\em {\ttfamily U\+A\+RT}设备的波特率 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constrains_8h_abcaa63d145f98e9d9b12fd8e0f2fe40f}\label{constrains_8h_abcaa63d145f98e9d9b12fd8e0f2fe40f}} 
+\#define \mbox{\hyperlink{constrains_8h_abcaa63d145f98e9d9b12fd8e0f2fe40f}{M\+A\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+UM}}~20
+\begin{DoxyCompactList}\small\item\em 最大测试函数的数量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constrains_8h_ae502fa58d8733344935307064f11d2d7}\label{constrains_8h_ae502fa58d8733344935307064f11d2d7}} 
+\#define \mbox{\hyperlink{constrains_8h_ae502fa58d8733344935307064f11d2d7}{M\+A\+X\+\_\+\+I\+N\+T\+R\+\_\+\+E\+X\+C\+P\+\_\+\+I\+N\+F\+O\+\_\+\+N\+UM}}~64
+\begin{DoxyCompactList}\small\item\em 中断/异常处理函数信息最大数量 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily constrain.\+h}定义了内核的一系列常数 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gmail.com}{\texttt{ jack4shihong@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/09
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{constrains_8h_ad72dbcf6d0153db1b8d8a58001feed83}\label{constrains_8h_ad72dbcf6d0153db1b8d8a58001feed83}} 
+\index{constrains.h@{constrains.h}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!constrains.h@{constrains.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily \#define D\+E\+B\+UG~1}
+
+
+
+内核是否处于\+D\+E\+B\+U\+G模式, 若\+: 
+
+
+\begin{DoxyItemize}
+\item D\+E\+B\+UG = 0, 不会运行测试函数
+\item D\+E\+B\+UG = 1, 运行测试函数 
+\end{DoxyItemize}\mbox{\Hypertarget{constrains_8h_af89a5df6a8924eb0fc0491190f3224a5}\label{constrains_8h_af89a5df6a8924eb0fc0491190f3224a5}} 
+\index{constrains.h@{constrains.h}!WITH\_FP\_REG@{WITH\_FP\_REG}}
+\index{WITH\_FP\_REG@{WITH\_FP\_REG}!constrains.h@{constrains.h}}
+\doxysubsubsection{\texorpdfstring{WITH\_FP\_REG}{WITH\_FP\_REG}}
+{\footnotesize\ttfamily \#define W\+I\+T\+H\+\_\+\+F\+P\+\_\+\+R\+EG~0}
+
+
+
+C\+P\+U是否具有浮点寄存器, 若 
+
+
+\begin{DoxyItemize}
+\item W\+I\+T\+H\+\_\+\+F\+P\+\_\+\+R\+EG = 0, C\+PU 不具有浮点寄存器
+\item W\+I\+T\+H\+\_\+\+F\+P\+\_\+\+R\+EG = 1, C\+PU 具有浮点寄存器 
+\end{DoxyItemize}

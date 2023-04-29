@@ -1,0 +1,247 @@
+\hypertarget{tfoffset_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/trap/tfoffset.h 文件参考}
+\label{tfoffset_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/trap/tfoffset.h@{/home/data/proj/oskernel2023-\/x2w/include/trap/tfoffset.h}}
+
+
+{\ttfamily \mbox{\hyperlink{tfoffset_8h}{tfoffset.\+h}}}中定义了{\ttfamily \mbox{\hyperlink{trapframe_8h}{trapframe.\+h}}}中的{\ttfamily strapframe\+\_\+t}和{\ttfamily ktrapframe\+\_\+t}结构体各个成员变量的字节偏移数  
+
+
+{\ttfamily \#include \char`\"{}constrains.\+h\char`\"{}}\newline
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tfoffset_8h_a344de885433d7b1f01741ca153e97342}\label{tfoffset_8h_a344de885433d7b1f01741ca153e97342}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a344de885433d7b1f01741ca153e97342}{S\+T\+F\+\_\+\+S\+I\+ZE}}~264
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S\+I\+ZE}宏是{\ttfamily strapframe\+\_\+t}结构体的总字节长度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a13ccf4d74c7540bbebdf8c9d6e6deb84}\label{tfoffset_8h_a13ccf4d74c7540bbebdf8c9d6e6deb84}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a13ccf4d74c7540bbebdf8c9d6e6deb84}{S\+T\+F\+\_\+\+M\+E\+PC}}~0
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+M\+E\+PC}宏是{\ttfamily mepc}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ae0aba43724c7d3b49539045d50edd273}\label{tfoffset_8h_ae0aba43724c7d3b49539045d50edd273}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ae0aba43724c7d3b49539045d50edd273}{S\+T\+F\+\_\+\+RA}}~8
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+RA}宏是{\ttfamily ra}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a76697902662999dc3ced9ef3e37aa0b6}\label{tfoffset_8h_a76697902662999dc3ced9ef3e37aa0b6}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a76697902662999dc3ced9ef3e37aa0b6}{S\+T\+F\+\_\+\+SP}}~16
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+SP}宏是{\ttfamily sp}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ad94a6d7d989af41539696f2a6c1ed909}\label{tfoffset_8h_ad94a6d7d989af41539696f2a6c1ed909}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ad94a6d7d989af41539696f2a6c1ed909}{S\+T\+F\+\_\+\+GP}}~24
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+GP}宏是{\ttfamily gp}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aa6699d590f0385f9020b9180058c23af}\label{tfoffset_8h_aa6699d590f0385f9020b9180058c23af}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aa6699d590f0385f9020b9180058c23af}{S\+T\+F\+\_\+\+TP}}~32
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+TP}宏是{\ttfamily tp}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a816c6b6a70515b8f7723c24f3f2928ce}\label{tfoffset_8h_a816c6b6a70515b8f7723c24f3f2928ce}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a816c6b6a70515b8f7723c24f3f2928ce}{S\+T\+F\+\_\+\+T0}}~40
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+T0}宏是{\ttfamily t0}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ab567ed12e9d95049d6846f83895651f5}\label{tfoffset_8h_ab567ed12e9d95049d6846f83895651f5}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ab567ed12e9d95049d6846f83895651f5}{S\+T\+F\+\_\+\+T1}}~48
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+T1}宏是{\ttfamily t1}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a881fa6196ce9e29b7831933cb0b8cbb1}\label{tfoffset_8h_a881fa6196ce9e29b7831933cb0b8cbb1}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a881fa6196ce9e29b7831933cb0b8cbb1}{S\+T\+F\+\_\+\+T2}}~56
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+T2}宏是{\ttfamily t2}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a04f607b019b8409ebc86348db4d56cda}\label{tfoffset_8h_a04f607b019b8409ebc86348db4d56cda}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a04f607b019b8409ebc86348db4d56cda}{S\+T\+F\+\_\+\+FP}}~64
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+FP}宏是{\ttfamily fp}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aeeb74f15b4679a43c42a7065a134d3f9}\label{tfoffset_8h_aeeb74f15b4679a43c42a7065a134d3f9}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aeeb74f15b4679a43c42a7065a134d3f9}{S\+T\+F\+\_\+\+S0}}~64
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S0}宏是{\ttfamily s0}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a5f810b3353b6c8e608882ed43c48fc82}\label{tfoffset_8h_a5f810b3353b6c8e608882ed43c48fc82}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a5f810b3353b6c8e608882ed43c48fc82}{S\+T\+F\+\_\+\+S1}}~72
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S1}宏是{\ttfamily s1}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aea0b0dfb3c435660af17982d012ef63e}\label{tfoffset_8h_aea0b0dfb3c435660af17982d012ef63e}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aea0b0dfb3c435660af17982d012ef63e}{S\+T\+F\+\_\+\+A0}}~80
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A0}宏是{\ttfamily a0}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aaa807dd1c3e4cdc8da9de3adf93177f8}\label{tfoffset_8h_aaa807dd1c3e4cdc8da9de3adf93177f8}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aaa807dd1c3e4cdc8da9de3adf93177f8}{S\+T\+F\+\_\+\+A1}}~88
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A1}宏是{\ttfamily a1}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a1f619de6b758986c1063b21163005f2b}\label{tfoffset_8h_a1f619de6b758986c1063b21163005f2b}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a1f619de6b758986c1063b21163005f2b}{S\+T\+F\+\_\+\+A2}}~96
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A2}宏是{\ttfamily a2}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a672248134a3e5bef4115cd02646cc1b2}\label{tfoffset_8h_a672248134a3e5bef4115cd02646cc1b2}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a672248134a3e5bef4115cd02646cc1b2}{S\+T\+F\+\_\+\+A3}}~104
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A3}宏是{\ttfamily a3}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ad9c2b21651acb652cb312734e57d9402}\label{tfoffset_8h_ad9c2b21651acb652cb312734e57d9402}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ad9c2b21651acb652cb312734e57d9402}{S\+T\+F\+\_\+\+A4}}~112
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A4}宏是{\ttfamily a4}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a50fb41e794d5034408e19c1d4eb91da5}\label{tfoffset_8h_a50fb41e794d5034408e19c1d4eb91da5}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a50fb41e794d5034408e19c1d4eb91da5}{S\+T\+F\+\_\+\+A5}}~120
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A5}宏是{\ttfamily a5}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ad6079c9fbea931150f1676e247a7e39d}\label{tfoffset_8h_ad6079c9fbea931150f1676e247a7e39d}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ad6079c9fbea931150f1676e247a7e39d}{S\+T\+F\+\_\+\+A6}}~128
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A6}宏是{\ttfamily a6}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aa11d9ad2c254cde9ea3197a5337e1679}\label{tfoffset_8h_aa11d9ad2c254cde9ea3197a5337e1679}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aa11d9ad2c254cde9ea3197a5337e1679}{S\+T\+F\+\_\+\+A7}}~136
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+A7}宏是{\ttfamily a7}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aa7b1d31f89ec613f5a60b55416db88ed}\label{tfoffset_8h_aa7b1d31f89ec613f5a60b55416db88ed}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aa7b1d31f89ec613f5a60b55416db88ed}{S\+T\+F\+\_\+\+S2}}~144
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S2}宏是{\ttfamily s2}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_af7b6c28643eed4d7f9f9daa0e570fffb}\label{tfoffset_8h_af7b6c28643eed4d7f9f9daa0e570fffb}} 
+\#define \mbox{\hyperlink{tfoffset_8h_af7b6c28643eed4d7f9f9daa0e570fffb}{S\+T\+F\+\_\+\+S3}}~152
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S3}宏是{\ttfamily s3}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a9617554bbf339ada11d4413342235e02}\label{tfoffset_8h_a9617554bbf339ada11d4413342235e02}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a9617554bbf339ada11d4413342235e02}{S\+T\+F\+\_\+\+S4}}~160
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S4}宏是{\ttfamily s4}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a1a2c476657607c04e32f81be031a342b}\label{tfoffset_8h_a1a2c476657607c04e32f81be031a342b}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a1a2c476657607c04e32f81be031a342b}{S\+T\+F\+\_\+\+S5}}~168
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S5}宏是{\ttfamily s5}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aa0bb7a7753babfd9a0f386711d62e9c9}\label{tfoffset_8h_aa0bb7a7753babfd9a0f386711d62e9c9}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aa0bb7a7753babfd9a0f386711d62e9c9}{S\+T\+F\+\_\+\+S6}}~176
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S6}宏是{\ttfamily s6}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ae0c10042eec156454f5cddb43b272bf6}\label{tfoffset_8h_ae0c10042eec156454f5cddb43b272bf6}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ae0c10042eec156454f5cddb43b272bf6}{S\+T\+F\+\_\+\+S7}}~184
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S7}宏是{\ttfamily s7}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_acde09390c68c3301a104d1e18789d08d}\label{tfoffset_8h_acde09390c68c3301a104d1e18789d08d}} 
+\#define \mbox{\hyperlink{tfoffset_8h_acde09390c68c3301a104d1e18789d08d}{S\+T\+F\+\_\+\+S8}}~192
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S8}宏是{\ttfamily s8}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a38544ea5553842b6344c63ff2fc16fde}\label{tfoffset_8h_a38544ea5553842b6344c63ff2fc16fde}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a38544ea5553842b6344c63ff2fc16fde}{S\+T\+F\+\_\+\+S9}}~200
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S9}宏是{\ttfamily s9}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_adcb3adb6ff4cf1d6a57bb333a7fb27c5}\label{tfoffset_8h_adcb3adb6ff4cf1d6a57bb333a7fb27c5}} 
+\#define \mbox{\hyperlink{tfoffset_8h_adcb3adb6ff4cf1d6a57bb333a7fb27c5}{S\+T\+F\+\_\+\+S10}}~208
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S10}宏是{\ttfamily s10}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a5349542488f8fc5446824a9a1b42c38d}\label{tfoffset_8h_a5349542488f8fc5446824a9a1b42c38d}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a5349542488f8fc5446824a9a1b42c38d}{S\+T\+F\+\_\+\+S11}}~216
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+S11}宏是{\ttfamily s11}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ac36b5e94bede0b873e509381052d846f}\label{tfoffset_8h_ac36b5e94bede0b873e509381052d846f}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ac36b5e94bede0b873e509381052d846f}{S\+T\+F\+\_\+\+T3}}~224
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+T3}宏是{\ttfamily t3}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a76260a337fa26d89c8098f10a18002ba}\label{tfoffset_8h_a76260a337fa26d89c8098f10a18002ba}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a76260a337fa26d89c8098f10a18002ba}{S\+T\+F\+\_\+\+T4}}~232
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+T4}宏是{\ttfamily t4}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a61ac99566d7cbac14305e999c16269a5}\label{tfoffset_8h_a61ac99566d7cbac14305e999c16269a5}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a61ac99566d7cbac14305e999c16269a5}{S\+T\+F\+\_\+\+T5}}~240
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+t5}宏是{\ttfamily t5}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a79a961ff6cfad36bd2f26c5af453c010}\label{tfoffset_8h_a79a961ff6cfad36bd2f26c5af453c010}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a79a961ff6cfad36bd2f26c5af453c010}{S\+T\+F\+\_\+\+T6}}~248
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+t6}宏是{\ttfamily t6}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ae8da2cdfcfcbd09f35fb687403c09513}\label{tfoffset_8h_ae8da2cdfcfcbd09f35fb687403c09513}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ae8da2cdfcfcbd09f35fb687403c09513}{S\+T\+F\+\_\+\+M\+S\+T\+A\+T\+US}}~265
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+T\+F\+\_\+\+M\+S\+T\+A\+T\+US}宏是{\ttfamily mstatus}寄存器在{\ttfamily strapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a33845d0a872b2a5ae253987e4b24a2a6}\label{tfoffset_8h_a33845d0a872b2a5ae253987e4b24a2a6}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a33845d0a872b2a5ae253987e4b24a2a6}{K\+T\+F\+\_\+\+S\+I\+ZE}}~288
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S\+I\+ZE}宏是{\ttfamily ktrapframe\+\_\+t}结构体的总字节长度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a2a8eae06e1f47ba5303c6d98f30dcca5}\label{tfoffset_8h_a2a8eae06e1f47ba5303c6d98f30dcca5}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a2a8eae06e1f47ba5303c6d98f30dcca5}{K\+T\+F\+\_\+\+S\+E\+PC}}~0
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S\+E\+PC}宏是{\ttfamily sepc}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_adc2fae3a9ee06d240410f0a9220c9974}\label{tfoffset_8h_adc2fae3a9ee06d240410f0a9220c9974}} 
+\#define \mbox{\hyperlink{tfoffset_8h_adc2fae3a9ee06d240410f0a9220c9974}{K\+T\+F\+\_\+\+RA}}~8
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+RA}宏是{\ttfamily ra}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a840e9dc30ac33cdeb7fd5907c55f0f6a}\label{tfoffset_8h_a840e9dc30ac33cdeb7fd5907c55f0f6a}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a840e9dc30ac33cdeb7fd5907c55f0f6a}{K\+T\+F\+\_\+\+SP}}~16
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+SP}宏是{\ttfamily sp}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a9ba4858989ca1be278bcfc0e0cbcd35e}\label{tfoffset_8h_a9ba4858989ca1be278bcfc0e0cbcd35e}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a9ba4858989ca1be278bcfc0e0cbcd35e}{K\+T\+F\+\_\+\+GP}}~24
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+GP}宏是{\ttfamily gp}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a9b7c2bed5065e5a547e9c9dfd2bcc78b}\label{tfoffset_8h_a9b7c2bed5065e5a547e9c9dfd2bcc78b}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a9b7c2bed5065e5a547e9c9dfd2bcc78b}{K\+T\+F\+\_\+\+TP}}~32
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+TP}宏是{\ttfamily tp}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_adad8652d80dd1956c57d43060047dec4}\label{tfoffset_8h_adad8652d80dd1956c57d43060047dec4}} 
+\#define \mbox{\hyperlink{tfoffset_8h_adad8652d80dd1956c57d43060047dec4}{K\+T\+F\+\_\+\+T0}}~40
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+T0}宏是{\ttfamily t0}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aefc935b09bb978b2b259865a4d5e0095}\label{tfoffset_8h_aefc935b09bb978b2b259865a4d5e0095}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aefc935b09bb978b2b259865a4d5e0095}{K\+T\+F\+\_\+\+T1}}~48
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+T1}宏是{\ttfamily t1}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_adfe89e209af35804f262039d5af61f73}\label{tfoffset_8h_adfe89e209af35804f262039d5af61f73}} 
+\#define \mbox{\hyperlink{tfoffset_8h_adfe89e209af35804f262039d5af61f73}{K\+T\+F\+\_\+\+T2}}~56
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+T2}宏是{\ttfamily t2}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a1fa08d092df813aa1af38861fbb0a73d}\label{tfoffset_8h_a1fa08d092df813aa1af38861fbb0a73d}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a1fa08d092df813aa1af38861fbb0a73d}{K\+T\+F\+\_\+\+FP}}~64
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+FP}宏是{\ttfamily fp}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a693da2fd5c7e091e4a4c65d2df50c5c8}\label{tfoffset_8h_a693da2fd5c7e091e4a4c65d2df50c5c8}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a693da2fd5c7e091e4a4c65d2df50c5c8}{K\+T\+F\+\_\+\+S0}}~64
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S0}宏是{\ttfamily s0}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a9994f82a84891398d9aae9f35492064a}\label{tfoffset_8h_a9994f82a84891398d9aae9f35492064a}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a9994f82a84891398d9aae9f35492064a}{K\+T\+F\+\_\+\+S1}}~72
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S1}宏是{\ttfamily s1}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a8a1644da3e77134453651535c2238d58}\label{tfoffset_8h_a8a1644da3e77134453651535c2238d58}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a8a1644da3e77134453651535c2238d58}{K\+T\+F\+\_\+\+A0}}~80
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A0}宏是{\ttfamily a0}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a6f0d3f6e0a3f80d07d71c8affd666744}\label{tfoffset_8h_a6f0d3f6e0a3f80d07d71c8affd666744}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a6f0d3f6e0a3f80d07d71c8affd666744}{K\+T\+F\+\_\+\+A1}}~88
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A1}宏是{\ttfamily a1}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a2f54d9d3b0d9bf8523ecf07fdcb7841e}\label{tfoffset_8h_a2f54d9d3b0d9bf8523ecf07fdcb7841e}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a2f54d9d3b0d9bf8523ecf07fdcb7841e}{K\+T\+F\+\_\+\+A2}}~96
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A2}宏是{\ttfamily a2}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a9d2673358ba3b82e7c066e5182409cbe}\label{tfoffset_8h_a9d2673358ba3b82e7c066e5182409cbe}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a9d2673358ba3b82e7c066e5182409cbe}{K\+T\+F\+\_\+\+A3}}~104
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A3}宏是{\ttfamily a3}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a70508123cf6428ce5fd34cdc95db8e37}\label{tfoffset_8h_a70508123cf6428ce5fd34cdc95db8e37}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a70508123cf6428ce5fd34cdc95db8e37}{K\+T\+F\+\_\+\+A4}}~112
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A4}宏是{\ttfamily a4}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a5049120ae466b40d4d21e2cdee71cb3f}\label{tfoffset_8h_a5049120ae466b40d4d21e2cdee71cb3f}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a5049120ae466b40d4d21e2cdee71cb3f}{K\+T\+F\+\_\+\+A5}}~120
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A5}宏是{\ttfamily a5}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aaf4ebd78a40563cec758b28ceebac7c3}\label{tfoffset_8h_aaf4ebd78a40563cec758b28ceebac7c3}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aaf4ebd78a40563cec758b28ceebac7c3}{K\+T\+F\+\_\+\+A6}}~128
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A6}宏是{\ttfamily a6}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a97d03d283bdd7916fafa53335ad4b261}\label{tfoffset_8h_a97d03d283bdd7916fafa53335ad4b261}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a97d03d283bdd7916fafa53335ad4b261}{K\+T\+F\+\_\+\+A7}}~136
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+A7}宏是{\ttfamily a7}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_aa52850002a4f14a377477adebd139191}\label{tfoffset_8h_aa52850002a4f14a377477adebd139191}} 
+\#define \mbox{\hyperlink{tfoffset_8h_aa52850002a4f14a377477adebd139191}{K\+T\+F\+\_\+\+S2}}~144
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S2}宏是{\ttfamily s2}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a8aab56ab0a47834e0143260d26ae56a3}\label{tfoffset_8h_a8aab56ab0a47834e0143260d26ae56a3}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a8aab56ab0a47834e0143260d26ae56a3}{K\+T\+F\+\_\+\+S3}}~152
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S3}宏是{\ttfamily s3}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a243efe6a4fdaaa9bd82d135d4fd88296}\label{tfoffset_8h_a243efe6a4fdaaa9bd82d135d4fd88296}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a243efe6a4fdaaa9bd82d135d4fd88296}{K\+T\+F\+\_\+\+S4}}~160
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S4}宏是{\ttfamily s4}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a45d57c9ab7df6a8664696785dda3c109}\label{tfoffset_8h_a45d57c9ab7df6a8664696785dda3c109}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a45d57c9ab7df6a8664696785dda3c109}{K\+T\+F\+\_\+\+S5}}~168
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S5}宏是{\ttfamily s5}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a5c8e6a0016065583564a3f3135580937}\label{tfoffset_8h_a5c8e6a0016065583564a3f3135580937}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a5c8e6a0016065583564a3f3135580937}{K\+T\+F\+\_\+\+S6}}~176
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S6}宏是{\ttfamily s6}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a98a33f72b607b9cf87321efcf885251c}\label{tfoffset_8h_a98a33f72b607b9cf87321efcf885251c}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a98a33f72b607b9cf87321efcf885251c}{K\+T\+F\+\_\+\+S7}}~184
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S7}宏是{\ttfamily s7}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_ad863d16fdfab4934d7f9007fff008376}\label{tfoffset_8h_ad863d16fdfab4934d7f9007fff008376}} 
+\#define \mbox{\hyperlink{tfoffset_8h_ad863d16fdfab4934d7f9007fff008376}{K\+T\+F\+\_\+\+S8}}~192
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S8}宏是{\ttfamily s8}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a6a11ff11951f2271c3318122d3eb89ee}\label{tfoffset_8h_a6a11ff11951f2271c3318122d3eb89ee}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a6a11ff11951f2271c3318122d3eb89ee}{K\+T\+F\+\_\+\+S9}}~200
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S9}宏是{\ttfamily s9}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a144a5e3d4d9824e8dc80480294337227}\label{tfoffset_8h_a144a5e3d4d9824e8dc80480294337227}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a144a5e3d4d9824e8dc80480294337227}{K\+T\+F\+\_\+\+S10}}~208
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S10}宏是{\ttfamily s10}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a62816ef2bdc358f0c9224e4d4ef3ad2d}\label{tfoffset_8h_a62816ef2bdc358f0c9224e4d4ef3ad2d}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a62816ef2bdc358f0c9224e4d4ef3ad2d}{K\+T\+F\+\_\+\+S11}}~216
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S11}宏是{\ttfamily s11}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_acec28dc8d95ded303a4fb25eae4d9431}\label{tfoffset_8h_acec28dc8d95ded303a4fb25eae4d9431}} 
+\#define \mbox{\hyperlink{tfoffset_8h_acec28dc8d95ded303a4fb25eae4d9431}{K\+T\+F\+\_\+\+T3}}~224
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+T3}宏是{\ttfamily t3}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a9bf3cd7b102abe7d2a80413ee52d18e3}\label{tfoffset_8h_a9bf3cd7b102abe7d2a80413ee52d18e3}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a9bf3cd7b102abe7d2a80413ee52d18e3}{K\+T\+F\+\_\+\+T4}}~232
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+T4}宏是{\ttfamily t4}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a586fdfd8fd4864dfd3b86d2ce17ecf7c}\label{tfoffset_8h_a586fdfd8fd4864dfd3b86d2ce17ecf7c}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a586fdfd8fd4864dfd3b86d2ce17ecf7c}{K\+T\+F\+\_\+\+T5}}~240
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+t5}宏是{\ttfamily t5}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a55f5de0d5cf0ab9df1e200c076c84708}\label{tfoffset_8h_a55f5de0d5cf0ab9df1e200c076c84708}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a55f5de0d5cf0ab9df1e200c076c84708}{K\+T\+F\+\_\+\+T6}}~248
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+t6}宏是{\ttfamily t6}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a98b438c5ef8bcfa27ff0aa704227ac72}\label{tfoffset_8h_a98b438c5ef8bcfa27ff0aa704227ac72}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a98b438c5ef8bcfa27ff0aa704227ac72}{K\+T\+F\+\_\+\+S\+S\+T\+A\+T\+US}}~256
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S\+S\+T\+A\+T\+US}宏是{\ttfamily sstatus}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a323a496470a7ec6806b53ebc34c53b1f}\label{tfoffset_8h_a323a496470a7ec6806b53ebc34c53b1f}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a323a496470a7ec6806b53ebc34c53b1f}{K\+T\+F\+\_\+\+S\+B\+A\+D\+A\+D\+DR}}~264
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S\+B\+A\+D\+A\+D\+DR}宏是{\ttfamily sbadaddr}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a6f300cf96e6f3172a768d5b1366bfec0}\label{tfoffset_8h_a6f300cf96e6f3172a768d5b1366bfec0}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a6f300cf96e6f3172a768d5b1366bfec0}{K\+T\+F\+\_\+\+S\+C\+A\+U\+SE}}~272
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+S\+C\+A\+U\+SE}宏是{\ttfamily scause}寄存器在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{tfoffset_8h_a83760c66ccaac4e8899cc99e7d1018be}\label{tfoffset_8h_a83760c66ccaac4e8899cc99e7d1018be}} 
+\#define \mbox{\hyperlink{tfoffset_8h_a83760c66ccaac4e8899cc99e7d1018be}{K\+T\+F\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+A0}}~280
+\begin{DoxyCompactList}\small\item\em {\ttfamily K\+T\+F\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+A0}宏是{\ttfamily origin\+\_\+a0}在{\ttfamily ktrapframe\+\_\+t}结构体中的字节偏移量 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{tfoffset_8h}{tfoffset.\+h}}}中定义了{\ttfamily \mbox{\hyperlink{trapframe_8h}{trapframe.\+h}}}中的{\ttfamily strapframe\+\_\+t}和{\ttfamily ktrapframe\+\_\+t}结构体各个成员变量的字节偏移数 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gmail.com}{\texttt{ jack4shihong@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}

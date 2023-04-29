@@ -1,0 +1,110 @@
+\hypertarget{pg__types_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/pg\+\_\+types.h 文件参考}
+\label{pg__types_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/pg\_types.h@{/home/data/proj/oskernel2023-\/x2w/include/pg\_types.h}}
+
+
+{\ttfamily \mbox{\hyperlink{pg__types_8h}{pg\+\_\+types.\+h}}}提供了一些内存管理的类型定义  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpte__t}{pte\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 定义pte页表结构体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpmd__t}{pmd\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 定义pmd页表结构体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpud__t}{pud\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 定义pud页表结构体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpgd__t}{pgd\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 定义pgd页表结构体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpgprot__t}{pgprot\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em 定义一个结构体pgprot来描述页表项的属性 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pg__types_8h_a6bf1a98e277eada2b20f2f5f3f5abba3}\label{pg__types_8h_a6bf1a98e277eada2b20f2f5f3f5abba3}} 
+\#define {\bfseries pte\+\_\+val}(x)~((x).pte)
+\item 
+\mbox{\Hypertarget{pg__types_8h_aab1779a2c0dcacac9d7139cc8ab8ecfc}\label{pg__types_8h_aab1779a2c0dcacac9d7139cc8ab8ecfc}} 
+\#define {\bfseries \+\_\+\+\_\+pte}(x)~((\mbox{\hyperlink{structpte__t}{pte\+\_\+t}}) \{ (x) \})
+\item 
+\mbox{\Hypertarget{pg__types_8h_a0a8ef916b62273864ffbcf476f6900b9}\label{pg__types_8h_a0a8ef916b62273864ffbcf476f6900b9}} 
+\#define {\bfseries pmd\+\_\+val}(x)~((x).pmd)
+\item 
+\mbox{\Hypertarget{pg__types_8h_a80aab7b44a98e6dc12c14cd3621fce73}\label{pg__types_8h_a80aab7b44a98e6dc12c14cd3621fce73}} 
+\#define {\bfseries \+\_\+\+\_\+pmd}(x)~((\mbox{\hyperlink{structpmd__t}{pmd\+\_\+t}}) \{ (x) \})
+\item 
+\mbox{\Hypertarget{pg__types_8h_a7bd22eb9cad6d3ea3fd4c2de968ffca3}\label{pg__types_8h_a7bd22eb9cad6d3ea3fd4c2de968ffca3}} 
+\#define {\bfseries pud\+\_\+val}(x)~((x).pud)
+\item 
+\mbox{\Hypertarget{pg__types_8h_a179b8c265a6d32b69040ed747bc76c45}\label{pg__types_8h_a179b8c265a6d32b69040ed747bc76c45}} 
+\#define {\bfseries \+\_\+\+\_\+pud}(x)~((\mbox{\hyperlink{structpud__t}{pud\+\_\+t}}) \{ (x) \})
+\item 
+\mbox{\Hypertarget{pg__types_8h_a605d4f89239af1a95251c3f71f75b9f9}\label{pg__types_8h_a605d4f89239af1a95251c3f71f75b9f9}} 
+\#define {\bfseries pgd\+\_\+val}(x)~((x).pgd)
+\item 
+\mbox{\Hypertarget{pg__types_8h_a974f59e880f89bd8f4e41b5661e4c5dc}\label{pg__types_8h_a974f59e880f89bd8f4e41b5661e4c5dc}} 
+\#define {\bfseries \+\_\+\+\_\+pgd}(x)~((\mbox{\hyperlink{structpgd__t}{pgd\+\_\+t}}) \{ (x) \})
+\item 
+\#define \mbox{\hyperlink{pg__types_8h_a02f3364ea339abc727ddb02ff7225695}{pgprot\+\_\+val}}(x)~((x).pgprot)
+\begin{DoxyCompactList}\small\item\em 从pgprot\+\_\+t结构体中获取其描述页表项\+P\+T\+E的属性的pgprot值 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{pg__types_8h_a3229d63d516d27f251870149747fa12c}{\+\_\+\+\_\+pgprot}}(x)~((\mbox{\hyperlink{structpgprot__t}{pgprot\+\_\+t}}) \{ (x) \})
+\begin{DoxyCompactList}\small\item\em 根据\+X的值获得一个pgprot\+\_\+t结构体，用来描述页表项\+P\+T\+E的属性（是否可写，是否有效等等） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pg__types_8h_a342b3981fd1ce5061c45236ab80b772c}\label{pg__types_8h_a342b3981fd1ce5061c45236ab80b772c}} 
+typedef \mbox{\hyperlink{types_8h_aa232ecf786a74ce5363c36c10798d2b1}{uint64\+\_\+t}} {\bfseries pteval\+\_\+t}
+\item 
+\mbox{\Hypertarget{pg__types_8h_ac5eef375453647c116dfa0b5e7d2ff91}\label{pg__types_8h_ac5eef375453647c116dfa0b5e7d2ff91}} 
+typedef \mbox{\hyperlink{types_8h_aa232ecf786a74ce5363c36c10798d2b1}{uint64\+\_\+t}} {\bfseries pmdval\+\_\+t}
+\item 
+\mbox{\Hypertarget{pg__types_8h_a105d6845c510e10dcef536fac99fb10d}\label{pg__types_8h_a105d6845c510e10dcef536fac99fb10d}} 
+typedef \mbox{\hyperlink{types_8h_aa232ecf786a74ce5363c36c10798d2b1}{uint64\+\_\+t}} {\bfseries pudval\+\_\+t}
+\item 
+\mbox{\Hypertarget{pg__types_8h_a3cdb01f13bfcaa52230e86836314d7a2}\label{pg__types_8h_a3cdb01f13bfcaa52230e86836314d7a2}} 
+typedef \mbox{\hyperlink{types_8h_aa232ecf786a74ce5363c36c10798d2b1}{uint64\+\_\+t}} {\bfseries pgdval\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{pg__types_8h}{pg\+\_\+types.\+h}}}提供了一些内存管理的类型定义 
+
+\begin{DoxyAuthor}{作者}
+Zhuir Xiao (\href{mailto:xzr3356142450@gmail.com}{\texttt{ xzr3356142450@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/27
+\end{DoxyDate}
+\begin{DoxyWarning}{警告}
+
+\end{DoxyWarning}
+\begin{DoxyCopyright}{版权所有}
+Copyright Zhuiri Xiao (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{pg__types_8h_a3229d63d516d27f251870149747fa12c}\label{pg__types_8h_a3229d63d516d27f251870149747fa12c}} 
+\index{pg\_types.h@{pg\_types.h}!\_\_pgprot@{\_\_pgprot}}
+\index{\_\_pgprot@{\_\_pgprot}!pg\_types.h@{pg\_types.h}}
+\doxysubsubsection{\texorpdfstring{\_\_pgprot}{\_\_pgprot}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+pgprot(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((\mbox{\hyperlink{structpgprot__t}{pgprot\+\_\+t}}) \{ (x) \})}
+
+
+
+根据\+X的值获得一个pgprot\+\_\+t结构体，用来描述页表项\+P\+T\+E的属性（是否可写，是否有效等等） 
+
+\mbox{\Hypertarget{pg__types_8h_a02f3364ea339abc727ddb02ff7225695}\label{pg__types_8h_a02f3364ea339abc727ddb02ff7225695}} 
+\index{pg\_types.h@{pg\_types.h}!pgprot\_val@{pgprot\_val}}
+\index{pgprot\_val@{pgprot\_val}!pg\_types.h@{pg\_types.h}}
+\doxysubsubsection{\texorpdfstring{pgprot\_val}{pgprot\_val}}
+{\footnotesize\ttfamily \#define pgprot\+\_\+val(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x).pgprot)}
+
+
+
+从pgprot\+\_\+t结构体中获取其描述页表项\+P\+T\+E的属性的pgprot值 
+

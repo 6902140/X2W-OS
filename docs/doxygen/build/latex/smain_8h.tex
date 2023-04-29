@@ -1,0 +1,111 @@
+\hypertarget{smain_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/sbi/smain.h 文件参考}
+\label{smain_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/sbi/smain.h@{/home/data/proj/oskernel2023-\/x2w/include/sbi/smain.h}}
+
+
+{\ttfamily \mbox{\hyperlink{smain_8h}{smain.\+h}}}中提供了{\ttfamily smain.\+c}中的宏定义、函数原型定义  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{smain_8h_a4c9238340695a2e90cd4b18903fd11c9}{X2\+W\+S\+B\+I\+\_\+\+B\+A\+N\+N\+ER}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily X2\+W\+S\+B\+I\+\_\+\+B\+A\+N\+N\+ER}是在{\ttfamily S\+BI}启动时输出字符串 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a9bc43e3ee0ae83643b65e07fe1fd0132}{N\+O\+\_\+\+R\+E\+T\+U\+RN}} void \mbox{\hyperlink{smain_8h_a64887dcd9264ad91ca504b688f5a3815}{sbi\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily sbi\+\_\+main}是{\ttfamily S\+BI}的主函数, 在进行一些准备后跳转到内核中运行 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9bc43e3ee0ae83643b65e07fe1fd0132}{N\+O\+\_\+\+R\+E\+T\+U\+RN}} void \mbox{\hyperlink{smain_8h_a6fb4aa6a2e416004d3366b51fd998bff}{jump\+\_\+to\+\_\+kernel}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily jump\+\_\+to\+\_\+kernel}在伪装中断返回后调用{\ttfamily mret}指令以跳转到内核中去 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{smain_8h}{smain.\+h}}}中提供了{\ttfamily smain.\+c}中的宏定义、函数原型定义 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gmail.com}{\texttt{ jack4shihong@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{smain_8h_a4c9238340695a2e90cd4b18903fd11c9}\label{smain_8h_a4c9238340695a2e90cd4b18903fd11c9}} 
+\index{smain.h@{smain.h}!X2WSBI\_BANNER@{X2WSBI\_BANNER}}
+\index{X2WSBI\_BANNER@{X2WSBI\_BANNER}!smain.h@{smain.h}}
+\doxysubsubsection{\texorpdfstring{X2WSBI\_BANNER}{X2WSBI\_BANNER}}
+{\footnotesize\ttfamily \#define X2\+W\+S\+B\+I\+\_\+\+B\+A\+N\+N\+ER}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{stringliteral}{"`YMM'   `MP'      `7MMF'     A     `7MF'             .M\(\backslash\)"\(\backslash\)"\(\backslash\)"bgd `7MM\(\backslash\)"\(\backslash\)"\(\backslash\)"Yp, `7MMF'\(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"  VMb.  ,P          `MA     ,MA     ,V              ,MI    \(\backslash\)"Y   MM    Yb   MM  \(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"   `MM.M'     pd*\(\backslash\)"*b.VM:   ,VVM:   ,V               `MMb.       MM    dP   MM  \(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"     MMb     (O)   j8 MM.  M' MM.  M'   **********    `YMMNq.   MM\(\backslash\)"\(\backslash\)"\(\backslash\)"bg.   MM  \(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"   ,M'`Mb.       ,;j9 `MM A'  `MM A'                .     `MM   MM    `Y   MM  \(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"  ,P   `MM.   ,-\/='     :MM;    :MM;                 Mb     dM   MM    ,9   MM  \(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{".MM:.  .:MMa.Ammmmmmm   VF      VF                  P\(\backslash\)"Ybmmd\(\backslash\)"  .JMMmmmd9  .JMML.\(\backslash\)n\(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"Copyright Shihong Wang, Shaofei Wang, Zhuiri Xiao (c) 2023 with GNU Public License V3.0\(\backslash\)n"} \(\backslash\)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"Enjoy!\(\backslash\)n"}}
+
+\end{DoxyCode}
+
+
+{\ttfamily X2\+W\+S\+B\+I\+\_\+\+B\+A\+N\+N\+ER}是在{\ttfamily S\+BI}启动时输出字符串 
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{smain_8h_a6fb4aa6a2e416004d3366b51fd998bff}\label{smain_8h_a6fb4aa6a2e416004d3366b51fd998bff}} 
+\index{smain.h@{smain.h}!jump\_to\_kernel@{jump\_to\_kernel}}
+\index{jump\_to\_kernel@{jump\_to\_kernel}!smain.h@{smain.h}}
+\doxysubsubsection{\texorpdfstring{jump\_to\_kernel()}{jump\_to\_kernel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9bc43e3ee0ae83643b65e07fe1fd0132}{N\+O\+\_\+\+R\+E\+T\+U\+RN}} void jump\+\_\+to\+\_\+kernel (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily jump\+\_\+to\+\_\+kernel}在伪装中断返回后调用{\ttfamily mret}指令以跳转到内核中去 
+
+\begin{DoxyNote}{注解}
+{\ttfamily jump\+\_\+to\+\_\+kernel}函数需要注意的点如下\+:
+\begin{DoxyEnumerate}
+\item 该函数通过伪装{\ttfamily S}模式中断返回的模式跳转到内核的主函数
+\item 该函数伪装中断返回的地址是由{\ttfamily K\+E\+R\+N\+E\+L\+\_\+\+J\+U\+M\+P\+\_\+\+A\+D\+DR}宏决定, 该宏定义在{\ttfamily \mbox{\hyperlink{constrains_8h}{constrains.\+h}}}中
+\item {\ttfamily K\+E\+R\+N\+E\+L\+\_\+\+J\+U\+M\+P\+\_\+\+A\+D\+DR}宏的地址需要指向{\ttfamily kernel\+\_\+start}函数, 该函数定义在{\ttfamily kernel/boot.\+S}中
+\end{DoxyEnumerate}
+
+{\ttfamily jump\+\_\+to\+\_\+kernel}函数在跳转到内核前会进行如下的准备工作以伪装成中断返回\+:
+\begin{DoxyEnumerate}
+\item 伪装从\+S模式中断进入\+M模式
+\item 设置\+M模式的中断返回地址
+\item 设置\+S模式中断向量表入口
+\item 关闭\+S模式的中断
+\item 关闭\+S模式的页表转换 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+\mbox{\Hypertarget{smain_8h_a64887dcd9264ad91ca504b688f5a3815}\label{smain_8h_a64887dcd9264ad91ca504b688f5a3815}} 
+\index{smain.h@{smain.h}!sbi\_main@{sbi\_main}}
+\index{sbi\_main@{sbi\_main}!smain.h@{smain.h}}
+\doxysubsubsection{\texorpdfstring{sbi\_main()}{sbi\_main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9bc43e3ee0ae83643b65e07fe1fd0132}{N\+O\+\_\+\+R\+E\+T\+U\+RN}} void sbi\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily sbi\+\_\+main}是{\ttfamily S\+BI}的主函数, 在进行一些准备后跳转到内核中运行 
+
+\begin{DoxyNote}{注解}
+{\ttfamily sbi\+\_\+main}函数运行在\+M模式
+
+{\ttfamily sbi\+\_\+main}函数干的事情\+:
+\begin{DoxyEnumerate}
+\item 跳转到内核\+: 调用{\ttfamily jump\+\_\+to\+\_\+kernel}函数实现 
+\end{DoxyEnumerate}
+\end{DoxyNote}

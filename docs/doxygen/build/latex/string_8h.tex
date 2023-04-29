@@ -1,0 +1,431 @@
+\hypertarget{string_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/string.h 文件参考}
+\label{string_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/string.h@{/home/data/proj/oskernel2023-\/x2w/include/string.h}}
+
+
+{\ttfamily \mbox{\hyperlink{string_8h}{string.\+h}}}提供了一系列内存和字符串操作函数.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_a0fd822120d98aeeb31c3e34b925aaac9}{memset}} (void $\ast$dst, \mbox{\hyperlink{types_8h_ab8ef12fab634c171394422d0ee8baf94}{byte}} value, \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em {\ttfamily memset}将{\ttfamily det\+\_\+}起始的{\ttfamily size}个字节的内存单元的值设置为{\ttfamily value} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_a81ef7c8c1f669e36358b53540413ad4a}{strmset}} (void $\ast$dst, char value, \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strmset是针对字符串复制的安全实现，避免了字符串复制时可能存在的缓存区溢出，}将{\ttfamily det\+\_\+}起始的{\ttfamily size}个字节的内存单元的值设置为{\ttfamily value} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_a85a508ca397d58bd730fe247406225c1}{memcpy}} (void $\ast$dst, const void $\ast$src, \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em {\ttfamily memcpy}将{\ttfamily src}起始的{\ttfamily size}个内存单元的值(以字节计算)复制到{\ttfamily dst}起始的{\ttfamily size}个内存单元中 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_a2b93142c59725e6f0a23c11c01dd9806}{memmove}} (void $\ast$dst, const void $\ast$src, \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em memmove -\/ Copy a block of memory, handling overlaps \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_ad566f6541e98b74246db1a3a3a85ad49}{int8\+\_\+t}} \mbox{\hyperlink{string_8h_a75fd34829c47ba7a5e17b3749376dfb1}{memcmp}} (const void $\ast$a, const void $\ast$b, \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em {\ttfamily memcmp}用于比较两个分别以{\ttfamily a}和{\ttfamily b}为起始地址的的{\ttfamily size}个字节的内存区域的值 \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{string_8h_a1a8e0d046aa6ccaf2c9947e3142e4786}{strcpy}} (char $\ast$dst, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strcpy}复制{\ttfamily src}指向的以\textquotesingle{}\textbackslash{}0\textquotesingle{}结尾的字符串到{\ttfamily dst}指向的字符串去中去 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_a008e171a518fe0e0352f31b245e03875}{strlen}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strlen}返回以\textquotesingle{}\textbackslash{}0\textquotesingle{}结尾的字符串的长度 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_ad566f6541e98b74246db1a3a3a85ad49}{int8\+\_\+t}} \mbox{\hyperlink{string_8h_a17120e5c0508b8cd7acb5b88a68df2e3}{strcmp}} (const char $\ast$a, const char $\ast$b)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strcmp}比较两个字符串 \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{string_8h_a34faed0b162387a0d9f7e706a9b9e5fa}{strcat}} (char $\ast$dst, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strcat}用于将字符串{\ttfamily src}拼接到{\ttfamily dst}后 \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{string_8h_a1a5e632fe609361d02cb7801fe24602f}{strchr}} (const char $\ast$str, const \mbox{\hyperlink{types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} ch)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strchr}返回字符串从左往右第一次出现字符{\ttfamily ch}的地址 \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{string_8h_aac8072fca6653374df87f4c52d72648f}{strrchr}} (const char $\ast$str, const \mbox{\hyperlink{types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} ch)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strrchr}返回反向字符串第一次出现字符{\ttfamily ch}的地址 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_ac777359738f935cd3bf50191baf869eb}{strchrs}} (const char $\ast$str, const \mbox{\hyperlink{types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}} ch)
+\begin{DoxyCompactList}\small\item\em {\ttfamily strchrs}返回字符串{\ttfamily str}中字符{\ttfamily ch}出现的次数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} \mbox{\hyperlink{string_8h_a78de187fd1851b4b4a6c78242c1611cb}{strslice}} (const char $\ast$src, char $\ast$dst, \mbox{\hyperlink{types_8h_a312c7e8848187d110315ab83a7b3d4d0}{int64\+\_\+t}} start, \mbox{\hyperlink{types_8h_a312c7e8848187d110315ab83a7b3d4d0}{int64\+\_\+t}} len)
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}strslice\textquotesingle{}从src字符串中截取从start的len个字节写入start中；同时检查是否越界，避免缓存区溢出； \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{string_8h_a1ca84242c233142bb41710cec6d77f68}{encrypt\+\_\+decrypt}} (char $\ast$str, int len, char key)
+\begin{DoxyCompactList}\small\item\em ‘encrypt\+\_\+decrypt’函数通过使用一个异或操作对字符串进行加密，由于异或具有自反的性质没所以该函数同样可以用于解密！ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{string_8h_aa60b1947c3dc54d4255d2adb2e01a8dd}\label{string_8h_aa60b1947c3dc54d4255d2adb2e01a8dd}} 
+int {\bfseries regu\+\_\+match} (const char $\ast$str, const char $\ast$pattern, int match\+\_\+pos\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{string_8h_a1e85b03de97ac68581bdd673389b8b5b}{regu\+\_\+replace}} (char $\ast$str, const char $\ast$pattern, const char $\ast$replacement, int max\+\_\+len)
+\begin{DoxyCompactList}\small\item\em ‘regu\+\_\+replac’函数通过使用正则表达式对字符串中特定字符串进行一个替换； \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{string_8h}{string.\+h}}}提供了一系列内存和字符串操作函数. 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gmail.com}{\texttt{ jack4shihong@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/08
+\end{DoxyDate}
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000004}{待办事项}}]
+\begin{DoxyEnumerate}
+\item 需要进行测试, 以测试函数正确性
+\item 实现debug.\+h后需要给每个指针添加 N\+U\+LL 检查
+\end{DoxyEnumerate}\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{警告}
+为了避免编译时编译器使用系统的{\ttfamily \mbox{\hyperlink{string_8h}{string.\+h}}}库, 编译时需要为{\ttfamily G\+CC}指定{\ttfamily -\/nostdinc}选项, 详见根目录下的{\ttfamily Makefile}
+\end{DoxyWarning}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{string_8h_a1ca84242c233142bb41710cec6d77f68}\label{string_8h_a1ca84242c233142bb41710cec6d77f68}} 
+\index{string.h@{string.h}!encrypt\_decrypt@{encrypt\_decrypt}}
+\index{encrypt\_decrypt@{encrypt\_decrypt}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{encrypt\_decrypt()}{encrypt\_decrypt()}}
+{\footnotesize\ttfamily void encrypt\+\_\+decrypt (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{len,  }\item[{char}]{key }\end{DoxyParamCaption})}
+
+
+
+‘encrypt\+\_\+decrypt’函数通过使用一个异或操作对字符串进行加密，由于异或具有自反的性质没所以该函数同样可以用于解密！ 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 要被加密的字符串 \\
+\hline
+{\em len} & 需要被加密的长度 \\
+\hline
+{\em key} & 加密\+K\+EY \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a75fd34829c47ba7a5e17b3749376dfb1}\label{string_8h_a75fd34829c47ba7a5e17b3749376dfb1}} 
+\index{string.h@{string.h}!memcmp@{memcmp}}
+\index{memcmp@{memcmp}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{memcmp()}{memcmp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_ad566f6541e98b74246db1a3a3a85ad49}{int8\+\_\+t}} memcmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b,  }\item[{\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily memcmp}用于比较两个分别以{\ttfamily a}和{\ttfamily b}为起始地址的的{\ttfamily size}个字节的内存区域的值 
+
+
+\begin{DoxyParams}{参数}
+{\em a} & 要比较的第一个内存区域的地址 \\
+\hline
+{\em b} & 要比较的第二个内存区域的地址 \\
+\hline
+{\em size} & 要比较的字节数\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int8\+\_\+t 比较的结果\+:
+\begin{DoxyItemize}
+\item 若{\ttfamily a}$>${\ttfamily b}, 则返回{\ttfamily 1}
+\item 若{\ttfamily a}={\ttfamily b}, 则返回{\ttfamily 0}
+\item 若{\ttfamily a}$<${\ttfamily b}, 则返回{\ttfamily -\/1} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a85a508ca397d58bd730fe247406225c1}\label{string_8h_a85a508ca397d58bd730fe247406225c1}} 
+\index{string.h@{string.h}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{memcpy()}{memcpy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} memcpy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily memcpy}将{\ttfamily src}起始的{\ttfamily size}个内存单元的值(以字节计算)复制到{\ttfamily dst}起始的{\ttfamily size}个内存单元中 
+
+
+\begin{DoxyParams}{参数}
+{\em dst} & 被复制的内存区域的起始地址 \\
+\hline
+{\em src} & 复制到的内存区域的起始地址 \\
+\hline
+{\em size} & 复制的字节数\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t 复制的字节数
+\end{DoxyReturn}
+\begin{DoxyWarning}{警告}
+{\ttfamily memcpy}不会进行长度检查, 注意{\ttfamily src}和{\ttfamily dst}的长度, 以避免溢出 
+\end{DoxyWarning}
+\mbox{\Hypertarget{string_8h_a2b93142c59725e6f0a23c11c01dd9806}\label{string_8h_a2b93142c59725e6f0a23c11c01dd9806}} 
+\index{string.h@{string.h}!memmove@{memmove}}
+\index{memmove@{memmove}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{memmove()}{memmove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} memmove (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+memmove -\/ Copy a block of memory, handling overlaps 
+
+
+\begin{DoxyParams}{参数}
+{\em dst} & Destination buffer \\
+\hline
+{\em src} & Source buffer \\
+\hline
+{\em size} & Size of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t return the copied char num 
+\end{DoxyReturn}
+\begin{DoxyNote}{注解}
+与 \mbox{\hyperlink{string_8h_a85a508ca397d58bd730fe247406225c1}{memcpy()}} 不同，memmove() 处理重叠缓冲区。 复制发生的过程就像 src 中的字节首先被复制到 不与 src 或 dest 和字节重叠的临时缓冲区 然后从临时缓冲区复制到目标。 
+
+此函数用于代替 \mbox{\hyperlink{string_8h_a85a508ca397d58bd730fe247406225c1}{memcpy()}} 在可能重叠的内存块之间进行复制。 
+\end{DoxyNote}
+\mbox{\Hypertarget{string_8h_a0fd822120d98aeeb31c3e34b925aaac9}\label{string_8h_a0fd822120d98aeeb31c3e34b925aaac9}} 
+\index{string.h@{string.h}!memset@{memset}}
+\index{memset@{memset}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{memset()}{memset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} memset (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{\mbox{\hyperlink{types_8h_ab8ef12fab634c171394422d0ee8baf94}{byte}}}]{value,  }\item[{\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily memset}将{\ttfamily det\+\_\+}起始的{\ttfamily size}个字节的内存单元的值设置为{\ttfamily value} 
+
+
+\begin{DoxyParams}{参数}
+{\em dst} & 起始地址 \\
+\hline
+{\em value} & 设置的值 \\
+\hline
+{\em size} & 要设置多少个字节\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t 成功设置的字节数 
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a1e85b03de97ac68581bdd673389b8b5b}\label{string_8h_a1e85b03de97ac68581bdd673389b8b5b}} 
+\index{string.h@{string.h}!regu\_replace@{regu\_replace}}
+\index{regu\_replace@{regu\_replace}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{regu\_replace()}{regu\_replace()}}
+{\footnotesize\ttfamily void regu\+\_\+replace (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{const char $\ast$}]{pattern,  }\item[{const char $\ast$}]{replacement,  }\item[{int}]{max\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+‘regu\+\_\+replac’函数通过使用正则表达式对字符串中特定字符串进行一个替换； 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 需要被操作的字符串 \\
+\hline
+{\em pattern} & 正则匹配模式 \\
+\hline
+{\em replacement} & 替换为的字符 \\
+\hline
+{\em max\+\_\+len} & 最大处理长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a34faed0b162387a0d9f7e706a9b9e5fa}\label{string_8h_a34faed0b162387a0d9f7e706a9b9e5fa}} 
+\index{string.h@{string.h}!strcat@{strcat}}
+\index{strcat@{strcat}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strcat()}{strcat()}}
+{\footnotesize\ttfamily char$\ast$ strcat (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strcat}用于将字符串{\ttfamily src}拼接到{\ttfamily dst}后 
+
+
+\begin{DoxyParams}{参数}
+{\em dst} & 将被拼接到的字符串 \\
+\hline
+{\em src} & 将被拼接的字符串\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+char$\ast$ 返回dst的首地址
+\end{DoxyReturn}
+\begin{DoxyWarning}{警告}
+{\ttfamily strcat}不会进行长度检查, 注意{\ttfamily src}和{\ttfamily dst}的长度, 以避免溢出 
+\end{DoxyWarning}
+\mbox{\Hypertarget{string_8h_a1a5e632fe609361d02cb7801fe24602f}\label{string_8h_a1a5e632fe609361d02cb7801fe24602f}} 
+\index{string.h@{string.h}!strchr@{strchr}}
+\index{strchr@{strchr}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strchr()}{strchr()}}
+{\footnotesize\ttfamily char$\ast$ strchr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const \mbox{\hyperlink{types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}}}]{ch }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strchr}返回字符串从左往右第一次出现字符{\ttfamily ch}的地址 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 被搜索的字符串 \\
+\hline
+{\em ch} & 要搜索的字符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+char$\ast$ 指向字符的指针,
+\begin{DoxyItemize}
+\item 若字符{\ttfamily ch}在字符串{\ttfamily str}中, 则返回字符串第一个{\ttfamily ch}的地址
+\item 若字符{\ttfamily ch}不在字符串{\ttfamily str}中, 则返回 {\ttfamily N\+U\+LL}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxyNote}{注解}
+{\ttfamily strchr}相当于返回字符{\ttfamily ch}第一次出现的地址 
+\end{DoxyNote}
+\mbox{\Hypertarget{string_8h_ac777359738f935cd3bf50191baf869eb}\label{string_8h_ac777359738f935cd3bf50191baf869eb}} 
+\index{string.h@{string.h}!strchrs@{strchrs}}
+\index{strchrs@{strchrs}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strchrs()}{strchrs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} strchrs (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const \mbox{\hyperlink{types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}}}]{ch }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strchrs}返回字符串{\ttfamily str}中字符{\ttfamily ch}出现的次数 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 要被搜索的字符串 \\
+\hline
+{\em ch} & 要查询的字符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t 字符{\ttfamily ch}在字符串{\ttfamily str}中出现的次数 
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a17120e5c0508b8cd7acb5b88a68df2e3}\label{string_8h_a17120e5c0508b8cd7acb5b88a68df2e3}} 
+\index{string.h@{string.h}!strcmp@{strcmp}}
+\index{strcmp@{strcmp}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strcmp()}{strcmp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_ad566f6541e98b74246db1a3a3a85ad49}{int8\+\_\+t}} strcmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strcmp}比较两个字符串 
+
+
+\begin{DoxyParams}{参数}
+{\em a} & 要比较的第一个字符串 \\
+\hline
+{\em b} & 要比较的第二个字符串\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int8\+\_\+t 返回比较的结果
+\begin{DoxyItemize}
+\item 若{\ttfamily a}$>${\ttfamily b}, 则返回{\ttfamily 1}
+\item 若{\ttfamily a}={\ttfamily b}, 则返回{\ttfamily 0}
+\item 若{\ttfamily a}$<${\ttfamily b}, 则返回{\ttfamily -\/1} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a1a8e0d046aa6ccaf2c9947e3142e4786}\label{string_8h_a1a8e0d046aa6ccaf2c9947e3142e4786}} 
+\index{string.h@{string.h}!strcpy@{strcpy}}
+\index{strcpy@{strcpy}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strcpy()}{strcpy()}}
+{\footnotesize\ttfamily char$\ast$ strcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strcpy}复制{\ttfamily src}指向的以\textquotesingle{}\textbackslash{}0\textquotesingle{}结尾的字符串到{\ttfamily dst}指向的字符串去中去 
+
+
+\begin{DoxyParams}{参数}
+{\em dst} & 将要复制到的内存地址 \\
+\hline
+{\em src} & 被复制的字符串\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+char$\ast$ 返回dst的首地址
+\end{DoxyReturn}
+\begin{DoxyWarning}{警告}
+{\ttfamily strcpy}不会进行长度检查, 注意{\ttfamily src}和{\ttfamily dst}的长度, 以避免溢出 
+\end{DoxyWarning}
+\mbox{\Hypertarget{string_8h_a008e171a518fe0e0352f31b245e03875}\label{string_8h_a008e171a518fe0e0352f31b245e03875}} 
+\index{string.h@{string.h}!strlen@{strlen}}
+\index{strlen@{strlen}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strlen()}{strlen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} strlen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strlen}返回以\textquotesingle{}\textbackslash{}0\textquotesingle{}结尾的字符串的长度 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 要获取长度的字符串\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t 字符串的长度 
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_a81ef7c8c1f669e36358b53540413ad4a}\label{string_8h_a81ef7c8c1f669e36358b53540413ad4a}} 
+\index{string.h@{string.h}!strmset@{strmset}}
+\index{strmset@{strmset}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strmset()}{strmset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} strmset (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{char}]{value,  }\item[{\mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strmset是针对字符串复制的安全实现，避免了字符串复制时可能存在的缓存区溢出，}将{\ttfamily det\+\_\+}起始的{\ttfamily size}个字节的内存单元的值设置为{\ttfamily value} 
+
+
+\begin{DoxyParams}{参数}
+{\em dst} & 起始地址 \\
+\hline
+{\em value} & 设置的值 \\
+\hline
+{\em size} & 要设置多少个字节\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t 成功设置的字节数 
+\end{DoxyReturn}
+\mbox{\Hypertarget{string_8h_aac8072fca6653374df87f4c52d72648f}\label{string_8h_aac8072fca6653374df87f4c52d72648f}} 
+\index{string.h@{string.h}!strrchr@{strrchr}}
+\index{strrchr@{strrchr}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strrchr()}{strrchr()}}
+{\footnotesize\ttfamily char$\ast$ strrchr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const \mbox{\hyperlink{types_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}}}]{ch }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily strrchr}返回反向字符串第一次出现字符{\ttfamily ch}的地址 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 被搜索的字符串 \\
+\hline
+{\em ch} & 要搜索的字符\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+char$\ast$
+\begin{DoxyItemize}
+\item 若字符{\ttfamily ch}在字符串{\ttfamily str}中, 则返回反向字符串第一个{\ttfamily ch}的地址
+\item 若字符{\ttfamily ch}不在字符串{\ttfamily str}中, 则返回 {\ttfamily N\+U\+LL}
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxyNote}{注解}
+{\ttfamily strrchr}相当于返回字符{\ttfamily ch}最后一次出现的地址 
+\end{DoxyNote}
+\mbox{\Hypertarget{string_8h_a78de187fd1851b4b4a6c78242c1611cb}\label{string_8h_a78de187fd1851b4b4a6c78242c1611cb}} 
+\index{string.h@{string.h}!strslice@{strslice}}
+\index{strslice@{strslice}!string.h@{string.h}}
+\doxysubsubsection{\texorpdfstring{strslice()}{strslice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a186ea1339bffb378854987065835afe3}{size\+\_\+t}} strslice (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src,  }\item[{char $\ast$}]{dst,  }\item[{\mbox{\hyperlink{types_8h_a312c7e8848187d110315ab83a7b3d4d0}{int64\+\_\+t}}}]{start,  }\item[{\mbox{\hyperlink{types_8h_a312c7e8848187d110315ab83a7b3d4d0}{int64\+\_\+t}}}]{len }\end{DoxyParamCaption})}
+
+
+
+\textquotesingle{}strslice\textquotesingle{}从src字符串中截取从start的len个字节写入start中；同时检查是否越界，避免缓存区溢出； 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 要被截取的字符串 \\
+\hline
+{\em dst} & 要被写入的字符串 \\
+\hline
+{\em start} & 开始的下标 \\
+\hline
+{\em len} & 要截取的长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+size\+\_\+t 成功截取的长度 
+\end{DoxyReturn}

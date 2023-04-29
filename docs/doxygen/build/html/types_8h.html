@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/types.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle">
+<div class="title">types.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="types_8h.html" title="types.h中定义了X2W-OS的内建类型">types.h</a></code>中定义了<code>X2W-OS</code>的内建类型  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="constrains_8h_source.html">constrains.h</a>&quot;</code><br />
+</div>
+<p><a href="types_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a23195218eef2cf21e2beae685a041783"><td class="memItemLeft" align="right" valign="top"><a id="a23195218eef2cf21e2beae685a041783"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a23195218eef2cf21e2beae685a041783">DELIMITER</a>&#160;&#160;&#160;&quot;============================================================\n&quot;</td></tr>
+<tr class="memdesc:a23195218eef2cf21e2beae685a041783"><td class="mdescLeft">&#160;</td><td class="mdescRight">分隔符 <br /></td></tr>
+<tr class="separator:a23195218eef2cf21e2beae685a041783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memItemLeft" align="right" valign="top"><a id="a070d2ce7b6bb7e5c05602aa8c308d0c4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&#160;&#160;&#160;((void *)0)</td></tr>
+<tr class="memdesc:a070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>NULL</code> 被定义为指向内存<code>0x0000000000000000</code>处的<code>void</code>指针, 由于在<code>QEMU</code>的<code>Memory Map</code>中该地址不在内存中, 因此访问该地址最终将会导致报错 <br /></td></tr>
+<tr class="separator:a070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c57aae3eb654e205459b4362c8089a"><td class="memItemLeft" align="right" valign="top"><a id="a70c57aae3eb654e205459b4362c8089a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a70c57aae3eb654e205459b4362c8089a">ARRAY_SIZE</a>(array)&#160;&#160;&#160;((<a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a>)(sizeof(array) / sizeof((array)[0])))</td></tr>
+<tr class="memdesc:a70c57aae3eb654e205459b4362c8089a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>ARRAY_SIZE</code>宏函数用于计算数组<code>array</code>中的元素个数, 返回值类型为<code>size_t</code> <br /></td></tr>
+<tr class="separator:a70c57aae3eb654e205459b4362c8089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf5ec070e9499d36b7f2009ce736076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#addf5ec070e9499d36b7f2009ce736076">UNUSED</a>&#160;&#160;&#160;__attribute__((unused))</td></tr>
+<tr class="memdesc:addf5ec070e9499d36b7f2009ce736076"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UNUSED</code>宏用于通知<code>GCC</code>/<code>Clang</code>寄存器被修饰的变量可能没有被使用, 从而在编译的时候静默警告  <a href="types_8h.html#addf5ec070e9499d36b7f2009ce736076">更多...</a><br /></td></tr>
+<tr class="separator:addf5ec070e9499d36b7f2009ce736076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc43e3ee0ae83643b65e07fe1fd0132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a9bc43e3ee0ae83643b65e07fe1fd0132">NO_RETURN</a>&#160;&#160;&#160;__attribute__((noreturn))</td></tr>
+<tr class="memdesc:a9bc43e3ee0ae83643b65e07fe1fd0132"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>NO_RETURN</code>宏用于通知<code>GCC</code>/<code>Clang</code>编译器被修饰的函数不会返回, 帮助编译器静态分析用  <a href="types_8h.html#a9bc43e3ee0ae83643b65e07fe1fd0132">更多...</a><br /></td></tr>
+<tr class="separator:a9bc43e3ee0ae83643b65e07fe1fd0132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e8a42306d8e67cb94ca31c3956ee78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">DEPRECATED</a>&#160;&#160;&#160;__attribute__((deprecated))</td></tr>
+<tr class="memdesc:ac1e8a42306d8e67cb94ca31c3956ee78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>DEPRECATED</code>宏用于通知<code>GCC</code>/<code>Clang</code>编译器被修饰的对象已经弃用, 帮助编译器静态分析用  <a href="types_8h.html#ac1e8a42306d8e67cb94ca31c3956ee78">更多...</a><br /></td></tr>
+<tr class="separator:ac1e8a42306d8e67cb94ca31c3956ee78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af99897b60119951af8961dbd52dd3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a3af99897b60119951af8961dbd52dd3f">UNREACHABLE</a>&#160;&#160;&#160;__builtin_unreachable()</td></tr>
+<tr class="memdesc:a3af99897b60119951af8961dbd52dd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UNREACHABLE</code>宏用于通知<code>GCC</code>/<code>Clang</code>编译器不会运行到此处, 帮助编译器静态分析用  <a href="types_8h.html#a3af99897b60119951af8961dbd52dd3f">更多...</a><br /></td></tr>
+<tr class="separator:a3af99897b60119951af8961dbd52dd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aba7bc1797add20fe3efdf37ced1182c5"><td class="memItemLeft" align="right" valign="top"><a id="aba7bc1797add20fe3efdf37ced1182c5"></a>
+typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td></tr>
+<tr class="memdesc:aba7bc1797add20fe3efdf37ced1182c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>char</code> 宽度为 <code>8 bit</code> <br /></td></tr>
+<tr class="separator:aba7bc1797add20fe3efdf37ced1182c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273cf69d639a59973b6019625df33e30"><td class="memItemLeft" align="right" valign="top"><a id="a273cf69d639a59973b6019625df33e30"></a>
+typedef unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td></tr>
+<tr class="memdesc:a273cf69d639a59973b6019625df33e30"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>short</code>宽度为 <code>16 bit</code> <br /></td></tr>
+<tr class="separator:a273cf69d639a59973b6019625df33e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435d1572bf3f880d55459d9805097f62"><td class="memItemLeft" align="right" valign="top"><a id="a435d1572bf3f880d55459d9805097f62"></a>
+typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td></tr>
+<tr class="memdesc:a435d1572bf3f880d55459d9805097f62"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>int</code> 宽度为 <code>32 bit</code> <br /></td></tr>
+<tr class="separator:a435d1572bf3f880d55459d9805097f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa232ecf786a74ce5363c36c10798d2b1"><td class="memItemLeft" align="right" valign="top"><a id="aa232ecf786a74ce5363c36c10798d2b1"></a>
+typedef unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a></td></tr>
+<tr class="memdesc:aa232ecf786a74ce5363c36c10798d2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>long</code> 宽度为 <code>64 bit</code> <br /></td></tr>
+<tr class="separator:aa232ecf786a74ce5363c36c10798d2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad566f6541e98b74246db1a3a3a85ad49"><td class="memItemLeft" align="right" valign="top"><a id="ad566f6541e98b74246db1a3a3a85ad49"></a>
+typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a></td></tr>
+<tr class="memdesc:ad566f6541e98b74246db1a3a3a85ad49"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>char</code> 宽度为 <code>8 bit</code> <br /></td></tr>
+<tr class="separator:ad566f6541e98b74246db1a3a3a85ad49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa343fa3b3d06292b959ffdd4c4703b06"><td class="memItemLeft" align="right" valign="top"><a id="aa343fa3b3d06292b959ffdd4c4703b06"></a>
+typedef short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#aa343fa3b3d06292b959ffdd4c4703b06">int16_t</a></td></tr>
+<tr class="memdesc:aa343fa3b3d06292b959ffdd4c4703b06"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>short</code>宽度为 <code>16 bit</code> <br /></td></tr>
+<tr class="separator:aa343fa3b3d06292b959ffdd4c4703b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f2e37ee053cf2ce8ca28d1f74630e5"><td class="memItemLeft" align="right" valign="top"><a id="a32f2e37ee053cf2ce8ca28d1f74630e5"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a></td></tr>
+<tr class="memdesc:a32f2e37ee053cf2ce8ca28d1f74630e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>int</code> 宽度为 <code>32 bit</code> <br /></td></tr>
+<tr class="separator:a32f2e37ee053cf2ce8ca28d1f74630e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312c7e8848187d110315ab83a7b3d4d0"><td class="memItemLeft" align="right" valign="top"><a id="a312c7e8848187d110315ab83a7b3d4d0"></a>
+typedef long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a></td></tr>
+<tr class="memdesc:a312c7e8848187d110315ab83a7b3d4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>LP64</code>中一个 <code>long</code> 宽度为 <code>64 bit</code> <br /></td></tr>
+<tr class="separator:a312c7e8848187d110315ab83a7b3d4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253b248072cfc8bd812c69acd0046eed"><td class="memItemLeft" align="right" valign="top"><a id="a253b248072cfc8bd812c69acd0046eed"></a>
+typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a253b248072cfc8bd812c69acd0046eed">Bool</a></td></tr>
+<tr class="memdesc:a253b248072cfc8bd812c69acd0046eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">布尔常量定义 <br /></td></tr>
+<tr class="separator:a253b248072cfc8bd812c69acd0046eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186ea1339bffb378854987065835afe3"><td class="memItemLeft" align="right" valign="top"><a id="a186ea1339bffb378854987065835afe3"></a>
+typedef <a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a></td></tr>
+<tr class="memdesc:a186ea1339bffb378854987065835afe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">计数类型定义 <br /></td></tr>
+<tr class="separator:a186ea1339bffb378854987065835afe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ef12fab634c171394422d0ee8baf94"><td class="memItemLeft" align="right" valign="top"><a id="ab8ef12fab634c171394422d0ee8baf94"></a>
+typedef <a class="el" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a></td></tr>
+<tr class="memdesc:ab8ef12fab634c171394422d0ee8baf94"><td class="mdescLeft">&#160;</td><td class="mdescRight">字节类型定义 <br /></td></tr>
+<tr class="separator:ab8ef12fab634c171394422d0ee8baf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c04c91bab78dc7c80f298f11ff2cd7"><td class="memItemLeft" align="right" valign="top"><a id="ad8c04c91bab78dc7c80f298f11ff2cd7"></a>
+typedef <a class="el" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ad8c04c91bab78dc7c80f298f11ff2cd7">offset_t</a></td></tr>
+<tr class="memdesc:ad8c04c91bab78dc7c80f298f11ff2cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">偏移类型定义 <br /></td></tr>
+<tr class="separator:ad8c04c91bab78dc7c80f298f11ff2cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23649fe323c2bb0dd67e8ddacb04a9df"><td class="memItemLeft" align="right" valign="top"><a id="a23649fe323c2bb0dd67e8ddacb04a9df"></a>
+typedef <a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a23649fe323c2bb0dd67e8ddacb04a9df">addr_t</a></td></tr>
+<tr class="memdesc:a23649fe323c2bb0dd67e8ddacb04a9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">地址类型 <br /></td></tr>
+<tr class="separator:a23649fe323c2bb0dd67e8ddacb04a9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f2f43c22b22212994d19244ccb10fc"><td class="memItemLeft" align="right" valign="top"><a id="a48f2f43c22b22212994d19244ccb10fc"></a>
+typedef <a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a></td></tr>
+<tr class="memdesc:a48f2f43c22b22212994d19244ccb10fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">整型寄存器类型 <br /></td></tr>
+<tr class="separator:a48f2f43c22b22212994d19244ccb10fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2876a5049438ad8f5b5799f69013faf"><td class="memItemLeft" align="right" valign="top"><a id="ac2876a5049438ad8f5b5799f69013faf"></a>
+typedef <a class="el" href="types_8h.html#aa232ecf786a74ce5363c36c10798d2b1">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ac2876a5049438ad8f5b5799f69013faf">freg_t</a></td></tr>
+<tr class="memdesc:ac2876a5049438ad8f5b5799f69013faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">浮点寄存器类型 <br /></td></tr>
+<tr class="separator:ac2876a5049438ad8f5b5799f69013faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a2f80701c36e79c0640d91c788feee0b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3af9d46b7804d93a4fcde88489a1b68c24">False</a> = 0, 
+<a class="el" href="types_8h.html#a2f80701c36e79c0640d91c788feee0b3a6d32c34708a0a3507c4bdb89219d650b">True</a> = 1
+ }</td></tr>
+<tr class="separator:a2f80701c36e79c0640d91c788feee0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="types_8h.html" title="types.h中定义了X2W-OS的内建类型">types.h</a></code>中定义了<code>X2W-OS</code>的内建类型 </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'gm'+'ail'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-08</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="ac1e8a42306d8e67cb94ca31c3956ee78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e8a42306d8e67cb94ca31c3956ee78">&#9670;&nbsp;</a></span>DEPRECATED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEPRECATED&#160;&#160;&#160;__attribute__((deprecated))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>DEPRECATED</code>宏用于通知<code>GCC</code>/<code>Clang</code>编译器被修饰的对象已经弃用, 帮助编译器静态分析用 </p>
+<dl class="section note"><dt>注解</dt><dd><code>NO_RETURN</code>宏本质上是借助了<code>GCC</code>/<code>Clang</code>的<code>__attribute__</code>关键词实现的, 使用的标记(annotation)是: <code>deprecated</code></dd>
+<dd>
+参考: <a href="https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/__attribute__/deprecated/index">https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/__attribute__/deprecated/index</a> </dd></dl>
+
+</div>
+</div>
+<a id="a9bc43e3ee0ae83643b65e07fe1fd0132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc43e3ee0ae83643b65e07fe1fd0132">&#9670;&nbsp;</a></span>NO_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NO_RETURN&#160;&#160;&#160;__attribute__((noreturn))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>NO_RETURN</code>宏用于通知<code>GCC</code>/<code>Clang</code>编译器被修饰的函数不会返回, 帮助编译器静态分析用 </p>
+<dl class="section note"><dt>注解</dt><dd><code>NO_RETURN</code>宏本质上是借助了<code>GCC</code>/<code>Clang</code>的<code>__attribute__</code>关键词实现的, 使用的标记(annotation)是: <code>noreturn</code></dd>
+<dd>
+参考: <a href="https://stackoverflow.com/questions/25408795/tell-gcc-that-a-function-call-will-not-return">https://stackoverflow.com/questions/25408795/tell-gcc-that-a-function-call-will-not-return</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3af99897b60119951af8961dbd52dd3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af99897b60119951af8961dbd52dd3f">&#9670;&nbsp;</a></span>UNREACHABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNREACHABLE&#160;&#160;&#160;__builtin_unreachable()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>UNREACHABLE</code>宏用于通知<code>GCC</code>/<code>Clang</code>编译器不会运行到此处, 帮助编译器静态分析用 </p>
+<dl class="section note"><dt>注解</dt><dd><code>NO_RETURN</code>宏本质上是借助了<code>GCC</code>/<code>Clang</code>内建的<code>__builtin_unreachable()</code>函数实现的</dd>
+<dd>
+参考: <a href="https://stackoverflow.com/questions/25408795/tell-gcc-that-a-function-call-will-not-return">https://stackoverflow.com/questions/25408795/tell-gcc-that-a-function-call-will-not-return</a> </dd></dl>
+
+</div>
+</div>
+<a id="addf5ec070e9499d36b7f2009ce736076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf5ec070e9499d36b7f2009ce736076">&#9670;&nbsp;</a></span>UNUSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNUSED&#160;&#160;&#160;__attribute__((unused))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>UNUSED</code>宏用于通知<code>GCC</code>/<code>Clang</code>寄存器被修饰的变量可能没有被使用, 从而在编译的时候静默警告 </p>
+<dl class="section note"><dt>注解</dt><dd><code>UNUSED</code>宏本质上是借助了<code>GCC</code>/<code>Clang</code>的<code>__attribute__</code>关键词实现的, 使用的标记(annotation)是: <code>unused</code></dd>
+<dd>
+参考: <a href="https://gcc.gnu.org/onlinedocs/gcc-3.4.6/gcc/Variable-Attributes.html">https://gcc.gnu.org/onlinedocs/gcc-3.4.6/gcc/Variable-Attributes.html</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a2f80701c36e79c0640d91c788feee0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f80701c36e79c0640d91c788feee0b3">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a2f80701c36e79c0640d91c788feee0b3af9d46b7804d93a4fcde88489a1b68c24"></a>False&#160;</td><td class="fielddoc"><p>等价于<code>unsigned int false = 0</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f80701c36e79c0640d91c788feee0b3a6d32c34708a0a3507c4bdb89219d650b"></a>True&#160;</td><td class="fielddoc"><p>等价于<code>unsigned int true = 1</code> </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

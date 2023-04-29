@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="test__stdlib_8h" kind="file" language="C++">
+    <compoundname>test_stdlib.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="stdlib_8h" local="yes">stdlib.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+        <link refid="stdlib_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_stdlib.h</label>
+        <link refid="test__stdlib_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__stdlib_8h_1a271b49079bf5f3a765f69f6c29539480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int test_stdlib</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_stdlib</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><computeroutput>test_stdlib</computeroutput>是<computeroutput>stdlib</computeroutput>库的测试函数 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int 测试正常则返回0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/test/test_stdlib.h" line="21" column="5" declfile="/home/data/proj/oskernel2023-x2w/include/test/test_stdlib.h" declline="21" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="test__stdlib_8h" kindref="compound">test_stdlib.h</ref></computeroutput>是<computeroutput>stdlib</computeroutput>的测试文件 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-17</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_TEST_TEST_STDLIB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_TEST_TEST_STDLIB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdlib_8h" kindref="compound">stdlib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test__stdlib_8h_1a271b49079bf5f3a765f69f6c29539480" kindref="member">test_stdlib</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/test/test_stdlib.h"/>
+  </compounddef>
+</doxygen>

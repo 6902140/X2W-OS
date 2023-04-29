@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>io.h &#8212; X2W-OS 0.1 文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/files/include/io';</script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="kstdio.h" href="kstdio.html" />
+    <link rel="prev" title="init.h" href="init.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">X2W-OS 0.1 文档</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../docs/compile-tutorial.html">
+                        X2W-OS Make Targets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../docs/development-tutorial.html">
+                        X2W-OS Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../notes/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html">
+                        内存管理
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../notes/%E5%BC%82%E5%B8%B8_%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.html">
+                        中断/异常处理机制
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../files.html">
+                        Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../functions.html">
+                        Functions
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../docs/compile-tutorial.html">
+                        X2W-OS Make Targets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../docs/development-tutorial.html">
+                        X2W-OS Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../notes/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html">
+                        内存管理
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../notes/%E5%BC%82%E5%B8%B8_%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.html">
+                        中断/异常处理机制
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../files.html">
+                        Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../functions.html">
+                        Functions
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="asm/csr.html">asm/csr.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="asm/uart.html">asm/uart.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constrains.html">constrains.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="init.html">init.h</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">io.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kstdio.html">kstdio.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdarg.html">stdarg.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdbitmap.html">stdbitmap.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdfmt.html">stdfmt.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlib.html">stdlib.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlist.html">stdlist.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="string.html">string.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">types.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uart.html">uart.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ustdio.html">ustdio.h</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../files.html" class="nav-link">Files</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">io.h</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="io-h">
+<h1>io.h<a class="headerlink" href="#io-h" title="此标题的永久链接">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">io.h</span></code>中提供了<code class="docutils literal notranslate"><span class="pre">io</span></code>操作函数 </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Shihong Wang (<a class="reference external" href="mailto:jack4shihong&#37;&#52;&#48;gmail&#46;com">jack4shihong<span>&#64;</span>gmail<span>&#46;</span>com</a>) </p>
+</dd>
+<dt><strong>Version</strong></dt><dd><p>0.1 </p>
+</dd>
+<dt><strong>Date</strong></dt><dd><p>2023-04-09</p>
+</dd>
+<dt><strong>Copyright</strong></dt><dd><p>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">RISC-V</span></code>通过<code class="docutils literal notranslate"><span class="pre">Memory</span> <span class="pre">Mapping</span> <span class="pre">IO</span></code> (<code class="docutils literal notranslate"><span class="pre">MMIO</span></code>)的方式操作设备寄存器. 关于具体的<code class="docutils literal notranslate"><span class="pre">MMIO</span> <span class="pre">Map</span></code>, 参阅<code class="docutils literal notranslate"><span class="pre">QEMU</span></code>中的<code class="docutils literal notranslate"><span class="pre">virt_memmap[]</span></code>: <a class="github reference external" href="https://github.com/qemu/qemu/blob/master/hw/riscv/virt.c">qemu/qemu</a></p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.dmb">
+<span class="target" id="io_8h_1a3c3e456bfd6d0406bc6e20318da1760b"></span><span class="sig-name descname"><span class="n"><span class="pre">dmb</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.dmb" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">dmb</span></code>(<code class="docutils literal notranslate"><span class="pre">Define</span> <span class="pre">Memory</span> <span class="pre">Barrier</span></code>)定义了内存屏障(<code class="docutils literal notranslate"><span class="pre">Memory</span> <span class="pre">Barrier</span></code>) </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>关于内存屏障, 参考:<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GCC</span></code>优化: <a class="reference external" href="https://www.cnblogs.com/nufangrensheng/p/3890856.html">https://www.cnblogs.com/nufangrensheng/p/3890856.html</a></p></li>
+<li><p>内存屏障原理: <a class="reference external" href="https://stackoverflow.com/questions/14950614/working-of-asm-volatile-memory">https://stackoverflow.com/questions/14950614/working-of-asm-volatile-memory</a></p></li>
+</ul>
+</p>
+</div>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__iormb">
+<span class="target" id="io_8h_1aa2972611d217f2dd8bf17d8e5a9df24c"></span><span class="sig-name descname"><span class="n"><span class="pre">__iormb</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.__iormb" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">__iormb</span></code> 定义了读取寄存器的内存屏障 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__iowmb">
+<span class="target" id="io_8h_1a76c5ac1cb98b83819b9cedd10ab863ca"></span><span class="sig-name descname"><span class="n"><span class="pre">__iowmb</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.__iowmb" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">__iowmb</span></code> 定义了写入寄存器的内存屏障 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.glue">
+<span class="target" id="io_8h_1a5c466414909380bc82d6d28e35193e7f"></span><span class="sig-name descname"><span class="n"><span class="pre">glue</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">x</span></span>, <span class="n"><span class="pre">y</span></span>, <span class="n"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.glue" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">glue</span></code>用于将符号<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code>拼接为符号<code class="docutils literal notranslate"><span class="pre">x_y_z</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 第一个符号 </p></li>
+<li><p><strong>y</strong> – 第二个符号 </p></li>
+<li><p><strong>z</strong> – 第三个符号 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.mkname">
+<span class="target" id="io_8h_1ac2eaa508b61574c8081061907488e005"></span><span class="sig-name descname"><span class="n"><span class="pre">mkname</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">type</span></span>, <span class="n"><span class="pre">width</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.mkname" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">mkname</span></code>用于方便的拼接得到函数名 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – 读还是写寄存器, 只能是read或write </p></li>
+<li><p><strong>width</strong> – 读写的位数 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.mkread">
+<span class="target" id="io_8h_1a04306cf4d238a563ec6e862b546dc590"></span><span class="sig-name descname"><span class="n"><span class="pre">mkread</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">width</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.mkread" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">mkread</span></code>用于生成读不同长度寄存器的函数 </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>通常情况下，在内联汇编代码块的最后一条语句中将需要返回的值存储在一个特定的变量中，然后该变量将被作为代码块的返回值返回给调用者。在GCC扩展中，这个变量通常被命名为__v（两个下划线 + v），并且在代码块的最后一行写上__v;语句来表示将其作为返回值返回给调用者。 </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>因为地址的值(寄存器的值)可能会被设备改变, 因此必须声明是volatile, 以避免GCC进行优化 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – 读取的位数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.mkwrite">
+<span class="target" id="io_8h_1a59e4e10887e0e4c54d738802bf969f1c"></span><span class="sig-name descname"><span class="n"><span class="pre">mkwrite</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">width</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.mkwrite" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">mkwrite</span></code>用于生成写不同长度寄存器的函数 </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>因为地址的值(寄存器的值)可能会被设备改变, 因此必须声明是volatile, 以避免GCC进行优化 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – 写入的位数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412write_8_bits8uint64_t7uint8_t">
+<span id="_CPPv312write_8_bits8uint64_t7uint8_t"></span><span id="_CPPv212write_8_bits8uint64_t7uint8_t"></span><span id="write_8_bits__uint64_t.uint8_t"></span><span class="target" id="io_8h_1a18639e39bdfcb6762848ce1cfbfda178"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_8_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span>, <a class="reference internal" href="types.html#_CPPv47uint8_t" title="uint8_t"><span class="n"><span class="pre">uint8_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412write_8_bits8uint64_t7uint8_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">write_8_bits</span></code>向<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器写1个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>addr</strong> – 寄存器映射的地址 </p></li>
+<li><p><strong>value</strong> – 需要写入的数据, 1个字节 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413write_16_bits8uint64_t8uint16_t">
+<span id="_CPPv313write_16_bits8uint64_t8uint16_t"></span><span id="_CPPv213write_16_bits8uint64_t8uint16_t"></span><span id="write_16_bits__uint64_t.uint16_t"></span><span class="target" id="io_8h_1af2eed07cd896b7c3c278eaae94b3a3d8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_16_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span>, <a class="reference internal" href="types.html#_CPPv48uint16_t" title="uint16_t"><span class="n"><span class="pre">uint16_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413write_16_bits8uint64_t8uint16_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">write_16_bits</span></code>向<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器写2个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>addr</strong> – 寄存器映射的地址 </p></li>
+<li><p><strong>value</strong> – 需要写入的数据, 2个字节 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413write_32_bits8uint64_t8uint32_t">
+<span id="_CPPv313write_32_bits8uint64_t8uint32_t"></span><span id="_CPPv213write_32_bits8uint64_t8uint32_t"></span><span id="write_32_bits__uint64_t.uint32_t"></span><span class="target" id="io_8h_1af7ff67b6e8e5a50f9e8681e2a6e6b37d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_32_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span>, <a class="reference internal" href="types.html#_CPPv48uint32_t" title="uint32_t"><span class="n"><span class="pre">uint32_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413write_32_bits8uint64_t8uint32_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">write_32_bits</span></code>向<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器写4个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>addr</strong> – 寄存器映射的地址 </p></li>
+<li><p><strong>value</strong> – 需要写入的数据, 4个字节 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413write_64_bits8uint64_t8uint64_t">
+<span id="_CPPv313write_64_bits8uint64_t8uint64_t"></span><span id="_CPPv213write_64_bits8uint64_t8uint64_t"></span><span id="write_64_bits__uint64_t.uint64_t"></span><span class="target" id="io_8h_1a8cc27c4b245b4151270e7bcb175a2f3a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_64_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span>, <a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413write_64_bits8uint64_t8uint64_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">write_64_bits</span></code>向<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器写8个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>addr</strong> – 寄存器映射的地址 </p></li>
+<li><p><strong>value</strong> – 需要写入的数据, 8个字节 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411read_8_bits8uint64_t">
+<span id="_CPPv311read_8_bits8uint64_t"></span><span id="_CPPv211read_8_bits8uint64_t"></span><span id="read_8_bits__uint64_t"></span><span class="target" id="io_8h_1a42d854a1756d2f41414989d70a7e133c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="types.html#_CPPv47uint8_t" title="uint8_t"><span class="n"><span class="pre">uint8_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_8_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411read_8_bits8uint64_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">read_8_bits</span></code>从<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器读取1个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>addr</strong> – 寄存器映射的地址 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>uint8_t 读取的数据 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412read_16_bits8uint64_t">
+<span id="_CPPv312read_16_bits8uint64_t"></span><span id="_CPPv212read_16_bits8uint64_t"></span><span id="read_16_bits__uint64_t"></span><span class="target" id="io_8h_1a57dc0a0ba522db596e722ae4737a987b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="types.html#_CPPv48uint16_t" title="uint16_t"><span class="n"><span class="pre">uint16_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_16_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412read_16_bits8uint64_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">read_16_bits</span></code>从<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器读取2个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>addr</strong> – 寄存器映射的地址 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>uint16_t 读取的数据 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412read_32_bits8uint64_t">
+<span id="_CPPv312read_32_bits8uint64_t"></span><span id="_CPPv212read_32_bits8uint64_t"></span><span id="read_32_bits__uint64_t"></span><span class="target" id="io_8h_1a84a7582f0f2906a174b7b09e72aa9201"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="types.html#_CPPv48uint32_t" title="uint32_t"><span class="n"><span class="pre">uint32_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_32_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412read_32_bits8uint64_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">read_32_bits</span></code>从<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器读取4个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>addr</strong> – 寄存器映射的地址 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>uint32_t 读取的数据 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412read_64_bits8uint64_t">
+<span id="_CPPv312read_64_bits8uint64_t"></span><span id="_CPPv212read_64_bits8uint64_t"></span><span id="read_64_bits__uint64_t"></span><span class="target" id="io_8h_1a16220d8c2bb2dd95396250d513e5587d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_64_bits</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types.html#_CPPv48uint64_t" title="uint64_t"><span class="n"><span class="pre">uint64_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412read_64_bits8uint64_t" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">read_64_bits</span></code>从<code class="docutils literal notranslate"><span class="pre">addr</span></code>映射的寄存器读取8个字节的数据 </p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>addr</strong> – 寄存器映射的地址 </p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>uint64_t 读取的数据 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1af5323b9c9edb836d4c9a0caf30b8755c"></span><span class="sig-name descname"><span class="pre">mkread</span> <span class="pre">(8)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1ae58e19d2fe95ee545850125e2cf044fe"></span><span class="sig-name descname"><span class="pre">mkread</span> <span class="pre">(16)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1a10c5fcbf785b7116785adce25a7eb59c"></span><span class="sig-name descname"><span class="pre">mkread</span> <span class="pre">(32)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1ae19e962b9bf6616b46865283e6f13206"></span><span class="sig-name descname"><span class="pre">mkread</span> <span class="pre">(64)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1a7a4cd0abcc5f7d5123b60acc8d457684"></span><span class="sig-name descname"><span class="pre">mkwrite</span> <span class="pre">(8)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1ac199dfaa00c7aaeccf12f9657b3e76f4"></span><span class="sig-name descname"><span class="pre">mkwrite</span> <span class="pre">(16)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1ae67e4a6176af3ef355f7c71884c46e52"></span><span class="sig-name descname"><span class="pre">mkwrite</span> <span class="pre">(32)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="io_8h_1a3871a02099ba5ff1fe0de444078f6afc"></span><span class="sig-name descname"><span class="pre">mkwrite</span> <span class="pre">(64)</span></span></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="init.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">init.h</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="kstdio.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">kstdio.h</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/api/files/include/io.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> 显示源代码
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Shihong Wang, Shaofei Wang, Zhuiri Xiao.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

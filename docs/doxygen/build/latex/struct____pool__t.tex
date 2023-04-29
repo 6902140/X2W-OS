@@ -1,0 +1,38 @@
+\hypertarget{struct____pool__t}{}\doxysection{\+\_\+\+\_\+pool\+\_\+t结构体 参考}
+\label{struct____pool__t}\index{\_\_pool\_t@{\_\_pool\_t}}
+
+
+定义内存池的数据结构  
+
+
+
+
+{\ttfamily \#include $<$mm.\+h$>$}
+
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct____pool__t_a0c8eb60905612ab5eb64fd1ea6bb7451}\label{struct____pool__t_a0c8eb60905612ab5eb64fd1ea6bb7451}} 
+\mbox{\hyperlink{stdbitmap_8h_ab332e61ebf800daa3f1100099da4b005}{bitmap\+\_\+t}} $\ast$ {\bfseries pool\+\_\+bitmap}
+\item 
+\mbox{\Hypertarget{struct____pool__t_a927544e97cb5a52e0b11b671e3ebb42b}\label{struct____pool__t_a927544e97cb5a52e0b11b671e3ebb42b}} 
+\mbox{\hyperlink{types_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}} {\bfseries phy\+\_\+addr\+\_\+start}
+\item 
+\mbox{\Hypertarget{struct____pool__t_a6065213d2dec79b2ec1549e25f2fcf40}\label{struct____pool__t_a6065213d2dec79b2ec1549e25f2fcf40}} 
+\mbox{\hyperlink{types_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}} {\bfseries pool\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+定义内存池的数据结构 
+
+\begin{DoxyNote}{注解}
+包含 ~\newline
+ pool\+\_\+bitmap; 本内存池的位图，用于管理物理内存 phy\+\_\+addr\+\_\+start; 本内存池所管理的物理内存的起始地址 pool\+\_\+size; 本内存池的字节容量 mutex\+\_\+t mutex; 用于实现互斥访问内存池暂时没有实现 ~\newline
+ 
+\end{DoxyNote}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/data/proj/oskernel2023-\/x2w/include/\mbox{\hyperlink{mm_8h}{mm.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: __gtrapframe_t结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="struct____gtrapframe__t-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">__gtrapframe_t结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>gtrapframe_t</code>是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场  
+ <a href="struct____gtrapframe__t.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trapframe_8h_source.html">trapframe.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a5a3d33b5f41e3bdbaf30a6dd5d410077"><td class="memItemLeft" ><a id="a5a3d33b5f41e3bdbaf30a6dd5d410077"></a>
+union {</td></tr>
+<tr class="memitem:aaa0e58d1104c74965cd0ff2f21910249"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x1</b></td></tr>
+<tr class="separator:aaa0e58d1104c74965cd0ff2f21910249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a349b2b7aa5c07a98c117717a63fab6"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>ra</b></td></tr>
+<tr class="separator:a6a349b2b7aa5c07a98c117717a63fab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3d33b5f41e3bdbaf30a6dd5d410077"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a5a3d33b5f41e3bdbaf30a6dd5d410077"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>ra</code>寄存器(<code>Return Address</code>)用于保存函数调用时的返回地址 <br /></td></tr>
+<tr class="separator:a5a3d33b5f41e3bdbaf30a6dd5d410077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda08d1aceb2301408de3d835b2deb08"><td class="memItemLeft" ><a id="adda08d1aceb2301408de3d835b2deb08"></a>
+union {</td></tr>
+<tr class="memitem:a4aa32b7da264e296932640364cbe66ff"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x2</b></td></tr>
+<tr class="separator:a4aa32b7da264e296932640364cbe66ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f2677c926b970bd8f1b07cbeb6db0f"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>sp</b></td></tr>
+<tr class="separator:a25f2677c926b970bd8f1b07cbeb6db0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda08d1aceb2301408de3d835b2deb08"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:adda08d1aceb2301408de3d835b2deb08"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sp</code>寄存器(<code>Stack Pointer</code>)用于保存当前线程的栈底指针 <br /></td></tr>
+<tr class="separator:adda08d1aceb2301408de3d835b2deb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6d28bc544052596637083559ce69d1"><td class="memItemLeft" ><a id="a6c6d28bc544052596637083559ce69d1"></a>
+union {</td></tr>
+<tr class="memitem:a77c93b0177f78b555fed1deb61a7c045"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x3</b></td></tr>
+<tr class="separator:a77c93b0177f78b555fed1deb61a7c045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460c4037c5dd7f7be6d053d4f80809c5"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>gp</b></td></tr>
+<tr class="separator:a460c4037c5dd7f7be6d053d4f80809c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6d28bc544052596637083559ce69d1"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a6c6d28bc544052596637083559ce69d1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>gp</code>寄存器(<code>Golbal Pointer</code>)用于保存全局指针 <br /></td></tr>
+<tr class="separator:a6c6d28bc544052596637083559ce69d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a5ef8a85160185cbca51a4dd88cdf4"><td class="memItemLeft" ><a id="a23a5ef8a85160185cbca51a4dd88cdf4"></a>
+union {</td></tr>
+<tr class="memitem:af6c7846a79c115142611ae58b3e5dbe8"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x4</b></td></tr>
+<tr class="separator:af6c7846a79c115142611ae58b3e5dbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cc97ee12f2d980f51ffeb4215e4333"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>tp</b></td></tr>
+<tr class="separator:a54cc97ee12f2d980f51ffeb4215e4333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a5ef8a85160185cbca51a4dd88cdf4"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a23a5ef8a85160185cbca51a4dd88cdf4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>tp</code>寄存器(<code>Thread Pointer</code>)用于保存当前线程帧的指针 <br /></td></tr>
+<tr class="separator:a23a5ef8a85160185cbca51a4dd88cdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cc844bc47f102f059922034f56bca0"><td class="memItemLeft" ><a id="aa2cc844bc47f102f059922034f56bca0"></a>
+union {</td></tr>
+<tr class="memitem:aea1462a884a32cdb3459815619cb083a"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x5</b></td></tr>
+<tr class="separator:aea1462a884a32cdb3459815619cb083a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ba5ba490ae797dc4efaf711d0df196"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t0</b></td></tr>
+<tr class="separator:a59ba5ba490ae797dc4efaf711d0df196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cc844bc47f102f059922034f56bca0"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:aa2cc844bc47f102f059922034f56bca0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t0</code>寄存器(<code>Temporary 0</code>)是临时寄存器或者备用<code>ra</code>寄存器 <br /></td></tr>
+<tr class="separator:aa2cc844bc47f102f059922034f56bca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d417c4cee512c757ed294b3c35698d"><td class="memItemLeft" ><a id="a05d417c4cee512c757ed294b3c35698d"></a>
+union {</td></tr>
+<tr class="memitem:a094fef053bfc00b5bc99781a262156dd"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x6</b></td></tr>
+<tr class="separator:a094fef053bfc00b5bc99781a262156dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5f8ec8b181044bb888fd4780d68bcf"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t1</b></td></tr>
+<tr class="separator:acf5f8ec8b181044bb888fd4780d68bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d417c4cee512c757ed294b3c35698d"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a05d417c4cee512c757ed294b3c35698d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t1</code>寄存器(<code>Temporary 1</code>)是临时寄存器 <br /></td></tr>
+<tr class="separator:a05d417c4cee512c757ed294b3c35698d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe7ab9c6ed216f4aa877787e71c22d3"><td class="memItemLeft" ><a id="a3fe7ab9c6ed216f4aa877787e71c22d3"></a>
+union {</td></tr>
+<tr class="memitem:a4f7c0a204f0c5b576838bc31e8e60c9a"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x7</b></td></tr>
+<tr class="separator:a4f7c0a204f0c5b576838bc31e8e60c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0324e634a9a0c12e2b632a15ad3ffad"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t2</b></td></tr>
+<tr class="separator:ae0324e634a9a0c12e2b632a15ad3ffad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe7ab9c6ed216f4aa877787e71c22d3"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a3fe7ab9c6ed216f4aa877787e71c22d3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t2</code>寄存器(<code>Temporary 2</code>)是临时寄存器 <br /></td></tr>
+<tr class="separator:a3fe7ab9c6ed216f4aa877787e71c22d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827cb9efbc71fa98b9416a1e46668df0"><td class="memItemLeft" ><a id="a827cb9efbc71fa98b9416a1e46668df0"></a>
+union {</td></tr>
+<tr class="memitem:acef5f972bb8fcd21a5307ec49d799933"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x8</b></td></tr>
+<tr class="separator:acef5f972bb8fcd21a5307ec49d799933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc04c6af39a259f7ddde358c55475434"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s0</b></td></tr>
+<tr class="separator:adc04c6af39a259f7ddde358c55475434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80eaacb6e5f117d846bbf11d309321cf"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>fp</b></td></tr>
+<tr class="separator:a80eaacb6e5f117d846bbf11d309321cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827cb9efbc71fa98b9416a1e46668df0"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a827cb9efbc71fa98b9416a1e46668df0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s0</code>寄存器(<code>Saved Register 0</code>)是保存寄存器/帧寄存器 <br /></td></tr>
+<tr class="separator:a827cb9efbc71fa98b9416a1e46668df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710297b965a23b698d0946d83d3e845c"><td class="memItemLeft" ><a id="a710297b965a23b698d0946d83d3e845c"></a>
+union {</td></tr>
+<tr class="memitem:a8fa3e99eaf8e40bffe4a20ce87a9ca1a"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x9</b></td></tr>
+<tr class="separator:a8fa3e99eaf8e40bffe4a20ce87a9ca1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eef834e8b17b66e2554df06d286f488"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s1</b></td></tr>
+<tr class="separator:a1eef834e8b17b66e2554df06d286f488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710297b965a23b698d0946d83d3e845c"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a710297b965a23b698d0946d83d3e845c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s1</code>寄存器(<code>Saved Register 1</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a710297b965a23b698d0946d83d3e845c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0637872c32d0b5456ff94926abab01a"><td class="memItemLeft" ><a id="ad0637872c32d0b5456ff94926abab01a"></a>
+union {</td></tr>
+<tr class="memitem:a8f018b07243a1fde45fa8769c5543de1"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x10</b></td></tr>
+<tr class="separator:a8f018b07243a1fde45fa8769c5543de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6484bc18d51e64dcc67494aa83a3f98"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a0</b></td></tr>
+<tr class="separator:ae6484bc18d51e64dcc67494aa83a3f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0637872c32d0b5456ff94926abab01a"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ad0637872c32d0b5456ff94926abab01a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a0</code>寄存器(<code>Argument 0</code>)是函数调用参数寄存器/返回值寄存器 <br /></td></tr>
+<tr class="separator:ad0637872c32d0b5456ff94926abab01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45df4d9305010f020cabb22754bd438"><td class="memItemLeft" ><a id="ac45df4d9305010f020cabb22754bd438"></a>
+union {</td></tr>
+<tr class="memitem:a4053ba0da723c04800cd65597303df32"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x11</b></td></tr>
+<tr class="separator:a4053ba0da723c04800cd65597303df32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45659b00f6cd06c3ec01f0b6bc9057fd"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a1</b></td></tr>
+<tr class="separator:a45659b00f6cd06c3ec01f0b6bc9057fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45df4d9305010f020cabb22754bd438"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ac45df4d9305010f020cabb22754bd438"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a1</code>寄存器(<code>Argument 1</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:ac45df4d9305010f020cabb22754bd438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e4c0a1f7b116e627886bfd1182b08e"><td class="memItemLeft" ><a id="a51e4c0a1f7b116e627886bfd1182b08e"></a>
+union {</td></tr>
+<tr class="memitem:a7a1d9ce00d883b5396f5bf3dab9a81df"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x12</b></td></tr>
+<tr class="separator:a7a1d9ce00d883b5396f5bf3dab9a81df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe5988a1424e512cb7c5713144f5fda"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a2</b></td></tr>
+<tr class="separator:a6fe5988a1424e512cb7c5713144f5fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e4c0a1f7b116e627886bfd1182b08e"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a51e4c0a1f7b116e627886bfd1182b08e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a2</code>寄存器(<code>Argument 2</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:a51e4c0a1f7b116e627886bfd1182b08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1090ed3a511f83616d62fdeb8264eff"><td class="memItemLeft" ><a id="ad1090ed3a511f83616d62fdeb8264eff"></a>
+union {</td></tr>
+<tr class="memitem:adb3554fba333e6e852fc2c41172f0a65"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x13</b></td></tr>
+<tr class="separator:adb3554fba333e6e852fc2c41172f0a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296c0d013c7dc539d8f312d24ac2c434"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a3</b></td></tr>
+<tr class="separator:a296c0d013c7dc539d8f312d24ac2c434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1090ed3a511f83616d62fdeb8264eff"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ad1090ed3a511f83616d62fdeb8264eff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a3</code>寄存器(<code>Argument 3</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:ad1090ed3a511f83616d62fdeb8264eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258278f4c76dbb2260edcfd28e861e1b"><td class="memItemLeft" ><a id="a258278f4c76dbb2260edcfd28e861e1b"></a>
+union {</td></tr>
+<tr class="memitem:a6504e0bc71e7874ea173e33f603097a3"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x14</b></td></tr>
+<tr class="separator:a6504e0bc71e7874ea173e33f603097a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534a81110ef278da3c6170ed59f66b81"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a4</b></td></tr>
+<tr class="separator:a534a81110ef278da3c6170ed59f66b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258278f4c76dbb2260edcfd28e861e1b"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a258278f4c76dbb2260edcfd28e861e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a4</code>寄存器(<code>Argument 4</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:a258278f4c76dbb2260edcfd28e861e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e61ed3df37632029b1fec36767e3a0d"><td class="memItemLeft" ><a id="a9e61ed3df37632029b1fec36767e3a0d"></a>
+union {</td></tr>
+<tr class="memitem:ada6e73c897c765b877c723d8d4cc8217"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x15</b></td></tr>
+<tr class="separator:ada6e73c897c765b877c723d8d4cc8217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9bba54d585d0a97a223d61c8560771"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a5</b></td></tr>
+<tr class="separator:a0f9bba54d585d0a97a223d61c8560771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e61ed3df37632029b1fec36767e3a0d"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a9e61ed3df37632029b1fec36767e3a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a5</code>寄存器(<code>Argument 5</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:a9e61ed3df37632029b1fec36767e3a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c620267bae292a9d645b9776ac5cba"><td class="memItemLeft" ><a id="ad3c620267bae292a9d645b9776ac5cba"></a>
+union {</td></tr>
+<tr class="memitem:a337f087e0270fed9b5f8265599b970b7"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x16</b></td></tr>
+<tr class="separator:a337f087e0270fed9b5f8265599b970b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5ee5a5c0a34ced19f7b10dd8548961"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a6</b></td></tr>
+<tr class="separator:aea5ee5a5c0a34ced19f7b10dd8548961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c620267bae292a9d645b9776ac5cba"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ad3c620267bae292a9d645b9776ac5cba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a6</code>寄存器(<code>Argument 6</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:ad3c620267bae292a9d645b9776ac5cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62af287c3c16b0a2e915494b4562404"><td class="memItemLeft" ><a id="aa62af287c3c16b0a2e915494b4562404"></a>
+union {</td></tr>
+<tr class="memitem:a08837fd576131851e112945da2ada25c"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x17</b></td></tr>
+<tr class="separator:a08837fd576131851e112945da2ada25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79c5de6311ced6f67b62fc3a2eda904"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>a7</b></td></tr>
+<tr class="separator:ab79c5de6311ced6f67b62fc3a2eda904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62af287c3c16b0a2e915494b4562404"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:aa62af287c3c16b0a2e915494b4562404"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a7</code>寄存器(<code>Argument 7</code>)是函数调用参数寄存器 <br /></td></tr>
+<tr class="separator:aa62af287c3c16b0a2e915494b4562404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bb85ff8f9174ecd013389d564b71b7"><td class="memItemLeft" ><a id="ac3bb85ff8f9174ecd013389d564b71b7"></a>
+union {</td></tr>
+<tr class="memitem:a35e8f7628218862466a7d6dc56e595e2"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x18</b></td></tr>
+<tr class="separator:a35e8f7628218862466a7d6dc56e595e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae243df208a46ce71e9910e85b66d8fc8"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s2</b></td></tr>
+<tr class="separator:ae243df208a46ce71e9910e85b66d8fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bb85ff8f9174ecd013389d564b71b7"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ac3bb85ff8f9174ecd013389d564b71b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s2</code>寄存器(<code>Saved Register 2</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:ac3bb85ff8f9174ecd013389d564b71b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe91c23039d9bf7bf2edd0fbc252f13"><td class="memItemLeft" ><a id="a7fe91c23039d9bf7bf2edd0fbc252f13"></a>
+union {</td></tr>
+<tr class="memitem:a0e2fe11c8f7b4c09b9baabbce5873df0"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x19</b></td></tr>
+<tr class="separator:a0e2fe11c8f7b4c09b9baabbce5873df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa615d934fb3af406a3762f2981f22102"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s3</b></td></tr>
+<tr class="separator:aa615d934fb3af406a3762f2981f22102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe91c23039d9bf7bf2edd0fbc252f13"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a7fe91c23039d9bf7bf2edd0fbc252f13"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s3</code>寄存器(<code>Saved Register 3</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a7fe91c23039d9bf7bf2edd0fbc252f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8406b1014833c1729db521f6f07d22dd"><td class="memItemLeft" ><a id="a8406b1014833c1729db521f6f07d22dd"></a>
+union {</td></tr>
+<tr class="memitem:a605a018d85e7a6786935874bd286ba6f"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x20</b></td></tr>
+<tr class="separator:a605a018d85e7a6786935874bd286ba6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59475f03bac2ddb873713692d9aa9c89"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s4</b></td></tr>
+<tr class="separator:a59475f03bac2ddb873713692d9aa9c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8406b1014833c1729db521f6f07d22dd"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a8406b1014833c1729db521f6f07d22dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s4</code>寄存器(<code>Saved Register 4</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a8406b1014833c1729db521f6f07d22dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dcf922ec2af8c5f497eda8b95f8942"><td class="memItemLeft" ><a id="a25dcf922ec2af8c5f497eda8b95f8942"></a>
+union {</td></tr>
+<tr class="memitem:aa012983ca21c1b59387c74486aa66208"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x21</b></td></tr>
+<tr class="separator:aa012983ca21c1b59387c74486aa66208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc2f62c6aaed6cec70b38dcacb5a982"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s5</b></td></tr>
+<tr class="separator:acbc2f62c6aaed6cec70b38dcacb5a982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dcf922ec2af8c5f497eda8b95f8942"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a25dcf922ec2af8c5f497eda8b95f8942"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s5</code>寄存器(<code>Saved Register 5</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a25dcf922ec2af8c5f497eda8b95f8942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59981d17735601dd6e49ab9d7b608f58"><td class="memItemLeft" ><a id="a59981d17735601dd6e49ab9d7b608f58"></a>
+union {</td></tr>
+<tr class="memitem:aeb5767e3d4d9fb8baf46678aeab86db7"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x22</b></td></tr>
+<tr class="separator:aeb5767e3d4d9fb8baf46678aeab86db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43dffb7be2c7976de1ea8dc4ed59faf"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s6</b></td></tr>
+<tr class="separator:ac43dffb7be2c7976de1ea8dc4ed59faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59981d17735601dd6e49ab9d7b608f58"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a59981d17735601dd6e49ab9d7b608f58"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s6</code>寄存器(<code>Saved Register 6</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a59981d17735601dd6e49ab9d7b608f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e0c9666d5db3396ec6f6c281903faa"><td class="memItemLeft" ><a id="a31e0c9666d5db3396ec6f6c281903faa"></a>
+union {</td></tr>
+<tr class="memitem:a3ed4f94530673602d953e87fee19bd7d"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x23</b></td></tr>
+<tr class="separator:a3ed4f94530673602d953e87fee19bd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af33788fcd0c1dfdc53a35c88f27a30"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s7</b></td></tr>
+<tr class="separator:a4af33788fcd0c1dfdc53a35c88f27a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e0c9666d5db3396ec6f6c281903faa"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a31e0c9666d5db3396ec6f6c281903faa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s7</code>寄存器(<code>Saved Register 7</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a31e0c9666d5db3396ec6f6c281903faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e374edfd546aea3a3c994bf674b76d"><td class="memItemLeft" ><a id="aa5e374edfd546aea3a3c994bf674b76d"></a>
+union {</td></tr>
+<tr class="memitem:a6ed6f8ad0149ebcd9ec8afbc53886748"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x24</b></td></tr>
+<tr class="separator:a6ed6f8ad0149ebcd9ec8afbc53886748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5873f01775b962513ec909ddf2da1394"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s8</b></td></tr>
+<tr class="separator:a5873f01775b962513ec909ddf2da1394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e374edfd546aea3a3c994bf674b76d"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:aa5e374edfd546aea3a3c994bf674b76d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s8</code>寄存器(<code>Saved Register 8</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:aa5e374edfd546aea3a3c994bf674b76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035da6fb4a5d8120397928c55940a6b1"><td class="memItemLeft" ><a id="a035da6fb4a5d8120397928c55940a6b1"></a>
+union {</td></tr>
+<tr class="memitem:a2b44fe85a557a0f99e220c2ee980fa2b"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x25</b></td></tr>
+<tr class="separator:a2b44fe85a557a0f99e220c2ee980fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9340077a94d2419f22fdf51c94eee3"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s9</b></td></tr>
+<tr class="separator:a5b9340077a94d2419f22fdf51c94eee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035da6fb4a5d8120397928c55940a6b1"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a035da6fb4a5d8120397928c55940a6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s9</code>寄存器(<code>Saved Register 9</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a035da6fb4a5d8120397928c55940a6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63015113c534f97d75f2d0a14f5262aa"><td class="memItemLeft" ><a id="a63015113c534f97d75f2d0a14f5262aa"></a>
+union {</td></tr>
+<tr class="memitem:a08374f55b31d7e31f1ec9b39942bfedb"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x26</b></td></tr>
+<tr class="separator:a08374f55b31d7e31f1ec9b39942bfedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56b4e599c47fbeffd76659638d29234"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s10</b></td></tr>
+<tr class="separator:af56b4e599c47fbeffd76659638d29234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63015113c534f97d75f2d0a14f5262aa"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a63015113c534f97d75f2d0a14f5262aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s10</code>寄存器(<code>Saved Register 10</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a63015113c534f97d75f2d0a14f5262aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557fec75adf552c1a5254cb9c3a266c5"><td class="memItemLeft" ><a id="a557fec75adf552c1a5254cb9c3a266c5"></a>
+union {</td></tr>
+<tr class="memitem:adc3069a5427efed7a37a5911e728c8b4"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x27</b></td></tr>
+<tr class="separator:adc3069a5427efed7a37a5911e728c8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5154edd8b89fa5672a6ca3274d26f08b"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>s11</b></td></tr>
+<tr class="separator:a5154edd8b89fa5672a6ca3274d26f08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557fec75adf552c1a5254cb9c3a266c5"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a557fec75adf552c1a5254cb9c3a266c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>s11</code>寄存器(<code>Saved Register 11</code>)是保存寄存器 <br /></td></tr>
+<tr class="separator:a557fec75adf552c1a5254cb9c3a266c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a584c1d061252aefb3353d349bc6d721e"><td class="memItemLeft" ><a id="a584c1d061252aefb3353d349bc6d721e"></a>
+union {</td></tr>
+<tr class="memitem:afe9a3de4dc95ff403ab74bc03e8c2877"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x28</b></td></tr>
+<tr class="separator:afe9a3de4dc95ff403ab74bc03e8c2877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6e47b487933ffb09faa0e89b9b408e"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t3</b></td></tr>
+<tr class="separator:acd6e47b487933ffb09faa0e89b9b408e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a584c1d061252aefb3353d349bc6d721e"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a584c1d061252aefb3353d349bc6d721e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t3</code>寄存器(<code>Temporary 3</code>)是临时寄存器 <br /></td></tr>
+<tr class="separator:a584c1d061252aefb3353d349bc6d721e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd98d4ba47b8f38d3277053ae313f12"><td class="memItemLeft" ><a id="a1cd98d4ba47b8f38d3277053ae313f12"></a>
+union {</td></tr>
+<tr class="memitem:a67298e89b86a27343d3d497c9d3077f6"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x29</b></td></tr>
+<tr class="separator:a67298e89b86a27343d3d497c9d3077f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae962af453528f8d80d31736a4a16cfe8"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t4</b></td></tr>
+<tr class="separator:ae962af453528f8d80d31736a4a16cfe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd98d4ba47b8f38d3277053ae313f12"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a1cd98d4ba47b8f38d3277053ae313f12"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t4</code>寄存器(<code>Temporary 4</code>)是临时寄存器 <br /></td></tr>
+<tr class="separator:a1cd98d4ba47b8f38d3277053ae313f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3dea9aa8b2e6b1848ebff5d77c5210"><td class="memItemLeft" ><a id="a8f3dea9aa8b2e6b1848ebff5d77c5210"></a>
+union {</td></tr>
+<tr class="memitem:a5b52ffbbb5a497dae109aad6e00043b0"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x30</b></td></tr>
+<tr class="separator:a5b52ffbbb5a497dae109aad6e00043b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a440d45cf71c6379d52e37b099dd88a"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t5</b></td></tr>
+<tr class="separator:a3a440d45cf71c6379d52e37b099dd88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3dea9aa8b2e6b1848ebff5d77c5210"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a8f3dea9aa8b2e6b1848ebff5d77c5210"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t5</code>寄存器(<code>Temporary 5</code>)是临时寄存器 <br /></td></tr>
+<tr class="separator:a8f3dea9aa8b2e6b1848ebff5d77c5210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71019775bc4ed186f2062e4ffd6bcf4b"><td class="memItemLeft" ><a id="a71019775bc4ed186f2062e4ffd6bcf4b"></a>
+union {</td></tr>
+<tr class="memitem:a40ffe7961cf54afa4917e9b96d7d0b65"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>_x31</b></td></tr>
+<tr class="separator:a40ffe7961cf54afa4917e9b96d7d0b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7c4333393b4b33f61e89eaa8191c47"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="types_8h.html#a48f2f43c22b22212994d19244ccb10fc">ireg_t</a>&#160;&#160;&#160;<b>t6</b></td></tr>
+<tr class="separator:a2a7c4333393b4b33f61e89eaa8191c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71019775bc4ed186f2062e4ffd6bcf4b"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a71019775bc4ed186f2062e4ffd6bcf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>t6</code>寄存器(<code>Temporary 6</code>)是临时寄存器 <br /></td></tr>
+<tr class="separator:a71019775bc4ed186f2062e4ffd6bcf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code>gtrapframe_t</code>是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场 </p>
+<dl class="section note"><dt>注解</dt><dd><ol type="1">
+<li><code>gtrapframe_t</code>是否包含浮点寄存器取决于<code>constrain.h</code>的<code>WITH_FP_REG</code>宏:<ul>
+<li><code>WITH_FP_REG = 0</code>, 不包含浮点寄存器, 此时保存: <code>x1~x31</code> 寄存器. 一共 31 个寄存器, 共 248 字节</li>
+<li><code>WITH_FP_REG = 1</code>, 包含浮点寄存器, 此时保存: <code>x1~x31</code>, <code>f0~f31</code> 一共 31 + 32 个寄存器, 共 248 + 128 字节</li>
+</ul>
+</li>
+<li>寄存器命名规则参考: RISC-V Assembly Programmer’s Handbook</li>
+</ol>
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>目前不支持浮点寄存器, 支持浮点寄存器的话, 需要额外修改trap_entry.S里的汇编入口函数来保存 </dd></dl>
+</div><hr/>该结构体的文档由以下文件生成:<ul>
+<li>/home/data/proj/oskernel2023-x2w/include/trap/<a class="el" href="trapframe_8h_source.html">trapframe.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

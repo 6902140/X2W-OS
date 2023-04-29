@@ -1,0 +1,51 @@
+\hypertarget{sinit_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/sbi/sinit.h 文件参考}
+\label{sinit_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/sbi/sinit.h@{/home/data/proj/oskernel2023-\/x2w/include/sbi/sinit.h}}
+
+
+{\ttfamily \mbox{\hyperlink{kinit_8h_source}{kinit.\+h}}}是{\ttfamily S\+BI}的初始化模块, 对{\ttfamily S\+BI}的各个模块进行了初始化  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}constrains.\+h\char`\"{}}\newline
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sinit_8h_a75c4d25a06eb3419d0ce0bf9a7ad30b1}{sinit\+\_\+all}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily sinit\+\_\+all}函数对{\ttfamily S\+BI}的各个模块进行初始化 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{kinit_8h_source}{kinit.\+h}}}是{\ttfamily S\+BI}的初始化模块, 对{\ttfamily S\+BI}的各个模块进行了初始化 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gmail.com}{\texttt{ jack4shihong@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{sinit_8h_a75c4d25a06eb3419d0ce0bf9a7ad30b1}\label{sinit_8h_a75c4d25a06eb3419d0ce0bf9a7ad30b1}} 
+\index{sinit.h@{sinit.h}!sinit\_all@{sinit\_all}}
+\index{sinit\_all@{sinit\_all}!sinit.h@{sinit.h}}
+\doxysubsubsection{\texorpdfstring{sinit\_all()}{sinit\_all()}}
+{\footnotesize\ttfamily void sinit\+\_\+all (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily sinit\+\_\+all}函数对{\ttfamily S\+BI}的各个模块进行初始化 
+
+\begin{DoxyNote}{注解}
+{\ttfamily sinit\+\_\+all}的初始化顺序\+:
+\begin{DoxyEnumerate}
+\item 初始化 S\+BI 异常/中断处理模块
+\item 初始化 S\+BI Ecall 异常处理模块 
+\end{DoxyEnumerate}
+\end{DoxyNote}

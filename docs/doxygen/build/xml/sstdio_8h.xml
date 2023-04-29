@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sstdio_8h" kind="file" language="C++">
+    <compoundname>sstdio.h</compoundname>
+    <includes local="yes">uart.h</includes>
+    <includes refid="stdfmt_8h" local="yes">stdfmt.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdarg.h</label>
+        <link refid="stdarg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h</label>
+        <link refid="sstdio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uart.h</label>
+      </node>
+      <node id="4">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+        <link refid="stdlib_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdfmt.h</label>
+        <link refid="stdfmt_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sstdio_8h_1a8c7d0ae2d3fa79a01d99c6ac10683461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a186ea1339bffb378854987065835afe3" kindref="member">size_t</ref></type>
+        <definition>size_t bprintf</definition>
+        <argsstring>(const char *format,...)</argsstring>
+        <name>bprintf</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>bprintf用于格式化输出字符串 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>含格式控制字符的格式字符串 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>可变参数列表 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t 输出的字符串中的字符数</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>bprintf</computeroutput>函数可以输出的字符串最大长度由<computeroutput><ref refid="constrains_8h" kindref="compound">constrains.h</ref></computeroutput>中的<computeroutput>PRINTF_STRING_SIZE</computeroutput>宏常量的值决定</para>
+</simplesect>
+<simplesect kind="note"><para>格式控制字符: <computeroutput>%[flag][width][precision][length]&lt;type&gt;</computeroutput>. 其中:<itemizedlist>
+<listitem><para><computeroutput>type</computeroutput>字段必须存在, 其余字段均可选</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+关于各个字段的说明:<itemizedlist>
+<listitem><para><computeroutput>flag</computeroutput>字段:<itemizedlist>
+<listitem><para><computeroutput>-</computeroutput>: 左对齐输出, 默认是右对齐</para>
+</listitem><listitem><para><computeroutput>+</computeroutput>: 输出正数前添加加号, 默认不添加</para>
+</listitem><listitem><para><computeroutput>#</computeroutput>: 当<computeroutput>type</computeroutput>为<computeroutput>b</computeroutput>, <computeroutput>o</computeroutput>, <computeroutput>x</computeroutput>, <computeroutput>X</computeroutput>时, 添加前缀<computeroutput>0b</computeroutput>, <computeroutput>0</computeroutput>或者<computeroutput>0x</computeroutput></para>
+</listitem><listitem><para><computeroutput>0</computeroutput>: 使用<computeroutput>0</computeroutput>填充对齐, 默认使用空格填充对齐</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>width</computeroutput>字段:<itemizedlist>
+<listitem><para><computeroutput>数字</computeroutput>: 设置对齐的宽度, 例如: <computeroutput>printf(&quot;%5d&quot;, 100)</computeroutput> 将会输出 <computeroutput>100</computeroutput></para>
+</listitem><listitem><para><computeroutput>*:</computeroutput> 动态参数, 由后续的数字指定, 例如: <computeroutput>printf(&quot;%*d&quot;, 5, 10)</computeroutput> 等价于 printf(&quot;%5d&quot;, 10)<computeroutput> -</computeroutput>precision<computeroutput>字段: -</computeroutput>.数字<computeroutput>: 设置输出的位数, 例如:</computeroutput>printf(&quot;%.2d&quot;, 111)<computeroutput>将会输出</computeroutput>11<computeroutput> -</computeroutput>.*<computeroutput>: 动态参数, 由后续的数字指定, 例如:</computeroutput>printf(&quot;%.*d&quot;, 2, 111)<computeroutput>等价于 printf(&quot;%.2d&quot;, 111)</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>length</computeroutput>字段:<itemizedlist>
+<listitem><para><computeroutput>h</computeroutput>: 输出一个16位宽度的整数, 即: <computeroutput>short</computeroutput>, <computeroutput>unsigned short</computeroutput>, <computeroutput>int16_t</computeroutput>, <computeroutput>uint16_t</computeroutput></para>
+</listitem><listitem><para><computeroutput>l</computeroutput>: 输出一个64位宽度的整数, 即: <computeroutput>long</computeroutput>, <computeroutput>unsigned long</computeroutput>, <computeroutput>int64_t</computeroutput>, <computeroutput>uint64_t</computeroutput></para>
+</listitem><listitem><para><computeroutput>ll</computeroutput>: 输出一个64位宽度的整数, 即: <computeroutput>long long</computeroutput>, <computeroutput>unsigned long long</computeroutput></para>
+</listitem><listitem><para>PS: RISC-V LP64中long long和long都是64位</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>type</computeroutput>字段:<itemizedlist>
+<listitem><para><computeroutput>%</computeroutput>: 输出一个<computeroutput>%</computeroutput></para>
+</listitem><listitem><para><computeroutput>p</computeroutput>: 输出一个指针, 需要转换为(void*)</para>
+</listitem><listitem><para><computeroutput>c</computeroutput>: 输出一个字符</para>
+</listitem><listitem><para><computeroutput>s</computeroutput>: 输出一个<computeroutput>\0</computeroutput>结尾的字符串</para>
+</listitem><listitem><para><computeroutput>b</computeroutput>: 以二进制输出一个整数, 无符号</para>
+</listitem><listitem><para><computeroutput>o</computeroutput>: 以八进制输出一个整数, 无符号</para>
+</listitem><listitem><para><computeroutput>i</computeroutput>: 以十进制输出一个整数, 有符号</para>
+</listitem><listitem><para><computeroutput>d</computeroutput>: 以十进制输出一个整数, 有符号</para>
+</listitem><listitem><para><computeroutput>u</computeroutput>: 以十进制输出一个整数, 无符号</para>
+</listitem><listitem><para><computeroutput>x</computeroutput>: 以十六进制输出一个整数, 小写字母, 无符号</para>
+</listitem><listitem><para><computeroutput>X</computeroutput>: 以十六进制输出一个整数, 大写字母, 无符号</para>
+</listitem><listitem><para><computeroutput>n</computeroutput>: 到此处已经输出的字符的数量, 不会输出文本, 而是将值保存到地址中. 参考: <ulink url="https://blog.csdn.net/zsx0728/article/details/118100389">https://blog.csdn.net/zsx0728/article/details/118100389</ulink></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para><computeroutput>bprintf</computeroutput>函数仅供SBI使用, 内核请使用<computeroutput>kprintf</computeroutput>函数, 用户程序请使用<computeroutput>uprintf</computeroutput>函数</para>
+</simplesect>
+<simplesect kind="warning"><para>目前<computeroutput>bprintf</computeroutput>最终向<computeroutput>uart</computeroutput>输出字符串 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h" line="67" column="8" declfile="/home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h" declline="67" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput>sstdio</computeroutput>库的实现 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-18</para>
+</simplesect>
+<simplesect kind="warning"><para><computeroutput>sstdio</computeroutput>为SBI库, 仅供SBI使用, 内核程序请使用<computeroutput>sstdio</computeroutput>库, 用户程序请使用<computeroutput>ustdio</computeroutput>库</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_SBI_SSTDIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_SBI_SSTDIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;uart.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdfmt_8h" kindref="compound">stdfmt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sstdio_8h_1a8c7d0ae2d3fa79a01d99c6ac10683461" kindref="member">bprintf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/sbi/sstdio.h"/>
+  </compounddef>
+</doxygen>

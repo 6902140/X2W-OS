@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/trap/trapframe.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a1638397e50ab9a7611310bf3275bb53.html">trap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">trapframe.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code><a class="el" href="trapframe_8h.html" title="trapframe.h中定义了通用的陷入帧gtrapframe_t">trapframe.h</a></code>中定义了通用的陷入帧<code>gtrapframe_t</code>  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="constrains_8h_source.html">constrains.h</a>&quot;</code><br />
+</div>
+<p><a href="trapframe_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____gtrapframe__t.html">__gtrapframe_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>gtrapframe_t</code>是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场  <a href="struct____gtrapframe__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____strapframe__t.html">__strapframe_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>strapframe_t</code>是<code>SBI</code>陷入帧(SBI Trap Frame), 在保存通用寄存器的基础上, 额外保存了<code>empc</code>寄存器和<code>mstatus</code>寄存器  <a href="struct____strapframe__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____ktrapframe__t.html">__ktrapframe_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>ktrapframe_t</code>是<code>Kernel</code>陷入帧(Kernel Trap Frame), 在保存通用寄存器的基础上, 额外保存了<code>sepc</code>, <code>sstatus</code>, <code>sbadaddr</code>, <code>scause</code>等寄存器  <a href="struct____ktrapframe__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ac7135428295a151a70d7b6de6ae41a3d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct____gtrapframe__t.html">__gtrapframe_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">gtrapframe_t</a></td></tr>
+<tr class="memdesc:ac7135428295a151a70d7b6de6ae41a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>gtrapframe_t</code>是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场  <a href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">更多...</a><br /></td></tr>
+<tr class="separator:ac7135428295a151a70d7b6de6ae41a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace23faaa1579bcc09327b838e4f18145"><td class="memItemLeft" align="right" valign="top"><a id="ace23faaa1579bcc09327b838e4f18145"></a>
+typedef struct <a class="el" href="struct____strapframe__t.html">__strapframe_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#ace23faaa1579bcc09327b838e4f18145">strapframe_t</a></td></tr>
+<tr class="memdesc:ace23faaa1579bcc09327b838e4f18145"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>strapframe_t</code>是<code>SBI</code>陷入帧(SBI Trap Frame), 在保存通用寄存器的基础上, 额外保存了<code>empc</code>寄存器和<code>mstatus</code>寄存器 <br /></td></tr>
+<tr class="separator:ace23faaa1579bcc09327b838e4f18145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee2ed696d45e589b6afcbb4c3a4f47a"><td class="memItemLeft" align="right" valign="top"><a id="a8ee2ed696d45e589b6afcbb4c3a4f47a"></a>
+typedef struct <a class="el" href="struct____ktrapframe__t.html">__ktrapframe_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#a8ee2ed696d45e589b6afcbb4c3a4f47a">ktrapframe_t</a></td></tr>
+<tr class="memdesc:a8ee2ed696d45e589b6afcbb4c3a4f47a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>ktrapframe_t</code>是<code>Kernel</code>陷入帧(Kernel Trap Frame), 在保存通用寄存器的基础上, 额外保存了<code>sepc</code>, <code>sstatus</code>, <code>sbadaddr</code>, <code>scause</code>等寄存器 <br /></td></tr>
+<tr class="separator:a8ee2ed696d45e589b6afcbb4c3a4f47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fb0a8d1c81ba64631d0af5eeae5336"><td class="memItemLeft" align="right" valign="top"><a id="ab7fb0a8d1c81ba64631d0af5eeae5336"></a>
+typedef <a class="el" href="types_8h.html#a186ea1339bffb378854987065835afe3">size_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a>) (const char *format,...)</td></tr>
+<tr class="memdesc:ab7fb0a8d1c81ba64631d0af5eeae5336"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>printf_t</code>是输出函数类型 <br /></td></tr>
+<tr class="separator:ab7fb0a8d1c81ba64631d0af5eeae5336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa2c72627c8a7364d0ffa8b93f3b9ebe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#aa2c72627c8a7364d0ffa8b93f3b9ebe4">print_gtrapframe</a> (<a class="el" href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">gtrapframe_t</a> *gtf_ptr, <a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a> print_func)</td></tr>
+<tr class="memdesc:aa2c72627c8a7364d0ffa8b93f3b9ebe4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>print_gtrapframe</code>用于输出通用陷入帧<code>gtf_ptr</code>  <a href="trapframe_8h.html#aa2c72627c8a7364d0ffa8b93f3b9ebe4">更多...</a><br /></td></tr>
+<tr class="separator:aa2c72627c8a7364d0ffa8b93f3b9ebe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b65ddc32145c57dd729fd2f926ce44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#af3b65ddc32145c57dd729fd2f926ce44">print_strapframe</a> (<a class="el" href="trapframe_8h.html#ace23faaa1579bcc09327b838e4f18145">strapframe_t</a> *stf_ptr, <a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a> print_func)</td></tr>
+<tr class="memdesc:af3b65ddc32145c57dd729fd2f926ce44"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>print_strapframe</code>用于输出<code>SBI</code>陷入帧<code>stf_ptr</code>  <a href="trapframe_8h.html#af3b65ddc32145c57dd729fd2f926ce44">更多...</a><br /></td></tr>
+<tr class="separator:af3b65ddc32145c57dd729fd2f926ce44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63953911ad2767d9f6001c191cde476b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trapframe_8h.html#a63953911ad2767d9f6001c191cde476b">print_ktrapframe</a> (<a class="el" href="trapframe_8h.html#a8ee2ed696d45e589b6afcbb4c3a4f47a">ktrapframe_t</a> *ktf_ptr, <a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a> print_func)</td></tr>
+<tr class="memdesc:a63953911ad2767d9f6001c191cde476b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>print_ktrapframe</code>用于输出内核陷入帧<code>ktf_ptr</code>  <a href="trapframe_8h.html#a63953911ad2767d9f6001c191cde476b">更多...</a><br /></td></tr>
+<tr class="separator:a63953911ad2767d9f6001c191cde476b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><code><a class="el" href="trapframe_8h.html" title="trapframe.h中定义了通用的陷入帧gtrapframe_t">trapframe.h</a></code>中定义了通用的陷入帧<code>gtrapframe_t</code> </p>
+<dl class="section author"><dt>作者</dt><dd>Shihong Wang (<a href="#" onclick="location.href='mai'+'lto:'+'jac'+'k4'+'shi'+'ho'+'ng@'+'gm'+'ail'+'.c'+'om'; return false;">jack4<span style="display: none;">.nosp@m.</span>shih<span style="display: none;">.nosp@m.</span>ong@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-04-19</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </dd></dl>
+</div><h2 class="groupheader">类型定义说明</h2>
+<a id="ac7135428295a151a70d7b6de6ae41a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7135428295a151a70d7b6de6ae41a3d">&#9670;&nbsp;</a></span>gtrapframe_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct____gtrapframe__t.html">__gtrapframe_t</a> <a class="el" href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">gtrapframe_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>gtrapframe_t</code>是通用陷入帧(General Trap Frame), 主要用于陷入中断/异常保存通用寄存器, 以方便在退出中断/异常的时候恢复现场 </p>
+<dl class="section note"><dt>注解</dt><dd><ol type="1">
+<li><code>gtrapframe_t</code>是否包含浮点寄存器取决于<code>constrain.h</code>的<code>WITH_FP_REG</code>宏:<ul>
+<li><code>WITH_FP_REG = 0</code>, 不包含浮点寄存器, 此时保存: <code>x1~x31</code> 寄存器. 一共 31 个寄存器, 共 248 字节</li>
+<li><code>WITH_FP_REG = 1</code>, 包含浮点寄存器, 此时保存: <code>x1~x31</code>, <code>f0~f31</code> 一共 31 + 32 个寄存器, 共 248 + 128 字节</li>
+</ul>
+</li>
+<li>寄存器命名规则参考: RISC-V Assembly Programmer’s Handbook</li>
+</ol>
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>目前不支持浮点寄存器, 支持浮点寄存器的话, 需要额外修改trap_entry.S里的汇编入口函数来保存 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aa2c72627c8a7364d0ffa8b93f3b9ebe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c72627c8a7364d0ffa8b93f3b9ebe4">&#9670;&nbsp;</a></span>print_gtrapframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_gtrapframe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="trapframe_8h.html#ac7135428295a151a70d7b6de6ae41a3d">gtrapframe_t</a> *&#160;</td>
+          <td class="paramname"><em>gtf_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a>&#160;</td>
+          <td class="paramname"><em>print_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>print_gtrapframe</code>用于输出通用陷入帧<code>gtf_ptr</code> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gtf_ptr</td><td>指向要输出的通用陷入帧的指针 </td></tr>
+    <tr><td class="paramname">print_func</td><td>printf函数, 可以是: <code>bprintf</code>, <code>kprintf</code>, <code>uprintf</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a63953911ad2767d9f6001c191cde476b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63953911ad2767d9f6001c191cde476b">&#9670;&nbsp;</a></span>print_ktrapframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ktrapframe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="trapframe_8h.html#a8ee2ed696d45e589b6afcbb4c3a4f47a">ktrapframe_t</a> *&#160;</td>
+          <td class="paramname"><em>ktf_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a>&#160;</td>
+          <td class="paramname"><em>print_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>print_ktrapframe</code>用于输出内核陷入帧<code>ktf_ptr</code> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ktf_ptr</td><td>指向要输出的内核陷入帧的指针 </td></tr>
+    <tr><td class="paramname">print_func</td><td>printf函数, 可以是: <code>bprintf</code>, <code>kprintf</code>, <code>uprintf</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af3b65ddc32145c57dd729fd2f926ce44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b65ddc32145c57dd729fd2f926ce44">&#9670;&nbsp;</a></span>print_strapframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_strapframe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="trapframe_8h.html#ace23faaa1579bcc09327b838e4f18145">strapframe_t</a> *&#160;</td>
+          <td class="paramname"><em>stf_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336">printf_t</a>&#160;</td>
+          <td class="paramname"><em>print_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>print_strapframe</code>用于输出<code>SBI</code>陷入帧<code>stf_ptr</code> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stf_ptr</td><td>指向要输出的<code>SBI</code>陷入帧的指针 </td></tr>
+    <tr><td class="paramname">print_func</td><td>printf函数, 可以是: <code>bprintf</code>, <code>kprintf</code>, <code>uprintf</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,40 @@
+\hypertarget{struct____ktrapframe__t}{}\doxysection{\+\_\+\+\_\+ktrapframe\+\_\+t结构体 参考}
+\label{struct____ktrapframe__t}\index{\_\_ktrapframe\_t@{\_\_ktrapframe\_t}}
+
+
+{\ttfamily ktrapframe\+\_\+t}是{\ttfamily Kernel}陷入帧(\+Kernel Trap Frame), 在保存通用寄存器的基础上, 额外保存了{\ttfamily sepc}, {\ttfamily sstatus}, {\ttfamily sbadaddr}, {\ttfamily scause}等寄存器  
+
+
+
+
+{\ttfamily \#include $<$trapframe.\+h$>$}
+
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct____ktrapframe__t_abde997ff85e120469bcbe78efb41a9c4}\label{struct____ktrapframe__t_abde997ff85e120469bcbe78efb41a9c4}} 
+\mbox{\hyperlink{types_8h_a48f2f43c22b22212994d19244ccb10fc}{ireg\+\_\+t}} \mbox{\hyperlink{struct____ktrapframe__t_abde997ff85e120469bcbe78efb41a9c4}{sepc}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily spec}保存了{\ttfamily spec}寄存器的值 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct____ktrapframe__t_a0271284c0175a48e3f01ac79622b3816}\label{struct____ktrapframe__t_a0271284c0175a48e3f01ac79622b3816}} 
+\mbox{\hyperlink{trapframe_8h_ac7135428295a151a70d7b6de6ae41a3d}{gtrapframe\+\_\+t}} \mbox{\hyperlink{struct____ktrapframe__t_a0271284c0175a48e3f01ac79622b3816}{gregisters}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily gregisters}寄存器保存了通用寄存器的值 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct____ktrapframe__t_a4ba6215f663034f5e09359093a072ca6}\label{struct____ktrapframe__t_a4ba6215f663034f5e09359093a072ca6}} 
+\mbox{\hyperlink{types_8h_a48f2f43c22b22212994d19244ccb10fc}{ireg\+\_\+t}} \mbox{\hyperlink{struct____ktrapframe__t_a4ba6215f663034f5e09359093a072ca6}{sstatus}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily sstatus}保存了{\ttfamily sstatus}寄存器的值 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct____ktrapframe__t_af996e039990b66e8fd5e084ef23bf853}\label{struct____ktrapframe__t_af996e039990b66e8fd5e084ef23bf853}} 
+\mbox{\hyperlink{types_8h_a48f2f43c22b22212994d19244ccb10fc}{ireg\+\_\+t}} \mbox{\hyperlink{struct____ktrapframe__t_af996e039990b66e8fd5e084ef23bf853}{sbadaddr}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily sbadaddr}保存了{\ttfamily sbadaddr}寄存器的值 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct____ktrapframe__t_a815906f6adbc4eb46a933e3c3cd86eaa}\label{struct____ktrapframe__t_a815906f6adbc4eb46a933e3c3cd86eaa}} 
+\mbox{\hyperlink{types_8h_a48f2f43c22b22212994d19244ccb10fc}{ireg\+\_\+t}} \mbox{\hyperlink{struct____ktrapframe__t_a815906f6adbc4eb46a933e3c3cd86eaa}{scause}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily scause}保存了{\ttfamily scause}寄存器的值 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct____ktrapframe__t_a9a66b5f4212f06c9eed91933ceba7db3}\label{struct____ktrapframe__t_a9a66b5f4212f06c9eed91933ceba7db3}} 
+\mbox{\hyperlink{types_8h_a48f2f43c22b22212994d19244ccb10fc}{ireg\+\_\+t}} \mbox{\hyperlink{struct____ktrapframe__t_a9a66b5f4212f06c9eed91933ceba7db3}{origin\+\_\+a0}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily origin\+\_\+a0}保存了系统调用前的{\ttfamily a0}寄存器的值 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily ktrapframe\+\_\+t}是{\ttfamily Kernel}陷入帧(\+Kernel Trap Frame), 在保存通用寄存器的基础上, 额外保存了{\ttfamily sepc}, {\ttfamily sstatus}, {\ttfamily sbadaddr}, {\ttfamily scause}等寄存器 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/home/data/proj/oskernel2023-\/x2w/include/trap/\mbox{\hyperlink{trapframe_8h}{trapframe.\+h}}\end{DoxyCompactItemize}

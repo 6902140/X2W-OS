@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/string.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">string.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="string_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_STRING_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define __INCLUDE_STRING_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#a0fd822120d98aeeb31c3e34b925aaac9">memset</a>(<span class="keywordtype">void</span> *dst, <span class="keywordtype">byte</span> value, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#a81ef7c8c1f669e36358b53540413ad4a">strmset</a>(<span class="keywordtype">void</span> *dst, <span class="keywordtype">char</span> value, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#a85a508ca397d58bd730fe247406225c1">memcpy</a>(<span class="keywordtype">void</span> *dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#a2b93142c59725e6f0a23c11c01dd9806">memmove</a>(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span> *src, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a> <a class="code" href="string_8h.html#a75fd34829c47ba7a5e17b3749376dfb1">memcmp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *a, <span class="keyword">const</span> <span class="keywordtype">void</span> *b, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="string_8h.html#a1a8e0d046aa6ccaf2c9947e3142e4786">strcpy</a>(<span class="keywordtype">char</span> *dst, <span class="keyword">const</span> <span class="keywordtype">char</span> *src);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#a008e171a518fe0e0352f31b245e03875">strlen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<a class="code" href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a> <a class="code" href="string_8h.html#a17120e5c0508b8cd7acb5b88a68df2e3">strcmp</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* a, <span class="keyword">const</span> <span class="keywordtype">char</span>* b);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="string_8h.html#a34faed0b162387a0d9f7e706a9b9e5fa">strcat</a>(<span class="keywordtype">char</span> *dst, <span class="keyword">const</span> <span class="keywordtype">char</span>* src);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="string_8h.html#a1a5e632fe609361d02cb7801fe24602f">strchr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ch);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="string_8h.html#aac8072fca6653374df87f4c52d72648f">strrchr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ch);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#ac777359738f935cd3bf50191baf869eb">strchrs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code" href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ch);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="string_8h.html#a78de187fd1851b4b4a6c78242c1611cb">strslice</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* src, <span class="keywordtype">char</span>* dst, <a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a> start, <a class="code" href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a> len);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keywordtype">void</span> <a class="code" href="string_8h.html#a1ca84242c233142bb41710cec6d77f68">encrypt_decrypt</a>(<span class="keywordtype">char</span> *str, <span class="keywordtype">int</span> len, <span class="keywordtype">char</span> key);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keywordtype">int</span> regu_match(<span class="keyword">const</span> <span class="keywordtype">char</span> *str, <span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keywordtype">int</span> match_pos[]);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">void</span> <a class="code" href="string_8h.html#a1e85b03de97ac68581bdd673389b8b5b">regu_replace</a>(<span class="keywordtype">char</span> *str, <span class="keyword">const</span> <span class="keywordtype">char</span> *pattern, <span class="keyword">const</span> <span class="keywordtype">char</span> *replacement, <span class="keywordtype">int</span> max_len);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astring_8h_html_a1e85b03de97ac68581bdd673389b8b5b"><div class="ttname"><a href="string_8h.html#a1e85b03de97ac68581bdd673389b8b5b">regu_replace</a></div><div class="ttdeci">void regu_replace(char *str, const char *pattern, const char *replacement, int max_len)</div><div class="ttdoc">‘regu_replac’函数通过使用正则表达式对字符串中特定字符串进行一个替换；</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">types.h中定义了X2W-OS的内建类型</div></div>
+<div class="ttc" id="astring_8h_html_a78de187fd1851b4b4a6c78242c1611cb"><div class="ttname"><a href="string_8h.html#a78de187fd1851b4b4a6c78242c1611cb">strslice</a></div><div class="ttdeci">size_t strslice(const char *src, char *dst, int64_t start, int64_t len)</div><div class="ttdoc">'strslice'从src字符串中截取从start的len个字节写入start中；同时检查是否越界，避免缓存区溢出；</div></div>
+<div class="ttc" id="astring_8h_html_a2b93142c59725e6f0a23c11c01dd9806"><div class="ttname"><a href="string_8h.html#a2b93142c59725e6f0a23c11c01dd9806">memmove</a></div><div class="ttdeci">size_t memmove(void *dst, const void *src, size_t size)</div><div class="ttdoc">memmove - Copy a block of memory, handling overlaps</div></div>
+<div class="ttc" id="astring_8h_html_a85a508ca397d58bd730fe247406225c1"><div class="ttname"><a href="string_8h.html#a85a508ca397d58bd730fe247406225c1">memcpy</a></div><div class="ttdeci">size_t memcpy(void *dst, const void *src, size_t size)</div><div class="ttdoc">memcpy将src起始的size个内存单元的值(以字节计算)复制到dst起始的size个内存单元中</div></div>
+<div class="ttc" id="astring_8h_html_a1ca84242c233142bb41710cec6d77f68"><div class="ttname"><a href="string_8h.html#a1ca84242c233142bb41710cec6d77f68">encrypt_decrypt</a></div><div class="ttdeci">void encrypt_decrypt(char *str, int len, char key)</div><div class="ttdoc">‘encrypt_decrypt’函数通过使用一个异或操作对字符串进行加密，由于异或具有自反的性质没所以该函数同样可以用于解密！</div></div>
+<div class="ttc" id="astring_8h_html_a17120e5c0508b8cd7acb5b88a68df2e3"><div class="ttname"><a href="string_8h.html#a17120e5c0508b8cd7acb5b88a68df2e3">strcmp</a></div><div class="ttdeci">int8_t strcmp(const char *a, const char *b)</div><div class="ttdoc">strcmp比较两个字符串</div></div>
+<div class="ttc" id="atypes_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdoc">LP64中一个 char 宽度为 8 bit</div><div class="ttdef"><b>Definition:</b> types.h:23</div></div>
+<div class="ttc" id="atypes_8h_html_ad566f6541e98b74246db1a3a3a85ad49"><div class="ttname"><a href="types_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a></div><div class="ttdeci">char int8_t</div><div class="ttdoc">LP64中一个 char 宽度为 8 bit</div><div class="ttdef"><b>Definition:</b> types.h:29</div></div>
+<div class="ttc" id="astring_8h_html_a75fd34829c47ba7a5e17b3749376dfb1"><div class="ttname"><a href="string_8h.html#a75fd34829c47ba7a5e17b3749376dfb1">memcmp</a></div><div class="ttdeci">int8_t memcmp(const void *a, const void *b, size_t size)</div><div class="ttdoc">memcmp用于比较两个分别以a和b为起始地址的的size个字节的内存区域的值</div></div>
+<div class="ttc" id="astring_8h_html_aac8072fca6653374df87f4c52d72648f"><div class="ttname"><a href="string_8h.html#aac8072fca6653374df87f4c52d72648f">strrchr</a></div><div class="ttdeci">char * strrchr(const char *str, const uint8_t ch)</div><div class="ttdoc">strrchr返回反向字符串第一次出现字符ch的地址</div></div>
+<div class="ttc" id="astring_8h_html_a1a8e0d046aa6ccaf2c9947e3142e4786"><div class="ttname"><a href="string_8h.html#a1a8e0d046aa6ccaf2c9947e3142e4786">strcpy</a></div><div class="ttdeci">char * strcpy(char *dst, const char *src)</div><div class="ttdoc">strcpy复制src指向的以'\0'结尾的字符串到dst指向的字符串去中去</div></div>
+<div class="ttc" id="astring_8h_html_a34faed0b162387a0d9f7e706a9b9e5fa"><div class="ttname"><a href="string_8h.html#a34faed0b162387a0d9f7e706a9b9e5fa">strcat</a></div><div class="ttdeci">char * strcat(char *dst, const char *src)</div><div class="ttdoc">strcat用于将字符串src拼接到dst后</div></div>
+<div class="ttc" id="atypes_8h_html_a312c7e8848187d110315ab83a7b3d4d0"><div class="ttname"><a href="types_8h.html#a312c7e8848187d110315ab83a7b3d4d0">int64_t</a></div><div class="ttdeci">long int64_t</div><div class="ttdoc">LP64中一个 long 宽度为 64 bit</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+<div class="ttc" id="astring_8h_html_a1a5e632fe609361d02cb7801fe24602f"><div class="ttname"><a href="string_8h.html#a1a5e632fe609361d02cb7801fe24602f">strchr</a></div><div class="ttdeci">char * strchr(const char *str, const uint8_t ch)</div><div class="ttdoc">strchr返回字符串从左往右第一次出现字符ch的地址</div></div>
+<div class="ttc" id="astring_8h_html_ac777359738f935cd3bf50191baf869eb"><div class="ttname"><a href="string_8h.html#ac777359738f935cd3bf50191baf869eb">strchrs</a></div><div class="ttdeci">size_t strchrs(const char *str, const uint8_t ch)</div><div class="ttdoc">strchrs返回字符串str中字符ch出现的次数</div></div>
+<div class="ttc" id="astring_8h_html_a008e171a518fe0e0352f31b245e03875"><div class="ttname"><a href="string_8h.html#a008e171a518fe0e0352f31b245e03875">strlen</a></div><div class="ttdeci">size_t strlen(const char *str)</div><div class="ttdoc">strlen返回以'\0'结尾的字符串的长度</div></div>
+<div class="ttc" id="astring_8h_html_a0fd822120d98aeeb31c3e34b925aaac9"><div class="ttname"><a href="string_8h.html#a0fd822120d98aeeb31c3e34b925aaac9">memset</a></div><div class="ttdeci">size_t memset(void *dst, byte value, size_t size)</div><div class="ttdoc">memset将det_起始的size个字节的内存单元的值设置为value</div></div>
+<div class="ttc" id="astring_8h_html_a81ef7c8c1f669e36358b53540413ad4a"><div class="ttname"><a href="string_8h.html#a81ef7c8c1f669e36358b53540413ad4a">strmset</a></div><div class="ttdeci">size_t strmset(void *dst, char value, size_t size)</div><div class="ttdoc">strmset是针对字符串复制的安全实现，避免了字符串复制时可能存在的缓存区溢出，将det_起始的size个字节的内存单元的值设置为value</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

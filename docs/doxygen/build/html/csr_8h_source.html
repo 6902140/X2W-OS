@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>X2W-OS: /home/data/proj/oskernel2023-x2w/include/asm/csr.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">X2W-OS
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">X2W参赛队作品</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_47b0152e0531aebd2c74f6f36a5c8382.html">asm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">csr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="csr_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef __INCLUDE_ASM_CSR_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define __INCLUDE_ASM_CSR_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//#include &quot;types.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* ------------------------------ 宏定义 ------------------------------ */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define SATP_MODE_39 (1UL &lt;&lt; 63)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* ----- 特权级定义 ----- */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="csr_8h.html#a37ad3140d4956a01548f08823d84d0cc">   28</a></span>&#160;<span class="preprocessor">#define PRIVILEGE_U     0UL</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define PRIVILEGE_S     1UL</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define PRIVILEGE_M     3UL</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* ----- 中断使能 ----- */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="csr_8h.html#a93f797aa24a8dcc039cdb87774c979e2">   36</a></span>&#160;<span class="preprocessor">#define INTR_DS         0UL</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define INTR_EN         1UL</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* ----- mstatus寄存器 ----- */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// MPP域</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="csr_8h.html#ac7a0e3b7853cd17e669f0f5da78cf905">   45</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define MSTATUS_MPP_SHIFT           11</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define MSTATUS_MPP                 (3UL &lt;&lt; MSTATUS_MPP_SHIFT)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define MSTATUS_MPP_U               (PRIVILEGE_U &lt;&lt; MSTATUS_MPP_SHIFT)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define MSTATUS_MPP_S               (PRIVILEGE_S &lt;&lt; MSTATUS_MPP_SHIFT)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define MSTATUS_MPP_M               (PRIVILEGE_M &lt;&lt; MSTATUS_MPP_SHIFT)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// MPIE域</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="csr_8h.html#a5b7a508b30cc8240d85c72373075130f">   58</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define MSTATUS_MPIE_SHIFT          7</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#define MSTATUS_MPIE                (1UL &lt;&lt; MSTATUS_MPIE_SHIFT)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define MSTATUS_MPIE_DS             (INTR_DS &lt;&lt; MSTATUS_MPIE_SHIFT)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define MSTATUS_MPIE_EN             (INTR_EN &lt;&lt; MSTATUS_MPIE_SHIFT)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/* ----- mtvec寄存器 ----- */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="csr_8h.html#a9fa813a9ac9c0fdd06b56201acd6a593">   70</a></span>&#160;<span class="preprocessor">#define TVEC_TRAP_DIRECT                (0b00)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#define TVEC_TRAP_INDIRECT              (0b01)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/* ----- mcause, scause, ucasue寄存器 ----- */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="csr_8h.html#aef218b97155a1af82eb4129c309889ff">   78</a></span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_FLAG        (1UL &lt;&lt; 63)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_FLAG        (0UL &lt;&lt; 64)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">/* 异常的编号 */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_MISALIGNED_FETCH                   0x00</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_FETCH_ACCESS                       0x01</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_ILLEGAL_INSTRUCTION                0x02</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_BREAKPOINT                         0x03</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_MISALIGNED_LOAD                    0x04</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_LOAD_ACCESS                        0x05</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_MISALIGNED_STORE                   0x06</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_STORE_ACCESS                       0x07</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_USER_ECALL                         0x08</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_SUPERVISOR_ECALL                   0x09</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_VIRTUAL_SUPERVISOR_ECALL           0x0A</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_MACHINE_ECALL                      0x0B</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_FETCH_PAGE_FAULT                   0x0C</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_LOAD_PAGE_FAULT                    0x0D</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_STORE_PAGE_FAULT                   0x0F</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_FETCH_GUEST_PAGE_FAULT             0x14</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_LOAD_GUEST_PAGE_FAULT              0x15</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_VIRTUAL_INST_FAULT                 0x16</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define CAUSE_EXCEPTION_STORE_GUEST_PAGE_FAULT             0x17</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/* 中断的编号 */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_U_SOFTWARE_INTERRUPT               0x00</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_S_SOFTWARE_INTERRUPT               0x01</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_M_SOFTWARE_INTERRUPT               0x03</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_U_TIMER_INTERRUPT                  0x04</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_S_TIMER_INTERRUPT                  0x05</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_M_TIMER_INTERRUPT                  0x07</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_U_EXTERNAL_INTERRUPT               0x08</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_S_EXTERNAL_INTERRUPT               0x09</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define CAUSE_INTERRUPT_M_EXTERNAL_INTERRUPT               0x11</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">/* ----- mip寄存器 ----- */</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define MIP_U_SOFTWARE_INTERRUPT                            (1UL &lt;&lt; CAUSE_INTERRUPT_U_SOFTWARE_INTERRUPT)</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#define MIP_S_SOFTWARE_INTERRUPT                            (1UL &lt;&lt; CAUSE_INTERRUPT_S_SOFTWARE_INTERRUPT)</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#define MIP_M_SOFTWARE_INTERRUPT                            (1UL &lt;&lt; CAUSE_INTERRUPT_M_SOFTWARE_INTERRUPT)</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#define MIP_U_TIMER_INTERRUPT                               (1UL &lt;&lt; CAUSE_INTERRUPT_U_TIMER_INTERRUPT)</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#define MIP_S_TIMER_INTERRUPT                               (1UL &lt;&lt; CAUSE_INTERRUPT_S_TIMER_INTERRUPT)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#define MIP_M_TIMER_INTERRUPT                               (1UL &lt;&lt; CAUSE_INTERRUPT_M_TIMER_INTERRUPT)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define MIP_U_EXTERNAL_INTERRUPT                            (1UL &lt;&lt; CAUSE_INTERRUPT_U_EXTERNAL_INTERRUPT)</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#define MIP_S_EXTERNAL_INTERRUPT                            (1UL &lt;&lt; CAUSE_INTERRUPT_S_EXTERNAL_INTERRUPT)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#define MIP_M_EXTERNAL_INTERRUPT                            (1UL &lt;&lt; CAUSE_INTERRUPT_M_EXTERNAL_INTERRUPT)</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">/* ----- medeleg寄存器 ----- */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">/* ----- mideleg寄存器 ----- */</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">/* ------------------------------ 宏函数 ------------------------------ */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="csr_8h.html#aea23c529d81311e98bf5756f13e20b53">  157</a></span>&#160;<span class="preprocessor">#define SET_FIELD(origin, which, fieldval) \</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">    (((origin) &amp; ~(which)) | ((fieldval) * ((which) &amp; ~((which) - 1))))</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="csr_8h.html#a29cc2e18dc58da69b8d351a52e193df9">  171</a></span>&#160;<span class="preprocessor">#define read_csr(csr) ({                            \</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">    register unsigned long __v;                     \</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">    asm volatile(                                   \</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">        &quot;csrr %0, &quot; #csr                            \</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">        : &quot;=r&quot; (__v)                                \</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">        :                                           \</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">        : &quot;memory&quot;                                  \</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">    );                                              \</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">    __v;                                            \</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">})</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="csr_8h.html#a920ec7be97d0deaaf7e4734fb062c555">  192</a></span>&#160;<span class="preprocessor">#define write_csr(csr, value) ({                    \</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">    unsigned long __v = (unsigned long) (value);    \</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">    __asm__ __volatile__(                           \</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">        &quot;csrw &quot; #csr &quot;, %0&quot;                         \</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">        :                                           \</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">        : &quot;rK&quot; (__v)                                \</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">        : &quot;memory&quot;                                  \</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">    );                                              \</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">})</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

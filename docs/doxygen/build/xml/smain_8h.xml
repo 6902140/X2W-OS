@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="smain_8h" kind="file" language="C++">
+    <compoundname>smain.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/sbi/smain.h</label>
+        <link refid="smain_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="smain_8h_1a4c9238340695a2e90cd4b18903fd11c9" prot="public" static="no">
+        <name>X2WSBI_BANNER</name>
+        <initializer>    &quot;`YMM&apos;   `MP&apos;      `7MMF&apos;     A     `7MF&apos;             .M\&quot;\&quot;\&quot;bgd `7MM\&quot;\&quot;\&quot;Yp, `7MMF&apos;\n&quot; \
+    &quot;  VMb.  ,P          `MA     ,MA     ,V              ,MI    \&quot;Y   MM    Yb   MM  \n&quot; \
+    &quot;   `MM.M&apos;     pd*\&quot;*b.VM:   ,VVM:   ,V               `MMb.       MM    dP   MM  \n&quot; \
+    &quot;     MMb     (O)   j8 MM.  M&apos; MM.  M&apos;   **********    `YMMNq.   MM\&quot;\&quot;\&quot;bg.   MM  \n&quot; \
+    &quot;   ,M&apos;`Mb.       ,;j9 `MM A&apos;  `MM A&apos;                .     `MM   MM    `Y   MM  \n&quot; \
+    &quot;  ,P   `MM.   ,-=&apos;     :MM;    :MM;                 Mb     dM   MM    ,9   MM  \n&quot; \
+    &quot;.MM:.  .:MMa.Ammmmmmm   VF      VF                  P\&quot;Ybmmd\&quot;  .JMMmmmd9  .JMML.\n\n&quot; \
+    &quot;Copyright Shihong Wang, Shaofei Wang, Zhuiri Xiao (c) 2023 with GNU Public License V3.0\n&quot; \
+    &quot;Enjoy!\n&quot;</initializer>
+        <briefdescription>
+<para><computeroutput>X2WSBI_BANNER</computeroutput>是在<computeroutput>SBI</computeroutput>启动时输出字符串 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h" line="17" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="smain_8h_1a64887dcd9264ad91ca504b688f5a3815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a9bc43e3ee0ae83643b65e07fe1fd0132" kindref="member">NO_RETURN</ref> void</type>
+        <definition>NO_RETURN void sbi_main</definition>
+        <argsstring>(void)</argsstring>
+        <name>sbi_main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><computeroutput>sbi_main</computeroutput>是<computeroutput>SBI</computeroutput>的主函数, 在进行一些准备后跳转到内核中运行 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para><computeroutput>sbi_main</computeroutput>函数运行在M模式</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>sbi_main</computeroutput>函数干的事情:<orderedlist>
+<listitem><para>跳转到内核: 调用<computeroutput>jump_to_kernel</computeroutput>函数实现 </para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h" line="36" column="16" declfile="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h" declline="36" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="smain_8h_1a6fb4aa6a2e416004d3366b51fd998bff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a9bc43e3ee0ae83643b65e07fe1fd0132" kindref="member">NO_RETURN</ref> void</type>
+        <definition>NO_RETURN void jump_to_kernel</definition>
+        <argsstring>(void)</argsstring>
+        <name>jump_to_kernel</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><computeroutput>jump_to_kernel</computeroutput>在伪装中断返回后调用<computeroutput>mret</computeroutput>指令以跳转到内核中去 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para><computeroutput>jump_to_kernel</computeroutput>函数需要注意的点如下:<orderedlist>
+<listitem><para>该函数通过伪装<computeroutput>S</computeroutput>模式中断返回的模式跳转到内核的主函数</para>
+</listitem><listitem><para>该函数伪装中断返回的地址是由<computeroutput>KERNEL_JUMP_ADDR</computeroutput>宏决定, 该宏定义在<computeroutput><ref refid="constrains_8h" kindref="compound">constrains.h</ref></computeroutput>中</para>
+</listitem><listitem><para><computeroutput>KERNEL_JUMP_ADDR</computeroutput>宏的地址需要指向<computeroutput>kernel_start</computeroutput>函数, 该函数定义在<computeroutput>kernel/boot.S</computeroutput>中</para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>jump_to_kernel</computeroutput>函数在跳转到内核前会进行如下的准备工作以伪装成中断返回:<orderedlist>
+<listitem><para>伪装从S模式中断进入M模式</para>
+</listitem><listitem><para>设置M模式的中断返回地址</para>
+</listitem><listitem><para>设置S模式中断向量表入口</para>
+</listitem><listitem><para>关闭S模式的中断</para>
+</listitem><listitem><para>关闭S模式的页表转换 </para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h" line="54" column="16" declfile="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h" declline="54" declcolumn="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="smain_8h" kindref="compound">smain.h</ref></computeroutput>中提供了<computeroutput>smain.c</computeroutput>中的宏定义、函数原型定义 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Shihong Wang (<ulink url="mailto:jack4shihong@gmail.com">jack4shihong@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-14</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>__INCLUDE_SBI_SMAIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__INCLUDE_SBI_SMAIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="smain_8h_1a4c9238340695a2e90cd4b18903fd11c9" refkind="member"><highlight class="preprocessor">#define<sp/>X2WSBI_BANNER<sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;`YMM&apos;<sp/><sp/><sp/>`MP&apos;<sp/><sp/><sp/><sp/><sp/><sp/>`7MMF&apos;<sp/><sp/><sp/><sp/><sp/>A<sp/><sp/><sp/><sp/><sp/>`7MF&apos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.M\&quot;\&quot;\&quot;bgd<sp/>`7MM\&quot;\&quot;\&quot;Yp,<sp/>`7MMF&apos;\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>VMb.<sp/><sp/>,P<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>`MA<sp/><sp/><sp/><sp/><sp/>,MA<sp/><sp/><sp/><sp/><sp/>,V<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,MI<sp/><sp/><sp/><sp/>\&quot;Y<sp/><sp/><sp/>MM<sp/><sp/><sp/><sp/>Yb<sp/><sp/><sp/>MM<sp/><sp/>\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/>`MM.M&apos;<sp/><sp/><sp/><sp/><sp/>pd*\&quot;*b.VM:<sp/><sp/><sp/>,VVM:<sp/><sp/><sp/>,V<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>`MMb.<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MM<sp/><sp/><sp/><sp/>dP<sp/><sp/><sp/>MM<sp/><sp/>\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/>MMb<sp/><sp/><sp/><sp/><sp/>(O)<sp/><sp/><sp/>j8<sp/>MM.<sp/><sp/>M&apos;<sp/>MM.<sp/><sp/>M&apos;<sp/><sp/><sp/>**********<sp/><sp/><sp/><sp/>`YMMNq.<sp/><sp/><sp/>MM\&quot;\&quot;\&quot;bg.<sp/><sp/><sp/>MM<sp/><sp/>\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/>,M&apos;`Mb.<sp/><sp/><sp/><sp/><sp/><sp/><sp/>,;j9<sp/>`MM<sp/>A&apos;<sp/><sp/>`MM<sp/>A&apos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/><sp/><sp/><sp/><sp/>`MM<sp/><sp/><sp/>MM<sp/><sp/><sp/><sp/>`Y<sp/><sp/><sp/>MM<sp/><sp/>\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>,P<sp/><sp/><sp/>`MM.<sp/><sp/><sp/>,-=&apos;<sp/><sp/><sp/><sp/><sp/>:MM;<sp/><sp/><sp/><sp/>:MM;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mb<sp/><sp/><sp/><sp/><sp/>dM<sp/><sp/><sp/>MM<sp/><sp/><sp/><sp/>,9<sp/><sp/><sp/>MM<sp/><sp/>\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;.MM:.<sp/><sp/>.:MMa.Ammmmmmm<sp/><sp/><sp/>VF<sp/><sp/><sp/><sp/><sp/><sp/>VF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>P\&quot;Ybmmd\&quot;<sp/><sp/>.JMMmmmd9<sp/><sp/>.JMML.\n\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;Copyright<sp/>Shihong<sp/>Wang,<sp/>Shaofei<sp/>Wang,<sp/>Zhuiri<sp/>Xiao<sp/>(c)<sp/>2023<sp/>with<sp/>GNU<sp/>Public<sp/>License<sp/>V3.0\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;Enjoy!\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="types_8h_1a9bc43e3ee0ae83643b65e07fe1fd0132" kindref="member">NO_RETURN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="smain_8h_1a64887dcd9264ad91ca504b688f5a3815" kindref="member">sbi_main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="types_8h_1a9bc43e3ee0ae83643b65e07fe1fd0132" kindref="member">NO_RETURN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="smain_8h_1a6fb4aa6a2e416004d3366b51fd998bff" kindref="member">jump_to_kernel</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/sbi/smain.h"/>
+  </compounddef>
+</doxygen>

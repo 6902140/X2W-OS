@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pg__attr_8h" kind="file" language="C++">
+    <compoundname>pg_attr.h</compoundname>
+    <includedby refid="pgable_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/pgable.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/data/proj/oskernel2023-x2w/include/pgable.h</label>
+        <link refid="pgable_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/data/proj/oskernel2023-x2w/include/mm.h</label>
+        <link refid="mm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/pg_attr.h</label>
+        <link refid="pg__attr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pg__attr_8h_1a75ee8179ce74ddb3af9df418bfbca263" prot="public" static="no">
+        <name>PGDIR_SHIFT</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="17" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a973d0c37c53087972d69bd37a1f05add" prot="public" static="no">
+        <name>PGDIR_SIZE</name>
+        <initializer>(1UL &lt;&lt; PGDIR_SHIFT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="18" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a1fd2535a7a68d6176439d2d7e825e48a" prot="public" static="no">
+        <name>PGDIR_MASK</name>
+        <initializer>(~(PGDIR_SIZE - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="19" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1abb8c7290ebf75a5c977f2f293cf1147e" prot="public" static="no">
+        <name>PMD_SHIFT</name>
+        <initializer>21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="22" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a7b2a997e858386ff56fc4b3c27ce1d34" prot="public" static="no">
+        <name>PMD_SIZE</name>
+        <initializer>(1UL &lt;&lt; PMD_SHIFT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="23" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a0cb26e0d85cc4c9d35dde688aed51910" prot="public" static="no">
+        <name>PMD_MASK</name>
+        <initializer>(~(PMD_SIZE - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="24" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a15f582d71764933117dde2a424995a2f" prot="public" static="no">
+        <name>PTE_SHIFT</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="27" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a021a1450fa4e282a95090f513640693a" prot="public" static="no">
+        <name>PTE_SIZE</name>
+        <initializer>(1UL &lt;&lt; PTE_SHIFT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="28" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a4ef7fc5e70cb2cb92de17ee28542b79e" prot="public" static="no">
+        <name>PTE_MASK</name>
+        <initializer>(~(PTE_SIZE-1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="29" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1ae30cdd8e0e6cc67026fd488b00fa9542" prot="public" static="no">
+        <name>PTRS_PER_PGD</name>
+        <initializer>(<ref refid="mm_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" kindref="member">PAGE_SIZE</ref> / sizeof(<ref refid="structpgd__t" kindref="compound">pgd_t</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="32" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1ae6dd032cf726dae2398e5a16ee6db243" prot="public" static="no">
+        <name>PTRS_PER_PTE</name>
+        <initializer>(<ref refid="mm_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e" kindref="member">PAGE_SIZE</ref> / sizeof(<ref refid="structpte__t" kindref="compound">pte_t</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="34" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a23259e02ec64224ad7c2e1aeae6abf8a" prot="public" static="no">
+        <name>PTRS_PER_PMD</name>
+        <initializer>(1 &lt;&lt; (PGDIR_SHIFT - PMD_SHIFT))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="36" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a6539c476713ac07664fe6d9fd256e99d" prot="public" static="no">
+        <name>SECTION_SHIFT</name>
+        <initializer>PMD_SHIFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="39" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1af736426da3c7639cf81900258bdd8a05" prot="public" static="no">
+        <name>SECTION_SIZE</name>
+        <initializer>(1UL &lt;&lt; SECTION_SHIFT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="40" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a16f225cca51a80c5cf1c9c002cfd2dba" prot="public" static="no">
+        <name>SECTION_MASK</name>
+        <initializer>(~(SECTION_SIZE-1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="41" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a634fa9e3491bc21c70f2f3d47c8a21ab" prot="public" static="no">
+        <name>_PAGE_ACCESSED_OFFSET</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="49" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a041b72cd1297a9757f8818a37c6babf8" prot="public" static="no">
+        <name>_PAGE_PRESENT</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="51" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a34817e0a9d91052b8e112e027e7e5357" prot="public" static="no">
+        <name>_PAGE_READ</name>
+        <initializer>(1 &lt;&lt; 1)    /* Readable */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="52" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a859113f71f0250bbf445b0ccc85d2b97" prot="public" static="no">
+        <name>_PAGE_WRITE</name>
+        <initializer>(1 &lt;&lt; 2)    /* Writable */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="53" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1add99445425a4ec5bb1efa9edff4073e0" prot="public" static="no">
+        <name>_PAGE_EXEC</name>
+        <initializer>(1 &lt;&lt; 3)    /* Executable */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="54" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1abbc3fc8293e9fa6f5acb7b2e4f530110" prot="public" static="no">
+        <name>_PAGE_USER</name>
+        <initializer>(1 &lt;&lt; 4)    /* User */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="55" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1af781b0dfda11209e5406d9c54059175b" prot="public" static="no">
+        <name>_PAGE_GLOBAL</name>
+        <initializer>(1 &lt;&lt; 5)    /* Global */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="56" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1aa99e3f1ea461841b95b84b460edee900" prot="public" static="no">
+        <name>_PAGE_ACCESSED</name>
+        <initializer>(1 &lt;&lt; 6)    /* Set by hardware on any access */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="57" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a5e659dcc26fd1d56633a2269a20b4e58" prot="public" static="no">
+        <name>_PAGE_DIRTY</name>
+        <initializer>(1 &lt;&lt; 7)    /* Set by hardware on any write */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="58" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1ada83d6c732a739620aacce476b1d3d96" prot="public" static="no">
+        <name>_PAGE_SOFT</name>
+        <initializer>(1 &lt;&lt; 8)    /* Reserved for software */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="59" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1ab00bcb4bc471be55a16edb0bca3cb4df" prot="public" static="no">
+        <name>_PAGE_SPECIAL</name>
+        <initializer>_PAGE_SOFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="61" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a5126758e5ed61b7e4995aee087573bca" prot="public" static="no">
+        <name>_PAGE_TABLE</name>
+        <initializer>_PAGE_PRESENT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="62" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a5e439de6f9bdcc6f2c63e80450173409" prot="public" static="no">
+        <name>_PAGE_PROT_NONE</name>
+        <initializer>_PAGE_READ</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="68" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1ac9494d98966010747e373320ee6381de" prot="public" static="no">
+        <name>_PAGE_PFN_SHIFT</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="70" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1aa9f2ef361f260e5c8a96cb3e19248e74" prot="public" static="no">
+        <name>_PAGE_CHG_MASK</name>
+        <initializer>					  (~(unsigned long)(_PAGE_PRESENT | _PAGE_READ |	\
+					  _PAGE_WRITE | _PAGE_EXEC |	\
+					  _PAGE_USER | _PAGE_GLOBAL))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="73" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1af48c32af61bb2d3255b6b35689590bcb" prot="public" static="no">
+        <name>_PAGE_LEAF</name>
+        <initializer>(_PAGE_READ | _PAGE_WRITE | _PAGE_EXEC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="80" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__attr_8h_1a77b0ae8baace75375a9bbe98632bc635" prot="public" static="no">
+        <name>SECTION_KERNEL_RWX</name>
+        <initializer>(_PAGE_PRESENT | _PAGE_ACCESSED | _PAGE_READ | _PAGE_EXEC | _PAGE_WRITE | _PAGE_DIRTY)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" line="82" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_attr.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="pg__attr_8h" kindref="compound">pg_attr.h</ref></computeroutput>提供了一些各种页表和页表项的属性. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Zhuir Xiao (<ulink url="mailto:xzr3356142450@gmail.com">xzr3356142450@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-27</para>
+</simplesect>
+<simplesect kind="warning"><para></para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#ifndef<sp/>PAGE_ATTR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGE_ATTR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGD<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PGDIR_SHIFT<sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PGDIR_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>(1UL<sp/>&lt;&lt;<sp/>PGDIR_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PGDIR_MASK<sp/><sp/><sp/><sp/><sp/><sp/>(~(PGDIR_SIZE<sp/>-<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PMD<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PMD_SHIFT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PMD_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1UL<sp/>&lt;&lt;<sp/>PMD_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PMD_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(~(PMD_SIZE<sp/>-<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PTE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTE_SHIFT<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTE_SIZE<sp/>(1UL<sp/>&lt;&lt;<sp/>PTE_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTE_MASK<sp/>(~(PTE_SIZE-1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>entries<sp/>in<sp/>the<sp/>page<sp/>global<sp/>directory<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTRS_PER_PGD<sp/><sp/><sp/><sp/>(PAGE_SIZE<sp/>/<sp/>sizeof(pgd_t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>entries<sp/>in<sp/>the<sp/>page<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTRS_PER_PTE<sp/><sp/><sp/><sp/>(PAGE_SIZE<sp/>/<sp/>sizeof(pte_t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>PTRS_PER_PMD<sp/><sp/><sp/><sp/>(PAGE_SIZE<sp/>/<sp/>sizeof(pmd_t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTRS_PER_PMD<sp/>(1<sp/>&lt;&lt;<sp/>(PGDIR_SHIFT<sp/>-<sp/>PMD_SHIFT))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>2MB<sp/>Section<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SECTION_SHIFT<sp/><sp/><sp/>PMD_SHIFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SECTION_SIZE<sp/><sp/><sp/><sp/>(1UL<sp/>&lt;&lt;<sp/>SECTION_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SECTION_MASK<sp/><sp/><sp/><sp/>(~(SECTION_SIZE-1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>PTE<sp/>format:</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>|<sp/>XLEN-1<sp/><sp/>10<sp/>|<sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/>|<sp/>7<sp/>|<sp/>6<sp/>|<sp/>5<sp/>|<sp/>4<sp/>|<sp/>3<sp/>|<sp/>2<sp/>|<sp/>1<sp/>|<sp/>0</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PFN<sp/><sp/><sp/><sp/><sp/><sp/>reserved<sp/>for<sp/>SW<sp/><sp/><sp/>D<sp/><sp/><sp/>A<sp/><sp/><sp/>G<sp/><sp/><sp/>U<sp/><sp/><sp/>X<sp/><sp/><sp/>W<sp/><sp/><sp/>R<sp/><sp/><sp/>V</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_ACCESSED_OFFSET<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_PRESENT<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_READ<sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>1)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Readable<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_WRITE<sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>2)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Writable<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_EXEC<sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>3)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Executable<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_USER<sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>4)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>User<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_GLOBAL<sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>5)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Global<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_ACCESSED<sp/><sp/>(1<sp/>&lt;&lt;<sp/>6)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>by<sp/>hardware<sp/>on<sp/>any<sp/>access<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_DIRTY<sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>7)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>by<sp/>hardware<sp/>on<sp/>any<sp/>write<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_SOFT<sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>8)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reserved<sp/>for<sp/>software<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_SPECIAL<sp/><sp/><sp/>_PAGE_SOFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_TABLE<sp/><sp/><sp/><sp/><sp/>_PAGE_PRESENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/>_PAGE_PROT_NONE<sp/>is<sp/>set<sp/>on<sp/>not-present<sp/>pages<sp/>(and<sp/>ignored<sp/>by<sp/>the<sp/>hardware)<sp/>to</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/>distinguish<sp/>them<sp/>from<sp/>swapped<sp/>out<sp/>pages</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_PROT_NONE<sp/>_PAGE_READ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_PFN_SHIFT<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Set<sp/>of<sp/>bits<sp/>to<sp/>preserve<sp/>across<sp/>pte_modify()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_CHG_MASK<sp/><sp/>(~(unsigned<sp/>long)(_PAGE_PRESENT<sp/>|<sp/>_PAGE_READ<sp/>|<sp/><sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_PAGE_WRITE<sp/>|<sp/>_PAGE_EXEC<sp/>|<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_PAGE_USER<sp/>|<sp/>_PAGE_GLOBAL))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*<sp/>when<sp/>all<sp/>of<sp/>R/W/X<sp/>are<sp/>zero,<sp/>the<sp/>PTE<sp/>is<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>next<sp/>level</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*<sp/>of<sp/>the<sp/>page<sp/>table;<sp/>otherwise,<sp/>it<sp/>is<sp/>a<sp/>leaf<sp/>PTE.</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PAGE_LEAF<sp/>(_PAGE_READ<sp/>|<sp/>_PAGE_WRITE<sp/>|<sp/>_PAGE_EXEC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SECTION_KERNEL_RWX<sp/>(_PAGE_PRESENT<sp/>|<sp/>_PAGE_ACCESSED<sp/>|<sp/>_PAGE_READ<sp/>|<sp/>_PAGE_EXEC<sp/>|<sp/>_PAGE_WRITE<sp/>|<sp/>_PAGE_DIRTY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/pg_attr.h"/>
+  </compounddef>
+</doxygen>

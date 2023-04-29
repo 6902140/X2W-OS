@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>弃用列表</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>成员 <ref refid="stdarg_8h_1a7b0f2a88c33d642ab5d0298f3c4b3035" kindref="member">_my_va_arg</ref>  (ap, t)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000003"/>自己写的<computeroutput>_my_va_arg</computeroutput>只适用于<computeroutput>x86-32</computeroutput>, 因此已经弃用, 详细的原因参考文件的doc  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="stdarg_8h_1af6468ba7e0b5727b681dd3905208872d" kindref="member">_my_va_end</ref>  (ap)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000004"/>自己写的<computeroutput>_my_va_end</computeroutput>只适用于<computeroutput>x86-32</computeroutput>, 因此已经弃用, 详细的原因参考文件的doc  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="stdarg_8h_1a7606ba07f197c44b4185b4ce441e0d76" kindref="member">_my_va_list</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/>自己写的<computeroutput>_my_va_list</computeroutput>只适用于<computeroutput>x86-32</computeroutput>, 因此已经弃用, 详细的原因参考文件的doc  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="stdarg_8h_1ae641e06b00550c111ccb048aafe0fc4b" kindref="member">_my_va_start</ref>  (ap, v)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/>自己写的<computeroutput>_my_va_list</computeroutput>只适用于<computeroutput>x86-32</computeroutput>, 因此已经弃用, 详细的原因参考文件的doc </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="memory_8h" kind="file" language="C++">
+    <compoundname>memory.h</compoundname>
+    <includedby refid="test__memory_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/test/test_memory.h</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/kernel/memory.h</label>
+        <link refid="memory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/data/proj/oskernel2023-x2w/include/test/test_memory.h</label>
+        <link refid="test__memory_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="memory_8h_1a0c234917347c5bfd7cea239572a370d7" prot="public" static="no">
+        <name>DDR_BASE</name>
+        <initializer>0x80000000UL</initializer>
+        <briefdescription>
+<para>DDR_BASE是计入内存管理的起始地址 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h" line="21" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_8h_1addb29ba4e96cc151009031e3485060b2" prot="public" static="no">
+        <name>TOTAL_MEMORY</name>
+        <initializer>(16 * 0x100000UL)</initializer>
+        <briefdescription>
+<para>内存管理的内存大小 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>可以手动改变大小 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h" line="28" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory_8h_1afe4047096f3f4346d624ed909e731562" prot="public" static="no">
+        <name>DDR_END</name>
+        <initializer>(<ref refid="memory_8h_1a0c234917347c5bfd7cea239572a370d7" kindref="member">DDR_BASE</ref> + <ref refid="memory_8h_1addb29ba4e96cc151009031e3485060b2" kindref="member">TOTAL_MEMORY</ref>)</initializer>
+        <briefdescription>
+<para>DDR_BASE是计入内存管理的终止地址 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h" line="34" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&quot;memory.h&quot; 定义了一些内存管理需要的常量和宏操作 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Zhuiri Xiao (<ulink url="mailto:xzr3356142450@gmail.com">xzr3356142450@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-28</para>
+</simplesect>
+<simplesect kind="warning"><para></para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#ifndef<sp/>_MEMORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MEMORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="memory_8h_1a0c234917347c5bfd7cea239572a370d7" refkind="member"><highlight class="preprocessor">#define<sp/>DDR_BASE<sp/>0x80000000UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="memory_8h_1addb29ba4e96cc151009031e3485060b2" refkind="member"><highlight class="preprocessor">#define<sp/>TOTAL_MEMORY<sp/>(16<sp/>*<sp/>0x100000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="memory_8h_1afe4047096f3f4346d624ed909e731562" refkind="member"><highlight class="preprocessor">#define<sp/>DDR_END<sp/>(DDR_BASE<sp/>+<sp/>TOTAL_MEMORY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/kernel/memory.h"/>
+  </compounddef>
+</doxygen>

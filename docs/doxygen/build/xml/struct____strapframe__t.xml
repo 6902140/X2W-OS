@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct____strapframe__t" kind="struct" language="C++" prot="public">
+    <compoundname>__strapframe_t</compoundname>
+    <includes refid="trapframe_8h" local="no">trapframe.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____strapframe__t_1a3ae3952178bfa660381e7a90eb9fb3a4" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __strapframe_t::mepc</definition>
+        <argsstring></argsstring>
+        <name>mepc</name>
+        <briefdescription>
+<para><computeroutput>mepc</computeroutput>保存了<computeroutput>mepc</computeroutput>寄存器的值 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="133" column="12" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____strapframe__t_1a16754ebab46250bbdfdc93a340d431fa" prot="public" static="no" mutable="no">
+        <type><ref refid="trapframe_8h_1ac7135428295a151a70d7b6de6ae41a3d" kindref="member">gtrapframe_t</ref></type>
+        <definition>gtrapframe_t __strapframe_t::gregisters</definition>
+        <argsstring></argsstring>
+        <name>gregisters</name>
+        <briefdescription>
+<para><computeroutput>gregisters</computeroutput>寄存器保存了通用寄存器的值 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="135" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct____strapframe__t_1a057bcc447c0a7b88be6e044572ef2c64" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a48f2f43c22b22212994d19244ccb10fc" kindref="member">ireg_t</ref></type>
+        <definition>ireg_t __strapframe_t::mstatus</definition>
+        <argsstring></argsstring>
+        <name>mstatus</name>
+        <briefdescription>
+<para><computeroutput>mstatus</computeroutput>保存了<computeroutput>mstatus</computeroutput>寄存器的值 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="137" column="12" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput>strapframe_t</computeroutput>是<computeroutput>SBI</computeroutput>陷入帧(SBI Trap Frame), 在保存通用寄存器的基础上, 额外保存了<computeroutput>empc</computeroutput>寄存器和<computeroutput>mstatus</computeroutput>寄存器 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>__strapframe_t</label>
+        <link refid="struct____strapframe__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>gregisters</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>__gtrapframe_t</label>
+        <link refid="struct____gtrapframe__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" line="131" column="29" bodyfile="/home/data/proj/oskernel2023-x2w/include/trap/trapframe.h" bodystart="131" bodyend="138"/>
+    <listofallmembers>
+      <member refid="struct____strapframe__t_1a16754ebab46250bbdfdc93a340d431fa" prot="public" virt="non-virtual"><scope>__strapframe_t</scope><name>gregisters</name></member>
+      <member refid="struct____strapframe__t_1a3ae3952178bfa660381e7a90eb9fb3a4" prot="public" virt="non-virtual"><scope>__strapframe_t</scope><name>mepc</name></member>
+      <member refid="struct____strapframe__t_1a057bcc447c0a7b88be6e044572ef2c64" prot="public" virt="non-virtual"><scope>__strapframe_t</scope><name>mstatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

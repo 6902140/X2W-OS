@@ -1,0 +1,326 @@
+\hypertarget{csr_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/asm/csr.h 文件参考}
+\label{csr_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/asm/csr.h@{/home/data/proj/oskernel2023-\/x2w/include/asm/csr.h}}
+
+
+{\ttfamily \mbox{\hyperlink{csr_8h}{csr.\+h}}}提供了读写{\ttfamily R\+I\+S\+C-\/V}体系结构中的{\ttfamily C\+SR}寄存器({\ttfamily Control and Status})的函数  
+
+
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{csr_8h_abe90ababbc031e196e373c27c729ecde}\label{csr_8h_abe90ababbc031e196e373c27c729ecde}} 
+\#define {\bfseries S\+A\+T\+P\+\_\+\+M\+O\+D\+E\+\_\+39}~(1UL $<$$<$ 63)
+\item 
+\mbox{\Hypertarget{csr_8h_a37ad3140d4956a01548f08823d84d0cc}\label{csr_8h_a37ad3140d4956a01548f08823d84d0cc}} 
+\#define \mbox{\hyperlink{csr_8h_a37ad3140d4956a01548f08823d84d0cc}{P\+R\+I\+V\+I\+L\+E\+G\+E\+\_\+U}}~0\+UL
+\begin{DoxyCompactList}\small\item\em 用户态特权级 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_af76a15d4ca67c4f2def9490c764f5aa4}\label{csr_8h_af76a15d4ca67c4f2def9490c764f5aa4}} 
+\#define \mbox{\hyperlink{csr_8h_af76a15d4ca67c4f2def9490c764f5aa4}{P\+R\+I\+V\+I\+L\+E\+G\+E\+\_\+S}}~1UL
+\begin{DoxyCompactList}\small\item\em 监管态特权级 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a61fcc9c63b58417818381f5d03420536}\label{csr_8h_a61fcc9c63b58417818381f5d03420536}} 
+\#define \mbox{\hyperlink{csr_8h_a61fcc9c63b58417818381f5d03420536}{P\+R\+I\+V\+I\+L\+E\+G\+E\+\_\+M}}~3UL
+\begin{DoxyCompactList}\small\item\em 机器态特权级 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a93f797aa24a8dcc039cdb87774c979e2}\label{csr_8h_a93f797aa24a8dcc039cdb87774c979e2}} 
+\#define \mbox{\hyperlink{csr_8h_a93f797aa24a8dcc039cdb87774c979e2}{I\+N\+T\+R\+\_\+\+DS}}~0\+UL
+\begin{DoxyCompactList}\small\item\em 中断开启 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a918fc7ae0a636b642d2a37f5c2e963ab}\label{csr_8h_a918fc7ae0a636b642d2a37f5c2e963ab}} 
+\#define \mbox{\hyperlink{csr_8h_a918fc7ae0a636b642d2a37f5c2e963ab}{I\+N\+T\+R\+\_\+\+EN}}~1UL
+\begin{DoxyCompactList}\small\item\em 中断关闭 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}\label{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}} 
+\#define \mbox{\hyperlink{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+\+S\+H\+I\+FT}}~11
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+PP}域在{\ttfamily mstatus}寄存器的偏移 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a2acf460f4ceda869c88c00878cb44314}\label{csr_8h_a2acf460f4ceda869c88c00878cb44314}} 
+\#define \mbox{\hyperlink{csr_8h_a2acf460f4ceda869c88c00878cb44314}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+PP}}~(3UL $<$$<$ \mbox{\hyperlink{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+PP}域选择子 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_aebc8dae20b3f619d03f0291db287f6de}\label{csr_8h_aebc8dae20b3f619d03f0291db287f6de}} 
+\#define \mbox{\hyperlink{csr_8h_aebc8dae20b3f619d03f0291db287f6de}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+U}}~(\mbox{\hyperlink{csr_8h_a37ad3140d4956a01548f08823d84d0cc}{P\+R\+I\+V\+I\+L\+E\+G\+E\+\_\+U}} $<$$<$ \mbox{\hyperlink{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+PP = 0b00}, 中断发生前的特权级为U \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a484f2297ebe1535484c13f12f70e602a}\label{csr_8h_a484f2297ebe1535484c13f12f70e602a}} 
+\#define \mbox{\hyperlink{csr_8h_a484f2297ebe1535484c13f12f70e602a}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+S}}~(\mbox{\hyperlink{csr_8h_af76a15d4ca67c4f2def9490c764f5aa4}{P\+R\+I\+V\+I\+L\+E\+G\+E\+\_\+S}} $<$$<$ \mbox{\hyperlink{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+PP = 0b01}, 中断发生前的特权级为S \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_aa6621785868a067469e73ac9babeed99}\label{csr_8h_aa6621785868a067469e73ac9babeed99}} 
+\#define \mbox{\hyperlink{csr_8h_aa6621785868a067469e73ac9babeed99}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+M}}~(\mbox{\hyperlink{csr_8h_a61fcc9c63b58417818381f5d03420536}{P\+R\+I\+V\+I\+L\+E\+G\+E\+\_\+M}} $<$$<$ \mbox{\hyperlink{csr_8h_ac7a0e3b7853cd17e669f0f5da78cf905}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+P\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+PP = 0b11}, 中断发生前的特权级为M \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a5b7a508b30cc8240d85c72373075130f}\label{csr_8h_a5b7a508b30cc8240d85c72373075130f}} 
+\#define \mbox{\hyperlink{csr_8h_a5b7a508b30cc8240d85c72373075130f}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+I\+E\+\_\+\+S\+H\+I\+FT}}~7
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+P\+IE}域在{\ttfamily mstatus}寄存器的偏移 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a05fc511bb3d22b5e1abe8b9ccb30e7b3}\label{csr_8h_a05fc511bb3d22b5e1abe8b9ccb30e7b3}} 
+\#define \mbox{\hyperlink{csr_8h_a05fc511bb3d22b5e1abe8b9ccb30e7b3}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+IE}}~(1UL $<$$<$ \mbox{\hyperlink{csr_8h_a5b7a508b30cc8240d85c72373075130f}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+I\+E\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+P\+IE}域选择子 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a0d829111cf513e8d2ccf2ab434b17bdd}\label{csr_8h_a0d829111cf513e8d2ccf2ab434b17bdd}} 
+\#define \mbox{\hyperlink{csr_8h_a0d829111cf513e8d2ccf2ab434b17bdd}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+I\+E\+\_\+\+DS}}~(\mbox{\hyperlink{csr_8h_a93f797aa24a8dcc039cdb87774c979e2}{I\+N\+T\+R\+\_\+\+DS}} $<$$<$ \mbox{\hyperlink{csr_8h_a5b7a508b30cc8240d85c72373075130f}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+I\+E\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+P\+IE = 0}, 中断发生前中断关闭 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a6ef6d2229ec2a9328ff08de7dea7cc9c}\label{csr_8h_a6ef6d2229ec2a9328ff08de7dea7cc9c}} 
+\#define \mbox{\hyperlink{csr_8h_a6ef6d2229ec2a9328ff08de7dea7cc9c}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+I\+E\+\_\+\+EN}}~(\mbox{\hyperlink{csr_8h_a918fc7ae0a636b642d2a37f5c2e963ab}{I\+N\+T\+R\+\_\+\+EN}} $<$$<$ \mbox{\hyperlink{csr_8h_a5b7a508b30cc8240d85c72373075130f}{M\+S\+T\+A\+T\+U\+S\+\_\+\+M\+P\+I\+E\+\_\+\+S\+H\+I\+FT}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+P\+IE = 1}, 中断发生前中断开启 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_a9fa813a9ac9c0fdd06b56201acd6a593}\label{csr_8h_a9fa813a9ac9c0fdd06b56201acd6a593}} 
+\#define \mbox{\hyperlink{csr_8h_a9fa813a9ac9c0fdd06b56201acd6a593}{T\+V\+E\+C\+\_\+\+T\+R\+A\+P\+\_\+\+D\+I\+R\+E\+CT}}~(0b00)
+\begin{DoxyCompactList}\small\item\em {\ttfamily T\+V\+E\+C\+\_\+\+T\+R\+A\+P\+\_\+\+D\+I\+R\+E\+CT}宏表示{\ttfamily mtvec}寄存器处于直接模式 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_aa12a22dbf2aa87997035c18f1b76c175}\label{csr_8h_aa12a22dbf2aa87997035c18f1b76c175}} 
+\#define \mbox{\hyperlink{csr_8h_aa12a22dbf2aa87997035c18f1b76c175}{T\+V\+E\+C\+\_\+\+T\+R\+A\+P\+\_\+\+I\+N\+D\+I\+R\+E\+CT}}~(0b01)
+\begin{DoxyCompactList}\small\item\em {\ttfamily M\+T\+V\+E\+C\+\_\+\+T\+R\+A\+P\+\_\+\+I\+N\+D\+I\+R\+E\+CT}宏表示{\ttfamily mtvec}寄存器处于间接模式 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_aef218b97155a1af82eb4129c309889ff}\label{csr_8h_aef218b97155a1af82eb4129c309889ff}} 
+\#define \mbox{\hyperlink{csr_8h_aef218b97155a1af82eb4129c309889ff}{C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+F\+L\+AG}}~(1UL $<$$<$ 63)
+\begin{DoxyCompactList}\small\item\em {\ttfamily C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+F\+L\+AG}宏用于判断当前陷入是否为中断 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_add33b6ebebec022bf3b124bf429482ac}\label{csr_8h_add33b6ebebec022bf3b124bf429482ac}} 
+\#define \mbox{\hyperlink{csr_8h_add33b6ebebec022bf3b124bf429482ac}{C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+F\+L\+AG}}~(0\+UL $<$$<$ 64)
+\begin{DoxyCompactList}\small\item\em {\ttfamily C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+F\+L\+AG}宏用于判断当前陷入是否为异常 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{csr_8h_aa75388e27235c7b388af4f88ea4de30c}\label{csr_8h_aa75388e27235c7b388af4f88ea4de30c}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+E\+D\+\_\+\+F\+E\+T\+CH}~0x00
+\item 
+\mbox{\Hypertarget{csr_8h_a415d18c5786e6465bb3b1bc8f3baeb21}\label{csr_8h_a415d18c5786e6465bb3b1bc8f3baeb21}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+F\+E\+T\+C\+H\+\_\+\+A\+C\+C\+E\+SS}~0x01
+\item 
+\mbox{\Hypertarget{csr_8h_a7a290a6569311a1a437d368c3dfc19dd}\label{csr_8h_a7a290a6569311a1a437d368c3dfc19dd}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}~0x02
+\item 
+\mbox{\Hypertarget{csr_8h_ac3a63cbefe5dbb40124e1c6282475606}\label{csr_8h_ac3a63cbefe5dbb40124e1c6282475606}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+B\+R\+E\+A\+K\+P\+O\+I\+NT}~0x03
+\item 
+\mbox{\Hypertarget{csr_8h_aebf57c1677a8867b38a302d8649ee0ae}\label{csr_8h_aebf57c1677a8867b38a302d8649ee0ae}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+E\+D\+\_\+\+L\+O\+AD}~0x04
+\item 
+\mbox{\Hypertarget{csr_8h_addec7d0bf0db39e50dc98929932e069f}\label{csr_8h_addec7d0bf0db39e50dc98929932e069f}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+L\+O\+A\+D\+\_\+\+A\+C\+C\+E\+SS}~0x05
+\item 
+\mbox{\Hypertarget{csr_8h_a1be2287df370d3ca2634a3dfb1c0fb65}\label{csr_8h_a1be2287df370d3ca2634a3dfb1c0fb65}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+M\+I\+S\+A\+L\+I\+G\+N\+E\+D\+\_\+\+S\+T\+O\+RE}~0x06
+\item 
+\mbox{\Hypertarget{csr_8h_afbb82cc93014b07f9b16dd512cc4073e}\label{csr_8h_afbb82cc93014b07f9b16dd512cc4073e}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+E\+\_\+\+A\+C\+C\+E\+SS}~0x07
+\item 
+\mbox{\Hypertarget{csr_8h_aeaf8b89d849833447273cb34b86314cc}\label{csr_8h_aeaf8b89d849833447273cb34b86314cc}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+U\+S\+E\+R\+\_\+\+E\+C\+A\+LL}~0x08
+\item 
+\mbox{\Hypertarget{csr_8h_a2ac310d1549659c056128c7e638baa10}\label{csr_8h_a2ac310d1549659c056128c7e638baa10}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+U\+P\+E\+R\+V\+I\+S\+O\+R\+\_\+\+E\+C\+A\+LL}~0x09
+\item 
+\mbox{\Hypertarget{csr_8h_a22297fe99a059da2b933ac65465dcd53}\label{csr_8h_a22297fe99a059da2b933ac65465dcd53}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+S\+U\+P\+E\+R\+V\+I\+S\+O\+R\+\_\+\+E\+C\+A\+LL}~0x0A
+\item 
+\mbox{\Hypertarget{csr_8h_a0b6e1f90e8a71d8a408403f9dfeb11f0}\label{csr_8h_a0b6e1f90e8a71d8a408403f9dfeb11f0}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+M\+A\+C\+H\+I\+N\+E\+\_\+\+E\+C\+A\+LL}~0x0B
+\item 
+\mbox{\Hypertarget{csr_8h_aa01619cb10a923eab5fbcab0e02328c0}\label{csr_8h_aa01619cb10a923eab5fbcab0e02328c0}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+F\+E\+T\+C\+H\+\_\+\+P\+A\+G\+E\+\_\+\+F\+A\+U\+LT}~0x0C
+\item 
+\mbox{\Hypertarget{csr_8h_a6adb3513f1f1b2f7f5eb240738cb459b}\label{csr_8h_a6adb3513f1f1b2f7f5eb240738cb459b}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+L\+O\+A\+D\+\_\+\+P\+A\+G\+E\+\_\+\+F\+A\+U\+LT}~0x0D
+\item 
+\mbox{\Hypertarget{csr_8h_ae520779fdaf92132d1158ff98b8d0090}\label{csr_8h_ae520779fdaf92132d1158ff98b8d0090}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+E\+\_\+\+P\+A\+G\+E\+\_\+\+F\+A\+U\+LT}~0x0F
+\item 
+\mbox{\Hypertarget{csr_8h_a4e34e7e27dbfedf1439841e7197055f4}\label{csr_8h_a4e34e7e27dbfedf1439841e7197055f4}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+F\+E\+T\+C\+H\+\_\+\+G\+U\+E\+S\+T\+\_\+\+P\+A\+G\+E\+\_\+\+F\+A\+U\+LT}~0x14
+\item 
+\mbox{\Hypertarget{csr_8h_ae15cd727a3ff3f1170271c1789b18ff0}\label{csr_8h_ae15cd727a3ff3f1170271c1789b18ff0}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+L\+O\+A\+D\+\_\+\+G\+U\+E\+S\+T\+\_\+\+P\+A\+G\+E\+\_\+\+F\+A\+U\+LT}~0x15
+\item 
+\mbox{\Hypertarget{csr_8h_a29cb2113270261161ae62fbcc1757a0d}\label{csr_8h_a29cb2113270261161ae62fbcc1757a0d}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+I\+N\+S\+T\+\_\+\+F\+A\+U\+LT}~0x16
+\item 
+\mbox{\Hypertarget{csr_8h_a3c3b6c845ff2ec0d59e899ea4a0761ab}\label{csr_8h_a3c3b6c845ff2ec0d59e899ea4a0761ab}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+S\+T\+O\+R\+E\+\_\+\+G\+U\+E\+S\+T\+\_\+\+P\+A\+G\+E\+\_\+\+F\+A\+U\+LT}~0x17
+\item 
+\mbox{\Hypertarget{csr_8h_abdb78e038610d0741be3de20372433ce}\label{csr_8h_abdb78e038610d0741be3de20372433ce}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+U\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x00
+\item 
+\mbox{\Hypertarget{csr_8h_ae6cd48b2ed18acc2c8178b70cf05da41}\label{csr_8h_ae6cd48b2ed18acc2c8178b70cf05da41}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x01
+\item 
+\mbox{\Hypertarget{csr_8h_a80fdade90011f1312a6a56a7195f3040}\label{csr_8h_a80fdade90011f1312a6a56a7195f3040}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x03
+\item 
+\mbox{\Hypertarget{csr_8h_a9ac68adf705b9331a4c94b159687d30d}\label{csr_8h_a9ac68adf705b9331a4c94b159687d30d}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+U\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x04
+\item 
+\mbox{\Hypertarget{csr_8h_af1463e49018ac4b6a6ddf7670769b072}\label{csr_8h_af1463e49018ac4b6a6ddf7670769b072}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x05
+\item 
+\mbox{\Hypertarget{csr_8h_a160e1f44ce942d80e5f0e512673a8e3c}\label{csr_8h_a160e1f44ce942d80e5f0e512673a8e3c}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x07
+\item 
+\mbox{\Hypertarget{csr_8h_ab5fabf52b94702133bbb3d17046caf44}\label{csr_8h_ab5fabf52b94702133bbb3d17046caf44}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+U\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x08
+\item 
+\mbox{\Hypertarget{csr_8h_a6099f1bd2cc677b042f9391773cece10}\label{csr_8h_a6099f1bd2cc677b042f9391773cece10}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x09
+\item 
+\mbox{\Hypertarget{csr_8h_ae2b18dc42bfe5bc31ec1d0956b976efa}\label{csr_8h_ae2b18dc42bfe5bc31ec1d0956b976efa}} 
+\#define {\bfseries C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x11
+\item 
+\mbox{\Hypertarget{csr_8h_a462f547447f3751fa2d55f04ba01fab6}\label{csr_8h_a462f547447f3751fa2d55f04ba01fab6}} 
+\#define {\bfseries M\+I\+P\+\_\+\+U\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+U\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_a110d08135f6f60deee9b7402955d731f}\label{csr_8h_a110d08135f6f60deee9b7402955d731f}} 
+\#define {\bfseries M\+I\+P\+\_\+\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_a1bfcda08e15446e332ee5c97e7451c1e}\label{csr_8h_a1bfcda08e15446e332ee5c97e7451c1e}} 
+\#define {\bfseries M\+I\+P\+\_\+\+M\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_a4ecd0f900d49546be4cf57fd6a1402a5}\label{csr_8h_a4ecd0f900d49546be4cf57fd6a1402a5}} 
+\#define {\bfseries M\+I\+P\+\_\+\+U\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+U\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_a023632324cde4e1787f61bf373bb6a38}\label{csr_8h_a023632324cde4e1787f61bf373bb6a38}} 
+\#define {\bfseries M\+I\+P\+\_\+\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_af7e7ae7a988b64226b794354bf6b57d1}\label{csr_8h_af7e7ae7a988b64226b794354bf6b57d1}} 
+\#define {\bfseries M\+I\+P\+\_\+\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_a575942391b8f0686bec79151eeadb82e}\label{csr_8h_a575942391b8f0686bec79151eeadb82e}} 
+\#define {\bfseries M\+I\+P\+\_\+\+U\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+U\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_ab00ed7cdf31f5a872f798ed2240efbd8}\label{csr_8h_ab00ed7cdf31f5a872f798ed2240efbd8}} 
+\#define {\bfseries M\+I\+P\+\_\+\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\mbox{\Hypertarget{csr_8h_a297777e25396598b0ea467b6e8187ec3}\label{csr_8h_a297777e25396598b0ea467b6e8187ec3}} 
+\#define {\bfseries M\+I\+P\+\_\+\+M\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~(1UL $<$$<$ C\+A\+U\+S\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT)
+\item 
+\#define \mbox{\hyperlink{csr_8h_aea23c529d81311e98bf5756f13e20b53}{S\+E\+T\+\_\+\+F\+I\+E\+LD}}(origin,  which,  fieldval)~(((origin) \& $\sim$(which)) $\vert$ ((fieldval) $\ast$ ((which) \& $\sim$((which) -\/ 1))))
+\begin{DoxyCompactList}\small\item\em {\ttfamily S\+E\+T\+\_\+\+F\+I\+E\+LD}宏用于将{\ttfamily origin}中{\ttfamily which}所指定的{\ttfamily field}的值设置为{\ttfamily fieldval} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{csr_8h_a29cc2e18dc58da69b8d351a52e193df9}{read\+\_\+csr}}(csr)
+\begin{DoxyCompactList}\small\item\em {\ttfamily read\+\_\+csr}用于读取的{\ttfamily csr}寄存器的值并返回 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{csr_8h_a920ec7be97d0deaaf7e4734fb062c555}{write\+\_\+csr}}(csr,  value)
+\begin{DoxyCompactList}\small\item\em {\ttfamily write\+\_\+csr}用于将{\ttfamily csr}寄存器的值设置为{\ttfamily value} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{csr_8h}{csr.\+h}}}提供了读写{\ttfamily R\+I\+S\+C-\/V}体系结构中的{\ttfamily C\+SR}寄存器({\ttfamily Control and Status})的函数 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gamil.com}{\texttt{ jack4shihong@gamil.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/09
+\end{DoxyDate}
+\begin{DoxyNote}{注解}
+参考\+R\+I\+S\+C-\/\+V架构手册\+:
+\begin{DoxyEnumerate}
+\item \href{https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMAFDQC/riscv-spec-20191213.pdf}{\texttt{ https\+://github.\+com/riscv/riscv-\/isa-\/manual/releases/download/\+Ratified-\/\+I\+M\+A\+F\+D\+Q\+C/riscv-\/spec-\/20191213.\+pdf}}
+\item \href{https://github.com/riscv/riscv-isa-manual/releases/download/Priv-v1.12/riscv-privileged-20211203.pdf}{\texttt{ https\+://github.\+com/riscv/riscv-\/isa-\/manual/releases/download/\+Priv-\/v1.\+12/riscv-\/privileged-\/20211203.\+pdf}}
+\end{DoxyEnumerate}
+
+一些有用的博客\+:
+\begin{DoxyEnumerate}
+\item \href{https://dingfen.github.io/risc-v/2020/08/05/riscv-privileged.html\#\%E4\%B8\%AD\%E6\%96\%AD\%E4\%B8\%8E\%E5\%BC\%82\%E5\%B8\%B8}{\texttt{ https\+://dingfen.\+github.\+io/risc-\/v/2020/08/05/riscv-\/privileged.\+html\#\%\+E4\%\+B8\%\+A\+D\%\+E6\%96\%\+A\+D\%\+E4\%\+B8\%8\+E\%\+E5\%\+B\+C\%82\%\+E5\%\+B8\%\+B8}} 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{csr_8h_a29cc2e18dc58da69b8d351a52e193df9}\label{csr_8h_a29cc2e18dc58da69b8d351a52e193df9}} 
+\index{csr.h@{csr.h}!read\_csr@{read\_csr}}
+\index{read\_csr@{read\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{read\_csr}{read\_csr}}
+{\footnotesize\ttfamily \#define read\+\_\+csr(\begin{DoxyParamCaption}\item[{}]{csr }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    (\{                            \(\backslash\)}
+\DoxyCodeLine{    register \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \_\_v;                     \(\backslash\)}
+\DoxyCodeLine{    asm \textcolor{keyword}{volatile}(                                   \(\backslash\)}
+\DoxyCodeLine{        \textcolor{stringliteral}{"csrr \%0, "} \#csr                            \(\backslash\)}
+\DoxyCodeLine{        : \textcolor{stringliteral}{"=r"} (\_\_v)                                \(\backslash\)}
+\DoxyCodeLine{        :                                           \(\backslash\)}
+\DoxyCodeLine{        : \textcolor{stringliteral}{"memory"}                                  \(\backslash\)}
+\DoxyCodeLine{    );                                              \(\backslash\)}
+\DoxyCodeLine{    \_\_v;                                            \(\backslash\)}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+{\ttfamily read\+\_\+csr}用于读取的{\ttfamily csr}寄存器的值并返回 
+
+
+\begin{DoxyParams}{参数}
+{\em csr} & 要读取的{\ttfamily C\+SR}寄存器名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+uint64\+\_\+t 读取得到的{\ttfamily csr}寄存器的值
+\end{DoxyReturn}
+\begin{DoxyNote}{注解}
+通常情况下，在内联汇编代码块的最后一条语句中将需要返回的值存储在一个特定的变量中，然后该变量将被作为代码块的返回值返回给调用者。在\+G\+C\+C扩展中，这个变量通常被命名为\+\_\+\+\_\+v（两个下划线 + v），并且在代码块的最后一行写上\+\_\+\+\_\+v;语句来表示将其作为返回值返回给调用者。 
+
+写入到{\ttfamily C\+SR}寄存器的变量必须要存在通用寄存器中 
+
+{\ttfamily read\+\_\+csr}中使用{\ttfamily \#}将{\ttfamily csr}转为字符串, 而后利用{\ttfamily C}语言的字符串拼接得到最终的汇编语句 
+\end{DoxyNote}
+\mbox{\Hypertarget{csr_8h_aea23c529d81311e98bf5756f13e20b53}\label{csr_8h_aea23c529d81311e98bf5756f13e20b53}} 
+\index{csr.h@{csr.h}!SET\_FIELD@{SET\_FIELD}}
+\index{SET\_FIELD@{SET\_FIELD}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{SET\_FIELD}{SET\_FIELD}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{origin,  }\item[{}]{which,  }\item[{}]{fieldval }\end{DoxyParamCaption})~(((origin) \& $\sim$(which)) $\vert$ ((fieldval) $\ast$ ((which) \& $\sim$((which) -\/ 1))))}
+
+
+
+{\ttfamily S\+E\+T\+\_\+\+F\+I\+E\+LD}宏用于将{\ttfamily origin}中{\ttfamily which}所指定的{\ttfamily field}的值设置为{\ttfamily fieldval} 
+
+
+\begin{DoxyParams}{参数}
+{\em origin} & 初始值 \\
+\hline
+{\em which} & 设置的{\ttfamily field} \\
+\hline
+{\em fieldval} & {\ttfamily field}将被设置的值\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+需要注意的点\+:
+\begin{DoxyItemize}
+\item {\ttfamily x \& $\sim$mask}\+: 将x的非{\ttfamily mask}清0
+\item {\ttfamily x \& $\sim$(x -\/ 1)}\+: 用于一个数的二进制表示中最右边的非零位（也称作最低位的1），并将其它位都置为0
+\item 而后利用这个最右边的非零位表示需要左移多少位, 这里是用乘法实现的左移
+\item 最后在和mask对应位清0之后的原值与就能得到最终需要的值
+\end{DoxyItemize}
+\end{DoxyNote}
+一个详细的例子{\ttfamily origin = 0b1001\+\_\+0001}, {\ttfamily which = 0b0011\+\_\+0000}, {\ttfamily fieldval = 0b11}则\+:
+\begin{DoxyItemize}
+\item {\ttfamily which \& $\sim$(which -\/ 1) = 0b0001\+\_\+0000}
+\item {\ttfamily fieldval $\ast$ (which \& $\sim$(which -\/ 1)) = 0b0011\+\_\+0000}
+\item {\ttfamily origin \& !(which) = 0b1011\+\_\+0001}
+\item {\ttfamily ... $\vert$ ... = 0b1000\+\_\+0000} 
+\end{DoxyItemize}\mbox{\Hypertarget{csr_8h_a920ec7be97d0deaaf7e4734fb062c555}\label{csr_8h_a920ec7be97d0deaaf7e4734fb062c555}} 
+\index{csr.h@{csr.h}!write\_csr@{write\_csr}}
+\index{write\_csr@{write\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{write\_csr}{write\_csr}}
+{\footnotesize\ttfamily \#define write\+\_\+csr(\begin{DoxyParamCaption}\item[{}]{csr,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    (\{                    \(\backslash\)}
+\DoxyCodeLine{    unsigned \textcolor{keywordtype}{long} \_\_v = (\textcolor{keywordtype}{unsigned} long) (value);    \(\backslash\)}
+\DoxyCodeLine{    \_\_asm\_\_ \_\_volatile\_\_(                           \(\backslash\)}
+\DoxyCodeLine{        \textcolor{stringliteral}{"csrw "} \#csr \textcolor{stringliteral}{", \%0"}                         \(\backslash\)}
+\DoxyCodeLine{        :                                           \(\backslash\)}
+\DoxyCodeLine{        : \textcolor{stringliteral}{"rK"} (\_\_v)                                \(\backslash\)}
+\DoxyCodeLine{        : \textcolor{stringliteral}{"memory"}                                  \(\backslash\)}
+\DoxyCodeLine{    );                                              \(\backslash\)}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+{\ttfamily write\+\_\+csr}用于将{\ttfamily csr}寄存器的值设置为{\ttfamily value} 
+
+
+\begin{DoxyParams}{参数}
+{\em csr} & 要设置的{\ttfamily C\+SR}寄存器名 \\
+\hline
+{\em value} & 要设置的值\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+{\ttfamily rK}约束参考, {\ttfamily r}是简单约束, {\ttfamily K}是{\ttfamily R\+I\+S\+C-\/V}的机器限定约束\+:
+\begin{DoxyEnumerate}
+\item \href{https://gcc.gnu.org/onlinedocs/gcc/Simple-Constraints.html}{\texttt{ https\+://gcc.\+gnu.\+org/onlinedocs/gcc/\+Simple-\/\+Constraints.\+html}}
+\item \href{https://gcc.gnu.org/onlinedocs/gcc/Machine-Constraints.html}{\texttt{ https\+://gcc.\+gnu.\+org/onlinedocs/gcc/\+Machine-\/\+Constraints.\+html}} 
+\end{DoxyEnumerate}
+\end{DoxyNote}

@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pg__types_8h" kind="file" language="C++">
+    <compoundname>pg_types.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includedby refid="pgable_8h" local="yes">/home/data/proj/oskernel2023-x2w/include/pgable.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/pg_types.h</label>
+        <link refid="pg__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constrains.h</label>
+        <link refid="constrains_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/data/proj/oskernel2023-x2w/include/pg_types.h</label>
+        <link refid="pg__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/data/proj/oskernel2023-x2w/include/pgable.h</label>
+        <link refid="pgable_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/data/proj/oskernel2023-x2w/include/mm.h</label>
+        <link refid="mm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpte__t" prot="public">pte_t</innerclass>
+    <innerclass refid="structpmd__t" prot="public">pmd_t</innerclass>
+    <innerclass refid="structpud__t" prot="public">pud_t</innerclass>
+    <innerclass refid="structpgd__t" prot="public">pgd_t</innerclass>
+    <innerclass refid="structpgprot__t" prot="public">pgprot_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pg__types_8h_1a6bf1a98e277eada2b20f2f5f3f5abba3" prot="public" static="no">
+        <name>pte_val</name>
+        <param><defname>x</defname></param>
+        <initializer>((x).pte)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="30" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1aab1779a2c0dcacac9d7139cc8ab8ecfc" prot="public" static="no">
+        <name>__pte</name>
+        <param><defname>x</defname></param>
+        <initializer>((<ref refid="structpte__t" kindref="compound">pte_t</ref>) { (x) })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="31" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a0a8ef916b62273864ffbcf476f6900b9" prot="public" static="no">
+        <name>pmd_val</name>
+        <param><defname>x</defname></param>
+        <initializer>((x).pmd)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="40" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a80aab7b44a98e6dc12c14cd3621fce73" prot="public" static="no">
+        <name>__pmd</name>
+        <param><defname>x</defname></param>
+        <initializer>((<ref refid="structpmd__t" kindref="compound">pmd_t</ref>) { (x) })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="41" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a7bd22eb9cad6d3ea3fd4c2de968ffca3" prot="public" static="no">
+        <name>pud_val</name>
+        <param><defname>x</defname></param>
+        <initializer>((x).pud)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="50" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a179b8c265a6d32b69040ed747bc76c45" prot="public" static="no">
+        <name>__pud</name>
+        <param><defname>x</defname></param>
+        <initializer>((<ref refid="structpud__t" kindref="compound">pud_t</ref>) { (x) })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="51" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a605d4f89239af1a95251c3f71f75b9f9" prot="public" static="no">
+        <name>pgd_val</name>
+        <param><defname>x</defname></param>
+        <initializer>((x).pgd)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="60" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a974f59e880f89bd8f4e41b5661e4c5dc" prot="public" static="no">
+        <name>__pgd</name>
+        <param><defname>x</defname></param>
+        <initializer>((<ref refid="structpgd__t" kindref="compound">pgd_t</ref>) { (x) })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="61" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a02f3364ea339abc727ddb02ff7225695" prot="public" static="no">
+        <name>pgprot_val</name>
+        <param><defname>x</defname></param>
+        <initializer>((x).pgprot)</initializer>
+        <briefdescription>
+<para>从pgprot_t结构体中获取其描述页表项PTE的属性的pgprot值 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="76" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pg__types_8h_1a3229d63d516d27f251870149747fa12c" prot="public" static="no">
+        <name>__pgprot</name>
+        <param><defname>x</defname></param>
+        <initializer>((<ref refid="structpgprot__t" kindref="compound">pgprot_t</ref>) { (x) })</initializer>
+        <briefdescription>
+<para>根据X的值获得一个pgprot_t结构体，用来描述页表项PTE的属性（是否可写，是否有效等等） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="82" column="9" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pg__types_8h_1a342b3981fd1ce5061c45236ab80b772c" prot="public" static="no">
+        <type><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref></type>
+        <definition>typedef uint64_t pteval_t</definition>
+        <argsstring></argsstring>
+        <name>pteval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="18" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pg__types_8h_1ac5eef375453647c116dfa0b5e7d2ff91" prot="public" static="no">
+        <type><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref></type>
+        <definition>typedef uint64_t pmdval_t</definition>
+        <argsstring></argsstring>
+        <name>pmdval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="19" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pg__types_8h_1a105d6845c510e10dcef536fac99fb10d" prot="public" static="no">
+        <type><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref></type>
+        <definition>typedef uint64_t pudval_t</definition>
+        <argsstring></argsstring>
+        <name>pudval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="20" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pg__types_8h_1a3cdb01f13bfcaa52230e86836314d7a2" prot="public" static="no">
+        <type><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref></type>
+        <definition>typedef uint64_t pgdval_t</definition>
+        <argsstring></argsstring>
+        <name>pgdval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="21" column="18" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><computeroutput><ref refid="pg__types_8h" kindref="compound">pg_types.h</ref></computeroutput>提供了一些内存管理的类型定义 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Zhuir Xiao (<ulink url="mailto:xzr3356142450@gmail.com">xzr3356142450@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-04-27</para>
+</simplesect>
+<simplesect kind="warning"><para></para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="preprocessor">#ifndef<sp/>ASM_PGTABLE_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASM_PGTABLE_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref><sp/>pteval_t;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref><sp/>pmdval_t;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref><sp/>pudval_t;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="types_8h_1aa232ecf786a74ce5363c36c10798d2b1" kindref="member">uint64_t</ref><sp/>pgdval_t;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structpte__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>pteval_t<sp/>pte;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/><ref refid="structpte__t" kindref="compound">pte_t</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pte_val(x)<sp/>((x).pte)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__pte(x)<sp/>((pte_t)<sp/>{<sp/>(x)<sp/>})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structpmd__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>pmdval_t<sp/>pmd;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/><ref refid="structpmd__t" kindref="compound">pmd_t</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pmd_val(x)<sp/>((x).pmd)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__pmd(x)<sp/>((pmd_t)<sp/>{<sp/>(x)<sp/>})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structpud__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>pudval_t<sp/>pud;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="structpud__t" kindref="compound">pud_t</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pud_val(x)<sp/>((x).pud)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__pud(x)<sp/>((pud_t)<sp/>{<sp/>(x)<sp/>})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structpgd__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>pgdval_t<sp/>pgd;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><ref refid="structpgd__t" kindref="compound">pgd_t</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pgd_val(x)<sp/>((x).pgd)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__pgd(x)<sp/>((pgd_t)<sp/>{<sp/>(x)<sp/>})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structpgprot__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pgprot;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="structpgprot__t" kindref="compound">pgprot_t</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="pg__types_8h_1a02f3364ea339abc727ddb02ff7225695" refkind="member"><highlight class="preprocessor">#define<sp/>pgprot_val(x)<sp/><sp/><sp/>((x).pgprot)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="pg__types_8h_1a3229d63d516d27f251870149747fa12c" refkind="member"><highlight class="preprocessor">#define<sp/>__pgprot(x)<sp/>((pgprot_t)<sp/>{<sp/>(x)<sp/>})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*ASM_PGTABLE_TYPES_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h"/>
+  </compounddef>
+</doxygen>

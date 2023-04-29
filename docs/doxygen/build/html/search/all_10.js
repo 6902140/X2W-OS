@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['page_5falign_177',['PAGE_ALIGN',['../mm_8h.html#a573f7d87a906903bec10256e19a8bb14',1,'mm.h']]],
+  ['page_5fshift_178',['PAGE_SHIFT',['../mm_8h.html#a850d80ca2291d26b40dc6b25c419f81a',1,'mm.h']]],
+  ['page_5fsize_179',['PAGE_SIZE',['../mm_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e',1,'mm.h']]],
+  ['paging_5finit_180',['paging_init',['../mm_8h.html#a0652f9c27490845217db5f3400a0f12c',1,'mm.h']]],
+  ['pg_5fattr_2eh_181',['pg_attr.h',['../pg__attr_8h.html',1,'']]],
+  ['pg_5ftypes_2eh_182',['pg_types.h',['../pg__types_8h.html',1,'']]],
+  ['pgd_5ft_183',['pgd_t',['../structpgd__t.html',1,'']]],
+  ['pgprot_5ft_184',['pgprot_t',['../structpgprot__t.html',1,'']]],
+  ['pgprot_5fval_185',['pgprot_val',['../pg__types_8h.html#a02f3364ea339abc727ddb02ff7225695',1,'pg_types.h']]],
+  ['pmd_5ft_186',['pmd_t',['../structpmd__t.html',1,'']]],
+  ['pool_5ft_187',['pool_t',['../mm_8h.html#ab4e8bc202de3328ef1923785bfff3065',1,'mm.h']]],
+  ['prev_188',['prev',['../struct____list__elem__t.html#a2c866e1669966b579fb5250a8cc921c5',1,'__list_elem_t']]],
+  ['print_5fgtrapframe_189',['print_gtrapframe',['../trapframe_8h.html#aa2c72627c8a7364d0ffa8b93f3b9ebe4',1,'trapframe.h']]],
+  ['print_5fkmem_190',['print_kmem',['../kmain_8h.html#a13e526f3bf3f8afd29676e0be88a20e4',1,'kmain.h']]],
+  ['print_5fktrapframe_191',['print_ktrapframe',['../trapframe_8h.html#a63953911ad2767d9f6001c191cde476b',1,'trapframe.h']]],
+  ['print_5fstrapframe_192',['print_strapframe',['../trapframe_8h.html#af3b65ddc32145c57dd729fd2f926ce44',1,'trapframe.h']]],
+  ['printf_5fstring_5fsize_193',['PRINTF_STRING_SIZE',['../constrains_8h.html#a9378dd52d6cbf1e8a87b58570fda75a6',1,'constrains.h']]],
+  ['printf_5ft_194',['printf_t',['../trapframe_8h.html#ab7fb0a8d1c81ba64631d0af5eeae5336',1,'trapframe.h']]],
+  ['privilege_5fm_195',['PRIVILEGE_M',['../csr_8h.html#a61fcc9c63b58417818381f5d03420536',1,'csr.h']]],
+  ['privilege_5fs_196',['PRIVILEGE_S',['../csr_8h.html#af76a15d4ca67c4f2def9490c764f5aa4',1,'csr.h']]],
+  ['privilege_5fu_197',['PRIVILEGE_U',['../csr_8h.html#a37ad3140d4956a01548f08823d84d0cc',1,'csr.h']]],
+  ['pt_5fregs_198',['pt_regs',['../structpt__regs.html',1,'']]],
+  ['pte_5ft_199',['pte_t',['../structpte__t.html',1,'']]],
+  ['pud_5ft_200',['pud_t',['../structpud__t.html',1,'']]]
+];

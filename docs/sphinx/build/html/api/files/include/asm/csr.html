@@ -1,0 +1,915 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>asm/csr.h &#8212; X2W-OS 0.1 文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/files/include/asm/csr';</script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../search.html" />
+    <link rel="next" title="asm/uart.h" href="uart.html" />
+    <link rel="prev" title="Files" href="../../../files.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">X2W-OS 0.1 文档</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/compile-tutorial.html">
+                        X2W-OS Make Targets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/development-tutorial.html">
+                        X2W-OS Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html">
+                        内存管理
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%BC%82%E5%B8%B8_%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.html">
+                        中断/异常处理机制
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../files.html">
+                        Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../functions.html">
+                        Functions
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/compile-tutorial.html">
+                        X2W-OS Make Targets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/development-tutorial.html">
+                        X2W-OS Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html">
+                        内存管理
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%BC%82%E5%B8%B8_%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.html">
+                        中断/异常处理机制
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../files.html">
+                        Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../functions.html">
+                        Functions
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">asm/csr.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uart.html">asm/uart.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constrains.html">constrains.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../init.html">init.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io.html">io.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kstdio.html">kstdio.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg.html">stdarg.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbitmap.html">stdbitmap.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdfmt.html">stdfmt.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">stdlib.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlist.html">stdlist.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string.html">string.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test.html">test.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types.html">types.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uart.html">uart.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ustdio.html">ustdio.h</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../files.html" class="nav-link">Files</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">asm/csr.h</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="asm-csr-h">
+<h1>asm/csr.h<a class="headerlink" href="#asm-csr-h" title="此标题的永久链接">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">csr.h</span></code>提供了读写<code class="docutils literal notranslate"><span class="pre">RISC-V</span></code>体系结构中的<code class="docutils literal notranslate"><span class="pre">CSR</span></code>寄存器(<code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">and</span> <span class="pre">Status</span></code>)的函数 </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Shihong Wang (<a class="reference external" href="mailto:jack4shihong&#37;&#52;&#48;gamil&#46;com">jack4shihong<span>&#64;</span>gamil<span>&#46;</span>com</a>) </p>
+</dd>
+<dt><strong>Version</strong></dt><dd><p>0.1 </p>
+</dd>
+<dt><strong>Date</strong></dt><dd><p>2023-04-09</p>
+</dd>
+<dt><strong>Copyright</strong></dt><dd><p>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>参考RISC-V架构手册:<ol class="arabic simple">
+<li><p><a class="github reference external" href="https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMAFDQC/riscv-spec-20191213.pdf">riscv/riscv-isa-manual</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/riscv/riscv-isa-manual/releases/download/Priv-v1.12/riscv-privileged-20211203.pdf">riscv/riscv-isa-manual</a></p></li>
+</ol>
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>一些有用的博客:<ol class="arabic simple">
+<li><p><a class="reference external" href="https://dingfen.github.io/risc-v/2020/08/05/riscv-privileged.html#%E4%B8%AD%E6%96%AD%E4%B8%8E%E5%BC%82%E5%B8%B8">https://dingfen.github.io/risc-v/2020/08/05/riscv-privileged.html#%E4%B8%AD%E6%96%AD%E4%B8%8E%E5%BC%82%E5%B8%B8</a></p></li>
+</ol>
+</p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SATP_MODE_39">
+<span class="target" id="csr_8h_1abe90ababbc031e196e373c27c729ecde"></span><span class="sig-name descname"><span class="n"><span class="pre">SATP_MODE_39</span></span></span><a class="headerlink" href="#c.SATP_MODE_39" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRIVILEGE_U">
+<span class="target" id="csr_8h_1a37ad3140d4956a01548f08823d84d0cc"></span><span class="sig-name descname"><span class="n"><span class="pre">PRIVILEGE_U</span></span></span><a class="headerlink" href="#c.PRIVILEGE_U" title="永久链接至目标">#</a><br /></dt>
+<dd><p>用户态特权级 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRIVILEGE_S">
+<span class="target" id="csr_8h_1af76a15d4ca67c4f2def9490c764f5aa4"></span><span class="sig-name descname"><span class="n"><span class="pre">PRIVILEGE_S</span></span></span><a class="headerlink" href="#c.PRIVILEGE_S" title="永久链接至目标">#</a><br /></dt>
+<dd><p>监管态特权级 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PRIVILEGE_M">
+<span class="target" id="csr_8h_1a61fcc9c63b58417818381f5d03420536"></span><span class="sig-name descname"><span class="n"><span class="pre">PRIVILEGE_M</span></span></span><a class="headerlink" href="#c.PRIVILEGE_M" title="永久链接至目标">#</a><br /></dt>
+<dd><p>机器态特权级 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.INTR_DS">
+<span class="target" id="csr_8h_1a93f797aa24a8dcc039cdb87774c979e2"></span><span class="sig-name descname"><span class="n"><span class="pre">INTR_DS</span></span></span><a class="headerlink" href="#c.INTR_DS" title="永久链接至目标">#</a><br /></dt>
+<dd><p>中断开启 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.INTR_EN">
+<span class="target" id="csr_8h_1a918fc7ae0a636b642d2a37f5c2e963ab"></span><span class="sig-name descname"><span class="n"><span class="pre">INTR_EN</span></span></span><a class="headerlink" href="#c.INTR_EN" title="永久链接至目标">#</a><br /></dt>
+<dd><p>中断关闭 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPP_SHIFT">
+<span class="target" id="csr_8h_1ac7a0e3b7853cd17e669f0f5da78cf905"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPP_SHIFT</span></span></span><a class="headerlink" href="#c.MSTATUS_MPP_SHIFT" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPP</span></code>域在<code class="docutils literal notranslate"><span class="pre">mstatus</span></code>寄存器的偏移 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPP">
+<span class="target" id="csr_8h_1a2acf460f4ceda869c88c00878cb44314"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPP</span></span></span><a class="headerlink" href="#c.MSTATUS_MPP" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPP</span></code>域选择子 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPP_U">
+<span class="target" id="csr_8h_1aebc8dae20b3f619d03f0291db287f6de"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPP_U</span></span></span><a class="headerlink" href="#c.MSTATUS_MPP_U" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPP</span> <span class="pre">=</span> <span class="pre">0b00</span></code>, 中断发生前的特权级为U </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPP_S">
+<span class="target" id="csr_8h_1a484f2297ebe1535484c13f12f70e602a"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPP_S</span></span></span><a class="headerlink" href="#c.MSTATUS_MPP_S" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPP</span> <span class="pre">=</span> <span class="pre">0b01</span></code>, 中断发生前的特权级为S </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPP_M">
+<span class="target" id="csr_8h_1aa6621785868a067469e73ac9babeed99"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPP_M</span></span></span><a class="headerlink" href="#c.MSTATUS_MPP_M" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPP</span> <span class="pre">=</span> <span class="pre">0b11</span></code>, 中断发生前的特权级为M </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPIE_SHIFT">
+<span class="target" id="csr_8h_1a5b7a508b30cc8240d85c72373075130f"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPIE_SHIFT</span></span></span><a class="headerlink" href="#c.MSTATUS_MPIE_SHIFT" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPIE</span></code>域在<code class="docutils literal notranslate"><span class="pre">mstatus</span></code>寄存器的偏移 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPIE">
+<span class="target" id="csr_8h_1a05fc511bb3d22b5e1abe8b9ccb30e7b3"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPIE</span></span></span><a class="headerlink" href="#c.MSTATUS_MPIE" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPIE</span></code>域选择子 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPIE_DS">
+<span class="target" id="csr_8h_1a0d829111cf513e8d2ccf2ab434b17bdd"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPIE_DS</span></span></span><a class="headerlink" href="#c.MSTATUS_MPIE_DS" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPIE</span> <span class="pre">=</span> <span class="pre">0</span></code>, 中断发生前中断关闭 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MSTATUS_MPIE_EN">
+<span class="target" id="csr_8h_1a6ef6d2229ec2a9328ff08de7dea7cc9c"></span><span class="sig-name descname"><span class="n"><span class="pre">MSTATUS_MPIE_EN</span></span></span><a class="headerlink" href="#c.MSTATUS_MPIE_EN" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MPIE</span> <span class="pre">=</span> <span class="pre">1</span></code>, 中断发生前中断开启 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TVEC_TRAP_DIRECT">
+<span class="target" id="csr_8h_1a9fa813a9ac9c0fdd06b56201acd6a593"></span><span class="sig-name descname"><span class="n"><span class="pre">TVEC_TRAP_DIRECT</span></span></span><a class="headerlink" href="#c.TVEC_TRAP_DIRECT" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">TVEC_TRAP_DIRECT</span></code>宏表示<code class="docutils literal notranslate"><span class="pre">mtvec</span></code>寄存器处于直接模式 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TVEC_TRAP_INDIRECT">
+<span class="target" id="csr_8h_1aa12a22dbf2aa87997035c18f1b76c175"></span><span class="sig-name descname"><span class="n"><span class="pre">TVEC_TRAP_INDIRECT</span></span></span><a class="headerlink" href="#c.TVEC_TRAP_INDIRECT" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">MTVEC_TRAP_INDIRECT</span></code>宏表示<code class="docutils literal notranslate"><span class="pre">mtvec</span></code>寄存器处于间接模式 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_FLAG">
+<span class="target" id="csr_8h_1aef218b97155a1af82eb4129c309889ff"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_FLAG</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_FLAG" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CAUSE_INTERRUPT_FLAG</span></code>宏用于判断当前陷入是否为中断 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_FLAG">
+<span class="target" id="csr_8h_1add33b6ebebec022bf3b124bf429482ac"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_FLAG</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_FLAG" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CAUSE_EXCEPTION_FLAG</span></code>宏用于判断当前陷入是否为异常 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_MISALIGNED_FETCH">
+<span class="target" id="csr_8h_1aa75388e27235c7b388af4f88ea4de30c"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_MISALIGNED_FETCH</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_MISALIGNED_FETCH" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_FETCH_ACCESS">
+<span class="target" id="csr_8h_1a415d18c5786e6465bb3b1bc8f3baeb21"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_FETCH_ACCESS</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_FETCH_ACCESS" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_ILLEGAL_INSTRUCTION">
+<span class="target" id="csr_8h_1a7a290a6569311a1a437d368c3dfc19dd"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_ILLEGAL_INSTRUCTION</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_ILLEGAL_INSTRUCTION" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_BREAKPOINT">
+<span class="target" id="csr_8h_1ac3a63cbefe5dbb40124e1c6282475606"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_BREAKPOINT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_BREAKPOINT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_MISALIGNED_LOAD">
+<span class="target" id="csr_8h_1aebf57c1677a8867b38a302d8649ee0ae"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_MISALIGNED_LOAD</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_MISALIGNED_LOAD" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_LOAD_ACCESS">
+<span class="target" id="csr_8h_1addec7d0bf0db39e50dc98929932e069f"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_LOAD_ACCESS</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_LOAD_ACCESS" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_MISALIGNED_STORE">
+<span class="target" id="csr_8h_1a1be2287df370d3ca2634a3dfb1c0fb65"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_MISALIGNED_STORE</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_MISALIGNED_STORE" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_STORE_ACCESS">
+<span class="target" id="csr_8h_1afbb82cc93014b07f9b16dd512cc4073e"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_STORE_ACCESS</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_STORE_ACCESS" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_USER_ECALL">
+<span class="target" id="csr_8h_1aeaf8b89d849833447273cb34b86314cc"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_USER_ECALL</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_USER_ECALL" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_SUPERVISOR_ECALL">
+<span class="target" id="csr_8h_1a2ac310d1549659c056128c7e638baa10"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_SUPERVISOR_ECALL</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_SUPERVISOR_ECALL" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_VIRTUAL_SUPERVISOR_ECALL">
+<span class="target" id="csr_8h_1a22297fe99a059da2b933ac65465dcd53"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_VIRTUAL_SUPERVISOR_ECALL</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_VIRTUAL_SUPERVISOR_ECALL" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_MACHINE_ECALL">
+<span class="target" id="csr_8h_1a0b6e1f90e8a71d8a408403f9dfeb11f0"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_MACHINE_ECALL</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_MACHINE_ECALL" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_FETCH_PAGE_FAULT">
+<span class="target" id="csr_8h_1aa01619cb10a923eab5fbcab0e02328c0"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_FETCH_PAGE_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_FETCH_PAGE_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_LOAD_PAGE_FAULT">
+<span class="target" id="csr_8h_1a6adb3513f1f1b2f7f5eb240738cb459b"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_LOAD_PAGE_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_LOAD_PAGE_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_STORE_PAGE_FAULT">
+<span class="target" id="csr_8h_1ae520779fdaf92132d1158ff98b8d0090"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_STORE_PAGE_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_STORE_PAGE_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_FETCH_GUEST_PAGE_FAULT">
+<span class="target" id="csr_8h_1a4e34e7e27dbfedf1439841e7197055f4"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_FETCH_GUEST_PAGE_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_FETCH_GUEST_PAGE_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_LOAD_GUEST_PAGE_FAULT">
+<span class="target" id="csr_8h_1ae15cd727a3ff3f1170271c1789b18ff0"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_LOAD_GUEST_PAGE_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_LOAD_GUEST_PAGE_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_VIRTUAL_INST_FAULT">
+<span class="target" id="csr_8h_1a29cb2113270261161ae62fbcc1757a0d"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_VIRTUAL_INST_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_VIRTUAL_INST_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_EXCEPTION_STORE_GUEST_PAGE_FAULT">
+<span class="target" id="csr_8h_1a3c3b6c845ff2ec0d59e899ea4a0761ab"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_EXCEPTION_STORE_GUEST_PAGE_FAULT</span></span></span><a class="headerlink" href="#c.CAUSE_EXCEPTION_STORE_GUEST_PAGE_FAULT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_U_SOFTWARE_INTERRUPT">
+<span class="target" id="csr_8h_1abdb78e038610d0741be3de20372433ce"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_U_SOFTWARE_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_U_SOFTWARE_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_S_SOFTWARE_INTERRUPT">
+<span class="target" id="csr_8h_1ae6cd48b2ed18acc2c8178b70cf05da41"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_S_SOFTWARE_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_S_SOFTWARE_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_M_SOFTWARE_INTERRUPT">
+<span class="target" id="csr_8h_1a80fdade90011f1312a6a56a7195f3040"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_M_SOFTWARE_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_M_SOFTWARE_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_U_TIMER_INTERRUPT">
+<span class="target" id="csr_8h_1a9ac68adf705b9331a4c94b159687d30d"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_U_TIMER_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_U_TIMER_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_S_TIMER_INTERRUPT">
+<span class="target" id="csr_8h_1af1463e49018ac4b6a6ddf7670769b072"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_S_TIMER_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_S_TIMER_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_M_TIMER_INTERRUPT">
+<span class="target" id="csr_8h_1a160e1f44ce942d80e5f0e512673a8e3c"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_M_TIMER_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_M_TIMER_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_U_EXTERNAL_INTERRUPT">
+<span class="target" id="csr_8h_1ab5fabf52b94702133bbb3d17046caf44"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_U_EXTERNAL_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_U_EXTERNAL_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_S_EXTERNAL_INTERRUPT">
+<span class="target" id="csr_8h_1a6099f1bd2cc677b042f9391773cece10"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_S_EXTERNAL_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_S_EXTERNAL_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CAUSE_INTERRUPT_M_EXTERNAL_INTERRUPT">
+<span class="target" id="csr_8h_1ae2b18dc42bfe5bc31ec1d0956b976efa"></span><span class="sig-name descname"><span class="n"><span class="pre">CAUSE_INTERRUPT_M_EXTERNAL_INTERRUPT</span></span></span><a class="headerlink" href="#c.CAUSE_INTERRUPT_M_EXTERNAL_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_U_SOFTWARE_INTERRUPT">
+<span class="target" id="csr_8h_1a462f547447f3751fa2d55f04ba01fab6"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_U_SOFTWARE_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_U_SOFTWARE_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_S_SOFTWARE_INTERRUPT">
+<span class="target" id="csr_8h_1a110d08135f6f60deee9b7402955d731f"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_S_SOFTWARE_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_S_SOFTWARE_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_M_SOFTWARE_INTERRUPT">
+<span class="target" id="csr_8h_1a1bfcda08e15446e332ee5c97e7451c1e"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_M_SOFTWARE_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_M_SOFTWARE_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_U_TIMER_INTERRUPT">
+<span class="target" id="csr_8h_1a4ecd0f900d49546be4cf57fd6a1402a5"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_U_TIMER_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_U_TIMER_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_S_TIMER_INTERRUPT">
+<span class="target" id="csr_8h_1a023632324cde4e1787f61bf373bb6a38"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_S_TIMER_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_S_TIMER_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_M_TIMER_INTERRUPT">
+<span class="target" id="csr_8h_1af7e7ae7a988b64226b794354bf6b57d1"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_M_TIMER_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_M_TIMER_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_U_EXTERNAL_INTERRUPT">
+<span class="target" id="csr_8h_1a575942391b8f0686bec79151eeadb82e"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_U_EXTERNAL_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_U_EXTERNAL_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_S_EXTERNAL_INTERRUPT">
+<span class="target" id="csr_8h_1ab00ed7cdf31f5a872f798ed2240efbd8"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_S_EXTERNAL_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_S_EXTERNAL_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MIP_M_EXTERNAL_INTERRUPT">
+<span class="target" id="csr_8h_1a297777e25396598b0ea467b6e8187ec3"></span><span class="sig-name descname"><span class="n"><span class="pre">MIP_M_EXTERNAL_INTERRUPT</span></span></span><a class="headerlink" href="#c.MIP_M_EXTERNAL_INTERRUPT" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SET_FIELD">
+<span class="target" id="csr_8h_1aea23c529d81311e98bf5756f13e20b53"></span><span class="sig-name descname"><span class="n"><span class="pre">SET_FIELD</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">origin</span></span>, <span class="n"><span class="pre">which</span></span>, <span class="n"><span class="pre">fieldval</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SET_FIELD" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">SET_FIELD</span></code>宏用于将<code class="docutils literal notranslate"><span class="pre">origin</span></code>中<code class="docutils literal notranslate"><span class="pre">which</span></code>所指定的<code class="docutils literal notranslate"><span class="pre">field</span></code>的值设置为<code class="docutils literal notranslate"><span class="pre">fieldval</span></code></p>
+<p>
+一个详细的例子<code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">=</span> <span class="pre">0b1001_0001</span></code>, <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">=</span> <span class="pre">0b0011_0000</span></code>, <code class="docutils literal notranslate"><span class="pre">fieldval</span> <span class="pre">=</span> <span class="pre">0b11</span></code>则:<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">&amp;</span> <span class="pre">~(which</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">=</span> <span class="pre">0b0001_0000</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldval</span> <span class="pre">*</span> <span class="pre">(which</span> <span class="pre">&amp;</span> <span class="pre">~(which</span> <span class="pre">-</span> <span class="pre">1))</span> <span class="pre">=</span> <span class="pre">0b0011_0000</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">&amp;</span> <span class="pre">!(which)</span> <span class="pre">=</span> <span class="pre">0b1011_0001</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">|</span> <span class="pre">...</span> <span class="pre">=</span> <span class="pre">0b1000_0000</span></code></p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>需要注意的点:<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&amp;</span> <span class="pre">~mask</span></code>: 将x的非<code class="docutils literal notranslate"><span class="pre">mask</span></code>清0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&amp;</span> <span class="pre">~(x</span> <span class="pre">-</span> <span class="pre">1)</span></code>: 用于一个数的二进制表示中最右边的非零位（也称作最低位的1），并将其它位都置为0</p></li>
+<li><p>而后利用这个最右边的非零位表示需要左移多少位, 这里是用乘法实现的左移</p></li>
+<li><p>最后在和mask对应位清0之后的原值与就能得到最终需要的值</p></li>
+</ul>
+</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>origin</strong> – 初始值 </p></li>
+<li><p><strong>which</strong> – 设置的<code class="docutils literal notranslate"><span class="pre">field</span></code></p></li>
+<li><p><strong>fieldval</strong> – <code class="docutils literal notranslate"><span class="pre">field</span></code>将被设置的值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.read_csr">
+<span class="target" id="csr_8h_1a29cc2e18dc58da69b8d351a52e193df9"></span><span class="sig-name descname"><span class="n"><span class="pre">read_csr</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">csr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.read_csr" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">read_csr</span></code>用于读取的<code class="docutils literal notranslate"><span class="pre">csr</span></code>寄存器的值并返回 </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>通常情况下，在内联汇编代码块的最后一条语句中将需要返回的值存储在一个特定的变量中，然后该变量将被作为代码块的返回值返回给调用者。在GCC扩展中，这个变量通常被命名为__v（两个下划线 + v），并且在代码块的最后一行写上__v;语句来表示将其作为返回值返回给调用者。 </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>写入到<code class="docutils literal notranslate"><span class="pre">CSR</span></code>寄存器的变量必须要存在通用寄存器中 </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">read_csr</span></code>中使用<code class="docutils literal notranslate"><span class="pre">#</span></code>将<code class="docutils literal notranslate"><span class="pre">csr</span></code>转为字符串, 而后利用<code class="docutils literal notranslate"><span class="pre">C</span></code>语言的字符串拼接得到最终的汇编语句 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csr</strong> – 要读取的<code class="docutils literal notranslate"><span class="pre">CSR</span></code>寄存器名</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>uint64_t 读取得到的<code class="docutils literal notranslate"><span class="pre">csr</span></code>寄存器的值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.write_csr">
+<span class="target" id="csr_8h_1a920ec7be97d0deaaf7e4734fb062c555"></span><span class="sig-name descname"><span class="n"><span class="pre">write_csr</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">csr</span></span>, <span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.write_csr" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">write_csr</span></code>用于将<code class="docutils literal notranslate"><span class="pre">csr</span></code>寄存器的值设置为<code class="docutils literal notranslate"><span class="pre">value</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">rK</span></code>约束参考, <code class="docutils literal notranslate"><span class="pre">r</span></code>是简单约束, <code class="docutils literal notranslate"><span class="pre">K</span></code>是<code class="docutils literal notranslate"><span class="pre">RISC-V</span></code>的机器限定约束:<ol class="loweralpha simple">
+<li><p><a class="reference external" href="https://gcc.gnu.org/onlinedocs/gcc/Simple-Constraints.html">https://gcc.gnu.org/onlinedocs/gcc/Simple-Constraints.html</a></p></li>
+<li><p><a class="reference external" href="https://gcc.gnu.org/onlinedocs/gcc/Machine-Constraints.html">https://gcc.gnu.org/onlinedocs/gcc/Machine-Constraints.html</a></p></li>
+</ol>
+</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csr</strong> – 要设置的<code class="docutils literal notranslate"><span class="pre">CSR</span></code>寄存器名 </p></li>
+<li><p><strong>value</strong> – 要设置的值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../../files.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">Files</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="uart.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">asm/uart.h</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../../../_sources/api/files/include/asm/csr.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> 显示源代码
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Shihong Wang, Shaofei Wang, Zhuiri Xiao.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

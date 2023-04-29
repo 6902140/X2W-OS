@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_69f6b0b437b9d7106ae46b3b241ba72b" kind="dir">
+    <compoundname>/home/data/proj/oskernel2023-x2w/include/test</compoundname>
+    <innerfile refid="test_8h">test.h</innerfile>
+    <innerfile refid="test__kstdio_8h">test_kstdio.h</innerfile>
+    <innerfile refid="test__memory_8h">test_memory.h</innerfile>
+    <innerfile refid="test__stdfmt_8h">test_stdfmt.h</innerfile>
+    <innerfile refid="test__stdlib_8h">test_stdlib.h</innerfile>
+    <innerfile refid="test__strap_8h">test_strap.h</innerfile>
+    <innerfile refid="test__string_8h">test_string.h</innerfile>
+    <innerfile refid="test__uart_8h">test_uart.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/data/proj/oskernel2023-x2w/include/test/"/>
+  </compounddef>
+</doxygen>

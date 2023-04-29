@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>asm/uart.h &#8212; X2W-OS 0.1 文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/files/include/asm/uart';</script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../search.html" />
+    <link rel="next" title="constrains.h" href="../constrains.html" />
+    <link rel="prev" title="asm/csr.h" href="csr.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">X2W-OS 0.1 文档</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/compile-tutorial.html">
+                        X2W-OS Make Targets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/development-tutorial.html">
+                        X2W-OS Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html">
+                        内存管理
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%BC%82%E5%B8%B8_%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.html">
+                        中断/异常处理机制
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../files.html">
+                        Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../functions.html">
+                        Functions
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/compile-tutorial.html">
+                        X2W-OS Make Targets
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../docs/development-tutorial.html">
+                        X2W-OS Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html">
+                        内存管理
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../notes/%E5%BC%82%E5%B8%B8_%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86.html">
+                        中断/异常处理机制
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../files.html">
+                        Files
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../functions.html">
+                        Functions
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="csr.html">asm/csr.h</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">asm/uart.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constrains.html">constrains.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../init.html">init.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../io.html">io.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kstdio.html">kstdio.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdarg.html">stdarg.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdbitmap.html">stdbitmap.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdfmt.html">stdfmt.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">stdlib.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlist.html">stdlist.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../string.html">string.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test.html">test.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types.html">types.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uart.html">uart.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ustdio.html">ustdio.h</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../files.html" class="nav-link">Files</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">asm/uart.h</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="asm-uart-h">
+<h1>asm/uart.h<a class="headerlink" href="#asm-uart-h" title="此标题的永久链接">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">asm/uart.h</span></code>文件中定义了<code class="docutils literal notranslate"><span class="pre">AXI</span> <span class="pre">UART</span> <span class="pre">16550</span></code>相关的常量 </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Shihong Wang (<a class="reference external" href="mailto:jack4shihong&#37;&#52;&#48;gamil&#46;com">jack4shihong<span>&#64;</span>gamil<span>&#46;</span>com</a>) </p>
+</dd>
+<dt><strong>Version</strong></dt><dd><p>0.1 </p>
+</dd>
+<dt><strong>Date</strong></dt><dd><p>2023-04-09</p>
+</dd>
+<dt><strong>Copyright</strong></dt><dd><p>Copyright Shihong Wang (c) 2023 with GNU Public License V3.0 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>关于<code class="docutils literal notranslate"><span class="pre">AXI</span> <span class="pre">UART</span> <span class="pre">16550</span></code>芯片介绍: <a class="reference external" href="https://wenku.baidu.com/view/6f7a176048d7c1c708a14521.html?_wkts_=1681021571718">https://wenku.baidu.com/view/6f7a176048d7c1c708a14521.html?_wkts_=1681021571718</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>关于<code class="docutils literal notranslate"><span class="pre">AXI</span> <span class="pre">UART</span> <span class="pre">16550</span></code>相关常量, 参考<code class="docutils literal notranslate"><span class="pre">AXI</span> <span class="pre">UART</span> <span class="pre">16550</span></code>编程手册(<code class="docutils literal notranslate"><span class="pre">Programming</span> <span class="pre">Table</span></code>): <a class="reference external" href="http://byterunner.com/16550.html">http://byterunner.com/16550.html</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p><code class="docutils literal notranslate"><span class="pre">asm/uart.h</span></code>仅提供<code class="docutils literal notranslate"><span class="pre">AXI</span> <span class="pre">UART</span> <span class="pre">16550</span></code>相关常量的定义, <code class="docutils literal notranslate"><span class="pre">UART</span></code>相关功能定义在<code class="docutils literal notranslate"><span class="pre">uart.h</span></code>中</p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART">
+<span class="target" id="asm_2uart_8h_1af7cb12b462b4594bd759d1b4e241ec4c"></span><span class="sig-name descname"><span class="n"><span class="pre">UART</span></span></span><a class="headerlink" href="#c.UART" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_SIZE">
+<span class="target" id="asm_2uart_8h_1ac0b0689b015ac9657c7fdf082797e88e"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_SIZE</span></span></span><a class="headerlink" href="#c.UART_SIZE" title="永久链接至目标">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART16550_CLOCK">
+<span class="target" id="asm_2uart_8h_1a87b7a54cec0c7dfafa97d47e7cfd988e"></span><span class="sig-name descname"><span class="n"><span class="pre">UART16550_CLOCK</span></span></span><a class="headerlink" href="#c.UART16550_CLOCK" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AXI</span> <span class="pre">UART</span> <span class="pre">16550</span></code>芯片的时钟频率, 设置波特率时将根据时钟频率计算除数 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_MMAP_BASE">
+<span class="target" id="asm_2uart_8h_1a50b083e5f3c00432ebaee95a865aa746"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_MMAP_BASE</span></span></span><a class="headerlink" href="#c.UART_MMAP_BASE" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>设备在内存中映射的起始单元 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._UART_REG">
+<span class="target" id="asm_2uart_8h_1a7f93d38a32cec4b5d5bf20def021911e"></span><span class="sig-name descname"><span class="n"><span class="pre">_UART_REG</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">offset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c._UART_REG" title="永久链接至目标">#</a><br /></dt>
+<dd><p>根据UART寄存器的偏移量计算在内存中的地址 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_DAT">
+<span class="target" id="asm_2uart_8h_1a23b9e788f979a7b74a192cfc4a3a2d96"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_DAT</span></span></span><a class="headerlink" href="#c.UART_DAT" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的数据寄存器(<code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Register</span></code>), 在发送模式和接受模式下有不同的作用 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_THR">
+<span class="target" id="asm_2uart_8h_1a7a676f075475e46d27eb878977b867ec"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_THR</span></span></span><a class="headerlink" href="#c.UART_THR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的发送数据寄存器(<code class="docutils literal notranslate"><span class="pre">Transmit</span> <span class="pre">Holding</span> <span class="pre">Register</span></code>), <code class="docutils literal notranslate"><span class="pre">UART</span></code>设备处于发送模式时候存储要发送的数据 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_RHR">
+<span class="target" id="asm_2uart_8h_1a6b1d9e511e1020db09f787660371e927"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_RHR</span></span></span><a class="headerlink" href="#c.UART_RHR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的接受数据寄存器(<code class="docutils literal notranslate"><span class="pre">Receiving</span> <span class="pre">Holding</span> <span class="pre">Register</span></code>), <code class="docutils literal notranslate"><span class="pre">UART</span></code>设备处于接收模式时候存储要接受的数据 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_IER">
+<span class="target" id="asm_2uart_8h_1aaf7aaa372e86b3aa99e6c78242be2722"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_IER</span></span></span><a class="headerlink" href="#c.UART_IER" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的中断使能寄存器(<code class="docutils literal notranslate"><span class="pre">Interrupt</span> <span class="pre">Enable</span> <span class="pre">Register</span></code>) </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">16550</span></code>支持四种中断, 优先级从高到低依次为:<ul class="simple">
+<li><p>接受出错中断</p></li>
+<li><p>接受缓冲区满中断</p></li>
+<li><p>发送缓冲区空中断</p></li>
+<li><p>Modem状态变化中断 四种中断源的使能状态由<code class="docutils literal notranslate"><span class="pre">IER</span></code>寄存器中的控制 </p></li>
+</ul>
+</p>
+</div>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_ISR">
+<span class="target" id="asm_2uart_8h_1a5e72509f2fe0cabe3a05502b2c6a867a"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_ISR</span></span></span><a class="headerlink" href="#c.UART_ISR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的中断状态寄存器(<code class="docutils literal notranslate"><span class="pre">Interrupt</span> <span class="pre">Status</span> <span class="pre">Register</span></code>) </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">16550</span></code>的四种中断源共用一条中断请求线<code class="docutils literal notranslate"><span class="pre">INTR</span></code>向<code class="docutils literal notranslate"><span class="pre">CPU</span></code>申请中断, 因此在<code class="docutils literal notranslate"><span class="pre">CPU</span></code>响应中断之后, 需要判断是那一个中断. 因此<code class="docutils literal notranslate"><span class="pre">16550</span></code>使用<code class="docutils literal notranslate"><span class="pre">ISR</span></code>寄存器表明有无中断和当前最高级别的中断 </p>
+</div>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_FCR">
+<span class="target" id="asm_2uart_8h_1a220a678f91ca8244b30fe813200c26c1"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_FCR</span></span></span><a class="headerlink" href="#c.UART_FCR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的FIFO控制寄存器(<code class="docutils literal notranslate"><span class="pre">FIFO</span> <span class="pre">Control</span> <span class="pre">Register</span></code>) </p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><code class="docutils literal notranslate"><span class="pre">UART</span></code>设备每次通信发送/接受1bit数据, 因此<code class="docutils literal notranslate"><span class="pre">16550</span></code>内部设置了缓冲区, 将发送/接受的数据保存在缓冲区中, 缓冲区空/满之后再向CPU发送中断. <code class="docutils literal notranslate"><span class="pre">16550</span></code>的缓冲区最大为16字节, 可以通过设置<code class="docutils literal notranslate"><span class="pre">FCR</span></code>设置使用的缓冲区的大小 </p>
+</div>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LCR">
+<span class="target" id="asm_2uart_8h_1a36c30861e332468c7f1998648e706740"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LCR</span></span></span><a class="headerlink" href="#c.UART_LCR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的线路控制寄存器(<code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">Control</span> <span class="pre">Register</span></code>) </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_MCR">
+<span class="target" id="asm_2uart_8h_1a8ef39bc0942ddd0411d87001d12224f4"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_MCR</span></span></span><a class="headerlink" href="#c.UART_MCR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的<code class="docutils literal notranslate"><span class="pre">Moden</span></code>控制寄存器(<code class="docutils literal notranslate"><span class="pre">Modem</span> <span class="pre">Control</span> <span class="pre">Register</span></code>) </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR">
+<span class="target" id="asm_2uart_8h_1a0f8ac527073d763bac90daba987361c6"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR</span></span></span><a class="headerlink" href="#c.UART_LSR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的线路状态寄存器(<code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">Status</span> <span class="pre">Register</span></code>) </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_MSR">
+<span class="target" id="asm_2uart_8h_1a71067c48bdde7dc6c5d0a1c56746e776"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_MSR</span></span></span><a class="headerlink" href="#c.UART_MSR" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的<code class="docutils literal notranslate"><span class="pre">Moden</span></code>状态寄存器(<code class="docutils literal notranslate"><span class="pre">Modem</span> <span class="pre">Status</span> <span class="pre">Register</span></code>) </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_DL_LSB">
+<span class="target" id="asm_2uart_8h_1a325451056249a66d1c7ceca8e52463e3"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_DL_LSB</span></span></span><a class="headerlink" href="#c.UART_DL_LSB" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的除数寄存器低八位(<code class="docutils literal notranslate"><span class="pre">Least</span> <span class="pre">Significant</span> <span class="pre">Bits</span></code>, <code class="docutils literal notranslate"><span class="pre">LSB</span> <span class="pre">of</span> <span class="pre">Divisor</span> <span class="pre">Latch</span></code>), 用于进行预分频, 即设置波特率 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_DL_MSB">
+<span class="target" id="asm_2uart_8h_1afa5670be346cb486d76bb75e732500fb"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_DL_MSB</span></span></span><a class="headerlink" href="#c.UART_DL_MSB" title="永久链接至目标">#</a><br /></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">UART</span></code>的除数寄存器高八位(<code class="docutils literal notranslate"><span class="pre">Most</span> <span class="pre">Significant</span> <span class="pre">Bits</span></code>, <code class="docutils literal notranslate"><span class="pre">MSB</span> <span class="pre">of</span> <span class="pre">Divisor</span> <span class="pre">Latch</span></code>), 用于进行预分频, 即设置波特率 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_ERR">
+<span class="target" id="asm_2uart_8h_1a087021cb4f563b545c2e827b1a95e97d"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_ERR</span></span></span><a class="headerlink" href="#c.UART_LSR_ERR" title="永久链接至目标">#</a><br /></dt>
+<dd><p>传输出错, FIFO Error </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_TSE">
+<span class="target" id="asm_2uart_8h_1afb0b74c1b345da06af598e6d00c291a3"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_TSE</span></span></span><a class="headerlink" href="#c.UART_LSR_TSE" title="永久链接至目标">#</a><br /></dt>
+<dd><p>传输缓冲区(FIFO)和移位寄存器为空, Transmit Empty </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_THE">
+<span class="target" id="asm_2uart_8h_1a367cdd2af61ca57bc1f7c78cca48704f"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_THE</span></span></span><a class="headerlink" href="#c.UART_LSR_THE" title="永久链接至目标">#</a><br /></dt>
+<dd><p>传输缓冲区(FIFO)为空, Transmit Holding Empty </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_BKI">
+<span class="target" id="asm_2uart_8h_1a0b0f5510bc38ddd69eab01ed6f90a5ea"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_BKI</span></span></span><a class="headerlink" href="#c.UART_LSR_BKI" title="永久链接至目标">#</a><br /></dt>
+<dd><p>传输被打断, Break Interrupt </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_FME">
+<span class="target" id="asm_2uart_8h_1a394124b89c650442a1ec18d228349e82"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_FME</span></span></span><a class="headerlink" href="#c.UART_LSR_FME" title="永久链接至目标">#</a><br /></dt>
+<dd><p>接受帧出错, 没有接收到停止位的帧, Framing Error </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_PRE">
+<span class="target" id="asm_2uart_8h_1ac13b37788c32483db8ac20d4809c5100"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_PRE</span></span></span><a class="headerlink" href="#c.UART_LSR_PRE" title="永久链接至目标">#</a><br /></dt>
+<dd><p>奇偶校验出错, Parity Error </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_ORE">
+<span class="target" id="asm_2uart_8h_1a45510686ea3a27a0e1908a0ae414f80e"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_ORE</span></span></span><a class="headerlink" href="#c.UART_LSR_ORE" title="永久链接至目标">#</a><br /></dt>
+<dd><p>数据溢出, Overrun Error </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.UART_LSR_RDR">
+<span class="target" id="asm_2uart_8h_1a3d83de31d722cd373ee69a2a38aaed43"></span><span class="sig-name descname"><span class="n"><span class="pre">UART_LSR_RDR</span></span></span><a class="headerlink" href="#c.UART_LSR_RDR" title="永久链接至目标">#</a><br /></dt>
+<dd><p>FIFO有数据, Receive Data Ready </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="csr.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">asm/csr.h</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../constrains.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">constrains.h</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../../../_sources/api/files/include/asm/uart.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> 显示源代码
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Shihong Wang, Shaofei Wang, Zhuiri Xiao.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

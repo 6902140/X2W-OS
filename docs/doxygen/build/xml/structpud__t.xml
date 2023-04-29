@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpud__t" kind="struct" language="C++" prot="public">
+    <compoundname>pud_t</compoundname>
+    <includes refid="pg__types_8h" local="no">pg_types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpud__t_1ab8a30760318cdc8dba1ffe3a8756596b" prot="public" static="no" mutable="no">
+        <type>pudval_t</type>
+        <definition>pudval_t pud_t::pud</definition>
+        <argsstring></argsstring>
+        <name>pud</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="48" column="10" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>定义pud页表结构体 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/data/proj/oskernel2023-x2w/include/pg_types.h" line="47" column="15" bodyfile="/home/data/proj/oskernel2023-x2w/include/pg_types.h" bodystart="47" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structpud__t_1ab8a30760318cdc8dba1ffe3a8756596b" prot="public" virt="non-virtual"><scope>pud_t</scope><name>pud</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

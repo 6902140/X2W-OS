@@ -1,0 +1,82 @@
+\hypertarget{test_8h}{}\doxysection{/home/data/proj/oskernel2023-\/x2w/include/test/test.h 文件参考}
+\label{test_8h}\index{/home/data/proj/oskernel2023-\/x2w/include/test/test.h@{/home/data/proj/oskernel2023-\/x2w/include/test/test.h}}
+
+
+{\ttfamily \mbox{\hyperlink{test_8h}{test.\+h}}}是系统的测试模块, 为各个模块提供了测试注册函数, 并在初始化时进行测试  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \mbox{\hyperlink{test_8h_a846aee27093c62bc074b1ddf5e67ded6}{test\+\_\+func\+\_\+pointer\+\_\+t}}) (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily test\+\_\+func\+\_\+pointer\+\_\+t}测试函数指针类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test_8h_ab9b71e6b53b29da0acfa3883cad174d5}{register\+\_\+test\+\_\+func}} (\mbox{\hyperlink{test_8h_a846aee27093c62bc074b1ddf5e67ded6}{test\+\_\+func\+\_\+pointer\+\_\+t}} func)
+\begin{DoxyCompactList}\small\item\em {\ttfamily register\+\_\+test\+\_\+func}用于注册测试函数, 测试函数模板\+: int test\+\_\+\+X\+X\+X(void) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test_8h_add1fe75ad79de762a3906b6d41897ff2}\label{test_8h_add1fe75ad79de762a3906b6d41897ff2}} 
+void \mbox{\hyperlink{test_8h_add1fe75ad79de762a3906b6d41897ff2}{test\+\_\+all}} (void)
+\begin{DoxyCompactList}\small\item\em {\ttfamily test\+\_\+all}函数运行所有测试函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+{\ttfamily \mbox{\hyperlink{test_8h}{test.\+h}}}是系统的测试模块, 为各个模块提供了测试注册函数, 并在初始化时进行测试 
+
+\begin{DoxyAuthor}{作者}
+Shihong Wang (\href{mailto:jack4shihong@gmail.com}{\texttt{ jack4shihong@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2023-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright Shihong Wang (c) 2023 with G\+NU Public License V3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{类型定义说明}
+\mbox{\Hypertarget{test_8h_a846aee27093c62bc074b1ddf5e67ded6}\label{test_8h_a846aee27093c62bc074b1ddf5e67ded6}} 
+\index{test.h@{test.h}!test\_func\_pointer\_t@{test\_func\_pointer\_t}}
+\index{test\_func\_pointer\_t@{test\_func\_pointer\_t}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{test\_func\_pointer\_t}{test\_func\_pointer\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ test\+\_\+func\+\_\+pointer\+\_\+t) (void)}
+
+
+
+{\ttfamily test\+\_\+func\+\_\+pointer\+\_\+t}测试函数指针类型 
+
+\begin{DoxyNote}{注解}
+测试函数的通用原型应该是{\ttfamily int test\+\_\+\+X\+X\+X\+X(void)}, 例如\+:
+\begin{DoxyItemize}
+\item {\ttfamily uart}的测试函数{\ttfamily int \mbox{\hyperlink{test__uart_8h_abbdb4b9ab6b89d7a6f6dfeb7e52e6c91}{test\+\_\+uart(void)}}} 
+\end{DoxyItemize}
+
+函数名即为函数的地址/函数第一条指令的地址, 因此函数名就是一个函数指针, 例如\+:
+\begin{DoxyItemize}
+\item 函数原型是{\ttfamily int \mbox{\hyperlink{test__uart_8h_abbdb4b9ab6b89d7a6f6dfeb7e52e6c91}{test\+\_\+uart(void)}}}, 则{\ttfamily test\+\_\+uart}就是指向{\ttfamily int (void)}的函数指针 
+\end{DoxyItemize}
+
+函数类型由函数的参数和返回值决定, 因此不同参数返回值的函数的函数类型不同, 因此不能放到数组中. 但是函数指针都是一个指针, 因此可以放到数组中, 所以这里声明的是函数指针 
+\end{DoxyNote}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{test_8h_ab9b71e6b53b29da0acfa3883cad174d5}\label{test_8h_ab9b71e6b53b29da0acfa3883cad174d5}} 
+\index{test.h@{test.h}!register\_test\_func@{register\_test\_func}}
+\index{register\_test\_func@{register\_test\_func}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{register\_test\_func()}{register\_test\_func()}}
+{\footnotesize\ttfamily void register\+\_\+test\+\_\+func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{test_8h_a846aee27093c62bc074b1ddf5e67ded6}{test\+\_\+func\+\_\+pointer\+\_\+t}}}]{func }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily register\+\_\+test\+\_\+func}用于注册测试函数, 测试函数模板\+: int test\+\_\+\+X\+X\+X(void) 
+
+
+\begin{DoxyParams}{参数}
+{\em func} & 测试函数指针, 测试函数名即可 \\
+\hline
+\end{DoxyParams}
