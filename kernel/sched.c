@@ -76,7 +76,7 @@ void tick_handle_periodic(void)
 static void schedule_debug(struct task_struct *p)
 {
 	if (in_atomic_preempt_off())
-		printk("BUG: scheduling while atomic: %d, 0x%x\n",
+		kprintf("BUG: scheduling while atomic: %d, 0x%x\n",
 				p->pid, preempt_count());
 }
 
@@ -136,7 +136,7 @@ void preempt_schedule_irq(void)
 {
 	/* this must be preemptible now*/
 	if (preempt_count())
-		printk("BUG: %s incorrect preempt count: 0x%x\n",
+		kprintf("BUG: %s incorrect preempt count: 0x%x\n",
 				__func__, preempt_count());
 
 	/* 关闭抢占，以免嵌套发生调度抢占*/

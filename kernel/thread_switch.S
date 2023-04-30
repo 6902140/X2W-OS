@@ -125,19 +125,7 @@ _save_user_sp:
    do_exception_vector必须4字节对齐
    否则写入stvec寄存器会不成功
  */
-.align 2
-.global do_exception_vector
-do_exception_vector:
-	/*保存异常（中断）现场*/
-	kernel_entry
 
-	csrw sscratch, x0
-
-	la ra, ret_from_exception
-
-	mv a0, sp /* pt_regs */
-	mv a1, s4
-	tail do_exception
 
 ret_from_exception:
 	ld s0, PT_SSTATUS(sp)
