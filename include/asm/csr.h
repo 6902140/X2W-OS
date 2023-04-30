@@ -56,7 +56,9 @@
  * 用于设置和清除 sstatus 寄存器中的浮点状态和扩展状态位字段。
  * SR_FS 用于设置和获取浮点运算的状态（禁用、启用或保存状态），
  * SR_XS 用于设置和获取指令集扩展（如 M 标准、A 标准）的状态。
- * /
+ */
+
+
 /* Status register flags */
 #define SSTATUS_SPP_SHIFT	8
 #define SSTATUS_SPP	(1UL << SSTATUS_SPP_SHIFT)
@@ -248,22 +250,7 @@
  * 下面这句话会在预编译阶段变成：
  *  asm volatile("csrr %0, " "reg" : "=r" (__val)); __val; });
  */
-#define read_csr(csr)						\
-({								\
-	register unsigned long __v;				\
-	__asm__ __volatile__ ("csrr %0, " #csr			\
-			      : "=r" (__v) :			\
-			      : "memory");			\
-	__v;							\
-})
 
-#define write_csr(csr, val)					\
-({								\
-	unsigned long __v = (unsigned long)(val);		\
-	__asm__ __volatile__ ("csrw " #csr ", %0"		\
-			      : : "rK" (__v)			\
-			      : "memory");			\
-})
 
 #define csr_set(csr, val)					\
 ({								\
