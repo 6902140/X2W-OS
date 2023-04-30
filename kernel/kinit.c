@@ -10,9 +10,17 @@
 
 #include "kernel/ktrap.h"
 #include "kernel/kinit.h"
+#include "kernel/memory.h"
+#include "mm.h"
 
+extern char _text_boot[], _etext_boot[];
+extern char _text[], _etext[];
+extern char _rodata[], _erodata[];
+extern char _data[], _edata[];
+extern char _bss[], _ebss[];
 
 void kinit_all(void){
     ktrap_init();
-   
+    mem_init((unsigned long)_ebss, DDR_END);
+	paging_init();
 }

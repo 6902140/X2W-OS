@@ -1,7 +1,7 @@
 /**
  * @file memory.c
  * @author Zhuiri Xiao (xzr3356142450@gmail.com)
- * @brief 'memory.c'实现了一些其他内存管理头文件中定义的头文件
+ * @brief 'memory.c'是系统内存管理的核心模块的实现
  * @version 0.1
  * @date 2023-04-26
  * 
@@ -20,10 +20,10 @@
 #include "pgable.h"
 #include"mm.h"
 #include"clint.h"
+#include "kernel/kstdio.h"
 
-
+//定义总共需要的页数
 #define NR_PAGES (TOTAL_MEMORY / PAGE_SIZE)
-#define PMD_NUM ((NR_PAGES+1)/512)
 
 
 /*
@@ -37,12 +37,17 @@
  * alloc_pgtable: 分配各级页表的分配函数
  * flags: 标志位
  */
-extern char idmap_pg_dir[];//定义一个外部指针指向内核进程的PGD基地址
 
+//定义一个外部指针指向内核进程的PGD基地址
+extern char idmap_pg_dir[];
+
+//定义外部指针指向文本段开头和结束，具体在kernel.ld中赋值
 extern char _text_boot[], _etext_boot[];
-extern char _text[], _etext[];
 
 //定义自己的文本代码段的起始和结束地址；可以自行在kernel.ld连接脚本中查看
+extern char _text[], _etext[];
+
+
 
 
 
@@ -129,6 +134,7 @@ static void alloc_init_pmd(pgd_t *pgdp, unsigned long addr,
 	} while (pmdp++, addr = next, addr != end);
 }
 
+
 /*
  * 分配一个page用于各级页表
  * 就是找到一个空闲页，并且将清空然后返回这个地址
@@ -209,10 +215,17 @@ static void create_identical_mapping(void)
 	/*map memory*/
 	//为内存创建恒等映射
 	start = PAGE_ALIGN((unsigned long)_etext);
-	end =  DDR_END;
+	end =  (unsigned long)(_e_bss+(PAGE_SIZE)*32);
 	
 	__create_pgd_mapping((pgd_t *)idmap_pg_dir, start, start,
 			end - start, PAGE_KERNEL,
+			early_pgtable_alloc,
+			0);
+	start = PAGE_ALIGN((unsigned long)(_e_bss+(PAGE_SIZE)*32));
+	end =  DDR_END;
+	
+	__create_pgd_mapping((pgd_t *)idmap_pg_dir, start, start,
+			end - start, PAGE_KERNEL_RESERVE,
 			early_pgtable_alloc,
 			0);
 	kprintf("map memory done\n");
@@ -221,7 +234,7 @@ static void create_identical_mapping(void)
 static void create_mmio_mapping(void)
 {
 	unsigned long start;
-	unsigned long end;
+	//unsigned long end;
 
 #ifdef CONFIG_BOARD_QEMU
 	/*map PLIC*/

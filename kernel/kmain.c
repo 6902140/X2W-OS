@@ -25,9 +25,9 @@ extern char _bss[], _ebss[];
 
 
 void kernel_main(void){
-	mem_init((unsigned long)_ebss, DDR_END);
-	paging_init();
-	//初始化内存和分页制度
+	// mem_init((unsigned long)_ebss, DDR_END);
+	// paging_init();
+	// //初始化内存和分页制度(写在kinit_all里面了)
     kprintf(DELIMITER);
     uart_puts("In kernel!\n");
     kprintf("Kernel init!\n");

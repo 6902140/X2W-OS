@@ -147,6 +147,27 @@ void __create_pgd_mapping(pgd_t *pgdir, unsigned long phys,
 		unsigned long (*alloc_pgtable)(void),
 		unsigned long flags);
 
+
+void init_phys_pool(pool_t* kpool,pool_t* upool,virtual_addr_t* k_vaddr);
+
+unsigned long get_free_page_user(void);
+
+void free_page_user(unsigned long p);
+
+unsigned long get_a_virt_page(void);
+
+unsigned long pgtable_alloc_1(void);
+
+unsigned long get_phy_addr_by_virt(unsigned long virt);
+
+void page_table_add(void* _vaddr, void* _page_phyaddr);
+
+void* malloc_a_page(void);
+
+int free_a_page(void* vaddr);
+
+unsigned long early_pgtable_alloc(void);
+
 void set_stage2_page_mapping(unsigned long gpa, unsigned long hpa, unsigned long size, pgprot_t prot);
 void write_stage2_pg_reg(void);
 void stage2_page_fault(struct pt_regs *regs);

@@ -1,9 +1,22 @@
+/**
+ * @file page_alloc.c
+ * @author Zhuiri Xiao xzr3356142450@gmail.com)
+ * @brief 'page_alloc.c'是内存管理中分配与释放页面模块的实现
+ * @version 0.1
+ * @date 2023-04-27
+ * 
+ * @copyright Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0
+ */
+
+
 #include "kernel/memory.h"
 #include "mm.h"
 #include "stdbitmap.h"
+#include "string.h"
 
 #define NR_PAGES (TOTAL_MEMORY / PAGE_SIZE)
 #define PHYADDR_MASK ((0xfffffffffff)<<10)
+
 static unsigned short mem_map[NR_PAGES/8+256] = {0,};
 static unsigned short virt_mem_map[NR_PAGES/8+256] = {0,};
 static unsigned long phy_start_address;
@@ -12,6 +25,8 @@ extern char idmap_pg_dir[];//定义一个外部指针指向内核进程的PGD基
 
 extern char _text_boot[], _etext_boot[];
 extern char _text[], _etext[];
+
+extern size_t kprintf(const char* format, ...);
 
 pool_t kpool,upool;
 virtual_addr_t kernel_vaddr;
@@ -166,8 +181,8 @@ void page_table_add(void* _vaddr, void* _page_phyaddr){
 
 void* malloc_a_page(void){
 	kprintf("start malloc a page\n");
-	void* vaddr=get_a_virt_page();
-	void* paddr=get_free_page();
+	void* vaddr=(void*)get_a_virt_page();
+	void* paddr=(void*)get_free_page();
 	kprintf("vaddr=%b,\tpaddr=%b\n",vaddr,paddr);
 	page_table_add(vaddr,paddr);
 	return vaddr;
@@ -189,12 +204,15 @@ int free_a_page(void* vaddr){
 	// bitmap_set(upool.pool_bitmap,index,BITMAP_FREE);
 	free_page((unsigned long)paddr);
 	
-	__create_pgd_mapping((pgd_t *)idmap_pg_dir, 0, vaddr,
+	__create_pgd_mapping((pgd_t *)idmap_pg_dir, 0, (unsigned long)vaddr,
 			PAGE_SIZE, PAGE_KERNEL_RESERVE,
 			pgtable_alloc_1,
 			0);
 	kprintf("vaddr:0x%x free successful\n",vaddr);
+	return 0;
 }
+
+
 
 
 
