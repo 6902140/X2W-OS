@@ -1,7 +1,7 @@
 /**
  * @file memory.h
  * @author Zhuiri Xiao (xzr3356142450@gmail.com)
- * @brief "memory.h" 定义了一些内存管理需要的常量和宏操作
+ * @brief "memory.h" 定义了一些描述内存大小和起始位置的信息
  * @version 0.1
  * @date 2023-04-28
  * 
