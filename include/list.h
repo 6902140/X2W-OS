@@ -41,3 +41,87 @@ static inline void INIT_LIST_HEAD(struct list_head *list)
 	list->next = list;
 	list->prev = list;
 }
+
+static inline void __list_add(struct list_head *newin, struct list_head *prev,
+		struct list_head *next)
+{
+	next->prev = newin;
+	newin->next = next;
+	newin->prev = prev;
+	prev->next = newin;
+}
+
+/**
+ * @brief 'list_add' 用于往指定list的头部添加一个元素
+ * 
+ * @param newin 新添加的列表元素
+ * @param head 指定list的头部指针
+ * 
+ * @note 此函数通过调用__list_add实现，添加成功之后得到的仍然是一个环状list
+ * 
+ * 
+ */
+static inline void list_add(struct list_head *newin, struct list_head *head)
+{
+	__list_add(newin, head, head->next);
+}
+
+
+/**
+ * @brief 'list_add_tail' 用于往指定list的尾部添加一个元素
+ * 
+ * @param newin 新添加的列表元素
+ * @param head 指定list的头部指针
+ * 
+ * @note 此函数通过调用__list_add实现，添加成功之后得到的仍然是一个环状list
+ * 
+ * 
+ */
+static inline void list_add_tail(struct list_head *newin, struct list_head *head)
+{
+	__list_add(newin, head->prev, head);
+}
+
+static inline void __list_del(struct list_head *prev, struct list_head *next)
+{
+	next->prev = prev;
+	prev->next = next;
+}
+
+/**
+ * @brief 'list_del' 用于将一个list元素从它所属的list中删除
+ * 
+ * @param entry 指定的需要删除的list元素
+ * 
+ * @note 此函数通过调用__list_del实现，删除元素被放在dead_list中
+ * 
+ * 
+ */
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next =(struct list_head*) LIST_POISON1;
+	entry->prev =(struct list_head*) LIST_POISON2;
+}
+
+/**
+ * @brief 'list_empty' 用于判定指定list是否为空
+ * 
+ * @param head 输入list的头部指针
+ * 
+ * @return 若为空则返回1，否则返回0；
+ * 
+ * 
+ */
+static inline int list_empty(struct list_head *head)
+{
+	return head->next == head;
+}
+
+#define list_entry(ptr, type, member) \
+	((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
+
+#define list_for_each(pos, head) \
+	for (pos = (head)->next; pos != (head); pos = pos->next)
+
+
