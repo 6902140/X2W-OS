@@ -14,6 +14,9 @@
  */
 
 
+
+
+
 #include "types.h"
 
 struct list_head {
@@ -41,6 +44,7 @@ static inline void INIT_LIST_HEAD(struct list_head *list)
 	list->next = list;
 	list->prev = list;
 }
+
 
 static inline void __list_add(struct list_head *newin, struct list_head *prev,
 		struct list_head *next)

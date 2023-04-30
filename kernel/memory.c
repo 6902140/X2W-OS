@@ -221,6 +221,7 @@ static void create_identical_mapping(void)
 			end - start, PAGE_KERNEL,
 			early_pgtable_alloc,
 			0);
+			
 	start = PAGE_ALIGN((unsigned long)(_e_bss+(PAGE_SIZE)*32));
 	end =  DDR_END;
 	
