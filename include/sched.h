@@ -10,12 +10,12 @@
 
 
 #define THREAD_SIZE  (1 * PAGE_SIZE)
+#define NR_TASK 128
 
 /**
  * @brief 'cpu_context' 是进程/线程切换时的保存的上下文
  * 
  * @note 保存的寄存器主要有ra，sp以及12个通用寄存器
- * 
  * 
  */
 struct cpu_context {
@@ -25,6 +25,32 @@ struct cpu_context {
 	/* 函数调用必须要保存的通用寄存器 */
 	unsigned long s[12];	/* s[0] 是FP */
 };
+
+
+
+struct task_struct;
+struct run_queue;
+
+struct sched_class {
+	const struct sched_class *next;
+
+	void (*task_fork)(struct task_struct *p);
+	void (*enqueue_task)(struct run_queue *rq, struct task_struct *p);
+	void (*dequeue_task)(struct run_queue *rq, struct task_struct *p);
+	void (*task_tick)(struct run_queue *rq, struct task_struct *p);
+	struct task_struct * (*pick_next_task)(struct run_queue *rq,
+			struct task_struct *prev);
+};
+
+struct run_queue {
+	struct list_head rq_head;
+	unsigned int nr_running;
+	uint64_t nr_switches;
+	struct task_struct *curr;
+};
+
+
+
 
 
 
@@ -135,7 +161,7 @@ void sched_init(void);
 void schedule(void);
 void task_tick(struct run_queue *rq, struct task_struct *p);
 void enqueue_task(struct run_queue *rq, struct task_struct *p);
-struct task_struct *pick_next_task(struct run_queue *rq,
+struct task_struct *_pick_next_task(struct run_queue *rq,
 		struct task_struct *prev);
 void tick_handle_periodic(void);
 void wake_up_process(struct task_struct *p);

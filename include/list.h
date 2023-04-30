@@ -13,7 +13,8 @@
  * @copyright Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0
  */
 
-
+#ifndef __LIST_H
+#define __LIST_H
 
 
 
@@ -129,3 +130,4 @@ static inline int list_empty(struct list_head *head)
 	for (pos = (head)->next; pos != (head); pos = pos->next)
 
 
+#endif

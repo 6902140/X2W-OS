@@ -38,6 +38,46 @@
 #define INTR_EN         1UL
 
 
+
+/* ----- sstatus寄存器 ----- */
+/***
+ * 具体来说：
+ * SSTATUS_SPP_SHIFT 和 SSTATUS_SPP 定义了一个宏，
+ * 用于获取和设置 sstatus 寄存器中的上一个模式（SPP）字段。
+ * SPP 字段用于记录 CPU 上一次运行的特权级别（用户模式或监管模式），
+ * 以便在切换回上一个模式时恢复该特权级别。
+ * SR_SIE、SR_SPIE、SR_SPP 和 SR_SUM 定义了一些常量，
+ * 用于设置和清除 sstatus 寄存器中的一些位字段。
+ * 其中，SR_SIE 用于开启或关闭监管模式中断使能，
+ * SR_SPIE 用于记录上一次监管模式中断使能的状态，
+ * SR_SPP 用于记录上一个模式的特权级别（用户模式或监管模式），
+ * SR_SUM 用于允许监管模式访问用户模式的内存。
+ * SR_FS 和 SR_XS 定义了一些常量，
+ * 用于设置和清除 sstatus 寄存器中的浮点状态和扩展状态位字段。
+ * SR_FS 用于设置和获取浮点运算的状态（禁用、启用或保存状态），
+ * SR_XS 用于设置和获取指令集扩展（如 M 标准、A 标准）的状态。
+ * /
+/* Status register flags */
+#define SSTATUS_SPP_SHIFT	8
+#define SSTATUS_SPP	(1UL << SSTATUS_SPP_SHIFT)
+
+#define SR_SIE  0x2UL /* Supervisor Interrupt Enable */
+#define SR_SPIE 0x20UL /* Previous Supervisor IE */
+#define SR_SPP 0x100UL /* Previously Supervisor */
+#define SR_SUM	0x40000UL /* Supervisor may access User Memory */
+#define SR_FS  0x6000UL /* Floating-point Status */
+#define SR_XS  0x00018000UL /* Extension Status */
+
+/* 中断使能 */
+#define SIE_SSIE 0x2UL /* IPI软中断使能 */
+#define SIE_STIE 0x20UL /* 时钟中断使能 */
+#define SIE_SEIE 0x200UL /* IRQ外部中断使能 */
+
+#define SCAUSE_INT (1UL << 63)
+#define is_interrupt_fault(reg) (reg & SCAUSE_INT)
+
+
+
 /* ----- mstatus寄存器 ----- */
 
 // MPP域
@@ -133,6 +173,8 @@
 /* ----- mideleg寄存器 ----- */
 
 
+
+
 /* ------------------------------ 宏函数 ------------------------------ */
 
 /**
@@ -199,6 +241,45 @@
     );                                              \
 })
 
+/*
+ * 在带参数的宏，#号作为一个预处理运算符,
+ * 可以把记号转换成字符串
+ *
+ * 下面这句话会在预编译阶段变成：
+ *  asm volatile("csrr %0, " "reg" : "=r" (__val)); __val; });
+ */
+#define read_csr(csr)						\
+({								\
+	register unsigned long __v;				\
+	__asm__ __volatile__ ("csrr %0, " #csr			\
+			      : "=r" (__v) :			\
+			      : "memory");			\
+	__v;							\
+})
+
+#define write_csr(csr, val)					\
+({								\
+	unsigned long __v = (unsigned long)(val);		\
+	__asm__ __volatile__ ("csrw " #csr ", %0"		\
+			      : : "rK" (__v)			\
+			      : "memory");			\
+})
+
+#define csr_set(csr, val)					\
+({								\
+	unsigned long __v = (unsigned long)(val);		\
+	__asm__ __volatile__ ("csrs " #csr ", %0"		\
+			      : : "rK" (__v)			\
+			      : "memory");			\
+})
+
+#define csr_clear(csr, val)					\
+({								\
+	unsigned long __v = (unsigned long)(val);		\
+	__asm__ __volatile__ ("csrc " #csr ", %0"		\
+			      : : "rK" (__v)			\
+			      : "memory");			\
+})
 
 
 
