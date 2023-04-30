@@ -37,6 +37,7 @@ riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -ma
 riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/data/proj/X2W-OS/build/sbi/smain.o sbi/smain.c
 riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/data/proj/X2W-OS/build/sbi/secall.o sbi/secall.c
 riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/data/proj/X2W-OS/build/sbi/sbi.o sbi/sbi.c
+
 运行内核: kernel.elf, 所有输出将在下方显示
 首先按下 Ctrl+A, 然后按下 X 键以退出 QEMU
 你可以运行 `make debug-gdb` 以使用 GDB 调试内核
@@ -3009,4 +3010,4 @@ the base addr of PGD is 8020d000
 0x0000000080d10000-0x0000000080d11000           4K PTE RSW . . . . . . . .
 0x0000000080d11000-0x0000000080d12000           4K PTE RSW . . . . . . . .
 0x0000000080d12000-0QEMU: Terminated
-
+
