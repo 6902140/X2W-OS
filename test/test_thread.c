@@ -46,10 +46,10 @@ int run_new_clone_thread(void *arg)
 int run_user_thread(void)
 {
 	unsigned long child_stack;
-	int ret;
+	//int ret;
 	unsigned long i = 0;
 
-	child_stack = malloc_a_page();
+	child_stack = (unsigned long)malloc_a_page();
 	if (child_stack < 0) {
 		kprintf("cannot allocate memory\n");
 		return -1;
@@ -57,7 +57,7 @@ int run_user_thread(void)
 
 	kprintf("malloc success 0x%x\n", child_stack);
 
-	child_stack = malloc_a_page();
+	child_stack = (unsigned long)malloc_a_page();
 	if (child_stack < 0)
 		kprintf("cannot allocate memory\n");
 
@@ -108,18 +108,18 @@ int test_thread(void){
     int pid = do_fork(PF_KTHREAD, (unsigned long)&move_thread1, 0);
 	if (pid < 0)
 		kprintf("create thread fail\n");
-	kprintf("pid %d created\n", pid);
+	kprintf("*****************pid %d created sccessful****************\n", pid);
 
 	pid = do_fork(PF_KTHREAD, (unsigned long)&move_thread2, 0);
 	if (pid < 0)
 		kprintf("create thread fail\n");
 	
-	kprintf("pid %d created\n", pid);
+	kprintf("***************pid %d created successful ****************\n", pid);
 
 	pid = do_fork(PF_KTHREAD, (unsigned long)&user_thread, 0);
        if (pid < 0)
                kprintf("create thread fail\n");
 	//schedule();
-	kprintf("pid %d created\n", pid);
+	kprintf("***********pid %d created successful***************\n", pid);
     return 0;
 }

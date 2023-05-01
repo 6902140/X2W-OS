@@ -247,6 +247,13 @@ static inline void preempt_sub(int val)
 	current->preempt_count -= val;
 }
 
+
+void dequeue_task(struct run_queue *rq, struct task_struct *p);
+
+void schedule_tail(struct task_struct *prev);
+
+void preempt_schedule_irq(void);
+
 #define __irq_enter() preempt_add(HARDIRQ_OFFSET)
 #define __irq_exit() preempt_sub(HARDIRQ_OFFSET)
 

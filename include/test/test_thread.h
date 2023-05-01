@@ -15,6 +15,21 @@
 #include "test.h"
 #include "sched.h"
 
+
+void user_thread1(void);
+
+void user_thread2(void);
+
+int run_new_clone_thread(void *arg);
+
+int run_user_thread(void);
+
+void move_thread1(void);
+
+void move_thread2(void);
+
+void user_thread(void);
+
 /**
  * @brief `test_bitmap`是`bitmap`库的测试函数
  * @return int 测试正常则返回0

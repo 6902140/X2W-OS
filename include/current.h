@@ -1,11 +1,13 @@
 #ifndef __CURRENT_H
 #define __CURRENT_H
 
+extern size_t kprintf(const char* format, ...);
+
 static struct task_struct *get_current(void)
 {
-	kprintf("heeeeeeeeeeeeeerebb!\n");
+	
 	register struct task_struct *tp __asm__("tp");
-	kprintf("tp=%u\n",tp);
+	kprintf("current pcb is 0x%x\n",tp);
 	return tp;
 }
 

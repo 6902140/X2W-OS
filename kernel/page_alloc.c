@@ -89,9 +89,10 @@ unsigned long get_free_page(void)
 	if(index!=-1){
 		bitmap_set(kpool.pool_bitmap,index,BITMAP_TAKEN);
 		kprintf("bitmap show off:\n");
-		for(int i=0;i<kpool.pool_bitmap->size;i++){
+		for(int i=0;i<kpool.pool_bitmap->size&&i<=24;i++){
 			kprintf("%b",kpool.pool_bitmap->bits[i]);
 		}
+		kprintf("....000\n");
 		return phy_start_address + index * PAGE_SIZE;
 	}
 	return 0;
@@ -101,7 +102,7 @@ void free_page(unsigned long p)
 {
 	//mem_map[(p - phy_start_address)/PAGE_SIZE] = 0;
 	int index=(p - phy_start_address)/PAGE_SIZE;
-	kprintf("!\n");
+	
 	bitmap_set(kpool.pool_bitmap,index,BITMAP_FREE);
 }
 
@@ -183,7 +184,7 @@ void* malloc_a_page(void){
 	kprintf("start malloc a page\n");
 	void* vaddr=(void*)get_a_virt_page();
 	void* paddr=(void*)get_free_page();
-	kprintf("vaddr=%b,\tpaddr=%b\n",vaddr,paddr);
+	kprintf("vaddr=0x%x,\tpaddr=0x%x\n",vaddr,paddr);
 	page_table_add(vaddr,paddr);
 	return vaddr;
 }
