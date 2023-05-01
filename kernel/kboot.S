@@ -7,9 +7,10 @@ kernel_start:
 
     # 设置栈
     la sp, kstacks_start
+    la sp, init_task_union
     li t0, 4096
     add sp, sp, t0
-
+    la tp, init_task_union
     # 跳转到C函数
     tail kernel_main
 

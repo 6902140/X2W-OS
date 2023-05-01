@@ -60,7 +60,7 @@ static int copy_thread(unsigned long clone_flags, struct task_struct *p,
 {
 	struct pt_regs *childregs;
 
-	//完全复制父亲线程的pt_regs栈帧
+	//获取栈帧位置
 	childregs = task_pt_regs(p);
 	memset(childregs, 0, sizeof(struct pt_regs));
 	memset(&p->cpu_context, 0, sizeof(struct cpu_context));
@@ -101,7 +101,9 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	struct task_struct *p;
 	int pid;
 	/*1.分配一个4KB的内存页*/
+	
 	p = (struct task_struct *)get_free_page();
+	
 	if (!p)
 		goto error;
 	/*初始化该页面*/
@@ -109,6 +111,7 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 
 	/*2.开始分配一个pid给该线程*/
 	pid = find_empty_task();
+	//kprintf("pid=%d\n",pid);
 	if (pid < 0)
 		goto error;
 
@@ -118,14 +121,19 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 
 	p->state = TASK_RUNNING;
 	p->pid = pid;
+
 	p->counter = (current->counter + 1) >> 1;
+
 	current->counter >>= 1;
 	p->need_resched = 0;
 	p->preempt_count = 0;
 	p->priority = 2;
 	total_forks++;
+
+	/*自此建立pid和pcb的联系*/
 	g_task[pid] = p;
 	SET_LINKS(p);
+
 	wake_up_process(p);
 
 	return pid;

@@ -15,6 +15,7 @@
 #include "kernel/kmain.h"
 #include "kernel/kinit.h"
 #include "kernel/memory.h"
+#include "sched.h"
 
 extern char _text_boot[], _etext_boot[];
 extern char _text[], _etext[];
@@ -37,6 +38,7 @@ void kernel_main(void){
     test_all();
 
 	print_kmem();
+	kprintf("current1=%d\n",current);
     kprintf("Kernel Hanging Here!\n");
     while (1);
 }

@@ -3,7 +3,9 @@
 
 static struct task_struct *get_current(void)
 {
+	kprintf("heeeeeeeeeeeeeerebb!\n");
 	register struct task_struct *tp __asm__("tp");
+	kprintf("tp=%u\n",tp);
 	return tp;
 }
 

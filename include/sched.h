@@ -1,5 +1,6 @@
 
 #ifndef __SCHED_H
+#define __SCHED_H
 
 #include "mm.h"
 #include "list.h"

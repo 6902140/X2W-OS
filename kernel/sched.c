@@ -174,5 +174,6 @@ void sched_init(void)
 	INIT_LIST_HEAD(&rq->rq_head);
 	rq->nr_running = 0;
 	rq->nr_switches = 0;
-	rq->curr = NULL;
+	rq->curr=NULL;
+	// rq->curr = (struct task_struct*)&init_task_union;
 }

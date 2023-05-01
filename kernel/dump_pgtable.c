@@ -211,8 +211,8 @@ void dump_pgtable(void)
 
 	/*dump the memory*/
 	start = PAGE_ALIGN((unsigned long)_text_boot);
-	end=DDR_END;
-	//end = PAGE_ALIGN((unsigned long)_ebss);
+	//end=DDR_END;
+	end = PAGE_ALIGN((unsigned long)_ebss);
 	pg_level_init();
 	walk_pgd((pgd_t *)idmap_pg_dir, start, end - start);
 }
