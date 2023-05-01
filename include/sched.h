@@ -93,7 +93,7 @@ struct task_struct {
 	/*preempt_count 是一个表示内核抢占计数的变量。
 	在 Linux 内核中，抢占是指内核可以强制剥夺当前进程的 CPU 使用权，将 CPU 分配给其他更高优先级的进程或者内核线程使用。
 	这种强制剥夺发生的原因可能是时钟中断或者其他事件的发生。
-	
+
 	preempt_count 也用于防止嵌套的抢占。如果当前进程被抢占时，
 	内核会增加 preempt_count 的值，并将抢占标志设置为真。如果在被抢占的代码段中有新的抢占事件发生，
 	内核将不会再次抢占当前进程，从而避免出现嵌套抢占的情况，提高代码的可靠性和稳定性。*/
@@ -223,6 +223,9 @@ static inline void clear_task_resched(struct task_struct *p)
 #define in_atomic_preempt_off() \
 	(preempt_count() != 1)
 
+/*
+实现关闭抢占的函数很简单，就是将本线程的pcb的preempt_count+1即可
+*/
 static inline void preempt_disable(void)
 {
 	current->preempt_count++;

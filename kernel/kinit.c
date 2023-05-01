@@ -12,6 +12,7 @@
 #include "kernel/kinit.h"
 #include "kernel/memory.h"
 #include "mm.h"
+#include "sched.h"
 
 extern char _text_boot[], _etext_boot[];
 extern char _text[], _etext[];
@@ -23,4 +24,5 @@ void kinit_all(void){
     ktrap_init();
     mem_init((unsigned long)_ebss, DDR_END);
 	paging_init();
+    sched_init();
 }
