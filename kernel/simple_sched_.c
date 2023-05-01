@@ -1,5 +1,5 @@
 
-#include <sched.h>
+#include "sched.h"
 
 
 static void dequeue_task_simple(struct run_queue *rq,
@@ -16,6 +16,8 @@ static void enqueue_task_simple(struct run_queue *rq,
 	rq->nr_running++;
 }
 
+
+/*简易调度的评价指标*/
 static int goodness(struct task_struct *p)
 {
 	int weight;
@@ -25,17 +27,19 @@ static int goodness(struct task_struct *p)
 	return weight;
 }
 
+
 static void reset_score(void)
 {
 	struct task_struct *p;
 
 	for_each_task(p) {
 		p->counter = DEF_COUNTER + p->priority;
-		//printk("%s, pid=%d, count=%d\n", __func__, p->pid, p->counter);
+		//kprintf("%s, pid=%d, count=%d\n", __func__, p->pid, p->counter);
 	}
 }
 
 
+/*循序轮流查看*/
 static struct task_struct *pick_next_task_simple(struct run_queue *rq,
 		struct task_struct *prev)
 {
@@ -65,6 +69,7 @@ repeat:
 	return next;
 }
 
+/*简易调度计时器*/
 static void task_tick_simple(struct run_queue *rq, struct task_struct *p)
 {
 	if (--p->counter <= 0) {
@@ -74,6 +79,7 @@ static void task_tick_simple(struct run_queue *rq, struct task_struct *p)
 	}
 }
 
+/*建议调度类的实现*/
 const struct sched_class simple_sched_class = {
 	.next = NULL,
 	.dequeue_task = dequeue_task_simple,

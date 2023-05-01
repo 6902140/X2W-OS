@@ -31,9 +31,12 @@ struct cpu_context {
 struct task_struct;
 struct run_queue;
 
+
+/**
+ * 使用类似C语言的函数指针实现一个调度类
+*/
 struct sched_class {
 	const struct sched_class *next;
-
 	void (*task_fork)(struct task_struct *p);
 	void (*enqueue_task)(struct run_queue *rq, struct task_struct *p);
 	void (*dequeue_task)(struct run_queue *rq, struct task_struct *p);
@@ -86,8 +89,20 @@ enum task_flags {
 /* 进程PCB */
 struct task_struct {
 	struct cpu_context cpu_context;
+
+	/*preempt_count 是一个表示内核抢占计数的变量。
+	在 Linux 内核中，抢占是指内核可以强制剥夺当前进程的 CPU 使用权，将 CPU 分配给其他更高优先级的进程或者内核线程使用。
+	这种强制剥夺发生的原因可能是时钟中断或者其他事件的发生。
+	
+	preempt_count 也用于防止嵌套的抢占。如果当前进程被抢占时，
+	内核会增加 preempt_count 的值，并将抢占标志设置为真。如果在被抢占的代码段中有新的抢占事件发生，
+	内核将不会再次抢占当前进程，从而避免出现嵌套抢占的情况，提高代码的可靠性和稳定性。*/
 	int preempt_count;
+	
+	/*need_resched 是一个表示当前进程是否需要被调度的标志。当 need_resched 被设置为非零值时，表示当前进程需要被调度，
+	调度器会尽快将 CPU 分配给其他进程执行。*/
 	int need_resched;
+
 	unsigned long kernel_sp;
 	unsigned long user_sp;
 	enum task_state state;
@@ -152,19 +167,31 @@ extern const struct sched_class simple_sched_class;
 
 extern void ret_from_kernel_thread(void);
 extern void ret_from_fork(void);
+
 int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg);
+
 struct task_struct * switch_to(struct task_struct *prev,
 		struct task_struct *next);
+
+/*cpu_switch*/
 extern struct task_struct *cpu_switch_to(struct task_struct *prev,
 					 struct task_struct *next);
+
 void sched_init(void);
+
 void schedule(void);
+
 void task_tick(struct run_queue *rq, struct task_struct *p);
+
 void enqueue_task(struct run_queue *rq, struct task_struct *p);
+
 struct task_struct *_pick_next_task(struct run_queue *rq,
 		struct task_struct *prev);
+
 void tick_handle_periodic(void);
+
 void wake_up_process(struct task_struct *p);
+
 int move_to_user_space(unsigned long pc);
 
 static inline void clear_task_resched(struct task_struct *p)
