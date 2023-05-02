@@ -108,18 +108,20 @@ int test_thread(void){
     int pid = do_fork(PF_KTHREAD, (unsigned long)&move_thread1, 0);
 	if (pid < 0)
 		kprintf("create thread fail\n");
-	kprintf("*****************pid %d created sccessful****************\n", pid);
+	kprintf("*****************pid %d created sccessful****************\n\n", pid);
 
 	pid = do_fork(PF_KTHREAD, (unsigned long)&move_thread2, 0);
 	if (pid < 0)
 		kprintf("create thread fail\n");
 	
-	kprintf("***************pid %d created successful ****************\n", pid);
+	kprintf("***************pid %d created successful ****************\n\n", pid);
 
 	pid = do_fork(PF_KTHREAD, (unsigned long)&user_thread, 0);
        if (pid < 0)
                kprintf("create thread fail\n");
+
+	kprintf("***********pid %d created successful***************\n\n", pid);
 	//schedule();
-	kprintf("***********pid %d created successful***************\n", pid);
-    return 0;
+    kprintf("\t******************test of create thread sccuessfully finished************\n\n");
+	return 0;
 }

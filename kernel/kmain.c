@@ -38,7 +38,7 @@ void kernel_main(void){
     test_all();
 
 	print_kmem();
-	kprintf("current1=%d\n",current);
+
     kprintf("Kernel Hanging Here!\n");
     while (1);
 }

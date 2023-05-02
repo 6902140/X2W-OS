@@ -39,7 +39,7 @@ struct task_struct * switch_to(struct task_struct *prev,
 {
 	if (prev == next)
 		return NULL;
-	kprintf("point7\n");
+	kprintf("okk here now!\n");
 	return cpu_switch_to(prev, next);
 }
 
@@ -83,27 +83,28 @@ static void __schedule(void)
 	struct run_queue *rq = &g_rq;
 
 	prev = current;
-	
+
 	/* 检查是否在中断上下文中发生了调度 */
 	schedule_debug(prev);
-	kprintf("point2\n");
+	
 	/* 关闭中断包含调度器，以免中断发生影响调度器 */
 	raw_local_irq_disable();
-	kprintf("point3\n");
+
 	//如果当前线程不是处在运行态，那么就将其直接从run_list中删除
 	if (prev->state)
 		dequeue_task(rq, prev);
 
 	//找到下一个可以替换上来运行的线程PCB
 	next = _pick_next_task(rq, prev);
-	kprintf("point4\n");
+
 	//清空被切换进程的need_resched标记
 	clear_task_resched(prev);
-	kprintf("point5\n");
+	
 	if (next != prev) {
-		kprintf("point6\n");
+		
 		last = switch_to(prev, next);
-		kprintf("point7\n");
+		kprintf("last=0x%x!!!!!!!!!!!!\n",last);
+		
 		/*
 		 * switch_to函数是用来切换prev进程到next进程。
 		 * switch_to函数执行完成之后，已经切换到next
