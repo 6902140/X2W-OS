@@ -11,6 +11,7 @@
 
 #include "kernel/memory.h"
 #include "mm.h"
+#include "pgable.h"
 #include "stdbitmap.h"
 #include "string.h"
 
@@ -175,7 +176,7 @@ void page_table_add(void* _vaddr, void* _page_phyaddr){
     uint32_t page_phyaddr = (uint64_t) _page_phyaddr;
 
 	__create_pgd_mapping((pgd_t *)idmap_pg_dir, page_phyaddr, vaddr,
-			PAGE_SIZE, PAGE_KERNEL_READ_EXEC,
+			PAGE_SIZE, PAGE_KERNEL_READ_WRITE_EXEC,
 			pgtable_alloc_1,
 			0);
 }

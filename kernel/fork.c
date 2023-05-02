@@ -59,12 +59,14 @@ static int copy_thread(unsigned long clone_flags, struct task_struct *p,
 		unsigned long fn, unsigned long arg)
 {
 	struct pt_regs *childregs;
-
+	
 	//获取栈帧位置
 	childregs = task_pt_regs(p);
+	
 	memset(childregs, 0, sizeof(struct pt_regs));
-	memset(&p->cpu_context, 0, sizeof(struct cpu_context));
 
+	memset(&p->cpu_context, 0, sizeof(struct cpu_context));
+	
 	if (clone_flags & PF_KTHREAD) {
 		const register unsigned long gp __asm__ ("gp");
 		childregs->gp = gp;
@@ -101,16 +103,20 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	struct task_struct *p;
 	int pid;
 	/*1.分配一个4KB的内存页*/
-	
-	p = (struct task_struct *)get_free_page();
+	//修改代码，修改为malloc_a_page而不是直接获取物理页
+	p = (struct task_struct *)malloc_a_page();
 	
 	if (!p)
 		goto error;
 	/*初始化该页面*/
+	
 	memset(p, 0, sizeof(*p));
-
+	for(int i=0;i<sizeof(*p);i++){
+		*((uint8_t*)(p)+i)=0;
+	}
 	/*2.开始分配一个pid给该线程*/
 	pid = find_empty_task();
+	kprintf("fetch a pid=%d\n",pid);
 	//kprintf("pid=%d\n",pid);
 	if (pid < 0)
 		goto error;
