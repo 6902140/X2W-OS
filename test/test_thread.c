@@ -22,8 +22,8 @@ void user_thread1(void)
 		delay(DELAY_TIME);
 		kprintf("\n\t***%s: %ld***\t\n", __func__, i++);
 		record++;
-		if(record>5){
-			// kprintf("\n******test thread and switch successful\n");
+		if(record>15){
+			 kprintf("\n******test thread and switch successful\n");
 			return;
 		}
 		if(i>3){
@@ -38,7 +38,7 @@ void user_thread2(void)
 	while (1) {
 		delay(DELAY_TIME);
 		record++;
-		if(record>5){
+		if(record>15){
 			kprintf("\n******test thread and switch successful******\n");
 			return;
 		}
