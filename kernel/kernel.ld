@@ -37,6 +37,8 @@ SECTIONS {
     _data = .;
     .data : {
         *(.data)
+        . = ALIGN(4096);
+        *(.data.init_task)
     }
     . = ALIGN(4096);
     idmap_pg_dir = .;

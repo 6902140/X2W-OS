@@ -83,25 +83,27 @@ static void __schedule(void)
 	struct run_queue *rq = &g_rq;
 
 	prev = current;
-
+	
 	/* 检查是否在中断上下文中发生了调度 */
 	schedule_debug(prev);
 	
 	/* 关闭中断包含调度器，以免中断发生影响调度器 */
 	raw_local_irq_disable();
-
+	
 	//如果当前线程不是处在运行态，那么就将其直接从run_list中删除
 	if (prev->state)
 		dequeue_task(rq, prev);
 
 	//找到下一个可以替换上来运行的线程PCB
 	next = _pick_next_task(rq, prev);
-
+	kprintf("next=0x%x,next=0x%x\n",next,get_phy_addr_by_virt((unsigned long)next));
 	//清空被切换进程的need_resched标记
 	clear_task_resched(prev);
 	
 	if (next != prev) {
 		
+		kprintf("prev=0x%x,prev=0x%x\n",prev,get_phy_addr_by_virt((unsigned long)prev));
+
 		last = switch_to(prev, next);
 		kprintf("last=0x%x!!!!!!!!!!!!\n",last);
 		
@@ -130,7 +132,6 @@ void schedule(void)
 {
 	/* 关闭抢占，以免嵌套发生调度抢占*/
 	preempt_disable();
-	kprintf("point1\n");
 	__schedule();
 	preempt_enable();
 }

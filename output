@@ -131,7 +131,7 @@ Testing atoi,output :123456
 Output a single percent sign: %
 Output a single char: J
 Output a string: 'Hello World'
-Output a pointer: 000000008020d7a0
+Output a pointer: 000000008020df40
 Output a binary: 1111111111111111
 Output a octal: 1234567
 Output a hex: abcdef
@@ -215,82 +215,82 @@ bitmap show off:
 bitmap show off:
 1111111111111100000000000000000000000....000
 pte_phy=2149707776,
-	test memory malloc page-> 1: virtual address=0x8020d798
+	test memory malloc page-> 1: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 11111111111111100000000000000000000000....000
 vaddr=0xc0101000,	paddr=0x80220000
-	test memory malloc page-> 2: virtual address=0x8020d798
+	test memory malloc page-> 2: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 111111111111111100000000000000000000000....000
 vaddr=0xc0102000,	paddr=0x80221000
-	test memory malloc page-> 3: virtual address=0x8020d798
+	test memory malloc page-> 3: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 111111111111111110000000000000000000000....000
 vaddr=0xc0103000,	paddr=0x80222000
-	test memory malloc page-> 4: virtual address=0x8020d798
+	test memory malloc page-> 4: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 1111111111111111110000000000000000000000....000
 vaddr=0xc0104000,	paddr=0x80223000
-	test memory malloc page-> 5: virtual address=0x8020d798
+	test memory malloc page-> 5: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 11111111111111111110000000000000000000000....000
 vaddr=0xc0105000,	paddr=0x80224000
-	test memory malloc page-> 6: virtual address=0x8020d798
+	test memory malloc page-> 6: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 111111111111111111110000000000000000000000....000
 vaddr=0xc0106000,	paddr=0x80225000
-	test memory malloc page-> 7: virtual address=0x8020d798
+	test memory malloc page-> 7: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 1111111111111111111110000000000000000000000....000
 vaddr=0xc0107000,	paddr=0x80226000
-	test memory malloc page-> 8: virtual address=0x8020d798
+	test memory malloc page-> 8: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 11111111111111111111110000000000000000000000....000
 vaddr=0xc0108000,	paddr=0x80227000
-	test memory malloc page-> 9: virtual address=0x8020d798
+	test memory malloc page-> 9: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 111111111111111111111110000000000000000000000....000
 vaddr=0xc0109000,	paddr=0x80228000
-	test memory malloc page-> 10: virtual address=0x8020d798
+	test memory malloc page-> 10: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 1111111111111111111111110000000000000000000000....000
 vaddr=0xc010a000,	paddr=0x80229000
-	test memory malloc page-> 11: virtual address=0x8020d798
+	test memory malloc page-> 11: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 1111111111111111111111111000000000000000000000....000
 vaddr=0xc010b000,	paddr=0x8022a000
-	test memory malloc page-> 12: virtual address=0x8020d798
+	test memory malloc page-> 12: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 11111111111111111111111111000000000000000000000....000
 vaddr=0xc010c000,	paddr=0x8022b000
-	test memory malloc page-> 13: virtual address=0x8020d798
+	test memory malloc page-> 13: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 111111111111111111111111111000000000000000000000....000
 vaddr=0xc010d000,	paddr=0x8022c000
-	test memory malloc page-> 14: virtual address=0x8020d798
+	test memory malloc page-> 14: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 1111111111111111111111111111000000000000000000000....000
 vaddr=0xc010e000,	paddr=0x8022d000
-	test memory malloc page-> 15: virtual address=0x8020d798
+	test memory malloc page-> 15: virtual address=0x8020df38
 start malloc a page
 bitmap show off:
 11111111111111111111111111111000000000000000000000....000
 vaddr=0xc010f000,	paddr=0x8022e000
-	test memory malloc page-> 16: virtual address=0x8020d798
+	test memory malloc page-> 16: virtual address=0x8020df38
 	 test free 0xc0100000 page
 start free a page
 phy_addr=8021d000
@@ -356,14 +356,14 @@ start free a page
 phy_addr=8022e000
 vaddr:0xc010f000 free successful
 ***************Congratulations! Paging successfully***********
-here!
+here! start test thread
 start malloc a page
 bitmap show off:
 1111111111111100000000000000000000000....000
 vaddr=0xc0100000,	paddr=0x8021d000
 fetch a pid=1
-current pcb is 0x8020c860
-current pcb is 0x8020c860
+current pcb is 0x8020d000
+current pcb is 0x8020d000
 *****************pid 1 created sccessful****************
 
 start malloc a page
@@ -371,30 +371,25 @@ bitmap show off:
 11111111111111100000000000000000000000....000
 vaddr=0xc0101000,	paddr=0x80220000
 fetch a pid=2
-current pcb is 0x8020c860
-current pcb is 0x8020c860
+current pcb is 0x8020d000
+current pcb is 0x8020d000
 ***************pid 2 created successful ****************
-
-start malloc a page
-bitmap show off:
-111111111111111100000000000000000000000....000
-vaddr=0xc0102000,	paddr=0x80221000
-fetch a pid=3
-current pcb is 0x8020c860
-current pcb is 0x8020c860
-***********pid 3 created successful***************
 
 	******************test of create thread sccuessfully finished************
 
-============================================================
-X2W-OS Image Layout:
-  kernel: 0x80200000 - 0x80211108 ( 69896 B)
-  .text.boot: 0x80200000 - 0x80200028 (    40 B)
-       .text: 0x80200028 - 0x80209000 ( 36824 B)
-     .rodata: 0x80209000 - 0x8020ad30 (  7472 B)
-       .data: 0x8020ad30 - 0x80210000 ( 21200 B)
-        .bss: 0x80210000 - 0x80211108 (  4360 B)
-============================================================
-Kernel Hanging Here!
+current pcb is 0x8020d000
+okk here now!
+
+	***user_thread2: abcde + 0***	
+
+	***user_thread2: abcde + 1***	
+
+	***user_thread2: abcde + 2***	
+
+	***user_thread2: abcde + 3***	
+
+	***user_thread2: abcde + 4***	
+
+******test thread and switch successful******
 QEMU: Terminated
 

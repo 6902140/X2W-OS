@@ -16,6 +16,7 @@
 #include "kernel/kinit.h"
 #include "kernel/memory.h"
 #include "sched.h"
+#include "asm/irq.h"
 
 extern char _text_boot[], _etext_boot[];
 extern char _text[], _etext[];
@@ -23,7 +24,27 @@ extern char _rodata[], _erodata[];
 extern char _data[], _edata[];
 extern char _bss[], _ebss[];
 
+// void delay(int n){
+// 	while(n--){};
+// }
 
+// void kernel_thread1(void)
+// {
+// 	unsigned long i = 0;
+// 	while (1) {
+// 		delay(8000);
+// 		kprintf("%s: %ld\n", __func__, i++);
+// 	}
+// }
+
+// void kernel_thread2(void)
+// {
+// 	unsigned long y = 0;
+// 	while (1) {
+// 		delay(8000);
+// 		kprintf("%s: %s + %llu\n", __func__, "abcde", y++);
+// 	}
+// }
 
 void kernel_main(void){
 	// mem_init((unsigned long)_ebss, DDR_END);
@@ -39,7 +60,25 @@ void kernel_main(void){
 
 	print_kmem();
 
-    kprintf("Kernel Hanging Here!\n");
+   
+	// int pid;
+
+	// pid = do_fork(PF_KTHREAD, (unsigned long)&kernel_thread1, 0);
+	// if (pid < 0)
+	// 	kprintf("create thread fail\n");
+	// kprintf("pid %d created\n", pid);
+
+	// pid = do_fork(PF_KTHREAD, (unsigned long)&kernel_thread2, 0);
+	// if (pid < 0)
+	// 	kprintf("create thread fail\n");
+	
+	// kprintf("pid %d created\n", pid);
+	// arch_local_irq_enable();
+	// delay(10000);
+	// struct task_struct *next = g_task[pid];
+	// kprintf("Kernel Hanging Here!\n");
+
+	// switch_to(current,next);
     while (1);
 }
 

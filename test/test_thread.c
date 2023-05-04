@@ -2,7 +2,9 @@
 #include "sched.h"
 #include "string.h"
 
-#define DELAY_TIME 80000
+#define DELAY_TIME 8000
+
+static int record=0;
 
 static inline void delay(unsigned int n)
 {
@@ -18,7 +20,15 @@ void user_thread1(void)
 	unsigned long i = 0;
 	while (1) {
 		delay(DELAY_TIME);
-		kprintf("%s: %ld\n", __func__, i++);
+		kprintf("\n\t***%s: %ld***\t\n", __func__, i++);
+		record++;
+		if(record>5){
+			// kprintf("\n******test thread and switch successful\n");
+			return;
+		}
+		if(i>3){
+			schedule();
+		}
 	}
 }
 
@@ -27,7 +37,15 @@ void user_thread2(void)
 	unsigned long y = 0;
 	while (1) {
 		delay(DELAY_TIME);
-		kprintf("%s: %s + %llu\n", __func__, "abcde", y++);
+		record++;
+		if(record>5){
+			kprintf("\n******test thread and switch successful******\n");
+			return;
+		}
+		kprintf("\n\t***%s: %s + %llu***\t\n", __func__, "abcde", y++);
+		if(y>5){
+			schedule();
+		}
 	}
 }
 
@@ -104,24 +122,25 @@ void move_thread2(void)
 }
 
 int test_thread(void){
-    kprintf("here!\n");
-    int pid = do_fork(PF_KTHREAD, (unsigned long)&move_thread1, 0);
-	if (pid < 0)
+    kprintf("here! start test thread\n");
+    int pid1 = do_fork(PF_KTHREAD, (unsigned long)&user_thread1, 0);
+	
+	if (pid1 < 0)
 		kprintf("create thread fail\n");
-	kprintf("*****************pid %d created sccessful****************\n\n", pid);
+	kprintf("*****************pid %d created sccessful****************\n\n", pid1);
 
-	pid = do_fork(PF_KTHREAD, (unsigned long)&move_thread2, 0);
-	if (pid < 0)
+	int pid2 = do_fork(PF_KTHREAD, (unsigned long)&user_thread2, 0);
+	if (pid2 < 0)
 		kprintf("create thread fail\n");
 	
-	kprintf("***************pid %d created successful ****************\n\n", pid);
+	kprintf("***************pid %d created successful ****************\n\n", pid2);
 
-	pid = do_fork(PF_KTHREAD, (unsigned long)&user_thread, 0);
-       if (pid < 0)
-               kprintf("create thread fail\n");
+	
+	struct task_struct *next = g_task[pid2];
 
-	kprintf("***********pid %d created successful***************\n\n", pid);
 	//schedule();
     kprintf("\t******************test of create thread sccuessfully finished************\n\n");
+	switch_to(current,next);
+	//int pid1=do_fork(PF_KTHREAD,(unsigned long)&user_thread1,0);
 	return 0;
 }
