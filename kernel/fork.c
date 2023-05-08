@@ -130,6 +130,10 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 
 	p->counter = (current->counter + 1) >> 1;
 
+	if(p->counter<=0){
+		p->counter=2;
+	}
+
 	current->counter >>= 1;
 	p->need_resched = 0;
 	p->preempt_count = 0;

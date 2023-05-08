@@ -20,17 +20,18 @@ void user_thread1(void)
 	unsigned long i = 0;
 	while (1) {
 		delay(DELAY_TIME);
-		kprintf("\n\t***%s: %ld***\t\n", __func__, i++);
+		kprintf("\n\t***%s: %ld***\t\n\n", __func__, i++);
+		schedule();
 		record++;
 		if(record>15){
-			 kprintf("\n******test thread and switch successful\n");
+			 kprintf("\n******test thread and switch successful******\n\n");
+			 schedule();
 			return;
 		}
-		if(i>3){
-			schedule();
-		}
+		schedule();
 	}
 }
+
 
 void user_thread2(void)
 {
@@ -42,11 +43,11 @@ void user_thread2(void)
 			kprintf("\n******test thread and switch successful******\n");
 			return;
 		}
-		kprintf("\n\t***%s: %s + %llu***\t\n", __func__, "abcde", y++);
-		if(y>5){
-			schedule();
-		}
+		kprintf("\n\t***%s: %s + %llu***\t\n\n", __func__, "abcde", y++);
+		schedule();
+		
 	}
+	return;
 }
 
 int run_new_clone_thread(void *arg)

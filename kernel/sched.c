@@ -125,6 +125,13 @@ static void __schedule(void)
 		kprintf("last point\n");
 		schedule_tail(last);
 	}
+	else{
+		next->counter=(next->counter-1)/2;
+		/**
+		 * 这里增加了切换线程的时候的策略
+		 * 
+		*/
+	}
 }
 
 /* 普通调度 */
