@@ -46,6 +46,11 @@ extern char _bss[], _ebss[];
 // 	}
 // }
 
+void kernel_main_stage2(void){
+	 kprintf("welcome to kernel_main_stage2 !!!!!\n ");
+	 while (1);
+}
+
 void kernel_main(void){
 	// mem_init((unsigned long)_ebss, DDR_END);
 	// paging_init();
@@ -79,7 +84,12 @@ void kernel_main(void){
 	// kprintf("Kernel Hanging Here!\n");
 
 	// switch_to(current,next);
+    int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_main_stage2, 0);
+	struct task_struct *next = g_task[pid_main];
+	switch_to(current,next);
+	return;
     while (1);
+
 }
 
 // TODO: 需要完成printf函数更多的feature
