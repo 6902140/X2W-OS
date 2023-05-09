@@ -24,7 +24,7 @@ typedef unsigned char       uint8_t;            ///< `LP64`中一个 `char` 宽�
 typedef unsigned short      uint16_t;           ///< `LP64`中一个 `short`宽度为 `16    bit`
 typedef unsigned int        uint32_t;           ///< `LP64`中一个 `int`  宽度为 `32    bit`
 typedef unsigned long       uint64_t;           ///< `LP64`中一个 `long` 宽度为 `64    bit`
-
+typedef unsigned long       size_t;
 // 符号常量定义, 由`gcc -mabi`参数设定, 参考`Makefile`中的`GCC`编译选项`CFLAGS`, https://www.ibm.com/docs/en/zos/2.3.0?topic=environments-ilp32-lp64-data-models-data-type-sizes
 typedef char       int8_t;            ///< `LP64`中一个 `char` 宽度为 `8     bit`
 typedef short      int16_t;           ///< `LP64`中一个 `short`宽度为 `16    bit`
