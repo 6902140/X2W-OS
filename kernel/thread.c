@@ -10,7 +10,7 @@
  */
 void create_user_vaddr_bitmap(struct task_struct *user_prog){
     raw_local_irq_disable();
-    kprintf("poin1\n");
+   
     user_prog->userprog_vaddr.vaddr_start = K_HEAP_START;
     // 计算存储描述用户程序所占用的内存需要的bitmap占用的页数。用户程序中给出的地址虽然是虚拟地址, 但是每个虚拟地址都是和一个物理地址一一对应的
     // 因此, 也需要对虚拟地址进行管理, 依旧是使用位图来管理。

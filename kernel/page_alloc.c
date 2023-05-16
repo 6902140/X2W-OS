@@ -38,19 +38,19 @@ void init_phys_pool(pool_t* kpool,pool_t* upool,virtual_addr_t* k_vaddr){
 	kpool->pool_size=NR_PAGES*PAGE_SIZE/2;
 	(kpool->pool_bitmap)=(bitmap_t*)mem_map;
 	kpool->pool_bitmap->bits=(byte*)mem_map+sizeof(bitmap_t);
-	kprintf("-------ffff------\n");
+	
 	upool->phy_addr_start=phy_start_address+kpool->pool_size;
 	upool->pool_size=NR_PAGES*PAGE_SIZE-kpool->pool_size;
 	(upool->pool_bitmap)=(bitmap_t*)(&mem_map[NR_PAGES/2]);
 	kpool->pool_bitmap->bits=(byte*)(&mem_map[NR_PAGES/2])+sizeof(bitmap_t);
-	kprintf("-------ffff------\n");
+	
 	bitmap_init(kpool->pool_bitmap,(kpool->pool_size)/(8*PAGE_SIZE));
 	bitmap_init(upool->pool_bitmap,(upool->pool_size)/(8*PAGE_SIZE));
 	//
 	k_vaddr->vaddr_bitmap=(bitmap_t*)virt_mem_map;
 	k_vaddr->vaddr_bitmap->bits=(byte*)virt_mem_map+sizeof(bitmap_t);
 	k_vaddr->vaddr_start=K_HEAP_START;
-	kprintf("-------ffff------\n");
+	
 	bitmap_init(k_vaddr->vaddr_bitmap,(kpool->pool_size+upool->pool_size)/(8*PAGE_SIZE));
 
 	spinlock_init(&kpool->mutex,"kpool_lock");
@@ -100,7 +100,7 @@ unsigned long get_free_page(void)
 	if(index!=-1){
 		spinlock_acquire(&kpool.mutex);
 		bitmap_set(kpool.pool_bitmap,index,BITMAP_TAKEN);
-		kprintf("4\n");
+		
 		spinlock_release(&kpool.mutex);
 		// kprintf("bitmap show off:\n");
 		// for(int i=0;i<kpool.pool_bitmap->size&&i<=24;i++){
@@ -179,14 +179,14 @@ void* malloc_pages(uint64_t pg_cnt,int ISKERNEL){
 	unsigned long vaddr_start=vaddr;
 
 	while(cnt!=0){
-		kprintf("cnt=%d\n",cnt);
+		
 		unsigned long page_phy=get_free_page();
-		kprintf("point 3\n");
+		
 		if(page_phy==NULL){
 			return NULL;
 		}
 		page_table_add(vaddr_start,page_phy);
-		kprintf("point 2\n");
+		
 		vaddr_start+=PAGE_SIZE;
 		cnt--;
 	}
