@@ -13,6 +13,8 @@
  * @copyright Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0
  */
 
+
+
 #ifndef	_MM_H
 #define	_MM_H
 
@@ -51,13 +53,13 @@
  * @brief  定义一个虚拟内存空间的起始地址
  * 
  */
-#define K_HEAP_START 0xC0100000   
+#define K_HEAP_START 0x8048000   
 
 #ifndef __ASSEMBLER__
 #include "pgable.h"
 #include "ptregs.h"
 #include "stdbitmap.h"
-
+#include "kernel/locks.h"
 /**
  * @brief  开启分页制度的初始化函数
  * 
@@ -118,6 +120,7 @@ typedef struct __pool_t {
     uint32_t phy_addr_start;                    // 本内存池所管理的物理内存的起始地址
     uint32_t pool_size;                         // 本内存池的字节容量
    // mutex_t mutex;         //暂时没有实现                     // 内存池是共享变量，申请内存时候要保证互斥
+    spinlock_t mutex;//实现了自旋锁
 } pool_t;
 
 /**
@@ -128,7 +131,7 @@ typedef struct __pool_t {
  *      vaddr_start;           虚拟内存的起始的物理地址   
  */
 typedef struct __virtual_addr_t {
-    bitmap_t* vaddr_bitmap;                      // 虚拟内存的位图
+    bitmap_t *vaddr_bitmap;                      // 虚拟内存的位图
     uint32_t vaddr_start;                       // 虚拟内存的起始的物理地址
 } virtual_addr_t;
 
@@ -235,6 +238,10 @@ int free_a_page(void* vaddr);
  * 
  */
 unsigned long early_pgtable_alloc(void);
+
+unsigned long get_virt_pages(uint64_t pg_cnt,int ISKERNEL);
+
+void* malloc_pages(uint64_t pg_cnt,int ISKERNEL);
 
 void set_stage2_page_mapping(unsigned long gpa, unsigned long hpa, unsigned long size, pgprot_t prot);
 void write_stage2_pg_reg(void);

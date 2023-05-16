@@ -1,11 +1,20 @@
-
 #include "sched.h"
+#include "string.h"
+#include "string.h"
+#include "asm/csr.h"
+#include "mm.h"
+#include "types.h"
+#include "trap/trapframe.h"
+#include "current.h"
 #include "irq.h"
-
+#include "stdlist.h"
+// extern struct task_struct* intr_cur;
 /* 定义一个全局的就绪队列*/
-struct run_queue g_rq;
+struct ready_queue_base g_rq;
 
-struct task_struct *_pick_next_task(struct run_queue *rq,
+struct task_struct* oncpu;
+
+struct task_struct *_pick_next_task(struct ready_queue_base *rq,
 		struct task_struct *prev)
 {
 	const struct sched_class *class = &simple_sched_class;
@@ -13,21 +22,22 @@ struct task_struct *_pick_next_task(struct run_queue *rq,
 	return class->pick_next_task(rq, prev);
 }
 
-void dequeue_task(struct run_queue *rq, struct task_struct *p)
+void dequeue_task(struct ready_queue_base *rq, struct task_struct *p)
 {
 	const struct sched_class *class = &simple_sched_class;
 
 	return class->dequeue_task(rq, p);
 }
 
-void enqueue_task(struct run_queue *rq, struct task_struct *p)
+void enqueue_task(struct ready_queue_base *rq, struct task_struct *p)
 {
+
 	const struct sched_class *class = &simple_sched_class;
 
 	return class->enqueue_task(rq, p);
 }
 
-void task_tick(struct run_queue *rq, struct task_struct *p)
+void task_tick(struct ready_queue_base *rq, struct task_struct *p)
 {
 	const struct sched_class *class = &simple_sched_class;
 
@@ -39,7 +49,7 @@ struct task_struct * switch_to(struct task_struct *prev,
 {
 	if (prev == next)
 		return NULL;
-	kprintf("okk here now!\n");
+	
 	return cpu_switch_to(prev, next);
 }
 
@@ -59,9 +69,10 @@ void schedule_tail(struct task_struct *prev)
 
 void tick_handle_periodic(void)
 {
-	struct run_queue *rq = &g_rq;
+	struct ready_queue_base *rq = &g_rq;
 
-	task_tick(rq, current);
+	task_tick(rq, oncpu);
+	//kprintf("trrrrrrrrrrrrrrrrrrrrrr\n");
 }
 
 /* 检查是否在中断上下文里发生了调度，这是一个不好
@@ -80,33 +91,36 @@ static void schedule_debug(struct task_struct *p)
 static void __schedule(void)
 {
 	struct task_struct *prev, *next, *last;
-	struct run_queue *rq = &g_rq;
-
-	prev = current;
+	struct ready_queue_base *rq = &g_rq;
+	kprintf("\n-----schedule start------\n");
+	prev = oncpu;
 	
 	/* 检查是否在中断上下文中发生了调度 */
-	schedule_debug(prev);
 	
+	schedule_debug(prev);
+
 	/* 关闭中断包含调度器，以免中断发生影响调度器 */
 	raw_local_irq_disable();
 	
 	//如果当前线程不是处在运行态，那么就将其直接从run_list中删除
 	if (prev->state)
 		dequeue_task(rq, prev);
-
+	//kprintf("<<<<<<<<<<<<<<<<<<<<<<<<s\n");
 	//找到下一个可以替换上来运行的线程PCB
 	next = _pick_next_task(rq, prev);
-	kprintf("next=0x%x,next=0x%x\n",next,get_phy_addr_by_virt((unsigned long)next));
+	// kprintf("next=%x,prev=%x\n",next,prev);
+	//kprintf("next=0x%x,next=0x%x\n",next,get_phy_addr_by_virt((unsigned long)next));
 	//清空被切换进程的need_resched标记
 	clear_task_resched(prev);
 	
 	if (next != prev) {
+		oncpu=next;
+		// kprintf("prev=0x%x,prev=0x%x\n",prev,get_phy_addr_by_virt((unsigned long)prev));
+		// intr_cur=next;
 		
-		kprintf("prev=0x%x,prev=0x%x\n",prev,get_phy_addr_by_virt((unsigned long)prev));
-
 		last = switch_to(prev, next);
 		kprintf("last=0x%x!!!!!!!!!!!!\n",last);
-		
+		//return;
 		/*
 		 * switch_to函数是用来切换prev进程到next进程。
 		 * switch_to函数执行完成之后，已经切换到next
@@ -118,19 +132,21 @@ static void __schedule(void)
 		 * task_struct,返回值也是通过a0寄存器，因此
 		 * 这里last变量表示prev进程的task_struct
 		 */
-		rq->nr_switches++;
-		rq->curr = current;
+		rq->switches_num++;
+		rq->curr = oncpu;
 		//printk("%s current:%d, last %d\n", __func__, current->pid, last->pid);
 		/* 由next进程来收拾last(prev进程)的现场 */
-		kprintf("last point\n");
+		
 		schedule_tail(last);
 	}
 	else{
-		next->counter=(next->counter-1)/2;
+		//next->counter=(next->counter-1)/2;
+		//kprintf("[[[[[[[[[[[[[[]]]]]]]]]]]]]]");
 		/**
 		 * 这里增加了切换线程的时候的策略
 		 * 
 		*/
+		kprintf(":-> to be complished\n");
 	}
 }
 
@@ -172,20 +188,35 @@ void preempt_schedule_irq(void)
 //将线程pcb指针加入就绪队列
 void wake_up_process(struct task_struct *p)
 {
-	struct run_queue *rq = &g_rq;
+	struct ready_queue_base *rq = &g_rq;
 
 	p->state = TASK_RUNNING;
 
 	enqueue_task(rq, p);
 }
 
+
+/**
+ * 
+ * struct ready_queue_base{
+	list_t ready_list;
+	uint64_t ready_task_num;
+	uint64_t switches_num;
+	struct task_struct* curr;
+};
+*/
 void sched_init(void)
 {
-	struct run_queue *rq = &g_rq;
+	// struct run_queue *rq = &g_rq;
 
-	INIT_LIST_HEAD(&rq->rq_head);
-	rq->nr_running = 0;
-	rq->nr_switches = 0;
+	// INIT_LIST_HEAD(&rq->rq_head);
+	// rq->nr_running = 0;
+	// rq->nr_switches = 0;
+	// rq->curr=NULL;
+	
+	struct ready_queue_base* rq=&g_rq;
+	list_init(&rq->ready_list);
+	rq->ready_task_num=0;
+	rq->switches_num=0;
 	rq->curr=NULL;
-	// rq->curr = (struct task_struct*)&init_task_union;
 }

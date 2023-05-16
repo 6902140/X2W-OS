@@ -13,6 +13,7 @@
 
 #include "stdfmt.h"
 
+
 /**
  * @brief `test_stdfmt`是`stdfmt`库的测试函数
  * @return int 测试正常则返回0

@@ -10,6 +10,8 @@
 
 #include "kernel/ktrap.h"
 #include "kernel/kinit.h"
+#include "kernel/ktimer.h"
+#include "kernel/kstdio.h"
 #include "kernel/memory.h"
 #include "mm.h"
 #include "sched.h"
@@ -21,8 +23,15 @@ extern char _data[], _edata[];
 extern char _bss[], _ebss[];
 
 void kinit_all(void){
+    // uart_init();
     ktrap_init();
+    kprintf("=> ktrap_init\n");
+    ktimer_init();
+    kprintf("=> ktimer_init\n");
+    local_interrupt_enable();
+    kprintf("=> local_interrupt_enable\n");
     mem_init((unsigned long)_ebss, DDR_END);
-	paging_init();
+    paging_init();
     sched_init();
+
 }

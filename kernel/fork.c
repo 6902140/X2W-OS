@@ -3,10 +3,11 @@
 #include "string.h"
 #include "asm/csr.h"
 #include "mm.h"
-#include "list.h"
+#include "stdlist.h"
 #include "types.h"
 #include "trap/trapframe.h"
 #include "current.h"
+extern int TASK_READY;
 
 /**
  * 把0号进程的内核栈 编译链接到.data.init_task段中 
@@ -104,19 +105,20 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	int pid;
 	/*1.分配一个4KB的内存页*/
 	//修改代码，修改为malloc_a_page而不是直接获取物理页
-	p = (struct task_struct *)malloc_a_page();
+	p = (struct task_struct *)malloc_pages(1,1);
 	
 	if (!p)
 		goto error;
 	/*初始化该页面*/
 	
 	memset(p, 0, sizeof(*p));
-	for(int i=0;i<sizeof(*p);i++){
-		*((uint8_t*)(p)+i)=0;
-	}
+	// for(int i=0;i<sizeof(*p);i++){
+	// 	*((uint8_t*)(p)+i)=0;
+	// }
 	/*2.开始分配一个pid给该线程*/
 	pid = find_empty_task();
 	kprintf("fetch a pid=%d\n",pid);
+	TASK_READY++;
 	//kprintf("pid=%d\n",pid);
 	if (pid < 0)
 		goto error;
@@ -124,26 +126,24 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	/*赋值进程的上下文信息*/
 	if (copy_thread(clone_flags, p, fn, arg))
 		goto error;
-
+	kprintf("!!------------------!!\n");
 	p->state = TASK_RUNNING;
 	p->pid = pid;
 
-	p->counter = (current->counter + 1) >> 1;
 
-	if(p->counter<=0){
-		p->counter=2;
-	}
-
-	current->counter >>= 1;
 	p->need_resched = 0;
 	p->preempt_count = 0;
 	p->priority = 2;
 	total_forks++;
-
+	
 	/*自此建立pid和pcb的联系*/
 	g_task[pid] = p;
-	SET_LINKS(p);
+	create_user_vaddr_bitmap(p);
 
+	kprintf("---thread pid[%d] bitmap alloc successfully!!!---\n",pid);
+
+	SET_LINKS(p);
+	
 	wake_up_process(p);
 
 	return pid;

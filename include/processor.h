@@ -1,5 +1,5 @@
-#ifndef	_BENOS_PROCESSOR_H
-#define	_BENOS_PROCESSOR_H
+#ifndef	__PROCESSOR_H
+#define	__PROCESSOR_H
 
 #define _TIF_NEED_RESCHED       (1)
 

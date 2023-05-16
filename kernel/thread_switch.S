@@ -233,7 +233,7 @@ cpu_switch_to:
 
 	/* tp point to task_struct*/
 	move tp, a1
-
+	#tail schedule_tail
 	ret
 
 /*

@@ -16,10 +16,6 @@
 #ifndef __INCLUDE_ASM_UART_H
 #define __INCLUDE_ASM_UART_H
 
-#define UART        0x10000000
-#define UART_SIZE   4096
-
-
 /// `AXI UART 16550`芯片的时钟频率, 设置波特率时将根据时钟频率计算除数
 #define UART16550_CLOCK 1843200
 

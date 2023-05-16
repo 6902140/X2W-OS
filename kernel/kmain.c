@@ -17,79 +17,106 @@
 #include "kernel/memory.h"
 #include "sched.h"
 #include "asm/irq.h"
+#include "kernel/locks.h"
+extern struct task_struct* oncpu;
+extern struct ready_queue_base g_rq;
+extern int TASK_READY;
 
-extern char _text_boot[], _etext_boot[];
-extern char _text[], _etext[];
-extern char _rodata[], _erodata[];
-extern char _data[], _edata[];
-extern char _bss[], _ebss[];
 
-// void delay(int n){
-// 	while(n--){};
-// }
 
-// void kernel_thread1(void)
-// {
-// 	unsigned long i = 0;
-// 	while (1) {
-// 		delay(8000);
-// 		kprintf("%s: %ld\n", __func__, i++);
-// 	}
-// }
+struct _test_lock_t{
+	int public_variable;
+	spinlock_t mylock;
+};
+struct _test_lock_t test_lock_t;
 
-// void kernel_thread2(void)
-// {
-// 	unsigned long y = 0;
-// 	while (1) {
-// 		delay(8000);
-// 		kprintf("%s: %s + %llu\n", __func__, "abcde", y++);
-// 	}
-// }
-
-void kernel_main_stage2(void){
-	 kprintf("welcome to kernel_main_stage2 !!!!!\n ");
-	 while (1);
+void test_lock_add(struct _test_lock_t* t){
+	spinlock_acquire(&(t->mylock));
+	t->public_variable+=1000;
+	delay(10000);
+	t->public_variable-=999;
+	spinlock_release(&(t->mylock));
 }
 
+void delay(uint64_t k){
+	while(k){
+		k--;
+	}
+}
+
+
+
+void kernel_stage2(void){
+	kprintf("welcome to kernel stage .2\n");
+	
+
+	while(1){
+		delay(5000);
+		test_lock_add(&test_lock_t);
+		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
+		kprintf("pid[%d] is on running 12345;\n",oncpu->pid);
+	};
+	
+}
+
+void kernel_stage3(void){
+	kprintf("welcome to kernel stage 3\n");
+	
+
+	while(1){
+		delay(5000);
+		test_lock_add(&test_lock_t);
+		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
+		kprintf("pid[%d] is on running abcde;\n",oncpu->pid);
+	};
+	
+}
+
+void kernel_stage4(void){
+	kprintf("welcome to kernel stage 3\n");
+
+	while(1){
+		delay(5000);
+		test_lock_add(&test_lock_t);
+		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
+		kprintf("pid[%d] is on running !@#$^;\n",oncpu->pid);
+	};
+	
+}
+
+
 void kernel_main(void){
-	// mem_init((unsigned long)_ebss, DDR_END);
-	// paging_init();
-	// //初始化内存和分页制度(写在kinit_all里面了)
     kprintf(DELIMITER);
     uart_puts("In kernel!\n");
     kprintf("Kernel init!\n");
+	oncpu=0;TASK_READY=1;
     kinit_all();
 
     kprintf("Start testing!\n");
-    test_all();
+    // test_all();
+
 
 	print_kmem();
+    kprintf("Kernel Hanging Here!\n");
+	int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage2, 0);
+	int pid_main2 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage3, 0);
+	int pid_main3 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage4, 0);
+	// for(int i=0;i<3;i++)
+	// 	create_user_vaddr_bitmap(g_task[i]);
+	kprintf("00ci0w-acvjd\n");
+	test_lock_t.public_variable=0;
+	spinlock_init(&(test_lock_t.mylock),"for test");
+	kprintf("pid:%d,%d,%d\n",pid_main,pid_main2,pid_main3);
 
-   
-	// int pid;
-
-	// pid = do_fork(PF_KTHREAD, (unsigned long)&kernel_thread1, 0);
-	// if (pid < 0)
-	// 	kprintf("create thread fail\n");
-	// kprintf("pid %d created\n", pid);
-
-	// pid = do_fork(PF_KTHREAD, (unsigned long)&kernel_thread2, 0);
-	// if (pid < 0)
-	// 	kprintf("create thread fail\n");
+	oncpu=g_task[0];
+	oncpu->counter=20;
+	oncpu->priority=5;
+	wake_up_process(oncpu);
 	
-	// kprintf("pid %d created\n", pid);
-	// arch_local_irq_enable();
-	// delay(10000);
-	// struct task_struct *next = g_task[pid];
-	// kprintf("Kernel Hanging Here!\n");
-
-	// switch_to(current,next);
-    int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_main_stage2, 0);
-	struct task_struct *next = g_task[pid_main];
-	switch_to(current,next);
-	return;
-    while (1);
-
+    while (1){
+		delay(10000);
+		kprintf("pid[0],In kernel main thread now\n");
+	};
 }
 
 // TODO: 需要完成printf函数更多的feature

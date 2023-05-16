@@ -5,6 +5,7 @@
 #include "pg_attr.h"
 #include "mm.h"
 
+
 /* Page protection bits */
 #define _PAGE_BASE	(_PAGE_PRESENT | _PAGE_ACCESSED | _PAGE_USER)
 

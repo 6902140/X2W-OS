@@ -1,6 +1,7 @@
-#include "mm.h"
+
 #include "asm/csr.h"
 
+#include "mm.h"
 
 /*
    使用汇编完成了SATP_MODE_39使能的操作

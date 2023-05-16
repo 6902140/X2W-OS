@@ -1,82 +1,62 @@
 
 #include "sched.h"
+#include "stdlist.h"
+int TASK_READY;
 
-
-static void dequeue_task_simple(struct run_queue *rq,
+static void dequeue_task_simple(struct ready_queue_base *rq,
 		struct task_struct *p)
 {
-	rq->nr_running--;
-	list_del(&p->run_list);
+	rq->ready_task_num--;
+	list_remove(&p->run_list);
 }
 
-static void enqueue_task_simple(struct run_queue *rq,
+static void enqueue_task_simple(struct ready_queue_base *rq,
 		struct task_struct *p)
 {
-	list_add(&p->run_list, &rq->rq_head);
-	rq->nr_running++;
+	list_append(&p->run_list, &rq->ready_list)
+	;
+	kprintf("append p->runlist=%x\n",&p->run_list);
+	rq->ready_task_num++;
+	kprintf("ready_task_num=%d\n",rq->ready_task_num);
 }
 
 
-/*简易调度的评价指标*/
-static int goodness(struct task_struct *p)
-{
-	int weight;
-
-	weight = p->counter;
-
-	return weight;
-}
 
 
-static void reset_score(void)
-{
-	struct task_struct *p;
 
-	for_each_task(p) {
-		p->counter = DEF_COUNTER + p->priority;
-		//kprintf("%s, pid=%d, count=%d\n", __func__, p->pid, p->counter);
-	}
-}
-
-
-/*循序轮流查看*/
-static struct task_struct *pick_next_task_simple(struct run_queue *rq,
+static struct task_struct *pick_next_task_simple(struct ready_queue_base *rq,
 		struct task_struct *prev)
 {
-	struct task_struct *p, *next;
-	struct list_head *tmp;
-	int weight;
-	int c;
+	struct task_struct *next;
+	// struct list_elem_t *tmp;
+	// list_for_each(temp,rq->ready_list->head)
+	// 	p = list_entry(tmp, struct task_struct, run_list);
+	next=list_entry((rq->ready_list.head.next), struct task_struct, run_list);
+	
+	list_elem_t* pop_elem=list_pop(&rq->ready_list);
+	list_append(pop_elem,&rq->ready_list);
 
-repeat:
-	c = -1000;
-	list_for_each(tmp, &rq->rq_head) {
-		p = list_entry(tmp, struct task_struct, run_list);
-		weight = goodness(p);
-		if (weight > c) {
-			c = weight;
-			next = p;
-		}
+	kprintf("\n====================\nok,ready list will select next thread...\n");
+	kprintf("pick next pid[%d]\n====================\n ",next->pid);
+	if(next->counter<=0){
+		next->counter+=DEF_COUNTER + next->priority;;
 	}
-
-	if (!c) {
-		reset_score();
-		goto repeat;
-	}
-
-	//printk("%s: pick next thread (pid %d)\n", __func__, next->pid);
-
 	return next;
 }
 
+
+
 /*简易调度计时器*/
-static void task_tick_simple(struct run_queue *rq, struct task_struct *p)
+void task_tick_simple(struct ready_queue_base *rq, struct task_struct *p)
 {
-	if (--p->counter <= 0) {
+	
+	p->counter=(p->counter)-1;
+	
+	if (p->counter <= 0) {
 		p->counter = 0;
-		p->need_resched = 1;
-		//printk("pid %d need_resched\n", p->pid);
+		p->need_resched = 1;	
 	}
+	
 }
 
 /*建议调度类的实现*/

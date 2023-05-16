@@ -3,15 +3,17 @@
 #define __SCHED_H
 
 #include "mm.h"
-#include "list.h"
 #include "types.h"
 #include "trap/trapframe.h"
 #include "current.h"
+#include "stdlist.h"
 
 
 
 #define THREAD_SIZE  (1 * PAGE_SIZE)
 #define NR_TASK 128
+
+extern struct task_struct* oncpu;
 
 /**
  * @brief 'cpu_context' 是进程/线程切换时的保存的上下文
@@ -21,6 +23,9 @@
  */
 struct cpu_context {
 	unsigned long ra;
+	/*ra寄存器是RISC-V体系结构中的一个通用寄存器，*/
+	/*该寄存器用于保存函数调用的返回地址，
+	在函数执行完毕后，可以使用该寄存器中的值返回到调用该函数的位置。*/
 	unsigned long sp;	/* 栈指针 */
 
 	/* 函数调用必须要保存的通用寄存器 */
@@ -30,7 +35,7 @@ struct cpu_context {
 
 
 struct task_struct;
-struct run_queue;
+struct ready_queue_base;
 
 
 /**
@@ -39,18 +44,25 @@ struct run_queue;
 struct sched_class {
 	const struct sched_class *next;
 	void (*task_fork)(struct task_struct *p);
-	void (*enqueue_task)(struct run_queue *rq, struct task_struct *p);
-	void (*dequeue_task)(struct run_queue *rq, struct task_struct *p);
-	void (*task_tick)(struct run_queue *rq, struct task_struct *p);
-	struct task_struct * (*pick_next_task)(struct run_queue *rq,
+	void (*enqueue_task)(struct ready_queue_base *rq, struct task_struct *p);
+	void (*dequeue_task)(struct ready_queue_base *rq, struct task_struct *p);
+	void (*task_tick)(struct ready_queue_base *rq, struct task_struct *p);
+	struct task_struct * (*pick_next_task)(struct ready_queue_base *rq,
 			struct task_struct *prev);
 };
 
-struct run_queue {
-	struct list_head rq_head;
-	unsigned int nr_running;
-	uint64_t nr_switches;
-	struct task_struct *curr;
+// struct ready_queue_base {
+// 	struct list_head rq_head;
+// 	unsigned int nr_running;
+// 	uint64_t nr_switches;
+// 	struct task_struct *curr;
+// };
+
+struct ready_queue_base{
+	list_t ready_list;
+	uint64_t ready_task_num;
+	uint64_t switches_num;
+	struct task_struct* curr;
 };
 
 
@@ -104,12 +116,15 @@ struct task_struct {
 	调度器会尽快将 CPU 分配给其他进程执行。*/
 	int need_resched;
 
+	uint64_t* private_pgdir;
+	virtual_addr_t userprog_vaddr;
+	bitmap_t virtual_bitmap;
 	unsigned long kernel_sp;
 	unsigned long user_sp;
 	enum task_state state;
 	enum task_flags flags;
 	int pid;
-	struct list_head run_list;
+	list_elem_t run_list;
 	int counter;
 	int priority;
 	struct task_struct *next_task;
@@ -182,11 +197,11 @@ void sched_init(void);
 
 void schedule(void);
 
-void task_tick(struct run_queue *rq, struct task_struct *p);
+void task_tick(struct ready_queue_base *rq, struct task_struct *p);
 
-void enqueue_task(struct run_queue *rq, struct task_struct *p);
+void enqueue_task(struct ready_queue_base *rq, struct task_struct *p);
 
-struct task_struct *_pick_next_task(struct run_queue *rq,
+struct task_struct *_pick_next_task(struct ready_queue_base *rq,
 		struct task_struct *prev);
 
 void tick_handle_periodic(void);
@@ -217,7 +232,7 @@ static inline void clear_task_resched(struct task_struct *p)
 #define PREEMPT_MASK	(__IRQ_MASK(PREEMPT_BITS) << PREEMPT_SHIFT)
 #define HARDIRQ_MASK	(__IRQ_MASK(HARDIRQ_BITS) << HARDIRQ_SHIFT)
 
-#define preempt_count() (current->preempt_count)
+#define preempt_count() (oncpu->preempt_count)
 
 #define hardirq_count()	(preepmt_count() & HARDIRQ_MASK)
 
@@ -229,12 +244,12 @@ static inline void clear_task_resched(struct task_struct *p)
 */
 static inline void preempt_disable(void)
 {
-	current->preempt_count++;
+	oncpu->preempt_count++;
 }
 
 static inline void preempt_enable(void)
 {
-	current->preempt_count--;
+	oncpu->preempt_count--;
 }
 
 static inline void preempt_add(int val)
@@ -248,7 +263,7 @@ static inline void preempt_sub(int val)
 }
 
 
-void dequeue_task(struct run_queue *rq, struct task_struct *p);
+void dequeue_task(struct ready_queue_base *rq, struct task_struct *p);
 
 void schedule_tail(struct task_struct *prev);
 

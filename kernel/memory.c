@@ -78,7 +78,7 @@ static void alloc_init_pte(pmd_t *pmdp, unsigned long addr,
 		/*分配一个page，用于PTE页表*/
 		pte_phys = alloc_pgtable();//强调：这是*PTE页表*的物理实际地址
 		/* 由PTE基地址来回填pmdp表项 */
-		kprintf("pte_phy=%u,\n",pte_phys);
+		//kprintf("pte_phy=%u,\n",pte_phys);
 		set_pmd(pmdp, pfn_pmd(PFN_DOWN(pte_phys), PAGE_TABLE));
 		pmd = *pmdp;
 	}
@@ -202,7 +202,7 @@ static void create_identical_mapping(void)
 
 	/*map text*/
 	//代码段的映射
-	kprintf("start create_identical_mapping\n");
+	//kprintf("start create_identical_mapping\n");
 	start = (unsigned long)_text_boot;
 	end = (unsigned long)_etext;
 	__create_pgd_mapping((pgd_t *)idmap_pg_dir, start, start,
@@ -210,7 +210,7 @@ static void create_identical_mapping(void)
 			early_pgtable_alloc,
 			0);
 
-	kprintf("map text done\n");
+	//kprintf("map text done\n");
 
 	/*map memory*/
 	//为内存创建恒等映射
@@ -226,10 +226,10 @@ static void create_identical_mapping(void)
 	end =  DDR_END;
 	
 	__create_pgd_mapping((pgd_t *)idmap_pg_dir, start, start,
-			end - start, PAGE_KERNEL_RESERVE,
+			end - start, PAGE_KERNEL,
 			early_pgtable_alloc,
 			0);
-	kprintf("map memory done\n");
+	//kprintf("map memory done\n");
 }
 
 static void create_mmio_mapping(void)
@@ -255,29 +255,30 @@ static void create_mmio_mapping(void)
 			0);
 
 	/*map UART0*/
-	start = UART;
+	start = UART_MMAP_BASE;
 	__create_pgd_mapping((pgd_t *)idmap_pg_dir, start, start,
-			UART_SIZE, PAGE_KERNEL,
+			4096, PAGE_KERNEL,
 			early_pgtable_alloc,
 			0);
 
 	/*map CLINT*/
 	start = VIRT_CLINT_ADDR;
 	__create_pgd_mapping((pgd_t *)idmap_pg_dir, start, start,
-			VIRT_CLINT_SIZE, PAGE_KERNEL,
+			VIRT_CLINT_SIZE, PAGE_KERNEL_READ_WRITE_EXEC,
 			early_pgtable_alloc,
 			0);
+	
 }
 
 void paging_init(void)
 {
-	kprintf("------------------start paging-------------------\n");
+	//kprintf("------------------start paging-------------------\n");
 	memset(idmap_pg_dir, 0, PAGE_SIZE);
 	//将PGD每一位给清零，防止数据污染
 	create_identical_mapping();
 	
 	create_mmio_mapping();
-	kprintf("\n***************paging finished********************\n");
+	//kprintf("\n***************paging finished********************\n");
 	enable_mmu_relocate();
-	kprintf("\n***************enable mmu finished sucessfully********************\n");
+	//kprintf("\n***************enable mmu finished sucessfully********************\n");
 }

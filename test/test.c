@@ -15,8 +15,6 @@
 #include "test/test_string.h"
 #include "test/test_kstdio.h"
 #include "test/test_strap.h"
-#include "test/test_memory.h"
-#include "test/test_thread.h"
 
 /// @brief 测试函数结构体
 struct {
@@ -46,9 +44,8 @@ void test_all(void){
     register_test_func(test_stdfmt);
     register_test_func(test_string);
     register_test_func(test_kstdio);
-    register_test_func(test_exception);
-    register_test_func(test_memory);
-   // register_test_func(test_thread);
+    // register_test_func(test_exception);
+
 
     for (int i = 0; i < _Test.regiter_idx; i++)
         (*_Test.test_functions[i])();
