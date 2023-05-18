@@ -4,16 +4,30 @@
 #include "processor.h"
 
 
+/*
+kernel_entry 宏：
+
+(1)
+该宏保存当前线程的上下文信息到内核栈（sp 寄存器）中。
+首先，通过读取 sscratch 寄存器将当前线程的任务结构指针（task_struct）存储到 tp 寄存器。
+然后，将当前线程的内核栈指针（sp 寄存器）保存到 task_struct->kernel_sp 字段中。
+接着，将当前线程的用户态栈指针（sp 寄存器）保存到 task_struct->user_sp 字段中。
+最后，从 task_struct->kernel_sp 字段中加载正确的内核态栈指针（sp 寄存器）。
+
+(2)
+寄存器保存：
+在 kernel_entry 宏中，一系列的 sd 指令被用于将寄存器的值保存到内核栈中，
+其中包括 x1 到 x31 寄存器以及 s0 寄存器。
+
+*/
+
 .macro kernel_entry
-	/* 先读tp = sscratch；后写sscratch=tp
-	   如果从用户态陷入到内核，sscratch寄存器保存了指向task_struct的指针
-	   如果从内核态下陷入，那么tp寄存器一直指向task_struct
-	 */
+
 	csrrw tp, sscratch, tp
 	bnez tp, _save_user_sp
-
+	/*如果寄存器 tp 的值不等于零，则跳转到标签 _save_user_sp 处执行代码。*/
 _save_kernel_sp:
-	csrr tp, sscratch
+	csrr tp, sscratch/*用于将 sscratch 寄存器的值加载到寄存器 tp 中。*/
 	sd sp, TASK_TI_KERNEL_SP(tp)
 _save_user_sp:
 	/* 把用户态的sp保存到task_struc->user_sp*/
@@ -22,6 +36,7 @@ _save_user_sp:
 	ld sp, TASK_TI_KERNEL_SP(tp)
 
 	addi sp, sp, -(PT_SIZE)
+	/*开始保存中断栈帧*/
 	sd x1,  PT_RA(sp)
 	sd x3,  PT_GP(sp)
 	sd x5,  PT_T0(sp)
@@ -53,10 +68,9 @@ _save_user_sp:
 	sd x31, PT_T6(sp)
 
 	/*
-	   内核态陷入时，内核态sp保存到了TASK_TI_USER_SP
-	   用户态陷入时，用户态的sp也保存到了TASK_TI_USER_SP
-	   保存SP -> PT_SP(sp)
-	 */
+	   这两条指令的作用是将任务的用户态栈指针从任务结构（task_struct）中加载到 s0 寄存器，
+	   并将其存储到内核态栈（sp）中的 PT_SP 偏移量所指向的位置。
+	*/
 	ld s0, TASK_TI_USER_SP(tp)
 	sd s0, PT_SP(sp)
 

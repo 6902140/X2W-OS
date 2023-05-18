@@ -99,9 +99,8 @@ enum task_flags {
 
 
 
-/* 进程PCB */
 struct task_struct {
-	struct cpu_context cpu_context;
+	struct cpu_context cpu_context;//14*8=112
 
 	/*preempt_count 是一个表示内核抢占计数的变量。
 	在 Linux 内核中，抢占是指内核可以强制剥夺当前进程的 CPU 使用权，将 CPU 分配给其他更高优先级的进程或者内核线程使用。
@@ -110,25 +109,30 @@ struct task_struct {
 	preempt_count 也用于防止嵌套的抢占。如果当前进程被抢占时，
 	内核会增加 preempt_count 的值，并将抢占标志设置为真。如果在被抢占的代码段中有新的抢占事件发生，
 	内核将不会再次抢占当前进程，从而避免出现嵌套抢占的情况，提高代码的可靠性和稳定性。*/
-	int preempt_count;
+	int preempt_count;//:112~116
 	
 	/*need_resched 是一个表示当前进程是否需要被调度的标志。当 need_resched 被设置为非零值时，表示当前进程需要被调度，
 	调度器会尽快将 CPU 分配给其他进程执行。*/
-	int need_resched;
+	int need_resched;//:116~120
 
-	uint64_t* private_pgdir;
-	virtual_addr_t userprog_vaddr;
-	bitmap_t virtual_bitmap;
-	unsigned long kernel_sp;
-	unsigned long user_sp;
+	
+	unsigned long kernel_sp;//:120~128
+	unsigned long user_sp;//:128~136
+	//定义在processor.h中：tcb中各种变量的偏移
 	enum task_state state;
 	enum task_flags flags;
 	int pid;
 	list_elem_t run_list;
+	int time_slice;
 	int counter;
 	int priority;
 	struct task_struct *next_task;
 	struct task_struct *prev_task;
+
+	//added:
+	uint64_t* private_pgdir;
+	virtual_addr_t userprog_vaddr;
+	bitmap_t virtual_bitmap;
 
 };
 
