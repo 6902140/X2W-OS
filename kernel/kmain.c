@@ -110,6 +110,7 @@ void kernel_main(void){
 	oncpu=g_task[0];
 	oncpu->counter=20;
 	oncpu->priority=5;
+	oncpu->preempt_count=0;
 	wake_up_process(oncpu);
 	
     while (1){

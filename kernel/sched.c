@@ -92,9 +92,11 @@ static void __schedule(void)
 {
 	struct task_struct *prev, *next, *last;
 	struct ready_queue_base *rq = &g_rq;
-	kprintf("\n-----schedule start------\n");
+	// kprintf("\n-----schedule start------\n");
+	// kprintf("000000000000000000000000000000000000\n");
+	// kprintf("222222222222222222222222222222222222\n");
 	prev = oncpu;
-	
+	// kprintf("111111111111111111111111111111111111\n");
 	/* 检查是否在中断上下文中发生了调度 */
 	
 	schedule_debug(prev);
@@ -119,7 +121,7 @@ static void __schedule(void)
 		// intr_cur=next;
 		
 		last = switch_to(prev, next);
-		kprintf("last=0x%x!!!!!!!!!!!!\n",last);
+		//kprintf("last=0x%x!!!!!!!!!!!!\n",last);
 		//return;
 		/*
 		 * switch_to函数是用来切换prev进程到next进程。

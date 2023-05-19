@@ -37,7 +37,7 @@ int64_t ktimer_interrupt_handler(ktrapframe_t *kft_ptr){
         tick_handle_periodic();
         if(oncpu->need_resched){
             kprintf("pid %d need sched out!\n",oncpu->pid);
-            schedule();
+            //schedule();
         }
     }
     return 0;
