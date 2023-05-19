@@ -26,3 +26,32 @@ void create_user_vaddr_bitmap(struct task_struct *user_prog){
     //memset(user_prog->userprog_vaddr.vaddr_bitmap->bits,0,user_prog->userprog_vaddr.vaddr_bitmap->size);
     raw_local_irq_enable();
 }
+
+
+/*
+
+// Reset tf->a0 to 0 so that fork returns 0 in the child.
+// 这里将tf->a0设置为0，以便fork在子进程中返回0。
+static void
+usertrapret(void)
+{
+  struct proc *p = myproc();
+
+  // 从当前进程的trapframe中恢复用户态寄存器状态
+  memmove(p->tf, p->tf->trapframe, sizeof(struct trapframe));
+  p->tf->epc += 4;  // 在epc中加上4，以绕过触发陷阱的指令
+
+  // 切换页表为当前进程的页表
+  lcr3(V2P(p->pagetable));
+
+  // 切换到用户态
+  p->state = RUNNING;
+  release(&p->lock);
+
+  // 跳转到用户态代码
+  asm volatile("sret");
+}
+
+
+*/
+

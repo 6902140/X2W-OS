@@ -49,7 +49,6 @@ void delay(uint64_t k){
 void kernel_stage2(void){
 	kprintf("welcome to kernel stage .2\n");
 	
-
 	while(1){
 		delay(5000);
 		test_lock_add(&test_lock_t);

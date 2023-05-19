@@ -140,6 +140,11 @@ _save_user_sp:
    否则写入stvec寄存器会不成功
  */
 
+ /*
+   do_exception_vector必须4字节对齐
+   否则写入stvec寄存器会不成功
+ */
+
 
 ret_from_exception:
 	ld s0, PT_SSTATUS(sp)

@@ -44,13 +44,22 @@ static int find_empty_task(void)
 /*
  * pt_regs存储在栈顶
  */
-static struct pt_regs *task_pt_regs(struct task_struct *tsk)
-{
+// static struct pt_regs *task_pt_regs(struct task_struct *tsk)
+// {
+// 	unsigned long p;
+
+// 	p = (unsigned long)tsk + THREAD_SIZE - sizeof(struct pt_regs);
+
+// 	return (struct pt_regs *)p;
+// }
+
+/*
+ * pt_regs存储在栈顶
+ */
+static ktrapframe_t* task_ktrapframe(struct task_struct* tsk){
 	unsigned long p;
-
-	p = (unsigned long)tsk + THREAD_SIZE - sizeof(struct pt_regs);
-
-	return (struct pt_regs *)p;
+	p=(unsigned long)tsk+THREAD_SIZE-sizeof(ktrapframe_t);
+	return(ktrapframe_t*)p;
 }
 
 /*
@@ -59,18 +68,19 @@ static struct pt_regs *task_pt_regs(struct task_struct *tsk)
 static int copy_thread(unsigned long clone_flags, struct task_struct *p,
 		unsigned long fn, unsigned long arg)
 {
-	struct pt_regs *childregs;
+    ktrapframe_t *childregs;
 	
 	//获取栈帧位置
-	childregs = task_pt_regs(p);
+	childregs = task_ktrapframe(p);
 	
-	memset(childregs, 0, sizeof(struct pt_regs));
+	memset(childregs, 0, sizeof(ktrapframe_t));
 
 	memset(&p->cpu_context, 0, sizeof(struct cpu_context));
 	
 	if (clone_flags & PF_KTHREAD) {
 		const register unsigned long gp __asm__ ("gp");
-		childregs->gp = gp;
+		//childregs->gp = gp;
+		childregs->gregisters.gp=gp;
 
 		childregs->sstatus = SR_SPP | SR_SPIE;
 
@@ -79,10 +89,10 @@ static int copy_thread(unsigned long clone_flags, struct task_struct *p,
 
 		p->cpu_context.ra = (unsigned long)ret_from_kernel_thread;
 	} else {
-		*childregs = *task_pt_regs(current);
-		childregs->a0 = 0;
+		*childregs = *task_ktrapframe(current);
+		childregs->gregisters.a0 = 0;
 		if (fn)
-			childregs->sp = fn;
+			childregs->gregisters.sp = fn;
 
 		p->cpu_context.ra = (unsigned long)ret_from_fork;
 	}
@@ -163,17 +173,17 @@ error:
  * 最后，函数调用 kprintf 函数打印输出 sstatus、sp 和 sepc 三个成员的值，以便在调试时检查它们是否正确设置。
  * 
 */
-static void start_user_thread(struct pt_regs *regs, unsigned long pc,
+static void start_user_thread(ktrapframe_t *regs, unsigned long pc,
 		unsigned long sp)
 {
 	unsigned long val;
 	memset(regs, 0, sizeof(*regs));
 	regs->sepc = pc;
-	regs->sp = sp;
+	regs->gregisters.sp = sp;
 
 	val = read_csr(sstatus);
 	regs->sstatus = val &~ SR_SPP;
-	kprintf("sstatus 0x%llx sp 0x%llx  pc 0x%llx\n", regs->sstatus, regs->sp, regs->sepc);
+	kprintf("sstatus 0x%llx sp 0x%llx  pc 0x%llx\n", regs->sstatus, regs->gregisters.sp, regs->sepc);
 }
 
 
@@ -187,12 +197,14 @@ static void start_user_thread(struct pt_regs *regs, unsigned long pc,
 */
 int move_to_user_space(unsigned long pc)
 {
-	struct pt_regs *regs;
+	ktrapframe_t *regs;
 	unsigned long stack;
 
-	regs = task_pt_regs(current);
+	regs = task_ktrapframe(current);
 
 	stack = get_free_page();
+	//to do
+
 	if (!stack)
 		return -1;
 
