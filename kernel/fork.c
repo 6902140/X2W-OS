@@ -41,21 +41,7 @@ static int find_empty_task(void)
 	return -1;
 }
 
-/*
- * pt_regs存储在栈顶
- */
-// static struct pt_regs *task_pt_regs(struct task_struct *tsk)
-// {
-// 	unsigned long p;
 
-// 	p = (unsigned long)tsk + THREAD_SIZE - sizeof(struct pt_regs);
-
-// 	return (struct pt_regs *)p;
-// }
-
-/*
- * pt_regs存储在栈顶
- */
 static ktrapframe_t* task_ktrapframe(struct task_struct* tsk){
 	unsigned long p;
 	p=(unsigned long)tsk+THREAD_SIZE-sizeof(ktrapframe_t);

@@ -1,5 +1,6 @@
 #include "trap/tfoffset.h"
-
+#include "processor.h"
+#include "asm/csr.h"
 /**
  * @brief `ktrap_enter`是`SBI`的陷入入口函数, C语言描述为`void ktrap_enter(void)`
  * 
@@ -18,6 +19,19 @@
 .align 3
 .global ktrap_enter
 ktrap_enter:
+
+	csrrw tp,sscratch,tp/*从sscratch寄存器中读取tp*/
+	bnez tp,_save_user_sp
+
+_save_kernel_sp:
+	csrr tp,sscratch
+	sd sp,TASK_TI_KERNEL_SP(tp)
+_save_user_sp:
+	
+	sd sp,TASK_TI_USER_SP(tp)
+	ld sp,TASK_TI_KERNEL_SP(tp)/*读取内核栈栈底指针*/
+
+
 	addi sp, sp, -(KTF_SIZE)
 
 	sd x1,  KTF_RA(sp)
@@ -79,6 +93,8 @@ ktrap_enter:
 
 	mv a0, sp /* pt_regs */
 	mv a1, s4
+
+	/*行为一摸一样*/
 	tail ktrap_dispatcher
 
 
@@ -89,7 +105,57 @@ ktrap_enter:
  *  1. 恢复现场: 将`ktrap_enter`中得到的到陷入栈中的通用寄存器和一些csr寄存器的值加载到对应的寄存器中
  */
 .global ktrap_exit
-ktrap_exit:
+ktrap_exit:/*相当于ret_from_exception*/
+	ld s0, KTF_SSTATUS(sp)
+
+
+	csrc sstatus,SR_SIE/*将状态寄存器sstatus中的SR_SIE位清零，禁止中断*/
+	
+	/*判断此时是否是内核态触发的中断：*/
+
+	andi s0,s0,SR_SPP/*安装位与操作*/
+
+	bnez s0,ret_to_kernel
+
+	/*SR_SPP:1内核态，0用户态*/
+
+ret_to_user:
+	lw s0,TASK_TI_NEED_RESCHED(tp)
+	andi s0,s0,_TIF_NEED_RESCHED
+	bnez s0,work_resched
+
+no_work_pending:
+	/* 这里马上要返回到用户态了
+	   1. 要把内核态的sp保存到task_struct->kernel_sp
+	   2. 把task_struct的指针保存到sscratch，下回从用户态陷入到
+	      内核态时候，就能获取task_struct的指针
+	 */
+	addi s0, sp, KTF_SIZE
+    sd s0, TASK_TI_KERNEL_SP(tp)
+	csrw sscratch, tp
+	j restore_all
+
+work_resched:
+	call schedule
+	j no_work_pending 
+
+ret_to_kernel:
+        /*判断当前内核是否 处于 不可抢占状态，
+	  preempt_count > 0表示不可抢占状态*/
+	lw s0, TASK_TI_PREEMPT_COUNT(tp)
+	bnez s0, restore_all
+
+need_resched:
+	/*判断是否要抢占当前进程*/
+	lw s0, TASK_TI_NEED_RESCHED(tp)
+	andi s0, s0, _TIF_NEED_RESCHED
+	beqz s0, restore_all
+	/*准备抢占当前进程*/
+	call preempt_schedule_irq
+	j need_resched
+restore_all:
+	/*恢复中断现场*/
+	/*kernel_exit*/
 	ld a0, KTF_SSTATUS(sp)
 	csrw sstatus, a0
 
@@ -129,3 +195,10 @@ ktrap_exit:
 
 	ld x2,  KTF_SP(sp)
 	sret
+	
+
+
+
+
+
+
