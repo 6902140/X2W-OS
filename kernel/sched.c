@@ -10,6 +10,8 @@
 #include "stdlist.h"
 // extern struct task_struct* intr_cur;
 /* 定义一个全局的就绪队列*/
+extern char idmap_pg_dir[];
+
 struct ready_queue_base g_rq;
 
 struct task_struct* oncpu;
@@ -119,7 +121,13 @@ static void __schedule(void)
 		oncpu=next;
 		// kprintf("prev=0x%x,prev=0x%x\n",prev,get_phy_addr_by_virt((unsigned long)prev));
 		// intr_cur=next;
-		
+		if(next->private_pgdir){
+			reset_pgdir( get_phy_addr_by_virt(next->private_pgdir));
+			kprintf("next pid[%d] reset pgdir\n",next->pid);
+		}
+		else{
+			reset_pgdir(idmap_pg_dir);
+		}
 		last = switch_to(prev, next);
 		//kprintf("last=0x%x!!!!!!!!!!!!\n",last);
 		//return;
