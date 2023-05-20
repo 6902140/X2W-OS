@@ -1,44 +1,4 @@
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/kboot.o kernel/kboot.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/mmu_enable_entry.o kernel/mmu_enable_entry.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/thread_switch.o kernel/thread_switch.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/ktrap_entry.o kernel/ktrap_entry.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_strap-asm.o test/test_strap-asm.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/stdlib.o lib/stdlib.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/string.o lib/string.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/stdlist.o lib/stdlist.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/stdbitmap.o lib/stdbitmap.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/stdfmt.o lib/stdfmt.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/kernel/locks.o lib/kernel/locks.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/kernel/kstdio.o lib/kernel/kstdio.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/user/ustdio.o lib/user/ustdio.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/trap/trapframe.o lib/trap/trapframe.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/dump_pgtable.o kernel/dump_pgtable.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/kinit.o kernel/kinit.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/page_alloc.o kernel/page_alloc.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/sched.o kernel/sched.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/ktimer.o kernel/ktimer.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/ktrap.o kernel/ktrap.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/memory.o kernel/memory.c
 riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/kmain.o kernel/kmain.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/simple_sched_.o kernel/simple_sched_.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/fork.o kernel/fork.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/kernel/thread.o kernel/thread.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/device/uart.o device/uart.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_kstdio.o test/test_kstdio.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_strap.o test/test_strap.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_stdfmt.o test/test_stdfmt.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_stdlib.o test/test_stdlib.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test.o test/test.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_string.o test/test_string.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/test/test_uart.o test/test_uart.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/sboot.o sbi/sboot.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/strap_entry.o sbi/strap_entry.S
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/lib/sbi/sstdio.o lib/sbi/sstdio.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/sinit.o sbi/sinit.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/stimer.o sbi/stimer.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/smain.o sbi/smain.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/secall.o sbi/secall.c
-riscv64-unknown-elf-gcc -nostdlib -nostdinc -fno-builtin -fno-pie -mabi=lp64 -march=rv64imafd -mcmodel=medany -g -O0 -I include/ -fomit-frame-pointer -Wall -Wmissing-prototypes -Werror=strict-prototypes -Werror=incompatible-pointer-types  -c -o /home/lighthouse/xzr/X2W-OS/build/sbi/strap.o sbi/strap.c
 运行内核: kernel.elf, 所有输出将在下方显示
 首先按下 Ctrl+A, 然后按下 X 键以退出 QEMU
 你可以运行 `make debug-gdb` 以使用 GDB 调试内核
@@ -77,11 +37,12 @@ X2W-OS Image Layout:
   kernel: 0x80200000 - 0x80211148 ( 69960 B)
   .text.boot: 0x80200000 - 0x80200028 (    40 B)
        .text: 0x80200028 - 0x80209000 ( 36824 B)
-     .rodata: 0x80209000 - 0x8020aa3a (  6714 B)
-       .data: 0x8020aa3a - 0x80210000 ( 21958 B)
+     .rodata: 0x80209000 - 0x8020aa7a (  6778 B)
+       .data: 0x8020aa7a - 0x80210000 ( 21894 B)
         .bss: 0x80210000 - 0x80211148 (  4424 B)
 ============================================================
 Kernel Hanging Here!
+kernel main sstatus:0x122
 fetch a pid=1
 !!------------------!!
 ok start to move to user space
@@ -104,54 +65,52 @@ ok start to move to user space
 append p->runlist=804a098
 ready_task_num=3
 bitmap start from 0x804c000
-sstatus 0x22 sp 0pid 0 need sched out!
-pid 0 need sched out!
-x804c000  pc 0x8020502c
+sstatus 0x22 sp 0x804c000  pc 0x8020509c
 bitmap start from 0x804f000
-sstatus 0x22 sp 0x804f000  pc 0x802050b0
-pid 0 need sched out!
-pid 0 need sched out!
-bitmap start from 0x8052000
-sstatus 0x22 sp 0x8052000  pc 0x80205pid 0 need sched out!
-pid 0 need sched out!
-120
-PID [1][2][3] move to user space success!!!
+sstatus 0x22 sp 0x804f000  pc 0x80205120
+bitmap pid 0 need sched out!
+start from 0x8052000
+sstpid 0 need sched out!
+atus 0x22 sp 0x8052000  pc 0x80205190
+PID [1][2][3] move to upid 0 need sched out!
+ser spacpid 0 need sched out!
+e success!!!
 pid[0]'s pgdir vaddr=0x0
 pid[1]'s pgdir vaddr=0x804d000
-pid[2]'s pgdpid 0 need sched out!
 pid 0 need sched out!
-ir vaddr=0x8050000
+pid 0 need sched out!
+pid[2]'s pgdir vaddr=0x8050000
 pid[3]'s pgdir vaddr=0x8053000
 00ci0w-acvjd
-append p->runlist=8020d098
-ready_taspid 0 need sched out!
+append p->runlist=8020dpid 0 need sched out!
 pid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
- welcome to kernel stage .2
+ next pid[1] reset pgdir
+welcome to kernel stage .2
 now public variable with lock protection is <1>
-pid[1] 10 is on running 12345;
+pid[1] 9 is on running 12345;
 now public variable with lock protection is <2>
-pid[1] 7 is on running 12345;
+pid[1] 8 is on running 12345;
 now public variable with lock protection is <3>
 pid[1] 6 is on running 12345;
 now public variable with lock protection is <4>
-pid[1] 3 is on running 12345;
+pid[1] 5 is on running 12345;
 now public variable with lock protection is <5>
 pid[1] 3 is on running 12345;
-now public variablepid 1 need sched out!
-pid 1 need sched out!
+now public variable with lock protection is <6>
+pid[1] 2 is on running 12345;
+now pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- welcome to kernel stage 3
-now public variable with lock protection is <7>
-pid[2] is on running abcde;
+ next pid[2] reset pgdir
+welcome to kernel stage 3
 now public variable with lock protection is <8>
 pid[2] is on running abcde;
 now public variable with lock protection is <9>
@@ -162,31 +121,41 @@ now public variable with lock protection is <11>
 pid[2] is on running abcde;
 now public variable with lock protection is <12>
 pid[2] is on running abcde;
-pid 2 need sched out!
-pid 2 need sched out!
+now public variable with lock protection is <13>
+pid[2] is on running abcde;
+now public variable with lock protection is <14>
+pid[2] is on running abcde;
+now public variable with lock protection is <15>
+pid[2]pid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- welcome to kernel stage 3
-now public variable with lock protection is <14>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <15>
-pid[3] is on running !@#$^;
+ next pid[3] reset pgdir
+welcome to kernel stage 3
 now public variable with lock protection is <16>
 pid[3] is on running !@#$^;
 now public variable with lock protection is <17>
 pid[3] is on running !@#$^;
 now public variable with lock protection is <18>
 pid[3] is on running !@#$^;
-now publipid 3 need sched out!
+now public variable with lock protection is <19>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <20>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <21>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <22>
+pid[3] is on running !@#$^;
+now public variable withpid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[0]
 ====================
- k_num=4
+ 098
+ready_task_num=4
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -201,66 +170,62 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],Ipid 0 need sched out!
+pidpid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
-  with lock protection is <6>
+ next pid[1] reset pgdir
+public variable with lock protection is <7>
 pid[1] 10 is on running 12345;
-now public variable with lock protection is <20>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <21>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <22>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <23>
-pid[1] 2 is on running 12345;
 now public variable with lock protection is <24>
-pid[1] 2 is on running 12345;
-now public variable with lock pid 1 need sched out!
-pid 1 need sched out!
+pid[1] 7 is on running 12345;
+now public variable with lock protection is <25>
+pid[1] 4 is on running 12345;
+now public variable with lock protection is <26>
+pid[1] 2 is on rupid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- now public variable with lock protection is <25>
-pid[2] is on running abcde;
-now public variable with lock protection is <26>
-pid[2] is on running abcde;
+ next pid[2] reset pgdir
+ is on running abcde;
 now public variable with lock protection is <27>
 pid[2] is on running abcde;
 now public variable with lock protection is <28>
 pid[2] is on running abcde;
 now public variable with lock protection is <29>
-pid[2] is on running pid 2 need sched out!
+pid[2] is on running abcde;
+now public variable with lock protection is <30>
+pid[2] is on running abcde;
+pid 2 need sched out!
 pid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- c variable with lock protection is <19>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <30>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <31>
+ next pid[3] reset pgdir
+ lock protection is <23>
 pid[3] is on running !@#$^;
 now public variable with lock protection is <32>
 pid[3] is on running !@#$^;
 now public variable with lock protection is <33>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <34>pid 3 need sched out!
+now public variable with lock protection is <34>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <35>
+pid[3] is on running !@#$^;
+npid 3 need sched out!
 pid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[0]
 ====================
- n kernel main thread now
+ [0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -269,1828 +234,60 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[pid 0 need sched out!
+pid[0],In kernel main thread nopid 0 need sched out!
+pid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
- protection is <25>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <35>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <36>
-pid[1] 6 is on running 12345;
+ next pid[1] reset pgdir
+nning 12345;
 now public variable with lock protection is <37>
-pid[1] 6 is on running 12345;
+pid[1] 8 is on running 12345;
 now public variable with lock protection is <38>
-pid[1] 3 is on running 12345;
+pid[1] 4 is on running 12345;
 now public variable with lock protection is <39>
-pid[1] 1 is on running 12345;
-now public variable with lock protection pid 1 need sched out!
+pid[1] 3 is on running 12345;
+now public variable with lock protectionpid 1 need sched out!
 pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- abcde;
+ next pid[2] reset pgdir
+now public variable with lock protection is <40>
+pid[2] is on running abcde;
 now public variable with lock protection is <41>
 pid[2] is on running abcde;
 now public variable with lock protection is <42>
 pid[2] is on running abcde;
 now public variable with lock protection is <43>
 pid[2] is on running abcde;
-now public variable with lock protection is <44>
-pid[2] is on running abcde;
-now public variable with lock protection is <45>
-pid[2] is on running abcde;
-now public variablepid 2 need sched out!
+now pubpid 2 need sched out!
+pid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- 
+ next pid[3] reset pgdir
+ow public variable with lock protection is <36>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <45>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <46>
 pid[3] is on running !@#$^;
 now public variable with lock protection is <47>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <48>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <49>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <50>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <51>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <52>
-pid[3pid 3 need sched out!
+pid[3] is on running pid 3 need sched out!
 pid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[0]
 ====================
- 0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],Inpid 0 need sched out!
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- is <40>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <53>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <54>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <55>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <56>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <57>
-pid[1] 1 is on running 12345;
-pid 1 need sched out!
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
-  with lock protection is <46>
-pid[2] is on running abcde;
-now public variable with lock protection is <59>
-pid[2] is on running abcde;
-now public variable with lock protection is <60>
-pid[2] is on running abcde;
-now public variable with lock protection is <61>
-pid[2] is on running abcde;
-now public variable with lock protection is <62>
-pid[2] is on running abcde;
-now public variable with lock protection is <63>
-pid[2] is on running abcde;
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- ] is on running !@#$^;
-now public variable with lock protection is <64>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <65>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <66>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <67>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <68>
-pid[3] is on runnpid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
-  kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- now public variable with lock protection is <68>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <69>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <70>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <71>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <72>
-pid[1] 2 is on running 12345;
-now public variable with lock prpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- now public variable with lock protection is <74>
-pid[2] is on running abcde;
-now public variable with lock protection is <75>
-pid[2] is on running abcde;
-now public variable with lock protection is <76>
-pid[2] is on running abcde;
-now public variable with lock protection is <77>
-pid[2] is on running abcde;
-now public variable with lock protection is <78>
-pid[2] is on running abcde;
-now public variable with lock protection is <79>
-ppid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- ing !@#$^;
-now public variable with lock protection is <80>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <81>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <82>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <83>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <84>
-pid[3] is on running !@#$^;
-nopid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread npid 0 need sched out!
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- otection is <73>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <86>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <87>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <88>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <89>
-pid[1] 1 is on running 12345;
-now public variable with locpid 1 need sched out!
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- id[2] is on running abcde;
-now public variable with lock protection is <91>
-pid[2] is on running abcde;
-now public variable with lock protection is <92>
-pid[2] is on running abcde;
-now public variable with lock protection is <93>
-pid[2] is on running abcde;
-now public variable with lock protection is <94>
-pid[2] is on running abcde;
-now public variable with lock protection is <95>
-pid[2] is on running abcde;
-now public variablpid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- w public variable with lock protection is <85>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <97>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <98>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <99>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <100>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <101>
-pid[3] is on running !@#$^pid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- ow
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- k protection is <90>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <102>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <103>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <104>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <105>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <106>
-pid[1] 2 is on running 12345;
-now publipid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- e with lock protection is <96>
-pid[2] is on running abcde;
-now public variable with lock protection is <108>
-pid[2] is on running abcde;
-now public variable with lock protection is <109>
-pid[2] is on running abcde;
-now public variable with lock protection is <110>
-pid[2] is on running abcde;
-now public variable with lock protection is <111>
-pid[2] is on running abcde;
-now public variable with lock protection is <112>
-pid[2] is on running abcde;
-pid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- ;
-now public variable with lock protection is <114>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <115>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <116>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <117>
-pid[3] is on running !@#$^;
-now public variable with lock protection ipid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernepid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- c variable with lock protection is <107>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <119>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <120>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <121>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <122>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <123>
-pid[1] 2 is on runninpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- now public variable with lock protection is <123>
-pid[2] is on running abcde;
-now public variable with lock protection is <124>
-pid[2] is on running abcde;
-now public variable with lock protection is <125>
-pid[2] is on running abcde;
-now public variable with lock protection is <126>
-pid[2] is on running abcde;
-now public variable with lock protection is <127>
-pid[2] is on running abcde;
-now public variable with lock protection is <128>
-pid[2] is on running abcde;
-now publpid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- s <118>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <130>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <131>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <132>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <133>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <134>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- l main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- g 12345;
-now public variable with lock protection is <136>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <137>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <138>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <139>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <140>
-pid[1] 2 is on running 12345;
-nowpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- ic variable with lock protection is <129>
-pid[2] is on running abcde;
-now public variable with lock protection is <142>
-pid[2] is on running abcde;
-now public variable with lock protection is <143>
-pid[2] is on running abcde;
-now public variable with lock protection is <144>
-pid[2] is on running abcde;
-now public variable with lock protection is <145>
-pid[2] is on running abcde;
-now public vapid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <135>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <147>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <148>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <149>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <150>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <151>
-pid[3] is on runninpid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thrpid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
-  public variable with lock protection is <141>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <152>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <153>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <154>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <155>
-pid[1] 3 is on running 12345;
-now public variable with lopid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- riable with lock protection is <146>
-pid[2] is on running abcde;
-now public variable with lock protection is <157>
-pid[2] is on running abcde;
-now public variable with lock protection is <158>
-pid[2] is on running abcde;
-now public variable with lock protection is <159>
-pid[2] is on running abcde;
-now public variable with lock protection is <160>
-pid[2] is on running abcde;
-now public variable with lock protection is <161>
-pid[2]pid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- g !@#$^;
-now public variable with lock protection is <162>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <163>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <164>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <165>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <166>
-pid[3] is on running !pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- ead now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],Inpid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- ck protection is <156>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <167>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <168>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <169>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <170>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <171>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <172>
-pid[1] 2 ispid 1 need sched out!
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
-  is on running abcde;
-now public variable with lock protection is <173>
-pid[2] is on running abcde;
-now public variable with lock protection is <174>
-pid[2] is on running abcde;
-now public variable with lock protection is <175>
-pid[2] is on running abcde;
-now public variable with lock protection is <176>
-pid[2] is on running abcde;
-now public variable with lock protection is <177>
-pid[2] is on running abcde;
-now public variabpid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- @#$^;
-now public variable with lock protection is <179>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <180>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <181>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <182>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <183>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <184>
-pid[3] is on running !@#$^;
-now public variable wpid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
-  kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kepid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
-  on running 12345;
-now public variable with lock protection is <186>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <187>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <188>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <189>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <190>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <191>
-pid[1] 2 is on running 12345;
-now publipid 1 need sched out!
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- le with lock protection is <178>
-pid[2] is on running abcde;
-now public variable with lock protection is <193>
-pid[2] is on running abcde;
-now public variable with lock protection is <194>
-pid[2] is on running abcde;
-now public variable with lock protection is <195>
-pid[2] is on running abcde;
-now public variable with lock protection is <196>
-pid[2] is on running abcde;
-now publpid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- ith lock protection is <185>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <198>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <199>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <200>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <201>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <202>
-pid[3] is on running !@#$^;
-now publipid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- rnel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- c variable with lock protection is <192>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <204>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <205>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <206>
-pid[1] 4 is on running 12345;
-now public variablepid 1 need sched out!
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- ic variable with lock protection is <197>
-pid[2] is on running abcde;
-now public variable with lock protection is <208>
-pid[2] is on running abcde;
-now public variable with lock protection is <209>
-pid[2] is on running abcde;
-now public variable with lock protection is <210>
-pid[2] is on running abcde;
-now public variable with lock protection is <211>
-pid[2] is on running abcde;
-now public variable with lock protection is <212>
-pid[2] is on running abpid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- c variable with lock protection is <203>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <213>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <214>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <215>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <216>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <217>
-pipid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[pid 0 need sched out!
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
-  with lock protection is <207>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <218>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <219>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <220>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <221>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <222>
-pid[1] 3 is on runnipid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- cde;
-now public variable with lock protection is <223>
-pid[2] is on running abcde;
-now public variable with lock protection is <224>
-pid[2] is on running abcde;
-now public variable with lock protection is <225>
-pid[2] is on running abcde;
-now public variable with lock protection is <226>
-pid[2] is on running abcde;
-now public variable with lock protection is <227>
-pid[2] is on running abcde;
-now public variapid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- d[3] is on running !@#$^;
-now public variable with lock protection is <229>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <230>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <231>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <232>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <233>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <234>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- 0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- ng 12345;
-now public variable with lock protection is <236>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <237>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <238>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <239>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <240>
-pid[1] 2 is on running 12345;
-now public variable with lock protectpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- ble with lock protection is <228>
-pid[2] is on running abcde;
-now public variable with lock protection is <242>
-pid[2] is on running abcde;
-now public variable with lock protection is <243>
-pid[2] is on running abcde;
-now public variable with lock protection is <244>
-pid[2] is on running abcde;
-now public variable with lock protection is <245>
-pid[2] is on running abcde;
-now public variable with lock protection is <246>
-pid[2] is on running abcde;
-now public variablpid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <235>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <248>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <249>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <250>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <251>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <252>
-pid[3] is on running !@#$^;
-now publipid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- ion is <241>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <254>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <255>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <256>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <257>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <258>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <259>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <260>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <261>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <262>
-pid[1] 1 is on running 12345;
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- e with lock protection is <247>
-pid[2] is on running abcde;
-now public variable with lock protection is <264>
-pid[2] is on running abcde;
-now public variable with lock protection is <265>
-pid[2] is on running abcde;
-now public variable with lock protection is <266>
-pid[2] is on running abcde;
-now public variable with lock protection is <267>
-pid[2] is on running abcde;
-now public variable with lock protection is <268>
-pid[2] is on running abcde;
-now public variable with lock protection is <269>
-pid[2] is on running abcde;
-now public variable with lock protection is <270>
-pid[2] is on running abcde;
-now public variable with lock protection is <271>
-pid[2] is on running abcde;
-now public variable with lock protection is <272>
-pid[2] is on running abcde;
-pid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- c variable with lock protection is <253>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <273>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <274>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <275>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <276>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <277>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <278>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <279>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <280>
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pipid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- now public variable with lock protection is <263>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <281>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <282>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <283>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <284>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <285>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <286>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <287>
-pid[1] 1 is on running 12345;
-now ppid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- now public variable with lock protection is <289>
-pid[2] is on running abcde;
-now public variable with lock protection is <290>
-pid[2] is on running abcde;
-now public variable with lock protection is <291>
-pid[2] is on running abcde;
-now public variable with lock protection is <292>
-pid[2] is on running abcde;
-now public variable with lock protection is <293>
-pid[2] is on running abcde;
-now public variable with lock protection is <294>
-pid[2] is on running abcde;
-now public variable with lock protection is <295>
-pid[2] is on running abcde;
-now public variable with lock protection is <296>
-pid[2] is on running abcde;
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- pid[3] is on running !@#$^;
-now public variable with lock protection is <298>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <299>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <300>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <301>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <302>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <303>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <304>
-pid[3] is on running !@#$^;
-now public variable with lock protectpid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- d[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernpid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- ublic variable with lock protection is <288>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <306>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <307>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <308>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <309>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <310>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <311>
-pid[1] 2 is on running 12345;
-now public variable with lock protectionpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- now public variable with lock protection is <312>
-pid[2] is on running abcde;
-now public variable with lock protection is <313>
-pid[2] is on running abcde;
-now public variable with lock protection is <314>
-pid[2] is on running abcde;
-now public variable with lock protection is <315>
-pid[2] is on running abcde;
-now public variable with lock protection is <316>
-pid[2] is on running abcde;
-now public variable with lock protection is <317>
-pid[2] is on running abcde;
-now public variable with lock protection is <318>
-pid[2] is on running abcde;
-nowpid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- ion is <305>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <320>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <321>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <322>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <323>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <324>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <325>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <326>
-pid[3] is on running !@#$^;
-now pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- el main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread npid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
-  is <312>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <328>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <329>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <330>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <331>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <332>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <333>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <334>
-pid[1] 1 is on running 12345;
-now pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
-  public variable with lock protection is <319>
-pid[2] is on running abcde;
-now public variable with lock protection is <336>
-pid[2] is on running abcde;
-now public variable with lock protection is <337>
-pid[2] is on running abcde;
-now public variable with lock protection is <338>
-pid[2] is on running abcde;
-now public variable with lock protection is <339>
-pid[2] is on running abcde;
-now public variable with lock protection is <340>
-pid[2] is on running abcde;
-now public variable with lock protection is <341>
-pid[2] is on running abcde;
-now public variable with lock protection is <342>
-pid[2] is on running abcde;
-now public variablepid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- public variable with lock protection is <327>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <344>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <345>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <346>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <347>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <348>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <349>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <350>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- ow
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- public variable with lock protection is <335>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <351>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <352>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <353>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <354>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <355>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <356>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <357>
-pid[1] 1 is on running 12345;
-pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
-  with lock protection is <343>
-pid[2] is on running abcde;
-now public variable with lock protection is <359>
-pid[2] is on running abcde;
-now public variable with lock protection is <360>
-pid[2] is on running abcde;
-now public variable with lock protection is <361>
-pid[2] is on running abcde;
-now public variable with lock protection is <362>
-pid[2] is on running abcde;
-now public variable with lock protection is <363>
-pid[2] is on running abcde;
-now public variable with lock protection is <364>
-pid[2] is on running abcde;
-now public variable with lock protection is <365>
-pid[2] is on running abcde;
-nowpid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <367>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <368>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <369>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <370>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <371>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <372>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <373>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <374>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- 0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pipid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- now public variable with lock protection is <375>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <376>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <377>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <378>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <379>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <380>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <381>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <382>
-pid[1] 1 is on running 1pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
-  public variable with lock protection is <366>
-pid[2] is on running abcde;
-now public variable with lock protection is <383>
-pid[2] is on running abcde;
-now public variable with lock protection is <384>
-pid[2] is on running abcde;
-now public variable with lock protection is <385>
-pid[2] is on running abcde;
-now public variable with lock protection is <386>
-pid[2] is on running abcde;
-now public variable with lock protection is <387>
-pid[2] is on running abcde;
-now public variable with lock protection is <388>
-pid[2] is on running abcde;
-now public variable with lock protection is <389>
-pid[2] is on running abcde;
-now public variapid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <390>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <391>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <392>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <393>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <394>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <395>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <396>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <397>
-pid[3] is on running !@#$^;
-now public variable with locpid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- d[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- 2345;
-now public variable with lock protection is <399>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <400>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <401>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <402>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <403>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <404>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <405>
-pid[1] 2 is on running 12345;
-now public varpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- ble with lock protection is <390>
-pid[2] is on running abcde;
-now public variable with lock protection is <407>
-pid[2] is on running abcde;
-now public variable with lock protection is <408>
-pid[2] is on running abcde;
-now public variable with lock protection is <409>
-pid[2] is on running abcde;
-now public variable with lock protection is <410>
-pid[2] is on running abcde;
-now public variable with lock protection is <411>
-pid[2] is on running abcde;
-now public variable with lock protection is <412>
-pid[2] is on running abcde;
-now public variable with lock protection is <413>
-pid[2] is on running abcde;
-now ppid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- k protection is <398>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <415>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <416>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <417>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <418>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <419>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <420>
-pid[3] is on running !@#$^;
-now public variabpid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pidpid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- iable with lock protection is <406>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <422>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <423>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <424>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <425>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <426>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <427>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <428>
-pid[1] 1 is on running 12345;
-now pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- ublic variable with lock protection is <414>
-pid[2] is on running abcde;
-now public variable with lock protection is <430>
-pid[2] is on running abcde;
-now public variable with lock protection is <431>
-pid[2] is on running abcde;
-now public variable with lock protection is <432>
-pid[2] is on running abcde;
-now public variable with lock protection is <433>
-pid[2] is on running abcde;
-now public variable with lock protection is <434>
-pid[2] is on running abcde;
-now public variable with lock protection is <435>
-pid[2] is on running abcde;
-now public variable with lock protection is <436>
-pid[2] is on running abcde;
-now public variabpid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- le with lock protection is <421>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <438>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <439>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <440>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <441>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <442>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <443>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <444>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- [0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pidpid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- public variable with lock protection is <429>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <445>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <446>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <447>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <448>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <449>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <450>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <451>
-pid[1] 1 is on running 12345;
-nowpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- le with lock protection is <437>
-pid[2] is on running abcde;
-now public variable with lock protection is <453>
-pid[2] is on running abcde;
-now public variable with lock protection is <454>
-pid[2] is on running abcde;
-now public variable with lock protection is <455>
-pid[2] is on running abcde;
-now public variable with lock protection is <456>
-pid[2] is on running abcde;
-now public variable with lock protection is <457>
-pid[2] is on running abcde;
-now public variable with lock protection is <458>
-pid[2] is on running abcde;
-now public variable with lock protection is <459>
-pid[2] is on running abcde;
-now public variable with lock protection is <460>
-pid 2 need sched out!
-pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <461>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <462>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <463>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <464>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <465>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <466>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <467>
-pid[3] is on running !@#$^;
-now public varpid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- [0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
+ w
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -2100,72 +297,54 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0]pid 0 need sched out!
+pid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
-  public variable with lock protection is <452>
+ next pid[1] reset pgdir
+ is <40>
 pid[1] 11 is on running 12345;
-now public variable with lock protection is <469>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <470>
+now public variable with lock protection is <48>
 pid[1] 8 is on running 12345;
-now public variable with lock protection is <471>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <472>
+now public variable with lock protection is <49>
 pid[1] 5 is on running 12345;
-now public variable with lock protection is <473>
+now public variable with lock protection is <50>
 pid[1] 3 is on running 12345;
-now public variable with lock protection is <474>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <475>
-pid[1] pid 1 need sched out!
+now pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- pid[2] is on running abcde;
-now public variable with lock protection is <476>
+ next pid[2] reset pgdir
+lic variable with lock protection is <44>
 pid[2] is on running abcde;
-now public variable with lock protection is <477>
+now public variable with lock protection is <52>
 pid[2] is on running abcde;
-now public variable with lock protection is <478>
+now public variable with lock protection is <53>
 pid[2] is on running abcde;
-now public variable with lock protection is <479>
+now public variable with lock protection is <54>
 pid[2] is on running abcde;
-now public variable with lock protection is <480>
-pid[2] is on running abcde;
-now public variable with lock protection is <481>
-pid[2] is on running abcde;
-now public variable with lock protection is <482>
-pid[2] is on running abcde;
-now public variable with lock protection is <483>
-pid[2] is on running abcde;
-now pubpid 2 need sched out!
+now public variapid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- iable with lock protection is <468>
+ next pid[3] reset pgdir
+!@#$^;
+now public variable with lock protection is <56>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <485>
+now public variable with lock protection is <57>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <486>
+now public variable with lock protection is <58>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <487>
+now public variable with lock protection is <59>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <488>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <489>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <490>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <491>
-pid[3] is on running !@#$^;
-now pubpid 3 need sched out!
+nopid 3 need sched out!
+pid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
@@ -2181,378 +360,64 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
+pid[pid 0 need sched out!
+pid 0 need sched out!
 pid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
- 1 is on running 12345;
-now public variable with lock protection is <493>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <494>
+ next pid[1] reset pgdir
+public variable with lock protection is <51>
 pid[1] 9 is on running 12345;
-now public variable with lock protection is <495>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <496>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <497>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <498>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <499>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <500>
-pid[1] 1 is on running 12345;
-now pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- lic variable with lock protection is <484>
-pid[2] is on running abcde;
-now public variable with lock protection is <502>
-pid[2] is on running abcde;
-now public variable with lock protection is <503>
-pid[2] is on running abcde;
-now public variable with lock protection is <504>
-pid[2] is on running abcde;
-now public variable with lock protection is <505>
-pid[2] is on running abcde;
-now public variable with lock protection is <506>
-pid[2] is on running abcde;
-now public variable with lock protection is <507>
-pid[2] is on running abcde;
-now public variable with lock protection is <508>
-pid[2] is on running abcde;pid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- lic variable with lock protection is <492>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <509>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <510>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <511>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <512>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <513>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <514>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <515>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- public variable with lock protection is <501>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <517>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <518>
+now public variable with lock protection is <61>
 pid[1] 7 is on running 12345;
-now public variable with lock protection is <519>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <520>
+now public variable with lock protection is <62>
 pid[1] 4 is on running 12345;
-now public variable with lock protection is <521>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <522>
+now public variable with lock protection is <63>
 pid[1] 2 is on running 12345;
-now public variablpid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- 
-now public variable with lock protection is <524>
-pid[2] is on running abcde;
-now public variable with lock protection is <525>
-pid[2] is on running abcde;
-now public variable with lock protection is <526>
-pid[2] is on running abcde;
-now public variable with lock protection is <527>
-pid[2] is on running abcde;
-now public variable with lock protection is <528>
-pid[2] is on running abcde;
-now public variable with lock protection is <529>
-pid[2] is on running abcde;
-now public variable with lock protection is <530>
-pid[2] is on running abcde;
-now public variable with lock protection is <531>
-pid[2] is on running abcde;
-npid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <532>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <533>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <534>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <535>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <536>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <537>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <538>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <539>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <540>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- e with lock protection is <523>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <541>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <542>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <543>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <544>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <545>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <546>
-pid[1] 2 is on running 12345;
-now public variable with lock protection is <547>
-pid[1] 1 is on pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- ow public variable with lock protection is <532>
-pid[2] is on running abcde;
-now public variable with lock protection is <548>
-pid[2] is on running abcde;
-now public variable with lock protection is <549>
-pid[2] is on running abcde;
-now public variable with lock protection is <550>
-pid[2] is on running abcde;
-now public variable with lock protection is <551>
-pid[2] is on running abcde;
-now public variable with lock protection is <552>
-pid[2] is on running abcde;
-now public variable with lock protection is <553>
-pid[2] is on running abcde;
-now public variable with lock protection is <554>
-pid[2] is on running abcde;
-now public variable with lock protection is <555>
-pid[2] is on running abcdepid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- now public variable with lock protection is <556>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <557>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <558>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <559>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <560>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <561>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <562>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <563>
-pid[3] is on running !@#pid 3 need sched out!
-pid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kerpid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- running 12345;
-now public variable with lock protection is <564>
-pid[1] 10 is on running 12345;
-now public variable with lock protection is <565>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <566>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <567>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <568>
-pid[1] 5 is on running 12345;
-now public variable with lock protection is <569>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <570>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <571>
-pid[1] 1 is on running 12345;
-nowpid 1 need sched out!
+now publpid 1 need sched out!
 pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- ;
-now public variable with lock protection is <573>
+ next pid[2] reset pgdir
+ble with lock protection is <55>
 pid[2] is on running abcde;
-now public variable with lock protection is <574>
+now public variable with lock protection is <65>
 pid[2] is on running abcde;
-now public variable with lock protection is <575>
+now public variable with lock protection is <66>
 pid[2] is on running abcde;
-now public variable with lock protection is <576>
+now public variable with lock protection is <67>
 pid[2] is on running abcde;
-now public variable with lock protection is <577>
+now public variable with lock protection is <68>
 pid[2] is on running abcde;
-now public variable with lock protection is <578>
-pid[2] is on running abcde;
-now public variable with lock protection is <579>
-pid[2] is on running abcde;
-now public variable with lock protection is <580>
-pid[2] is on running abcde;
+pid 2 need sched out!
 pid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- $^;
-now public variable with lock protection is <582>
+ next pid[3] reset pgdir
+w public variable with lock protection is <60>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <583>
+now public variable with lock protection is <70>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <584>
+now public variable with lock protection is <71>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <585>
+now public variable with lock protection is <72>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <586>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <587>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <588>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <589>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
-pid 3 need sched out!
+now publicpid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[0]
 ====================
- nel main thread now
+ 0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -2562,6 +427,58 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main threadpid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ic variable with lock protection is <64>
+pid[1] 11 is on running 12345;
+now public variable with lock protection is <74>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <75>
+pid[1] 6 is on running 12345;
+now public variable with lock protection is <76>
+pid[1] 3 is on running 12345;
+now public variablpid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+now public variable with lock protection is <77>
+pid[2] is on running abcde;
+now public variable with lock protection is <78>
+pid[2] is on running abcde;
+now public variable with lock protection is <79>
+pid[2] is on running abcde;
+now public variapid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ variable with lock protection is <73>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <81>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <82>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <83>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <84>
+pid[3] is on runningpid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+  now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -2578,67 +495,49 @@ pid[0pid 0 need sched out!
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
-  public variable with lock protection is <572>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <591>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <592>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <593>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <594>
+ next pid[1] reset pgdir
+e with lock protection is <77>
+pid[1] 10 is on running 12345;
+now public variable with lock protection is <85>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <86>
 pid[1] 4 is on running 12345;
-now public variable with lock protection is <595>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <596>
-pid[1] 3 is on running 12345;
-nowpid 1 need sched out!
+now public variable with lock protection is <87>
+pid[1] 2 is on running 12345;
+now pubpid 1 need sched out!
+pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- now public variable with lock protection is <597>
+ next pid[2] reset pgdir
+ble with lock protection is <80>
 pid[2] is on running abcde;
-now public variable with lock protection is <598>
+now public variable with lock protection is <89>
 pid[2] is on running abcde;
-now public variable with lock protection is <599>
+now public variable with lock protection is <90>
 pid[2] is on running abcde;
-now public variable with lock protection is <600>
+now public variable with lock protection is <91>
 pid[2] is on running abcde;
-now public variable with lock protection is <601>
-pid[2] is on running abcde;
-now public variable with lock protection is <602>
-pid[2] is on running abcde;
-now public variable with lock protection is <603>
-pid[2] is on running abcde;
-now public variable with lock protection is <604>
-pid[2] is on running abcde;
-now pupid 2 need sched out!
+now public pid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- now public variable with lock protection is <605>
+ next pid[3] reset pgdir
+ !@#$^;
+now public variable with lock protection is <93>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <606>
+now public variable with lock protection is <94>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <607>
+now public variable with lock protection is <95>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <608>
+now public variable with lock protection is <96>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <609>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <610>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <611>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <612>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <613>
-pid[3] is on running !@#$^;
-now ppid 3 need sched out!
+pid 3 need sched out!
+pid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
@@ -2656,57 +555,495 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kepid 0 need sched out!
+pid[0pid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
-  public variable with lock protection is <597>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <615>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <616>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <617>
+ next pid[1] reset pgdir
+lic variable with lock protection is <88>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <98>
 pid[1] 6 is on running 12345;
-now public variable with lock protection is <618>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <619>
+now public variable with lock protection is <99>
 pid[1] 3 is on running 12345;
-now public variable with lock protection is <620>
+now public variable with lock protection is <100>
 pid[1] 1 is on running 12345;
-now pupid 1 need sched out!
+now public variable with lock protection is <101>
+pid[1] 1 is on rupid 1 need sched out!
+pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- blic variable with lock protection is <605>
+ next pid[2] reset pgdir
+variable with lock protection is <92>
 pid[2] is on running abcde;
-now public variable with lock protection is <622>
+now public variable with lock protection is <102>
 pid[2] is on running abcde;
-now public variable with lock protection is <623>
+now public variable with lock protection is <103>
 pid[2] is on running abcde;
-now public variable with lock protection is <624>
+now public variable with lock protection is <104>
 pid[2] is on running abcde;
-now public variable with lock protection is <625>
+now public variablpid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+now public variable with lock protection is <105>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <106>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <107>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <108>
+pid[3] is on running !@#$^;
+now publpid 3 need sched out!
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ ],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kpid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+nning 12345;
+now public variable with lock protection is <110>
+pid[1] 10 is on running 12345;
+now public variable with lock protection is <111>
+pid[1] 7 is on running 12345;
+now public variable with lock protection is <112>
+pid[1] 3 is on running 12345;
+now public variable with lock protection is <113>
+pid[1] 1 is on running 12pid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+e with lock protection is <105>
 pid[2] is on running abcde;
-now public variable with lock protection is <626>
+now public variable with lock protection is <114>
 pid[2] is on running abcde;
-now public variable with lock protection is <627>
+now public variable with lock protection is <115>
 pid[2] is on running abcde;
-now public variable with lock protection is <628>
+now public variable with lock protection is <116>
+pid[2] is on running abcde;
+now public variable with lock protection is <117>
+pid[2] is on running abcde;
+now public variable with lock protection is <118>
+pid[2] is on running abcde;
+now public variable with lock protection ispid 2 need sched out!
+pid 2 need sched out!
+pid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ic variable with lock protection is <109>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <120>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <121>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <122>
+pid[3] is on running !@#$^;
+now publicpid 3 need sched out!
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ ernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],Ipid 0 need sched out!
+pid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+345;
+now public variable with lock protection is <124>
+pid[1] 10 is on running 12345;
+now public variable with lock protection is <125>
+pid[1] 7 is on running 12345;
+now public variable with lock protection is <126>
+pid[1] 4 is on running 12345;
+now public variable with lock protection is <127>
+pid[1] 1 is on running 12345;
+npid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+ <119>
+pid[2] is on running abcde;
+now public variable with lock protection is <129>
+pid[2] is on running abcde;
+now public variable with lock protection is <130>
+pid[2] is on running abcde;
+now public variable with lock protection is <131>
+pid[2] is on running abcde;
+now public variable with lock protection is <132>
+pipid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ variable with lock protection is <123>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <133>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <134>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <135>
+pid[3] is on running !@#$^;
+now publicpid 3 need sched out!
+pid 3 need sched out!
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ n kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In pid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ow public variable with lock protection is <128>
+pid[1] 10 is on running 12345;
+now public variable with lock protection is <137>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <138>
+pid[1] 5 is on running 12345;
+now public variable with lock protection is <139>
+pid[1] 2 is on running 12345;
+now publicpid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+d[2] is on running abcde;
+now public variable with lock protection is <141>
+pid[2] is on running abcde;
+now public variable with lock protection is <142>
+pid[2] is on running abcde;
+now public variable with lock protection is <143>
+pid[2] is on running abcde;
+now public variabpid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ variable with lock protection is <136>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <145>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <146>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <147>
+pid[3] is on running !@#$^;
+nowpid 3 need sched out!
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pipid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ variable with lock protection is <140>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <149>
+pid[1] 6 is on running 12345;
+now public variable with lock protection is <150>
+pid[1] 3 is on running 12345;
+now public variable with lock protection is <151>
+pid[1]pid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+le with lock protection is <144>
+pid[2] is on running abcde;
+now public variable with lock protection is <152>
+pid[2] is on running abcde;
+now public variable with lock protection is <153>
+pid[2] is on running abcde;
+now public variable with lock protection is <154>
+pid[2] is on running abcde;
+now public varipid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ public variable with lock protection is <148>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <156>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <157>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <158>
+pid[3] is on running !@#$^;
+now ppid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ d[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel mapid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ 1 is on running 12345;
+now public variable with lock protection is <160>
+pid[1] 9 is on running 12345;
+now public variable with lock protection is <161>
+pid[1] 7 is on running 12345;
+now public variable with lock protection is <162>
+pid[1] 4 is on running 12345;
+now public variable with lock protection is <163>
+pid[1] 1 is on running 12345pid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+able with lock protection is <155>
+pid[2] is on running abcde;
+now public variable with lock protection is <164>
+pid[2] is on running abcde;
+now public variable with lock protection is <165>
+pid[2] is on running abcde;
+now public variable with lock protection is <166>
+pid[2] is on running abcde;
+now public variable with lock protection is <167>
+pid[2] is on running abcde;
+nopid 2 need sched out!
+pid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ublic variable with lock protection is <159>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <169>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <170>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <171>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <172>
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ in thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+;
+now public variable with lock protection is <173>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <174>
+pid[1] 5 is on running 12345;
+now public variable with lock protection is <175>
+pid[1] 3 is on running 12345;
+now ppid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+w public variable with lock protection is <168>
+pid[2] is on running abcde;
+now public variable with lock protection is <177>
+pid[2] is on running abcde;
+now public variable with lock protection is <178>
+pid[2] is on running abcde;
+now public variable with lock protection is <179>
+pid[2] is on running abcde;
+now ppid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+pid[3] is on running !@#$^;
+now public variable with lock protection is <181>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <182>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <183>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <184>
+pid[3] is on running !@#$^;
+now publipid 3 need sched out!
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ublic variable with lock protection is <176>
+pid[1] 11 is on running 12345;
+now public variable with lock protection is <186>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <187>
+pid[1] 5 is on running 12345;
+now public variable with lock protection is <188>
+pid[1] 3 is on running 12345;
+now ppid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+ublic variable with lock protection is <180>
+pid[2] is on running abcde;
+now public variable with lock protection is <190>
+pid[2] is on running abcde;
+now public variable with lock protection is <191>
+pid[2] is on running abcde;
+now public variable with lock protection is <192>
 pid[2] is on running abcde;
 now pid 2 need sched out!
 
@@ -2714,121 +1051,23 @@ now pid 2 need sched out!
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- ublic variable with lock protection is <614>
+ next pid[3] reset pgdir
+c variable with lock protection is <185>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <630>
+now public variable with lock protection is <194>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <631>
+now public variable with lock protection is <195>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <632>
+now public variable with lock protection is <196>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <633>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <634>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <635>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <636>
-pid[3] is on running !@#$^;
-now pubpid 3 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[0]
-====================
- rnel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread pid 0 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[1]
-====================
- blic variable with lock protection is <621>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <638>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <639>
-pid[1] 7 is on running 12345;
-now public variable with lock protection is <640>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <641>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <642>
-pid[1] 3 is on running 12345;
-now public variable with lock protection is <643>
-pid[1] 2 is on running 12345;
-now pid 1 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[2]
-====================
- public variable with lock protection is <629>
-pid[2] is on running abcde;
-now public variable with lock protection is <645>
-pid[2] is on running abcde;
-now public variable with lock protection is <646>
-pid[2] is on running abcde;
-now public variable with lock protection is <647>
-pid[2] is on running abcde;
-now public variable with lock protection is <648>
-pid[2] is on running abcde;
-now public variable with lock protection is <649>
-pid[2] is on running abcde;
-now public variable with lock protection is <650>
-pid[2] is on running abcde;
-now public variable with lock protection is <651>
-pid[2] is on running abcde;
-nopid 2 need sched out!
-
-====================
-ok,ready list will select next thread...
-pick next pid[3]
-====================
- lic variable with lock protection is <637>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <653>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <654>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <655>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <656>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <657>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <658>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <659>
-pid[3] is on running !@#$^;
-now public variable wpid 3 need sched out!
+now public variable with lock protection is <197>
 pid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[0]
 ====================
- now
+ ],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -2837,6 +1076,68 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ublic variable with lock protection is <189>
+pid[1] 11 is on running 12345;
+now public variable with lock protection is <198>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <199>
+pid[1] 6 is on running 12345;
+now public variable with lock protection is <200>
+pid[1] 3 is on running 12345;
+now public variable with lock protection is <201>
+pid[1] 1 is on running 12345;
+pid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+public variable with lock protection is <193>
+pid[2] is on running abcde;
+now public variable with lock protection is <203>
+pid[2] is on running abcde;
+now public variable with lock protection is <204>
+pid[2] is on running abcde;
+now public variable with lock protection is <205>
+pid[2] is on running abcde;
+now public variable with lock protection is <206>
+pid[2] is on running abcpid 2 need sched out!
+pid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+pid[3] is on running !@#$^;
+now public variable with lock protection is <207>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <208>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <209>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <210>
+pid[3] is on running !@#$^;
+now pid 3 need sched out!
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
@@ -2854,67 +1155,48 @@ pid[pid 0 need sched out!
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
- public variable with lock protection is <644>
-pid[1] 11 is on running 12345;
-now public variable with lock protection is <661>
+ next pid[1] reset pgdir
+now public variable with lock protection is <211>
 pid[1] 10 is on running 12345;
-now public variable with lock protection is <662>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <663>
-pid[1] 8 is on running 12345;
-now public variable with lock protection is <664>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <665>
+now public variable with lock protection is <212>
+pid[1] 7 is on running 12345;
+now public variable with lock protection is <213>
 pid[1] 5 is on running 12345;
-now public variable with lock protection is <666>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <667>
+now public variable with lock protection is <214>
 pid[1] 2 is on running 12345;
-now public variable with lock protectipid 1 need sched out!
+now publipid 1 need sched out!
+pid 1 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[2]
 ====================
- w public variable with lock protection is <652>
+ next pid[2] reset pgdir
+de;
+now public variable with lock protection is <216>
 pid[2] is on running abcde;
-now public variable with lock protection is <669>
+now public variable with lock protection is <217>
 pid[2] is on running abcde;
-now public variable with lock protection is <670>
+now public variable with lock protection is <218>
 pid[2] is on running abcde;
-now public variable with lock protection is <671>
+now public variable with lock protection is <219>
 pid[2] is on running abcde;
-now public variable with lock protection is <672>
-pid[2] is on running abcde;
-now public variable with lock protection is <673>
-pid[2] is on running abcde;
-now public variable with lock protection is <674>
-pid[2] is on running abcde;
-now public variable with lock protection is <675>
-pid[2] is on running abcde;
-now public variabpid 2 need sched out!
+pid 2 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[3]
 ====================
- ith lock protection is <660>
+ next pid[3] reset pgdir
+public variable with lock protection is <211>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <677>
+now public variable with lock protection is <220>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <678>
+now public variable with lock protection is <221>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <679>
+now public variable with lock protection is <222>
 pid[3] is on running !@#$^;
-now public variable with lock protection is <680>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <681>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <682>
-pid[3] is on running !@#$^;
-now public variable with lock protection is <683>
-pid[3] is on running !@#$^;
-pid 3 need sched out!
+now public pid 3 need sched out!
 
 ====================
 ok,ready list will select next thread...
@@ -2932,40 +1214,308 @@ pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
 pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[0],In kernel main thread now
-pid[pid 0 need sched out!
+pid[0],In kernel main thpid 0 need sched out!
 
 ====================
 ok,ready list will select next thread...
 pick next pid[1]
 ====================
- on is <668>
-pid[1] 12 is on running 12345;
-now public variable with lock protection is <684>
-pid[1] 9 is on running 12345;
-now public variable with lock protection is <685>
+ next pid[1] reset pgdir
+c variable with lock protection is <215>
+pid[1] 11 is on running 12345;
+now public variable with lock protection is <224>
 pid[1] 8 is on running 12345;
-now public variable with lock protection is <686>
-pid[1] 6 is on running 12345;
-now public variable with lock protection is <687>
+now public variable with lock protection is <225>
 pid[1] 5 is on running 12345;
-now public variable with lock protection is <688>
-pid[1] 4 is on running 12345;
-now public variable with lock protection is <689>
+now public variable with lock protection is <226>
 pid[1] 3 is on running 12345;
-now public variable with lock protection is <690>
-pid[1] 2 is on running 12345;
-now public variablpid 1 need sched out!
+now public variapid 1 need sched out!
 
 ====================
-ok,rQEMU: Terminated
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+now public variable with lock protection is <228>
+pid[2] is on running abcde;
+now public variable with lock protection is <229>
+pid[2] is on running abcde;
+now public variable with lock protection is <230>
+pid[2] is on running abcde;
+now public variable with lock protection is <231>
+pid[2] is on running abcde;
+nopid 2 need sched out!
+pid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+variable with lock protection is <223>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <233>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <234>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <235>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <236>
+pid[3] is on runnpid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ read now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pipid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+ble with lock protection is <227>
+pid[1] 11 is on running 12345;
+now public variable with lock protection is <237>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <238>
+pid[1] 6 is on running 12345;
+now public variable with lock protection is <239>
+pid[1] 3 is on running 12345;
+now public variable with lock protection is <240>
+pid[1] 1 is on running 12345;
+pid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+w public variable with lock protection is <232>
+pid[2] is on running abcde;
+now public variable with lock protection is <242>
+pid[2] is on running abcde;
+now public variable with lock protection is <243>
+pid[2] is on running abcde;
+now public variable with lock protection is <244>
+pid[2] is on running abcde;
+now public variable with lock protection is <245>
+pid[2] is on running abcde;
+now public variable with lock protection is <246>
+ppid 2 need sched out!
+pid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ing !@#$^;
+now public variable with lock protection is <247>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <248>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <249>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <250>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <251>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <252>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <253>
+pid[3] is on running !@#$^;
+now publpid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ d[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+now public variable with lock protection is <254>
+pid[1] 11 is on running 12345;
+now public variable with lock protection is <255>
+pid[1] 9 is on running 12345;
+now public variable with lock protection is <256>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <257>
+pid[1] 7 is on running 12345;
+now public variable with lock protection is <258>
+pid[1] 5 is on running 12345;
+now public variable with lock protection is <259>
+pid[1] 3 is on running 12345;
+now public variable with lock protection is <260>
+pid[1] 2 is on running 12345;
+now public vapid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+id[2] is on running abcde;
+now public variable with lock protection is <262>
+pid[2] is on running abcde;
+now public variable with lock protection is <263>
+pid[2] is on running abcde;
+now public variable with lock protection is <264>
+pid[2] is on running abcde;
+now public variable with lock protection is <265>
+pid[2] is on running abcde;
+now public variable with lock protection is <266>
+pid[2] is on running abcde;
+now public variable with lock protection is <267>
+pid[2] is on running abcde;
+now public variable with lock protection is <268>
+pid[2] is on running abcde;
+now public variable with lock protection is <269>
+pid[2] is on running abcde;
+nopid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+ic variable with lock protection is <254>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <271>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <272>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <273>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <274>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <275>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <276>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <277>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <278>
+pid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid 0 need sched out!
+pid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdir
+riable with lock protection is <261>
+pid[1] 12 is on running 12345;
+now public variable with lock protection is <279>
+pid[1] 8 is on running 12345;
+now public variable with lock protection is <280>
+pid[1] 5 is on running 12345;
+now public variable with lock protection is <281>
+pid[1] 5 is on running 12345;
+now public variable with lock protpid 1 need sched out!
+pid 1 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[2]
+====================
+ next pid[2] reset pgdir
+w public variable with lock protection is <270>
+pid[2] is on running abcde;
+now public variable with lock protection is <283>
+pid[2] is on running abcde;
+now public variable with lock protection is <284>
+pid[2] is on running abcde;
+now public variable with lock pid 2 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[3]
+====================
+ next pid[3] reset pgdir
+pid[3] is on running !@#$^;
+now public variable with lock protection is <286>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <287>
+pid[3] is on running !@#$^;
+now public variable with lock protection is <288>
+pid[3] is on running !@#$^;
+now public varipid 3 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[0]
+====================
+ pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernel main thread now
+pid[0],In kernelpid 0 need sched out!
+
+====================
+ok,ready list will select next thread...
+pick next pid[1]
+====================
+ next pid[1] reset pgdiQEMU: Terminated
 

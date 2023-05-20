@@ -102,6 +102,10 @@ void kernel_main(void){
 	oncpu->counter=20;
 	oncpu->priority=5;
 	oncpu->preempt_count=1;
+	unsigned long val = read_csr(sstatus);
+	write_csr(sstatus,val|SR_SPP);
+	val = read_csr(sstatus);
+	kprintf("kernel main sstatus:0x%x\n",val);
 	//raw_local_irq_disable();
 	int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage2, 0);
 	int pid_main2 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage3, 0);
