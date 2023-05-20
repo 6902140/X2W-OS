@@ -8,7 +8,7 @@
  * @copyright Copyright Zhuiri Xiao (c) 2023 with GNU Public License V3.0
  */
 
-
+#include "asm/csr.h"
 #include "kernel/memory.h"
 #include "mm.h"
 #include "pgable.h"
@@ -170,6 +170,9 @@ unsigned long get_virt_pages(uint64_t pg_cnt,int ISKERNEL){
 }
 
 void* malloc_pages(uint64_t pg_cnt,int ISKERNEL){
+	unsigned long val = read_csr(sstatus);
+	val = read_csr(sstatus);
+	kprintf("in malloc sstatus=0x%x\n",val);
 	unsigned long vaddr=get_virt_pages(pg_cnt,ISKERNEL);
 	if(vaddr==NULL){
 		return NULL;

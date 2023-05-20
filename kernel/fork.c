@@ -98,12 +98,18 @@ static int copy_thread(unsigned long clone_flags, struct task_struct *p,
  */
 int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 {
+	unsigned long val = read_csr(sstatus);
+	val = read_csr(sstatus);
+	kprintf("in fork sstatus=0x%x\n",val);
 	struct task_struct *p;
 	int pid;
+	val = read_csr(sstatus);
+	kprintf("1in fork sstatus=0x%x\n",val);
 	/*1.分配一个4KB的内存页*/
 	//修改代码，修改为malloc_a_page而不是直接获取物理页
 	p = (struct task_struct *)malloc_pages(1,1);
-	
+	val = read_csr(sstatus);
+	kprintf("1in fork sstatus=0x%x\n",val);
 	if (!p)
 		goto error;
 	/*初始化该页面*/
@@ -113,6 +119,8 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	// 	*((uint8_t*)(p)+i)=0;
 	// }
 	/*2.开始分配一个pid给该线程*/
+	val = read_csr(sstatus);
+	kprintf("2in fork sstatus=0x%x\n",val);
 	pid = find_empty_task();
 	kprintf("fetch a pid=%d\n",pid);
 	TASK_READY++;
@@ -124,6 +132,8 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	if (copy_thread(clone_flags, p, fn, arg))
 		goto error;
 	kprintf("!!------------------!!\n");
+	val = read_csr(sstatus);
+	kprintf("3in fork sstatus=0x%x\n",val);
 	p->state = TASK_RUNNING;
 	p->pid = pid;
 
@@ -145,7 +155,8 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	}
 
 	kprintf("---thread pid[%d] bitmap alloc successfully!!!---\n",pid);
-
+	val = read_csr(sstatus);
+	kprintf("in fork sstatus=0x%x\n",val);
 	SET_LINKS(p);
 	
 	wake_up_process(p);

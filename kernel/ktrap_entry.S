@@ -33,7 +33,7 @@ _save_user_sp:
 
 
 	addi sp, sp, -(KTF_SIZE)
-
+	/*保存中断栈帧 trampframe_t*/
 	sd x1,  KTF_RA(sp)
 	sd x3,  KTF_GP(sp)
 	sd x5,  KTF_T0(sp)
@@ -63,7 +63,7 @@ _save_user_sp:
 	sd x29, KTF_T4(sp)
 	sd x30, KTF_T5(sp)
 	sd x31, KTF_T6(sp)
-
+	/*读取此时sstatus寄存器的值保存到ktrapfram*/
 	csrr s1, sstatus
 	sd s1, KTF_SSTATUS(sp)
 

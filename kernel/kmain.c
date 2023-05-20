@@ -49,11 +49,11 @@ void delay(uint64_t k){
 
 void kernel_stage2(void){
 	kprintf("welcome to kernel stage .2\n");
-	
 	while(1){
 		delay(5000);
+		uint64_t val = read_csr(sstatus);
 		test_lock_add(&test_lock_t);
-		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
+		kprintf("now public variable with lock protection is <%d>,2sstatus=%x\n",test_lock_t.public_variable,val);
 		kprintf("pid[%d] %d is on running 12345;\n",oncpu->pid,oncpu->counter);
 	};
 	
@@ -110,18 +110,25 @@ void kernel_main(void){
 	int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage2, 0);
 	int pid_main2 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage3, 0);
 	int pid_main3 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage4, 0);
-	
+	val = read_csr(sstatus);
+	kprintf("kernel main sstatus:0x%x\n",val);
+	wake_up_process(oncpu);
 	move_to_user_space((unsigned long)&kernel_stage2,g_task[1]);
 	
 	move_to_user_space((unsigned long)&kernel_stage3,g_task[2]);
 	
 	move_to_user_space((unsigned long)&kernel_stage4,g_task[3]);
 	kprintf("PID [1][2][3] move to user space success!!!\n");
+	val = read_csr(sstatus);
+	kprintf("kernel main sstatus:0x%x\n",val);
 	for(int i=0;i<4;i++){
 		kprintf("pid[%d]'s pgdir vaddr=0x%x\n",i,g_task[i]->private_pgdir);
 	}
 	raw_local_irq_disable();
 	oncpu->preempt_count=0;
+	write_csr(sstatus,val|SR_SPP);
+	val = read_csr(sstatus);
+	kprintf("-kernel main sstatus:0x%x\n",val);
 	raw_local_irq_enable();
 	//raw_local_irq_enable();
 	// for(int i=0;i<3;i++)
@@ -133,11 +140,14 @@ void kernel_main(void){
 	//kprintf("pid:%d,%d,%d\n",pid_main,pid_main2,pid_main3);
 
 	
-	wake_up_process(oncpu);
+	
 	
     while (1){
 		delay(10000);
-		kprintf("pid[0],In kernel main thread now\n");
+		write_csr(sstatus,val|SR_SPP);
+		val = read_csr(sstatus);
+		kprintf("pid[0],In kernel main thread now,sstatus=%x\n",val);
+		//write_csr(sstatus,val|SR_SPP);
 	};
 }
 
