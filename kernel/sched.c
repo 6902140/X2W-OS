@@ -10,6 +10,12 @@
 #include "stdlist.h"
 // extern struct task_struct* intr_cur;
 /* 定义一个全局的就绪队列*/
+static ktrapframe_t* task_ktrapframe(struct task_struct* tsk){
+	unsigned long p;
+	p=(unsigned long)tsk+THREAD_SIZE-sizeof(ktrapframe_t);
+	return(ktrapframe_t*)p;
+}
+
 extern char idmap_pg_dir[];
 
 struct ready_queue_base g_rq;
@@ -123,6 +129,10 @@ static void __schedule(void)
 		else{
 			reset_pgdir(idmap_pg_dir);
 		}
+		unsigned long val = read_csr(sstatus);
+	
+		kprintf("schedule val=0b%b\n",val);
+		kprintf("prev sstatus=0b%b,next sstatus=0b%b\n",task_ktrapframe(prev)->sstatus,task_ktrapframe(next)->sstatus);
 		last = switch_to(prev, next);
 		//kprintf("last=0x%x!!!!!!!!!!!!\n",last);
 		//return;

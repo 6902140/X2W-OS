@@ -142,7 +142,7 @@ struct task_struct {
  */
 union task_union {
 	struct task_struct task;
-	unsigned long stack[THREAD_SIZE/sizeof(long)];
+	unsigned long stack[(THREAD_SIZE-sizeof(struct task_struct))/sizeof(long)];
 };
 
 
