@@ -113,6 +113,9 @@ void kernel_main(void){
 	
 	move_to_user_space((unsigned long)&kernel_stage4,g_task[3]);
 	kprintf("PID [1][2][3] move to user space success!!!\n");
+	for(int i=0;i<4;i++){
+		kprintf("pid[%d]'s pgdir vaddr=0x%x\n",i,g_task[i]->private_pgdir);
+	}
 	raw_local_irq_disable();
 	oncpu->preempt_count=0;
 	raw_local_irq_enable();
