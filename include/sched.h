@@ -212,7 +212,7 @@ void tick_handle_periodic(void);
 
 void wake_up_process(struct task_struct *p);
 
-int move_to_user_space(unsigned long pc);
+int move_to_user_space(unsigned long pc,struct task_struct* tsk);
 
 static inline void clear_task_resched(struct task_struct *p)
 {

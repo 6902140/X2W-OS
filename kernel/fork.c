@@ -7,6 +7,7 @@
 #include "types.h"
 #include "trap/trapframe.h"
 #include "current.h"
+#include "irq.h"
 extern int TASK_READY;
 
 /**
@@ -75,7 +76,7 @@ static int copy_thread(unsigned long clone_flags, struct task_struct *p,
 
 		p->cpu_context.ra = (unsigned long)ret_from_kernel_thread;
 	} else {
-		*childregs = *task_ktrapframe(current);
+		*childregs = *task_ktrapframe(oncpu);
 		childregs->gregisters.a0 = 0;
 		if (fn)
 			childregs->gregisters.sp = fn;
@@ -134,7 +135,14 @@ int do_fork(unsigned long clone_flags, unsigned long fn, unsigned long arg)
 	
 	/*自此建立pid和pcb的联系*/
 	g_task[pid] = p;
-	create_user_vaddr_bitmap(p);
+	//create_user_vaddr_bitmap(p);
+	if ((clone_flags & PF_KTHREAD)){
+		kprintf("ok start to move to user space\n");
+		
+		//move_to_user_space(fn,p);
+		
+		kprintf("*pid[%d]*: move to user space success,pgdir vaddr=0x%x\n",p->pid,p->private_pgdir);
+	}
 
 	kprintf("---thread pid[%d] bitmap alloc successfully!!!---\n",pid);
 
@@ -160,7 +168,7 @@ error:
  * 
 */
 static void start_user_thread(ktrapframe_t *regs, unsigned long pc,
-		unsigned long sp)
+		unsigned long sp,struct task_struct* tsk)
 {
 	unsigned long val;
 	memset(regs, 0, sizeof(*regs));
@@ -169,6 +177,8 @@ static void start_user_thread(ktrapframe_t *regs, unsigned long pc,
 
 	val = read_csr(sstatus);
 	regs->sstatus = val &~ SR_SPP;
+	create_user_vaddr_bitmap(tsk);
+	tsk->private_pgdir=create_page_dir();
 	kprintf("sstatus 0x%llx sp 0x%llx  pc 0x%llx\n", regs->sstatus, regs->gregisters.sp, regs->sepc);
 }
 
@@ -181,14 +191,14 @@ static void start_user_thread(ktrapframe_t *regs, unsigned long pc,
  * 总的来说，这段代码的作用是为当前进程分配一个新的内核栈，并将当前进程切换到用户空间运行。通过将 pt_regs 结构体、用户线程的起始地址和内核栈地址传递给 start_user_thread 函数，可以在用户空间运行新的用户线程。
  * 
 */
-int move_to_user_space(unsigned long pc)
+int move_to_user_space(unsigned long pc,struct task_struct* tsk)
 {
 	ktrapframe_t *regs;
 	unsigned long stack;
 
-	regs = task_ktrapframe(current);
+	regs = task_ktrapframe(tsk);
 
-	stack = get_free_page();
+	stack = malloc_pages(1,1);
 	//to do
 
 	if (!stack)
@@ -196,7 +206,7 @@ int move_to_user_space(unsigned long pc)
 
 	memset((void *)stack, 0, PAGE_SIZE);
 	
-	start_user_thread(regs, pc, stack + PAGE_SIZE);
+	start_user_thread(regs, pc, stack + PAGE_SIZE,tsk);
 
 	return 0;
 }

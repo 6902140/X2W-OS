@@ -1,6 +1,7 @@
 
 #include "sched.h"
 #include "stdlist.h"
+#include "irq.h"
 int TASK_READY;
 
 static void dequeue_task_simple(struct ready_queue_base *rq,
@@ -31,11 +32,12 @@ static struct task_struct *pick_next_task_simple(struct ready_queue_base *rq,
 	// struct list_elem_t *tmp;
 	// list_for_each(temp,rq->ready_list->head)
 	// 	p = list_entry(tmp, struct task_struct, run_list);
+	//raw_local_irq_disable();
 	next=list_entry((rq->ready_list.head.next), struct task_struct, run_list);
 	
 	list_elem_t* pop_elem=list_pop(&rq->ready_list);
 	list_append(pop_elem,&rq->ready_list);
-
+	//raw_local_irq_enable();
 	kprintf("\n====================\nok,ready list will select next thread...\n");
 	kprintf("pick next pid[%d]\n====================\n ",next->pid);
 	if(next->counter<=0){

@@ -18,6 +18,7 @@
 #include "sched.h"
 #include "asm/irq.h"
 #include "kernel/locks.h"
+#include "irq.h"
 extern struct task_struct* oncpu;
 extern struct ready_queue_base g_rq;
 extern int TASK_READY;
@@ -53,7 +54,7 @@ void kernel_stage2(void){
 		delay(5000);
 		test_lock_add(&test_lock_t);
 		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
-		kprintf("pid[%d] is on running 12345;\n",oncpu->pid);
+		kprintf("pid[%d] %d is on running 12345;\n",oncpu->pid,oncpu->counter);
 	};
 	
 }
@@ -97,20 +98,34 @@ void kernel_main(void){
 
 	print_kmem();
     kprintf("Kernel Hanging Here!\n");
-	int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage2, 0);
-	int pid_main2 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage3, 0);
-	int pid_main3 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage4, 0);
-	// for(int i=0;i<3;i++)
-	// 	create_user_vaddr_bitmap(g_task[i]);
-	kprintf("00ci0w-acvjd\n");
-	test_lock_t.public_variable=0;
-	spinlock_init(&(test_lock_t.mylock),"for test");
-	kprintf("pid:%d,%d,%d\n",pid_main,pid_main2,pid_main3);
-
 	oncpu=g_task[0];
 	oncpu->counter=20;
 	oncpu->priority=5;
+	oncpu->preempt_count=1;
+	//raw_local_irq_disable();
+	int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage2, 0);
+	int pid_main2 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage3, 0);
+	int pid_main3 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage4, 0);
+	
+	move_to_user_space((unsigned long)&kernel_stage2,g_task[1]);
+	
+	move_to_user_space((unsigned long)&kernel_stage3,g_task[2]);
+	
+	move_to_user_space((unsigned long)&kernel_stage4,g_task[3]);
+	kprintf("PID [1][2][3] move to user space success!!!\n");
+	raw_local_irq_disable();
 	oncpu->preempt_count=0;
+	raw_local_irq_enable();
+	//raw_local_irq_enable();
+	// for(int i=0;i<3;i++)
+	// 	create_user_vaddr_bitmap(g_task[i]);
+	//move_to_user_space((unsigned long)&kernel_stage2,g_task[1]);
+	kprintf("00ci0w-acvjd\n");
+	test_lock_t.public_variable=0;
+	spinlock_init(&(test_lock_t.mylock),"for test");
+	//kprintf("pid:%d,%d,%d\n",pid_main,pid_main2,pid_main3);
+
+	
 	wake_up_process(oncpu);
 	
     while (1){
