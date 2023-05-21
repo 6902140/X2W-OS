@@ -8,6 +8,7 @@
 #include "current.h"
 #include "irq.h"
 #include "stdlist.h"
+#include "kernel/kdebug.h"
 // extern struct task_struct* intr_cur;
 /* 定义一个全局的就绪队列*/
 static ktrapframe_t* task_ktrapframe(struct task_struct* tsk){
@@ -115,6 +116,8 @@ static void __schedule(void)
 		dequeue_task(rq, prev);
 	
 	next = _pick_next_task(rq, prev);
+
+	ASSERT(next!=NULL,"ERROR: schedule next is NONE\n");
 	
 	clear_task_resched(prev);
 	
