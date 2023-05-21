@@ -49,6 +49,7 @@ void delay(uint64_t k){
 
 void kernel_stage2(void){
 	kprintf("welcome to kernel stage .2\n");
+	
 	while(1){
 		delay(5000);
 		
@@ -71,11 +72,25 @@ void kernel_stage3(void){
 	
 }
 
+void run_new_clone_thread(void){
+	while(1){
+		delay(1000);
+		kprintf("----------new clone thread---------\n");
+	}
+}
+
 void kernel_stage4(void){
 	kprintf("welcome to kernel stage 3\n");
-
+	int t=2;
 	while(1){
+		t--;
 		delay(5000);
+		uint64_t child_stack = malloc_pages(1,1);
+		if(t!=0){
+			// int ret = clone(&run_new_clone_thread,
+			// (void *)(child_stack + PAGE_SIZE), 0, NULL);
+		}
+		
 		test_lock_add(&test_lock_t);
 		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
 		kprintf("pid[%d] is on running !@#$^;\n",oncpu->pid);
