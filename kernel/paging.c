@@ -70,6 +70,12 @@ void create_identical_mapping(void){
     kprintf("\tmapping total free mem, %#X~%#X, %7d Bytes, %2d Pages used (%2d * 4096 = %7d)\n", start_addr, end_addr, size, pages, pages, pages * PAGE_SIZE);
     page_property_t total_mem_prot = {(uint64_t) KERNEL_PAGE};
     create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, total_mem_prot, 0);
+
+    // start_addr=(addr_t)_e_bss,end_addr=(addr_t)PHYSTOP,size=(size_t) (end_addr - start_addr);
+    // pages = (size + PAGE_SIZE - 1) / PAGE_SIZE;
+    // kprintf("\tmapping total free mem, %#X~%#X, %7d Bytes, %2d Pages used (%2d * 4096 = %7d)\n", start_addr, end_addr, size, pages, pages, pages * PAGE_SIZE);
+    // page_property_t total_mem_prot = {(uint64_t) KERNEL_PAGE};
+    // create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, total_mem_prot, 0);
 }
 
 

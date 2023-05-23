@@ -105,7 +105,7 @@ struct process* allocproc(void){
 FOUND:
     p->pid=allocpid();
     p->state=_USED;
-    p->trapframe=(struct trapframe*)malloc_page(1,1);
+    p->trapframe=(struct trapframe*)alloc_ppage(1);
     if(p->trapframe==0){
         freeproc(p);
         spinlock_release(&p->lock);
@@ -164,7 +164,7 @@ pagetable_t proc_pagetable(struct process * p){
     uvmfree(pagetable, 0);
     return 0;
   }
-  return 0;
+  return pagetable;
 }
 
 
@@ -299,6 +299,7 @@ void userinit(void)
   // prepare for the very first "return" from kernel to user.
   p->trapframe->epc = 0;      // user program counter
   p->trapframe->sp = PGSIZE;  // user stack pointer
+  //参考xv6手册p36 figure3.4的用户空间布局
   safestrcpy(p->name, "initcode", sizeof(p->name));
   p->state = RUNNABLE;
   spinlock_release(&p->lock);

@@ -40,6 +40,8 @@ void kinit_all(void){
     kprintf("=> paging_init\n");
     paging_init();
     kprintf("=> procinit\n");
+
     procinit();
+    userinit();
     INIT_DONE;
 }
