@@ -11,6 +11,7 @@
  */
 
 #include "string.h"
+char* safestrcpy(char *s, const char *t, int n);
 
 size_t memset(void* dst, byte value, size_t size){
     size_t num = 0;
@@ -214,4 +215,16 @@ void regu_replace(char *str, const char *pattern, const char *replacement, int m
     str[k] = '\0';
 }
 
+// Like strncpy but guaranteed to NUL-terminate.
+char* safestrcpy(char *s, const char *t, int n)
+{
+  char *os;
 
+  os = s;
+  if(n <= 0)
+    return os;
+  while(--n > 0 && (*s++ = *t++) != 0)
+    ;
+  *s = 0;
+  return os;
+}

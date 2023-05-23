@@ -16,7 +16,7 @@ extern char _etext[];  // kernel.ld sets this to end of kernel code.
 extern char trampoline[]; // trampoline.S
 
 spinlock_t pid_lock;
-
+extern char* safestrcpy(char *s, const char *t, int n);
 // helps ensure that wakeups of wait()ing
 // parents are not lost. helps obey the
 // memory model when using p->parent.
@@ -267,18 +267,41 @@ void pop_off(void)
     intr_on();
 }
 
+// a user program that calls exec("/init")
+// assembled from ../user/initcode.S
+// od -t xC ../user/initcode
+char initcode[] = {
+  0x17, 0x05, 0x00, 0x00, 0x13, 0x05, 0x45, 0x02,
+  0x97, 0x05, 0x00, 0x00, 0x93, 0x85, 0x35, 0x02,
+  0x93, 0x08, 0x70, 0x00, 0x73, 0x00, 0x00, 0x00,
+  0x93, 0x08, 0x20, 0x00, 0x73, 0x00, 0x00, 0x00,
+  0xef, 0xf0, 0x9f, 0xff, 0x2f, 0x69, 0x6e, 0x69,
+  0x74, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00
+};
+/*
+0000000 17 05 00 00 13 05 45 02 97 05 00 00 93 85 35 02
+0000020 93 08 70 00 73 00 00 00 93 08 20 00 73 00 00 00
+0000040 ef f0 9f ff 2f 69 6e 69 74 00 00 24 00 00 00 00
+0000060 00 00 00 00
+0000064
+*/
+
 void userinit(void)
 {
   struct process* p;
   p=allocproc();
   initproc=p;
 
+  uvmfirst(p->pagetable, initcode, sizeof(initcode));
   p->sz = PGSIZE;
 
   // prepare for the very first "return" from kernel to user.
   p->trapframe->epc = 0;      // user program counter
   p->trapframe->sp = PGSIZE;  // user stack pointer
-
+  safestrcpy(p->name, "initcode", sizeof(p->name));
+  p->state = RUNNABLE;
+  spinlock_release(&p->lock);
 
 
   
