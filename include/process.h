@@ -33,8 +33,9 @@ void forkret(void);
 int killed(struct process* p);
 void setkilled(struct process *p);
 void freeproc(struct process*p);
-int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm);
+//int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm);
 void uvmfree(pagetable_t pagetable, uint64_t sz);
+void userinit(void);
 // void usertrapret(void);
 // Saved registers for kernel context switches.
 struct context {

@@ -57,6 +57,7 @@ typedef uint64_t ireg_t;
 typedef uint64_t freg_t;
 //定义页表类型
 typedef uint64_t* pagetable_t; // 512 PTEs
+typedef uint64_t pde_t;
 
 /// `ARRAY_SIZE`宏函数用于计算数组`array`中的元素个数, 返回值类型为`size_t`
 #define ARRAY_SIZE(array)  ((size_t)(sizeof(array) / sizeof((array)[0])))

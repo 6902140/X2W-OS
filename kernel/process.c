@@ -2,7 +2,7 @@
 #include "process.h"
 #include "kernel/paging.h"
 #include "trap/trapret.h"
-
+#include "kernel/mm.h"
 struct cpu cpus[NCPU];
 
 struct process processes[NPROC];
@@ -55,6 +55,8 @@ void procinit(void)
         p->state=_UNUSED;
         p->kstack=KSTACK((int) (p - processes));
     }
+
+    kprintf("total %d process init(state and virt kstack)\n",NPROC);
 
 }
 
@@ -206,30 +208,30 @@ void setkilled(struct process *p)
 }
 
 
-int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm)
-{
-//   uint64_t a, last;
-//   pte_t *pte;
+// int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm)
+// {
+// //   uint64_t a, last;
+// //   pte_t *pte;
 
-//   if(size == 0)
-//     panic("mappages: size");
+// //   if(size == 0)
+// //     panic("mappages: size");
   
-//   a = PGROUNDDOWN(va);
-//   last = PGROUNDDOWN(va + size - 1);
-//   for(;;){
-//     if((pte = walk(pagetable, a, 1)) == 0)
-//       return -1;
-//     if(*pte & PTE_V)
-//       panic("mappages: remap");
-//     *pte = PA2PTE(pa) | perm | PTE_V;
-//     if(a == last)
-//       break;
-//     a += PGSIZE;
-//     pa += PGSIZE;
-//   }
-//to do
-  return 0;
-}
+// //   a = PGROUNDDOWN(va);
+// //   last = PGROUNDDOWN(va + size - 1);
+// //   for(;;){
+// //     if((pte = walk(pagetable, a, 1)) == 0)
+// //       return -1;
+// //     if(*pte & PTE_V)
+// //       panic("mappages: remap");
+// //     *pte = PA2PTE(pa) | perm | PTE_V;
+// //     if(a == last)
+// //       break;
+// //     a += PGSIZE;
+// //     pa += PGSIZE;
+// //   }
+// //to do
+//   return 0;
+// }
 
 
 void uvmfree(pagetable_t pagetable, uint64_t sz)
@@ -263,4 +265,21 @@ void pop_off(void)
   c->noff -= 1;
   if(c->noff == 0 && c->intena)
     intr_on();
+}
+
+void userinit(void)
+{
+  struct process* p;
+  p=allocproc();
+  initproc=p;
+
+  p->sz = PGSIZE;
+
+  // prepare for the very first "return" from kernel to user.
+  p->trapframe->epc = 0;      // user program counter
+  p->trapframe->sp = PGSIZE;  // user stack pointer
+
+
+
+  
 }

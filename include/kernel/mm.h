@@ -17,6 +17,7 @@
 #include "constrains.h"
 #include "asm/svxx.h"
 #include "kernel/locks.h"
+#include "riscv.h"
 
 #define PTE_VALID_MASK 0x1
 #define PTE_PPN_MASK   0xFFFFFFFFFFFFF000
@@ -161,4 +162,10 @@ void *malloc_page(size_t cnt, Bool kpage);
 
 uint64_t get_physical_address(uint64_t vaddr);
 pagetable_t uvmcreate(void);
+pte_t * walk(pagetable_t pagetable, uint64_t va, int alloc);
+int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm);
+void uvmfirst(pagetable_t pagetable, char *src, unsigned int sz);
+
+
+
 #endif

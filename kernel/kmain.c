@@ -17,8 +17,12 @@
 #include "kernel/kinit.h"
 #include "kernel/kdebug.h"
 #include "kernel/kstdio.h"
+#include "process.h"
 
 void kernel_main(void){
+	if(cpuid()==0){
+		kprintf("\nyes,cpu 0 here\n");
+	}
     kprintf(DELIMITER);
     kprintf("In kernel!\n");
     kprintf("Kernel init!\n");

@@ -12,6 +12,7 @@
 #include "kernel/mm.h"
 #include "kernel/paging.h"
 #include "kernel/kdebug.h"
+#include "riscv.h"
 
 /// `KPAGES`定义了内核可用物理页数
 #define KPAGES ((int) (PAGE_NUMS / MEMORY_US_RATIO))
@@ -243,61 +244,101 @@ void *malloc_page(size_t cnt, Bool kpage){
 //     return (void *) vpage;
 // }
 
+// Return the address of the PTE in page table pagetable
+// that corresponds to virtual address va.  If alloc!=0,
+// create any required page-table pages.
+//
+// The risc-v Sv39 scheme has three levels of page-table
+// pages. A page-table page contains 512 64-bit PTEs.
+// A 64-bit virtual address is split into five fields:
+//   39..63 -- must be zero.
+//   30..38 -- 9 bits of level-2 index.
+//   21..29 -- 9 bits of level-1 index.
+//   12..20 -- 9 bits of level-0 index.
+//    0..11 -- 12 bits of byte offset within the page.
+pte_t * walk(pagetable_t pagetable, uint64_t va, int alloc)
+{
+//   if(va >= MAXVA)
+//     panic("walk");
+    ASSERT(va<PHYSTOP,"walk va too much",0);
+  for(int level = 2; level > 0; level--) {
+    pte_t *pte = &pagetable[PX(level, va)];
+    if(*pte & PTE_V) {
+      pagetable = (pagetable_t)PTE2PA(*pte);
+    } else {
+      if(!alloc || (pagetable = (pde_t*)alloc_ppage(True)) == 0)
+        return 0;
+      memset(pagetable, 0, PGSIZE);
+      *pte = PA2PTE(pagetable) | PTE_V;
+    }
+  }
+  return &pagetable[PX(0, va)];
+}
 
 
+// Create PTEs for virtual addresses starting at va that refer to
+// physical addresses starting at pa. va and size might not
+// be page-aligned. Returns 0 on success, -1 if walk() couldn't
+// allocate a needed page-table page.
+int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm)
+{
+  uint64_t a, last;
+  pte_t *pte;
 
+//   if(size == 0)
+//     panic("mappages: size");
+  ASSERT(size>0,"mappages:size error",1)
 
-
-uint64_t get_physical_address(uint64_t vaddr) {
-    uint64_t satp;
-
-    // 使用汇编指令csrr获取satp寄存器的值
-    asm volatile("csrr %0, satp" : "=r"(satp));
-
-    // 解析satp以获取页表根地址
-    uint64_t pgbase = satp & 0xFFFFFFFFFFFFF000;
-
-    // 计算虚拟地址的索引
-    uint64_t vpn2 = (vaddr >> VPN2_SHIFT) & 0x1FF;
-    uint64_t vpn1 = (vaddr >> VPN1_SHIFT) & 0x1FF;
-    uint64_t vpn0 UNUSED = (vaddr >> VPN0_SHIFT) & 0x1FF;
-
-    // 计算页目录表项的地址
-    uint64_t ptd_addr = pgbase + (vpn2 << 3);
-
-    // 从页目录表中读取页表地址
-    uint64_t ptd_entry = *((uint64_t*)ptd_addr);
-
-    // 检查页表项是否有效
-    ASSERT(ptd_entry & PTE_VALID_MASK,"ptd entry %u invalid ",ptd_entry);
-
-    // 获取页表地址
-    uint64_t pgtable = ptd_entry & PTE_PPN_MASK;
-
-    // 计算页表项的地址
-    uint64_t pte_addr = pgtable + (vpn1 << 3);
-
-    // 从页表中读取物理页帧地址
-    uint64_t pte_entry = *((uint64_t*)pte_addr);
-
-    // 检查页表项是否有效
-    ASSERT(pte_entry & PTE_VALID_MASK,"pte entry %u invalid ",pte_entry);
-
-    // 获取物理页帧地址
-    uint64_t paddr = (pte_entry & PTE_PPN_MASK) + (vaddr & 0xFFF);
-
-    // 返回物理地址
-    return paddr;
+  
+  a = PGROUNDDOWN(va);
+  last = PGROUNDDOWN(va + size - 1);
+  for(;;){
+    if((pte = walk(pagetable, a, 1)) == 0)
+      return -1;
+    // if(*pte & PTE_V)
+    //   panic("mappages: remap");
+    ASSERT(!(*pte&PTE_V),"mappage:repeat map",0);
+    *pte = PA2PTE(pa) | perm | PTE_V;
+    if(a == last)
+      break;
+    a += PGSIZE;
+    pa += PGSIZE;
+  }
+  return 0;
 }
 
 
 
+
+
+//注意：内核恒等映射就ok了，对内核的mem就不用操作了，内核mem对外提供的唯一接口就是alloc_ppage()
+
+// create an empty user page table.
+// returns 0 if out of memory.
 pagetable_t uvmcreate(void)
 {
   pagetable_t pagetable;
-  pagetable = (pagetable_t) malloc_page(1,1);
+  pagetable = (pagetable_t) alloc_ppage(True);
   if(pagetable == 0)
     return 0;
   memset(pagetable, 0, PGSIZE);
   return pagetable;
 }
+
+// Load the user initcode into address 0 of pagetable,
+// for the very first process.
+// sz must be less than a page.
+void uvmfirst(pagetable_t pagetable, char *src, unsigned int sz)
+{
+  char *mem;
+
+//   if(sz >= PGSIZE)
+//     panic("uvmfirst: more than a page");
+  ASSERT(sz<=PGSIZE,"uvmfirst: more than a page",0);
+  mem = (char*)alloc_ppage(True);
+  memset(mem, 0, PGSIZE);
+  mappages(pagetable, 0, PGSIZE, (uint64_t)mem, PTE_W|PTE_R|PTE_X|PTE_U);
+  memmove(mem, src, sz);
+}
+
+

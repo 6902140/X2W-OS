@@ -17,6 +17,7 @@
 #include "kernel/ktimer.h"
 #include "kernel/kstdio.h"
 #include "kernel/paging.h"
+#include "process.h"
 
 // _e_kernel是内存中的内核映像结束地址
 extern char _e_kernel[];
@@ -38,5 +39,7 @@ void kinit_all(void){
     INIT_DONE;
     kprintf("=> paging_init\n");
     paging_init();
+    kprintf("=> procinit\n");
+    procinit();
     INIT_DONE;
 }

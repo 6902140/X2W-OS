@@ -31,6 +31,7 @@
 #define PAGE_SIZE   (1 << PAGE_SHIFT)
 #endif
 
+#define PHYSTOP 0x86400000
 
 /* ---------- X2WOS中的页属性 ---------- */ 
 
