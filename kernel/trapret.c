@@ -2,6 +2,9 @@
 #include "trap/trapret.h"
 #include "process.h"
 
+extern char trampoline[], uservec[], userret[];
+
+void kernelvec(void);
 
 void usertrap(void)
 {
@@ -21,9 +24,8 @@ void usertrap(void)
   
   if(r_scause() == 8){
     // system call
-
-    if(killed(p))
-      exit(-1);
+    //to do
+    // if(killed(p))exit(-1);
 
     // sepc points to the ecall instruction,
     // but we want to return to the next instruction.
@@ -33,7 +35,10 @@ void usertrap(void)
     // so enable only now that we're done with those registers.
     intr_on();
 
-    syscall();
+    //syscall();
+    while(1){
+      kprintf("here for syscalls\n");
+    };
   } 
 //   else if((which_dev = devintr()) != 0){
 //     // ok
@@ -44,8 +49,10 @@ void usertrap(void)
     setkilled(p);
   }
 
-  if(killed(p))
-    exit(-1);
+  if(killed(p)){
+    while(1);//exit(-1);
+  }
+    //exit(-1);
 
   // give up the CPU if this is a timer interrupt.
 //   if(which_dev == 2)
@@ -98,4 +105,36 @@ void usertrapret(void)
   // and switches to user mode with sret.
   uint64_t trampoline_userret = TRAMPOLINE + (userret - trampoline);
   ((void (*)(uint64_t))trampoline_userret)(satp);
+}
+
+
+// interrupts and exceptions from kernel code go here via kernelvec,
+// on whatever the current kernel stack is.
+void  kerneltrap(void)
+{
+  // int which_dev = 0;
+  uint64_t sepc = r_sepc();
+  uint64_t sstatus = r_sstatus();
+  uint64_t scause = r_scause();
+  ASSERT(((sstatus & SSTATUS_SPP) == 0),"kerneltrap: not from supervisor mode\n",0);
+  // if((sstatus & SSTATUS_SPP) == 0)
+  //   panic("kerneltrap: not from supervisor mode");
+   ASSERT(intr_get()==0,"kerneltrap: not from supervisor mode\n",0);
+  // if(intr_get() != 0)
+  //   panic("kerneltrap: interrupts enabled");
+
+  // if((which_dev = devintr()) == 0){
+     kprintf("scause %p\n", scause);
+  //   printf("sepc=%p stval=%p\n", r_sepc(), r_stval());
+  //   panic("kerneltrap");
+  // }
+
+  // give up the CPU if this is a timer interrupt.
+  // if(which_dev == 2 && myproc() != 0 && myproc()->state == RUNNING)
+  //   yield();
+
+  // the yield() may have caused some traps to occur,
+  // so restore trap registers for use by kernelvec.S's sepc instruction.
+  w_sepc(sepc);
+  w_sstatus(sstatus);
 }

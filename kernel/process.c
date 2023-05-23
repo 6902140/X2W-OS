@@ -1,6 +1,7 @@
 #include"types.h"
 #include "process.h"
 #include "kernel/paging.h"
+#include "trap/trapret.h"
 
 struct cpu cpus[NCPU];
 
@@ -9,6 +10,10 @@ struct process processes[NPROC];
 struct process* initproc;
 
 int nextpid=1;
+
+extern char _etext[];  // kernel.ld sets this to end of kernel code.
+
+extern char trampoline[]; // trampoline.S
 
 spinlock_t pid_lock;
 
@@ -153,10 +158,11 @@ pagetable_t proc_pagetable(struct process * p){
         return 0;
 
     if(mappages(pagetable, TRAMPOLINE, PGSIZE,
-              (uint64)trampoline, PTE_R | PTE_X) < 0){
+              (uint64_t)trampoline, PTE_R | PTE_X) < 0){
     uvmfree(pagetable, 0);
     return 0;
   }
+  return 0;
 }
 
 
@@ -164,7 +170,7 @@ pagetable_t proc_pagetable(struct process * p){
 // will swtch to forkret.
 void forkret(void)
 {
-  static int first = 1;
+  //static int first = 1;
 
   // Still holding p->lock from scheduler.
   spinlock_release(&myproc()->lock);
@@ -178,4 +184,83 @@ void forkret(void)
 //   }
 
   usertrapret();
+}
+
+
+
+
+int killed(struct process *p)
+{
+
+  spinlock_acquire(&p->lock);
+  int k = p->killed;
+  spinlock_release(&p->lock);
+  return k;
+}
+
+void setkilled(struct process *p)
+{
+  spinlock_acquire(&p->lock);
+  p->killed = 1;
+  spinlock_release(&p->lock);
+}
+
+
+int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm)
+{
+//   uint64_t a, last;
+//   pte_t *pte;
+
+//   if(size == 0)
+//     panic("mappages: size");
+  
+//   a = PGROUNDDOWN(va);
+//   last = PGROUNDDOWN(va + size - 1);
+//   for(;;){
+//     if((pte = walk(pagetable, a, 1)) == 0)
+//       return -1;
+//     if(*pte & PTE_V)
+//       panic("mappages: remap");
+//     *pte = PA2PTE(pa) | perm | PTE_V;
+//     if(a == last)
+//       break;
+//     a += PGSIZE;
+//     pa += PGSIZE;
+//   }
+//to do
+  return 0;
+}
+
+
+void uvmfree(pagetable_t pagetable, uint64_t sz)
+{
+
+//   if(sz > 0)
+//     uvmunmap(pagetable, 0, PGROUNDUP(sz)/PGSIZE, 1);
+//   freewalk(pagetable);
+}
+
+
+void push_off(void)
+{
+  int old = intr_get();
+
+  intr_off();
+  if(mycpu()->noff == 0)
+    mycpu()->intena = old;
+  mycpu()->noff += 1;
+}
+
+void pop_off(void)
+{
+  struct cpu *c = mycpu();
+  // if(intr_get())
+  //   panic("pop_off - interruptible");
+  ASSERT(!intr_get(),"pop_off - interruptible");
+  // if(c->noff < 1)
+  //   panic("pop_off");
+  ASSERT(c->noff>=1,"pop_off");
+  c->noff -= 1;
+  if(c->noff == 0 && c->intena)
+    intr_on();
 }

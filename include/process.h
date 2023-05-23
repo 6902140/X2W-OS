@@ -1,6 +1,15 @@
+#ifndef __process_H_
+#define __process_H_
+
+
+
 #include "kernel/locks.h"
 #include "kernel/kdebug.h"
 #include "riscv.h"
+
+
+
+
 #define NCPU 8
 #define NPROC 64
 #define PGSIZE 4096
@@ -21,7 +30,12 @@ int allocpid(void);
 struct process* allocproc(void);
 pagetable_t proc_pagetable(struct process * p);
 void forkret(void);
-
+int killed(struct process* p);
+void setkilled(struct process *p);
+void freeproc(struct process*p);
+int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm);
+void uvmfree(pagetable_t pagetable, uint64_t sz);
+// void usertrapret(void);
 // Saved registers for kernel context switches.
 struct context {
   uint64_t ra;
@@ -138,27 +152,8 @@ static inline uint64_t read_tp(void)
   return x;
 }
 
-void push_off(void)
-{
-  int old = intr_get();
 
-  intr_off();
-  if(mycpu()->noff == 0)
-    mycpu()->intena = old;
-  mycpu()->noff += 1;
-}
 
-void pop_off(void)
-{
-  struct cpu *c = mycpu();
-  // if(intr_get())
-  //   panic("pop_off - interruptible");
-  ASSERT(!intr_get(),"pop_off - interruptible");
-  // if(c->noff < 1)
-  //   panic("pop_off");
-  ASSERT(c->noff>=1,"pop_off");
-  c->noff -= 1;
-  if(c->noff == 0 && c->intena)
-    intr_on();
-}
 
+
+#endif
