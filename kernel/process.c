@@ -73,3 +73,109 @@ struct process* myproc(void){
     return tempp;
     
 }
+
+int allocpid(void){
+    int pid;
+    spinlock_acquire(&pid_lock);
+    pid=nextpid;
+    nextpid++;
+    spinlock_release(&pid_lock);
+    return pid;
+}
+
+struct process* allocproc(void){
+    struct process* p;
+    for(p=processes;p<&processes[NPROC];p++)
+    {
+        spinlock_acquire(&p->lock);
+        if(p->state==_UNUSED){
+            goto FOUND;
+        }
+        else{
+            spinlock_release(&p->lock);
+        }
+    }
+FOUND:
+    p->pid=allocpid();
+    p->state=_USED;
+    p->trapframe=(struct trapframe*)malloc_page(1,1);
+    if(p->trapframe==0){
+        freeproc(p);
+        spinlock_release(&p->lock);
+        return 0;
+    }
+
+    p->pagetable = proc_pagetable(p);
+    if(p->pagetable == 0){
+        freeproc(p);
+        spinlock_release(&p->lock);
+        return 0;
+    }
+
+    // Set up new context to start executing at forkret,
+    // which returns to user space.
+    memset(&p->context, 0, sizeof(p->context));
+    p->context.ra = (uint64_t)forkret;
+    p->context.sp = p->kstack + PGSIZE;
+
+    return p;
+
+}
+
+
+void freeproc(struct process*p)
+{
+    if(p->trapframe){
+        //to do free;
+    }
+    if(p->pagetable){
+
+    }
+    p->trapframe = 0;
+  
+    p->pagetable = 0;
+    p->sz = 0;
+    p->pid = 0;
+    p->parent = 0;
+    p->name[0] = 0;
+    p->chan = 0;
+    p->killed = 0;
+    p->xstate = 0;
+    p->state = _UNUSED;
+}
+
+pagetable_t proc_pagetable(struct process * p){
+    pagetable_t pagetable;
+
+  // An empty page table.
+    pagetable = uvmcreate();
+    if(pagetable == 0)
+        return 0;
+
+    if(mappages(pagetable, TRAMPOLINE, PGSIZE,
+              (uint64)trampoline, PTE_R | PTE_X) < 0){
+    uvmfree(pagetable, 0);
+    return 0;
+  }
+}
+
+
+// A fork child's very first scheduling by scheduler()
+// will swtch to forkret.
+void forkret(void)
+{
+  static int first = 1;
+
+  // Still holding p->lock from scheduler.
+  spinlock_release(&myproc()->lock);
+
+//   if (first) {
+//     // File system initialization must be run in the context of a
+//     // regular process (e.g., because it calls sleep), and thus cannot
+//     // be run from main().
+//     first = 0;
+//     fsinit(ROOTDEV);
+//   }
+
+  usertrapret();
+}

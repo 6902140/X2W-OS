@@ -11,12 +11,13 @@
 
 #include "kernel/mm.h"
 #include "kernel/paging.h"
+#include "kernel/kdebug.h"
 
 /// `KPAGES`定义了内核可用物理页数
 #define KPAGES ((int) (PAGE_NUMS / MEMORY_US_RATIO))
 /// `KPAGES`定义了用户可用物理页数
 #define UPAGES (PAGE_NUMS - KPAGES)
-
+#define PGSIZE 4096
 /**
  * @brief `pool_btmps`是预先分配好的`bitmap`数组
  * 
@@ -210,4 +211,93 @@ void *malloc_page(size_t cnt, Bool kpage){
         vpage += PAGE_SIZE;
     }
     return (void *) vpage;
+}
+
+// void *free_page(void* vpage,Bool kpage){
+    
+//     // ASSERT(kpage == True, "Only kernel page is supported now, you're trying to malloc a user page, kpage=%d!", kpage);
+
+//     // // debug only
+//     // kprintf("free a %s page\n", kpage == True ? "kernel" : "user");
+
+//     // // 首先获取需要添加映射的全局页目录表
+//     // pgd_t *pgd = get_pgd();
+    
+//     // // 获取要操作的虚拟内存池
+//     // vpool_t *vpool = get_vpool();
+
+//     // 分配虚拟页
+//    // addr_t vpage UNUSED = alloc_vpage(vpool, cnt);
+//     // 逐虚拟页操作
+//     // while (cnt-- > 0){
+//     //     // 分配和该虚拟页对应的物理页
+//     //     addr_t ppage UNUSED = alloc_ppage(kpage);
+//     //     page_property_t pproperty = { (uint64_t) KERNEL_PAGE};
+
+//     //     // 操作页目录表完成虚拟页-物理页映射
+//     //     create_mapping(pgd, vpage, ppage, PAGE_SIZE, pproperty, 0);
+
+//     //     // 映射下一个虚拟页
+//     //     vpage += PAGE_SIZE;
+//     // }
+//     return (void *) vpage;
+// }
+
+
+
+
+
+
+uint64_t get_physical_address(uint64_t vaddr) {
+    uint64_t satp;
+
+    // 使用汇编指令csrr获取satp寄存器的值
+    asm volatile("csrr %0, satp" : "=r"(satp));
+
+    // 解析satp以获取页表根地址
+    uint64_t pgbase = satp & 0xFFFFFFFFFFFFF000;
+
+    // 计算虚拟地址的索引
+    uint64_t vpn2 = (vaddr >> VPN2_SHIFT) & 0x1FF;
+    uint64_t vpn1 = (vaddr >> VPN1_SHIFT) & 0x1FF;
+    uint64_t vpn0 UNUSED = (vaddr >> VPN0_SHIFT) & 0x1FF;
+
+    // 计算页目录表项的地址
+    uint64_t ptd_addr = pgbase + (vpn2 << 3);
+
+    // 从页目录表中读取页表地址
+    uint64_t ptd_entry = *((uint64_t*)ptd_addr);
+
+    // 检查页表项是否有效
+    ASSERT(ptd_entry & PTE_VALID_MASK,"ptd entry %u invalid ",ptd_entry);
+
+    // 获取页表地址
+    uint64_t pgtable = ptd_entry & PTE_PPN_MASK;
+
+    // 计算页表项的地址
+    uint64_t pte_addr = pgtable + (vpn1 << 3);
+
+    // 从页表中读取物理页帧地址
+    uint64_t pte_entry = *((uint64_t*)pte_addr);
+
+    // 检查页表项是否有效
+    ASSERT(pte_entry & PTE_VALID_MASK,"pte entry %u invalid ",pte_entry);
+
+    // 获取物理页帧地址
+    uint64_t paddr = (pte_entry & PTE_PPN_MASK) + (vaddr & 0xFFF);
+
+    // 返回物理地址
+    return paddr;
+}
+
+
+
+pagetable_t uvmcreate(void)
+{
+  pagetable_t pagetable;
+  pagetable = (pagetable_t) malloc_page(1,1);
+  if(pagetable == 0)
+    return 0;
+  memset(pagetable, 0, PGSIZE);
+  return pagetable;
 }

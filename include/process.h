@@ -17,6 +17,10 @@ void process_statck_map(pagetable_t kernel_pgdir);
 void procinit(void);
 int cpuid(void);
 struct process* myproc(void);
+int allocpid(void);
+struct process* allocproc(void);
+pagetable_t proc_pagetable(struct process * p);
+void forkret(void);
 
 // Saved registers for kernel context switches.
 struct context {
