@@ -11,7 +11,6 @@
 #ifndef __INCLUDE_KERNEL_KINIT_H
 #define __INCLUDE_KERNEL_KINIT_H
 
-#include "uart.h"
 #include "types.h"
 #include "constrains.h"
 

@@ -8,13 +8,13 @@
  * @copyright Copyright Shihong Wang (c) 2023 with GNU Public License V3.0
  */
 
-#include "uart.h"
 #include "types.h"
 #include "constrains.h"
 #include "asm/csr.h"
 #include "sbi/sinit.h"
 #include "sbi/smain.h"
 #include "sbi/sstdio.h"
+#include "device/uart.h"
 
 
 NO_RETURN void sbi_main(void){
@@ -53,7 +53,7 @@ NO_RETURN void jump_to_kernel(){
     // 关闭S模式的页表转换
     write_csr(satp, 0);
 
-    // 设置物理地址保护(Physical Memory Protection)
+    // 设置物理地址保护(Physical Memory Protection), 内核能访问的内存地址是0x0~0x3FFFFFFFFFFFFF, 大小是16384 TB 
     write_csr(pmpaddr0, (ireg_t)0x3FFFFFFFFFFFFF);
     write_csr(pmpcfg0, 0xF);
 

@@ -50,11 +50,12 @@ CFLAGS = \
 	-I include/ \
 	-fomit-frame-pointer \
 	-Wall \
+	-Werror \
 	-Wmissing-prototypes \
 	-Werror=strict-prototypes \
 	-Werror=incompatible-pointer-types \
-
-#	-save-temps -dumpdir=${BDIR}/temps/ \
+	-save-temps
+#	-dumpdir=${BDIR}/temps/ \
 
 # QEMU 参数
 #		1. -nographic: 不显示图形界面
@@ -307,7 +308,6 @@ full: all disasm documentation
 .PHONY: mkdir
 mkdir:
 	@mkdir -p ${BDIR}/disasms
-	@mkdir -p ${BDIR}/temps
 	@mkdir -p $(foreach dir, $(K_SRCS_DIR), ${BDIR}/$(dir))
 	@mkdir -p $(foreach dir, $(S_SRCS_DIR), ${BDIR}/$(dir))
 
@@ -442,6 +442,10 @@ clean:
 	rm -rf ${RDIR}/docs/sphinx/build/*
 
 
+# rebuild 目标将会:
+#		1. 运行 clean 伪目标
+#		2. 运行 all 目标
+rebuild: clean all
 
 # ----------------------------------------------------------
 # 命令行工具
@@ -515,6 +519,7 @@ debug-vscode: kernel sbi
 	@echo "如果你想直接停止运行, 则首先按下 Ctrl+A, 然后按下 X 键以退出 QEMU"
 	@echo '你可以运行 `make run` 以使用 QEMU 直接运行内核'
 	@echo '你可以运行 `make debug-gdb` 以使用 GDB 调试内核'
+	@echo '你需要手动在调试控制台运行如下命令以加载SBI符号表: -exec add-symbol-file build/sbi.debug'
 	@echo "------------------------------------------------------------------"
 	@${QEMU} ${Q_FLAG} ${Q_BIOS} -kernel ${RDIR}/${KNAME} -gdb tcp::1234 -S
 

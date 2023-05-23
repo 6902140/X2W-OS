@@ -7,10 +7,9 @@ kernel_start:
 
     # 设置栈
     la sp, kstacks_start
-    la sp, init_task_union
     li t0, 4096
     add sp, sp, t0
-    la tp, init_task_union
+
     # 跳转到C函数
     tail kernel_main
 
@@ -19,3 +18,12 @@ kernel_start:
 .global kstacks_start
 kstacks_start:
     .skip 4096
+.global kstacks_end
+kstacks_end:
+
+
+.section .rodata
+.align 3
+.global kernel_info
+kernel_info:
+    .string "X2WOS, Version 0.1"

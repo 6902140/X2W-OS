@@ -136,18 +136,4 @@ Bool list_search(list_elem_t *elem_ptr, list_t *list_ptr);
  */
 list_elem_t* list_walking(list_t *list_ptr, list_walking_func_t func, int arg);
 
-/**
- * 
- * 在这个宏定义中，0被用作一个指针，
- * 它的目的是获取一个特定类型的结构体在内存中的偏移量。
- * 这个技巧称为"结构体成员偏移量"的计算。
- * 
-*/
-#define list_entry(ptr, type, member) \
-	((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
-
-#define list_for_each(pos, head) \
-	for (pos = (head)->next; pos->next != NULL; pos = pos->next)
-
-
 #endif

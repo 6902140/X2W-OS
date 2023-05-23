@@ -12,33 +12,25 @@
 #include "asm/csr.h"
 #include "kernel/ktimer.h"
 #include "kernel/kstdio.h"
-#include "sched.h"
-extern struct task_struct* oncpu;
+
 uint64_t volatile ALIGN64 ticks;
 
 void reset_timer(void){
-    sbi_settimer(get_cycle() + TIMER_BASE_FRQENCY / TIMER_FREQUENCY_HZ);
+    sbi_settimer(get_cycle() + CLINT_TIMER_BASE_FRQENCY / CLINT_TIMER_FREQUENCY_HZ);
     // 打开Supervisor模式下的时钟中断
     set_csr(sie, SIE_S_TIMER_INTERRUPT);
 }
 
 void ktimer_init(void){
     reset_timer();
-    register_ktrap_handler(CAUSE_INTERRUPT_S_TIMER_INTERRUPT, True, "Supervisor Timer Interrupt", ktimer_interrupt_handler);
 }
 
 int64_t ktimer_interrupt_handler(ktrapframe_t *kft_ptr){
+    // 关闭Supervisor模式下的时钟中断, 避免S模式下的时钟中断嵌套
     clear_csr(sie, SIE_S_TIMER_INTERRUPT);
+    // 重新设置mtimecmp寄存器
     reset_timer();
     ticks++;
     //kprintf("Core0 Timer Interrupt, ticks=%lu\r\n", ticks);
-    if(oncpu!=0){
-   
-        tick_handle_periodic();
-        if(oncpu->need_resched){
-            kprintf("pid %d need sched out!\n",oncpu->pid);
-            schedule();
-        }
-    }
     return 0;
 }

@@ -8,118 +8,43 @@
  * @copyright Copyright Shihong Wang (c) 2023 with GNU Public License V3.0
  */
 
-#include "uart.h"
 #include "types.h"
 #include "test/test.h"
-#include "kernel/kstdio.h"
+#include "device/ddr.h"
+#include "device/uart.h"
+#include "kernel/ktrap.h"
 #include "kernel/kmain.h"
 #include "kernel/kinit.h"
-#include "kernel/memory.h"
-#include "sched.h"
-#include "asm/irq.h"
-#include "kernel/locks.h"
-extern struct task_struct* oncpu;
-extern struct ready_queue_base g_rq;
-extern int TASK_READY;
-
-
-
-struct _test_lock_t{
-	int public_variable;
-	spinlock_t mylock;
-};
-struct _test_lock_t test_lock_t;
-
-void test_lock_add(struct _test_lock_t* t){
-	spinlock_acquire(&(t->mylock));
-	t->public_variable+=1000;
-	delay(10000);
-	t->public_variable-=999;
-	spinlock_release(&(t->mylock));
-}
-
-void delay(uint64_t k){
-	while(k){
-		k--;
-	}
-}
-
-
-
-void kernel_stage2(void){
-	kprintf("welcome to kernel stage .2\n");
-	
-
-	while(1){
-		delay(5000);
-		test_lock_add(&test_lock_t);
-		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
-		kprintf("pid[%d] is on running 12345;\n",oncpu->pid);
-	};
-	
-}
-
-void kernel_stage3(void){
-	kprintf("welcome to kernel stage 3\n");
-	
-
-	while(1){
-		delay(5000);
-		test_lock_add(&test_lock_t);
-		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
-		kprintf("pid[%d] is on running abcde;\n",oncpu->pid);
-	};
-	
-}
-
-void kernel_stage4(void){
-	kprintf("welcome to kernel stage 3\n");
-
-	while(1){
-		delay(5000);
-		test_lock_add(&test_lock_t);
-		kprintf("now public variable with lock protection is <%d>\n",test_lock_t.public_variable);
-		kprintf("pid[%d] is on running !@#$^;\n",oncpu->pid);
-	};
-	
-}
-
+#include "kernel/kdebug.h"
+#include "kernel/kstdio.h"
 
 void kernel_main(void){
     kprintf(DELIMITER);
-    uart_puts("In kernel!\n");
+    kprintf("In kernel!\n");
     kprintf("Kernel init!\n");
-	oncpu=0;TASK_READY=1;
+
+	// 输出内核内存映像信息
+	print_kmem();
+
+	// 初始化内核
     kinit_all();
 
     kprintf("Start testing!\n");
+	// 测试库文件
     // test_all();
 
-
-	print_kmem();
     kprintf("Kernel Hanging Here!\n");
-	int pid_main = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage2, 0);
-	int pid_main2 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage3, 0);
-	int pid_main3 = do_fork(PF_KTHREAD, (unsigned long)&kernel_stage4, 0);
-	// for(int i=0;i<3;i++)
-	// 	create_user_vaddr_bitmap(g_task[i]);
-	kprintf("00ci0w-acvjd\n");
-	test_lock_t.public_variable=0;
-	spinlock_init(&(test_lock_t.mylock),"for test");
-	kprintf("pid:%d,%d,%d\n",pid_main,pid_main2,pid_main3);
 
-	oncpu=g_task[0];
-	oncpu->counter=20;
-	oncpu->priority=5;
-	wake_up_process(oncpu);
-	
-    while (1){
-		delay(10000);
-		kprintf("pid[0],In kernel main thread now\n");
-	};
+    kprintf("local_interrupt_enable\n");
+	// 打开S模式下所有中断
+    supervisor_interrupt_enable();
+
+	// addr_t unmapped_addr = DDR_END_ADDR + 4096;
+	// *(uint64_t *) unmapped_addr = 0x55;
+	kprintf("Done");
+    while (1);
 }
 
-// TODO: 需要完成printf函数更多的feature
 void print_kmem(void){
     kprintf(DELIMITER);
     kprintf("X2W-OS Image Layout:\n");

@@ -11,7 +11,10 @@
 #include "types.h"
 #include "string.h"
 #include "stdbitmap.h"
-#define SIZE_BYTE 8
+
+/// `BYTE_BITS`定义了一个字节有多少个位
+#define BYTE_BITS 8
+
 
 void bitmap_init(bitmap_t *btmp_ptr, size_t size){
     btmp_ptr->size = size;
@@ -20,9 +23,9 @@ void bitmap_init(bitmap_t *btmp_ptr, size_t size){
 
 void bitmap_set(bitmap_t *btmp_ptr, offset_t bit_idx, Bool taken){
     // 字节偏移量
-    offset_t byte_idx = (offset_t)(bit_idx / SIZE_BYTE);
+    offset_t byte_idx = (offset_t)(bit_idx / BYTE_BITS);
     // 字节内bit偏移量, 即相对(字节)偏移量, relative bit
-    offset_t rbit_idx = (offset_t)(bit_idx % SIZE_BYTE);
+    offset_t rbit_idx = (offset_t)(bit_idx % BYTE_BITS);
 
     if (taken)
         // (BITMAP_TAKEN << rbit_idx) = 0b00001000
@@ -34,9 +37,9 @@ void bitmap_set(bitmap_t *btmp_ptr, offset_t bit_idx, Bool taken){
 
 Bool bitmap_test(bitmap_t *btmp_ptr, offset_t bit_idx){
     // 字节偏移量
-    offset_t byte_idx = (offset_t)(bit_idx / SIZE_BYTE);
+    offset_t byte_idx = (offset_t)(bit_idx / sizeof(byte));
     // 字节内bit偏移量, 即相对(字节)偏移量, relative bit
-    offset_t rbit_idx = (offset_t)(bit_idx % SIZE_BYTE);
+    offset_t rbit_idx = (offset_t)(bit_idx % sizeof(byte));
     return (btmp_ptr->bits[byte_idx] & (BITMAP_TAKEN << rbit_idx)) == 0 ? False : True; 
 }
 

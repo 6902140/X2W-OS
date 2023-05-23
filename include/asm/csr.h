@@ -17,10 +17,9 @@
 #ifndef __INCLUDE_ASM_CSR_H
 #define __INCLUDE_ASM_CSR_H
 
-//#include "types.h"
+#include "types.h"
 
 /* ------------------------------ 宏定义 ------------------------------ */
-#define SATP_MODE_39 (1UL << 63)
 
 /* ----- 特权级定义 ----- */
 /// 用户态特权级
@@ -35,45 +34,6 @@
 #define INTR_DS         0UL
 /// 中断关闭
 #define INTR_EN         1UL
-
-/***
- * 具体来说：
- * SSTATUS_SPP_SHIFT 和 SSTATUS_SPP 定义了一个宏，
- * 用于获取和设置 sstatus 寄存器中的上一个模式（SPP）字段。
- * SPP 字段用于记录 CPU 上一次运行的特权级别（用户模式或监管模式），
- * 以便在切换回上一个模式时恢复该特权级别。
- * SR_SIE、SR_SPIE、SR_SPP 和 SR_SUM 定义了一些常量，
- * 用于设置和清除 sstatus 寄存器中的一些位字段。
- * 其中，SR_SIE 用于开启或关闭监管模式中断使能，
- * SR_SPIE 用于记录上一次监管模式中断使能的状态，
- * SR_SPP 用于记录上一个模式的特权级别（用户模式或监管模式），
- * SR_SUM 用于允许监管模式访问用户模式的内存。
- * SR_FS 和 SR_XS 定义了一些常量，
- * 用于设置和清除 sstatus 寄存器中的浮点状态和扩展状态位字段。
- * SR_FS 用于设置和获取浮点运算的状态（禁用、启用或保存状态），
- * SR_XS 用于设置和获取指令集扩展（如 M 标准、A 标准）的状态。
- */
-
-
-/* Status register flags */
-#define SSTATUS_SPP_SHIFT	8
-#define SSTATUS_SPP	(1UL << SSTATUS_SPP_SHIFT)
-
-#define SR_SIE  0x2UL /* Supervisor Interrupt Enable */
-#define SR_SPIE 0x20UL /* Previous Supervisor IE */
-#define SR_SPP 0x100UL /* Previously Supervisor */
-#define SR_SUM	0x40000UL /* Supervisor may access User Memory */
-#define SR_FS  0x6000UL /* Floating-point Status */
-#define SR_XS  0x00018000UL /* Extension Status */
-
-/* 中断使能 */
-#define SIE_SSIE 0x2UL /* IPI软中断使能 */
-#define SIE_STIE 0x20UL /* 时钟中断使能 */
-#define SIE_SEIE 0x200UL /* IRQ外部中断使能 */
-
-#define SCAUSE_INT (1UL << 63)
-#define is_interrupt_fault(reg) (reg & SCAUSE_INT)
-
 
 
 /* ----- mstatus寄存器 ----- */
@@ -103,9 +63,10 @@
 
 
 /* ----- sstatus寄存器 ----- */
+/// Supervisor Interrupt Enable
 #define SSTATUS_SIE                 0x00000002UL
 #define SSTATUS_SPIE                0x00000020UL
-// #define SSTATUS_SPP                 0x00000100UL
+#define SSTATUS_SPP                 0x00000100UL
 #define SSTATUS_SUM                 0x00040000UL
 #define SSTATUS_FS                  0x00006000UL
 #define SSTATUS_XS                  0x00018000UL
@@ -202,11 +163,35 @@
 #define SIE_S_EXTERNAL_INTERRUPT                            (1UL << CAUSE_INTERRUPT_S_EXTERNAL_INTERRUPT)
 
 
-/* ----- medeleg寄存器 ----- */
+/*
+ * satp寄存器
+ * offset:      63            60 59                 44 43                                                    0
+ *              .---------------------------------------------------------------------------------------------,
+ *              |  Mode (WARL)  |     ASID (WARL)     |                       PPN (WARL)                      |
+ *              '---------------------------------------------------------------------------------------------'
+ * length:             4 Bit             16 Bit                                 44 Bit
+ * 
+ * Mode域:  控制分页模式
+ *          Value       Name        Description
+ *      -       0       Bare        No translation or protection
+ *      -     1-7       ----        Reserved
+ *      -       8       Sv39        Page-based 39-bit virtual addressing
+ *      -       9       Sv48        Page-based 48-bit virtual addressing
+ *      -      10       Sv57        Reserved for page-based 57-bit virtual addressing
+ *      -      11       Sv64        Reserved for page-based 64-bit virtual addressing
+ * 
+ * ASID域: 可选, 用于减少切换时的开销, 是为了和基于Spike指令集的系统兼容
+ *      
+ * PPN域: 保存页目录表物理页号(Physical Page Number)
+ *      - 运行内核线程时为内核页目录表物理页号
+ *      - 运行用户线程时为用户页目录表物理页号
+ */
+#define SATP_MODE_SV39                                      (0b1000UL << 60)
+#define SATP_MODE_SV48                                      (0b1001UL << 60)
+#define SATP_MODE_SV57                                      (0b1010UL << 60)
+#define SATP_MODE_SV64                                      (0b1011UL << 60)
 
 
-
-/* ----- mideleg寄存器 ----- */
 
 
 /* ------------------------------ 宏函数 ------------------------------ */

@@ -32,20 +32,6 @@ typedef int64_t (*ktrap_handler_t)(ktrapframe_t *ktf_ptr);
 
 
 /**
- * @brief `local_interrupt_enable`用于打开S模式下的中断, 即设置`sstatus`寄存器的`SIE`位为1
- */
-static inline void local_interrupt_enable(void){
-    set_csr(sstatus, SSTATUS_SIE);
-}
-
-/**
- * @brief `local_interrupt_disable`用于关闭S模式下的中断, 即设置`sstatus`寄存器的`SIE`位为0
- */
-static inline void local_interrupt_disable(void){
-    clear_csr(sstatus, SSTATUS_SIE);
-}
-
-/**
  * @brief `supervisor_interrupt_enable`用于打开S模式下的中断, 即设置`sstatus`寄存器的`SIE`位为1
  */
 static inline void supervisor_interrupt_enable(void){
@@ -60,7 +46,10 @@ static inline void supervisor_interrupt_disable(void){
 }
 
 /**
- * @brief `ktrap_init`是内核的异常/中断初始化函数
+ * @brief `ktrap_init`是内核的异常/中断初始化函数, 主要:
+ *      1. 设置了`sstvec`寄存器
+ *      2. 设置了`sie`寄存器
+ *      3. 将所有异常和中断处理函数设置为通用异常/中断处理函数
  */
 void ktrap_init(void);
 
