@@ -153,5 +153,6 @@ void free_vpage(vpool_t *vpool, addr_t vpage);
  */
 void *malloc_page(size_t cnt, Bool kpage);
 
+addr_t alloc_nppage(size_t cnt,Bool kpage);
 
 #endif

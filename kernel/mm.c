@@ -127,6 +127,30 @@ addr_t alloc_ppage(Bool kpage){
 }
 
 
+//分配连续的物理页
+addr_t alloc_nppage(size_t cnt,Bool kpage){
+    ppool_t *pool = (kpage == True) ? &kernel_ppool : &user_ppool;
+
+    offset_t bit_idx = bitmap_scan(pool->btmp, cnt);
+    // TODO: 未来实现换页机制后, 这里需要修改为换出物理页
+    ASSERT(bit_idx != -1, "bit_idx=%d, cannot find a physical page!", bit_idx);
+
+    spinlock_acquire(&pool->lock);
+    for(int i=bit_idx;i-bit_idx<cnt;i++)
+        bitmap_set(pool->btmp, i, BITMAP_TAKEN);
+    spinlock_release(&pool->lock);
+
+
+    addr_t ppage = pool->paddr_start + bit_idx * PAGE_SIZE;
+    for(int i=bit_idx;i-bit_idx<cnt;i++)
+        memset((void *)((char*)ppage+(i-bit_idx)*PAGE_SIZE), 0, PAGE_SIZE);
+
+    return ppage;
+
+
+}
+
+
 void free_ppage(addr_t ppage, Bool kpage){
     ppool_t *pool = (kpage == True) ? &kernel_ppool : &user_ppool;
 
