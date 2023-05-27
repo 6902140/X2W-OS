@@ -17,12 +17,8 @@
 #include "kernel/kinit.h"
 #include "kernel/kdebug.h"
 #include "kernel/kstdio.h"
-#include "process.h"
 
 void kernel_main(void){
-	if(cpuid()==0){
-		kprintf("\nyes,cpu 0 here\n");
-	}
     kprintf(DELIMITER);
     kprintf("In kernel!\n");
     kprintf("Kernel init!\n");
@@ -43,8 +39,8 @@ void kernel_main(void){
 	// 打开S模式下所有中断
     supervisor_interrupt_enable();
 
-	// addr_t unmapped_addr = DDR_END_ADDR + 4096;
-	// *(uint64_t *) unmapped_addr = 0x55;
+	addr_t unmapped_addr = DDR_END_ADDR + 4096;
+	*(uint64_t *) unmapped_addr = 0x55;
 	kprintf("Done");
     while (1);
 }

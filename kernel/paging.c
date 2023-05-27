@@ -43,7 +43,7 @@ void paging_init(void){
  *      3. `_s_rodata`是内核`.rodata`段的开始地址, 即内核数据段的起始地址
  *      4. `_e_bss`是内核`.bss`段的结束地址, 即内核数据段的结束地址
  */
-extern char _s_text_boot[], _e_text[], _s_rodata[], _e_bss[];
+extern char _s_text_boot[], _e_text[], _s_rodata[], _e_bss[],_e_kernel[];
 
 void create_identical_mapping(void){
     kprintf("start %s\n", __func__);
@@ -65,17 +65,12 @@ void create_identical_mapping(void){
     page_property_t kdata_prot = {(uint64_t) KERNEL_PAGE};
     create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, kdata_prot, 0);
 
-    start_addr=(addr_t)_e_bss,end_addr=(addr_t)PHYSTOP,size=(size_t) (end_addr - start_addr);
+    start_addr=(addr_t)_e_kernel,end_addr=start_addr+MEMORY_TOTAL,size=(size_t)(end_addr-start_addr);
     pages = (size + PAGE_SIZE - 1) / PAGE_SIZE;
-    kprintf("\tmapping total free mem, %#X~%#X, %7d Bytes, %2d Pages used (%2d * 4096 = %7d)\n", start_addr, end_addr, size, pages, pages, pages * PAGE_SIZE);
-    page_property_t total_mem_prot = {(uint64_t) KERNEL_PAGE};
-    create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, total_mem_prot, 0);
+    page_property_t kheap_prot = {(uint64_t) KERNEL_PAGE};
+    create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, kheap_prot, 0);
 
-    // start_addr=(addr_t)_e_bss,end_addr=(addr_t)PHYSTOP,size=(size_t) (end_addr - start_addr);
-    // pages = (size + PAGE_SIZE - 1) / PAGE_SIZE;
-    // kprintf("\tmapping total free mem, %#X~%#X, %7d Bytes, %2d Pages used (%2d * 4096 = %7d)\n", start_addr, end_addr, size, pages, pages, pages * PAGE_SIZE);
-    // page_property_t total_mem_prot = {(uint64_t) KERNEL_PAGE};
-    // create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, total_mem_prot, 0);
+
 }
 
 
@@ -136,7 +131,12 @@ NO_RETURN int64_t paging_load_page_fault_exception_handler(ktrapframe_t *ktf_ptr
     kprintf("\tkernel PGD is at %#X\n", (addr_t) kernel_pgd);
     kprintf("\tcurrent running thread PGD is at %#X\n", (addr_t) get_pgd());
     kprintf("Kernel PGD/PMT/PT Info:\n");
-    // dump_pgd(get_pgd(), (addr_t) _s_text_boot, (addr_t) _e_bss);
+    kprintf("WARNING: printing PGD/PMT/PT may cause huge outputs on screen, please use tee to save outputs. Start printing in a few seconds...\n");
+    // for (int32_t max = (__INT32_MAX__ >> 1) + __INT16_MAX__ * 0xFFF ; max-- > 0;);
+    for (int32_t max = __INT32_MAX__; max-- > 0;);
+    // 关闭虚拟地址翻译
+    disable_vm_translation();
+    dump_pgd(get_pgd(), (addr_t) _s_text_boot, (addr_t) _e_bss);
     while (1);
     UNREACHABLE;
 }

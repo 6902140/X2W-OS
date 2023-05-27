@@ -17,13 +17,7 @@
 #include "constrains.h"
 #include "asm/svxx.h"
 #include "kernel/locks.h"
-#include "riscv.h"
 
-#define PTE_VALID_MASK 0x1
-#define PTE_PPN_MASK   0xFFFFFFFFFFFFF000
-#define VPN2_SHIFT     30
-#define VPN1_SHIFT     21
-#define VPN0_SHIFT     12
 
 /**
  * @brief `ppool_t`是物理内存池(Physical Memory Pool)结构体, 内存池以页面为管理对象
@@ -158,14 +152,6 @@ void free_vpage(vpool_t *vpool, addr_t vpage);
  *      3. 在页目录表中完成虚拟页和物理页的映射
  */
 void *malloc_page(size_t cnt, Bool kpage);
-
-
-uint64_t get_physical_address(uint64_t vaddr);
-pagetable_t uvmcreate(void);
-pte_t * walk(pagetable_t pagetable, uint64_t va, int alloc);
-int mappages(pagetable_t pagetable, uint64_t va, uint64_t size, uint64_t pa, int perm);
-void uvmfirst(pagetable_t pagetable, char *src, unsigned int sz);
-
 
 
 #endif

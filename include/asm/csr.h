@@ -17,7 +17,7 @@
 #ifndef __INCLUDE_ASM_CSR_H
 #define __INCLUDE_ASM_CSR_H
 
-//#include "types.h"
+#include "types.h"
 
 /* ------------------------------ 宏定义 ------------------------------ */
 
