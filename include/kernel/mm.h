@@ -19,8 +19,8 @@
 #include "kernel/locks.h"
 
 
-
-
+#define VA_OFFSET(va) ((addr_t)(va)&(0xfff))
+#define GET_PA(va, value) (VA_OFFSET(va) + (((addr_t)(value) >> 10) << 12))
 
 #define GET_PPN(pa) (((addr_t)(pa) >> 12) << 10)  //截取物理地址对应的PPN
 #define PAGE_ROUND_UP(va) (((addr_t)(va) + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1))  // 向上对齐4kb

@@ -418,3 +418,20 @@ pt_t* get_level0_pte(pgd_t pageTable, addr_t va, int alloc) {
     // pageTable_t x = &pageTable[VPN(va, 0)];
     return &((pt_t*)pageTable)[VPN(va, 0)];
 }
+
+addr_t kvm_trans(addr_t va, pgd_t pagetable) {
+    uint64_t pa;
+    pt_t* pte = get_level0_pte(pagetable, va, 0);
+    if (pte == NULL) {
+        kprintf("kvm_trans: unmapped va: %x", va);
+        while (1)
+            ;
+    }
+    if ((*pte & PTE_V) == 0) {
+        kprintf("kvm_trans: unmapped va: %x", va);
+        while (1)
+            ;
+    }
+    pa = GET_PA(va, *pte);
+    return pa;
+}

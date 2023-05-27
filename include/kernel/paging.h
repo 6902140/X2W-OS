@@ -527,5 +527,5 @@ void paging_init(void);
  */
 NO_RETURN int64_t paging_load_page_fault_exception_handler(ktrapframe_t *ktf_ptr);
 pt_t* get_level0_pte(pgd_t pageTable, addr_t va, int alloc);
-
+addr_t kvm_trans(addr_t va, pgd_t pagetable);
 #endif

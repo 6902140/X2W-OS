@@ -17,7 +17,8 @@
 #include "kernel/kinit.h"
 #include "kernel/kdebug.h"
 #include "kernel/kstdio.h"
-
+#include "kernel/mm.h"
+#include "kernel/paging.h"
 void kernel_main(void){
     kprintf(DELIMITER);
     kprintf("In kernel!\n");
@@ -34,13 +35,19 @@ void kernel_main(void){
     // test_all();
 
     kprintf("Kernel Hanging Here!\n");
-
+	
     kprintf("local_interrupt_enable\n");
 	// 打开S模式下所有中断
     supervisor_interrupt_enable();
 
-	addr_t unmapped_addr = DDR_END_ADDR + 4096;
-	*(uint64_t *) unmapped_addr = 0x55;
+	// addr_t unmapped_addr = DDR_END_ADDR + 4096;
+	// *(uint64_t *) unmapped_addr = 0x55;
+	addr_t test=alloc_nppage(12,1);
+	for(int i=0;i<12;i++){
+
+		kprintf("va=%x,pa=%x\n",test+i*(PAGE_SIZE),kvm_trans(test+i*(PAGE_SIZE),(pgd_t)kernel_pgd));
+	}
+	kfree_pages(test,test+11*PAGE_SIZE);
 	kprintf("Done");
     while (1);
 }
