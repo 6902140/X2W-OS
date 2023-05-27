@@ -16,9 +16,9 @@
 #include "asm/uart.h"
 #include "asm/clint.h"
 #include "kernel/paging.h"
-
+#include "memlayout.h"
 pgd_t *kernel_pgd = (pgd_t *)_s_kernel_pgd;
-
+extern char trampoline[];
 void paging_init(void){
     // 初始化内核页目录表
     memset(kernel_pgd, 0, PAGE_SIZE);
@@ -67,9 +67,15 @@ void create_identical_mapping(void){
 
     start_addr=(addr_t)_e_kernel,end_addr=start_addr+MEMORY_TOTAL,size=(size_t)(end_addr-start_addr);
     pages = (size + PAGE_SIZE - 1) / PAGE_SIZE;
+    kprintf("\tmapping other RAM, %#X~%#X, %7d Bytes, %2d Pages used (%2d * 4096 = %7d)\n", start_addr, end_addr, size, pages, pages, pages * PAGE_SIZE);
     page_property_t kheap_prot = {(uint64_t) KERNEL_PAGE};
     create_mapping((pgd_t *)kernel_pgd, start_addr, start_addr, size, kheap_prot, 0);
-
+    
+    start_addr=(addr_t)TRAMPOLINE,end_addr=start_addr+PAGE_SIZE,size=(size_t)PAGE_SIZE;
+    pages = (size + PAGE_SIZE - 1) / PAGE_SIZE;
+    kprintf("\tmapping trampoline, %#X~%#X, %7d Bytes, %2d Pages used (%2d * 4096 = %7d)\n", start_addr, end_addr, size, pages, pages, pages * PAGE_SIZE);
+    page_property_t trampoline_prot = {(uint64_t) (PTE_R | PTE_X)};
+    create_mapping((pgd_t *)kernel_pgd, start_addr, (addr_t)trampoline, size, trampoline_prot, 0);
 
 }
 

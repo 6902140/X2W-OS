@@ -19,6 +19,13 @@
 #include "kernel/locks.h"
 
 
+
+
+
+
+#define PAGE_ROUND_UP(va) (((addr_t)(va) + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1))  // 向上对齐4kb
+#define PAGE_ROUND_DOWN(va) ((address_t)(va) & ~(PAGE_SIZE - 1)) 
+
 /**
  * @brief `ppool_t`是物理内存池(Physical Memory Pool)结构体, 内存池以页面为管理对象
  * 
@@ -154,5 +161,8 @@ void free_vpage(vpool_t *vpool, addr_t vpage);
 void *malloc_page(size_t cnt, Bool kpage);
 
 addr_t alloc_nppage(size_t cnt,Bool kpage);
+void kfree_pages(addr_t pstart,addr_t pend);
+
+
 
 #endif

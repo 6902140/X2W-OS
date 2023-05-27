@@ -162,6 +162,14 @@ void free_ppage(addr_t ppage, Bool kpage){
     spinlock_release(&pool->lock);
 }
 
+void kfree_pages(addr_t pstart,addr_t pend){
+    char* temp=(char*)pstart;
+    temp=(char*)PAGE_ROUND_UP(temp);
+    for(;temp<(char*)pend;temp+=PAGE_SIZE){
+        free_ppage((addr_t)temp,True);
+    }
+}
+
 
 // addr_t alloc_vpage(vpool_t *vpool, size_t cnt){
 //     ASSERT(vpool != NULL, "vpool shouldn't be NULL!");
