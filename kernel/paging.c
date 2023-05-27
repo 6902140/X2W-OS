@@ -387,3 +387,34 @@ void create_mapping(pgd_t *pgd, addr_t vaddr, addr_t paddr, uint64_t size, page_
         curr_ppage += (next_vpage - curr_vpage);
     } while (pgd_ent++, curr_vpage = next_vpage, curr_vpage < end_vpage);
 }
+
+
+
+
+
+
+pt_t* get_level0_pte(pgd_t pageTable, addr_t va, int alloc) {
+    // if (va > MAX_VA) {
+    //     panic("get_level0_pte out of bound");
+    // }
+    ASSERT(va<=MAX_VA,"invalid va",0);
+    pt_t* pte;
+    for (int level = 2; level > 0; level--) {
+        pte = &((pt_t*)pageTable)[VPN(va, level)];  // level > 0 is right.Don't change
+        if (*pte & PTE_V) {
+            pageTable = (pgd_t)GET_PAGETABLE(*pte);
+        } else {
+            if (!alloc)
+                return NULL;
+            pageTable = (pgd_t)alloc_ppage(1);
+            if (pageTable == (addr_t)NULL)
+                return NULL;
+            memset((char*)pageTable, 0, PAGE_SIZE);
+            *pte = GET_PPN(pageTable) | PTE_V;
+        }
+    }
+    // debug
+
+    // pageTable_t x = &pageTable[VPN(va, 0)];
+    return &((pt_t*)pageTable)[VPN(va, 0)];
+}

@@ -22,10 +22,11 @@
 
 
 
-
+#define GET_PPN(pa) (((addr_t)(pa) >> 12) << 10)  //截取物理地址对应的PPN
 #define PAGE_ROUND_UP(va) (((addr_t)(va) + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1))  // 向上对齐4kb
-#define PAGE_ROUND_DOWN(va) ((address_t)(va) & ~(PAGE_SIZE - 1)) 
-
+#define PAGE_ROUND_DOWN(va) ((addr_t)(va) & ~(PAGE_SIZE - 1)) 
+#define GET_PAGETABLE(pte) ((((addr_t)(pte)) >> 10) << 12)
+#define VPN(va, level) (((addr_t)(va) >> (12 + (level)*9)) & 0x1ff)
 /**
  * @brief `ppool_t`是物理内存池(Physical Memory Pool)结构体, 内存池以页面为管理对象
  * 

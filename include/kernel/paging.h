@@ -526,6 +526,6 @@ void paging_init(void);
  * @note 当前的函数仅读取错误地址, 而后打印. 未来实现换页技术时候需要修改该函数
  */
 NO_RETURN int64_t paging_load_page_fault_exception_handler(ktrapframe_t *ktf_ptr);
-
+pt_t* get_level0_pte(pgd_t pageTable, addr_t va, int alloc);
 
 #endif
