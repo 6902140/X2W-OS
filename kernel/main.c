@@ -1,6 +1,7 @@
 // Copyright (c) 2006-2019 Frans Kaashoek, Robert Morris, Russ Cox,
 //                         Massachusetts Institute of Technology
 #define DEBUG
+
 #include "include/types.h"
 #include "include/param.h"
 #include "include/memlayout.h"
@@ -65,6 +66,7 @@ main(unsigned long hartid, unsigned long dtb_pa)
   
   if (__first_boot_magic == 0x5a5a) { /* boot hart not fixed 1 */
     __first_boot_magic = 0;
+    #define _hello
     cpuinit();
     consoleinit();
     printfinit();   // init a lock for printf 
