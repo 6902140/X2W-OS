@@ -7,6 +7,11 @@
  * 
  * @copyright Copyright Shihong Wang (c) 2023 with GNU Public License V3.0
  */
+#ifndef  QEMU
+#define QEMU
+#endif
+
+
 
 #ifndef __INCLUDE_TYPES_H
 #define __INCLUDE_TYPES_H
@@ -49,12 +54,22 @@ typedef int64_t offset_t;
 
 /// 地址类型
 typedef uint64_t addr_t;
+typedef addr_t address_t;
 
 /// 整型寄存器类型
 typedef uint64_t ireg_t;
 
+typedef ireg_t register_t;
+
 /// 浮点寄存器类型
 typedef uint64_t freg_t;
+
+typedef int pid_t;
+
+typedef uint64_t* pageTable_t;
+typedef unsigned char byte_t;
+typedef unsigned short wchar_t;
+typedef int bool;
 
 /// `ARRAY_SIZE`宏函数用于计算数组`array`中的元素个数, 返回值类型为`size_t`
 #define ARRAY_SIZE(array)  ((size_t)(sizeof(array) / sizeof((array)[0])))

@@ -42,12 +42,12 @@ void kernel_main(void){
 
 	// addr_t unmapped_addr = DDR_END_ADDR + 4096;
 	// *(uint64_t *) unmapped_addr = 0x55;
-	addr_t test=alloc_nppage(12,1);
-	for(int i=0;i<12;i++){
-
+	addr_t test=alloc_nppage(120,1);
+	for(int i=0;i<120;i++){
+		kprintf("test val=%x\n",*(uint64_t*)(test+i*(PAGE_SIZE)));
 		kprintf("va=%x,pa=%x\n",test+i*(PAGE_SIZE),kvm_trans(test+i*(PAGE_SIZE),(pgd_t)kernel_pgd));
 	}
-	kfree_pages(test,test+11*PAGE_SIZE);
+	kfree_pages(test,test+120*PAGE_SIZE);
 	kprintf("Done");
     while (1);
 }

@@ -171,29 +171,7 @@ void kfree_pages(addr_t pstart,addr_t pend){
 }
 
 
-// addr_t alloc_vpage(vpool_t *vpool, size_t cnt){
-//     ASSERT(vpool != NULL, "vpool shouldn't be NULL!");
 
-//     offset_t bit_idx = bitmap_scan(vpool->btmp, cnt);
-//     // TODO: 未来实现换页机制后, 这里需要修改为换出虚拟页
-//     ASSERT(bit_idx != -1, "bit_idx=%d, cannot find a virtual page!", bit_idx);
-//     spinlock_acquire(&vpool->lock);
-//     bitmap_set(vpool->btmp, bit_idx, BITMAP_TAKEN);
-//     spinlock_release(&vpool->lock);
-
-//     return vpool->vaddr_start + bit_idx * PAGE_SIZE;
-// }
-
-
-// void free_vpage(vpool_t *vpool, addr_t vpage){
-//     ASSERT(vpool != NULL, "vpool shouldn't be NULL!");
-
-//     offset_t bit_idx = (vpage - vpool->vaddr_start) / PAGE_SIZE;
-//     ASSERT(bit_idx >= 0, "bit_idx shouldn't be negative, bit_idx = %d!", bit_idx);
-//     spinlock_acquire(&vpool->lock);
-//     bitmap_set(vpool->btmp, bit_idx, BITMAP_FREE);
-//     spinlock_release(&vpool->lock);
-// }
 
 
 ppool_t *get_ppool(void){
@@ -213,7 +191,10 @@ ppool_t *get_ppool(void){
 extern inline pgd_t *get_pgd(void);
 extern void create_mapping(pgd_t *pgd, addr_t vaddr, addr_t paddr, uint64_t size, page_property_t property, uint64_t flags);
 
-
+void create_pages_map(pgd_t *pgd,addr_t va,addr_t pa,size_t size,uint64_t prot){
+    page_property_t map_prot={prot};
+    create_mapping(pgd, va, pa,size, map_prot, 0);
+}
 
 //暂时完全不用考虑内核虚拟页，内核完全恒等映射
 
