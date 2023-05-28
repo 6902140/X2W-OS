@@ -1,53 +1,74 @@
-OUTPUT_ARCH(riscv)
-ENTRY(_entry)
+SECTIONS {
+    /* 内核虚拟地址基地址 */
+    . = 0x80200000,
+    /* 内核入口 */
+    kernel_entry = .;
+    _s_kernel = .;
 
-BASE_ADDRESS = 0x80200000;
+    /* ********** 内核代码段 ********** */
+    /** 
+     *  内核代码段由 
+     *      1. 启动代码段(只在内核启动阶段运行一次)
+     *      2. 其余代码段(内核运行过程中可能多次运行)
+     *  两部分组成
+     */
 
-SECTIONS
-{
-    /* Load the kernel at this address: "." means the current address */
-    . = BASE_ADDRESS;
+    /* 内核引导段代码放在入口处 */
+    _s_text_boot = .;
+    .text.boot : {
+        *(.text.boot)
+    }
+    _e_text_boot = .;
 
-    kernel_start = .;
-
-    . = ALIGN(4K);
-
-    text_start = .;
+    /* 内核其余代码段依次排列, 内核其余代码8字节对齐 */
+    . = ALIGN(8);
+    _s_text = .;
     .text : {
-        *(.text .text.*)
-        . = ALIGN(0x1000);
-        _trampoline = .;
-        *(trampsec)
-        . = ALIGN(0x1000);
-        ASSERT(. - _trampoline == 0x1000, "error: trampoline larger than one page");
-        PROVIDE(etext = .);
+        *(.text)
     }
+    . = ALIGN(4096);
+    _e_text = .;
 
-    . = ALIGN(4K);
-    rodata_start = .;
-    .rodata : {
-        srodata = .;
-        *(.rodata .rodata.*)
-        erodata = .;
+    /* 代码段之后就是数据段, 内核数据段4096字节对齐, 注意这里和`mm.c`中的`create_identical_mapping`里的page_align的对应 */
+
+
+    /* ********** 内核数据段 ********** */
+    /** 
+     *  内核数据段由 
+     *      1. 只读数据段, 存放字符常量这类只读数据
+     *      2. 一般数据段, 存放一般的全局变量
+     *      2. 静态数据段, 存放未初始化的全局变量
+     *  三部分组成
+     */
+
+    /* 内核只读数据段 */
+    _s_rodata = .;
+    .rodata : AT(ADDR(.rodata)) {
+        *(.rodata)
     }
+    _e_rodata = .;
 
-    . = ALIGN(4K);
-    data_start = .;
+    /* 内核一般数据段 */
+    _s_data = .;
     .data : {
-        sdata = .;
-        *(.data .data.*)
-        edata = .;
+        *(.data)
+        . = ALIGN(4096);
+        *(.data.init_task)
     }
+    /* 物理页需要4096字节对齐, 这里4096字节对齐之后划分4096字节作为内核页目录表 */
+    . = ALIGN(4096);
+    _s_kernel_pgd = .;
+    . += 2 * 4096;
+    _e_kernel_pgd = .;
+    _e_data = .;
 
-    . = ALIGN(4K);
-    bss_start = .;
+    /* 内核静态数据段 */
+    . = ALIGN(0x8);
+    _s_bss = .;
     .bss : {
-	    *(.bss.stack)
-        sbss_clear = .;
-        *(.sbss .bss .bss.*)
-        ebss_clear = .;
+        *(.bss*)
     }
-
-    . = ALIGN(4K);
-    PROVIDE(kernel_end = .);
+    _e_bss = .;
+    _e_kernel = .;
+    kernel_end = .;
 }
